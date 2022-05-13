@@ -171,6 +171,13 @@
     </h1>
   
 
+        
+          <!--显示阅读次数完毕-->
+          
+          <a href="/post/Markdown%20%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8A%80%E5%B7%A7.html" class="archive-article-date">
+  	<time datetime="2022-05-13T07:18:34.123Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
+</a>
+           
           <!--20220513 显示阅读次数-->
           
            <br/>
@@ -180,15 +187,38 @@
               阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
               </span>
             </a>
-          
-          <!--显示阅读次数完毕-->
-        
-        <a href="/post/Markdown%20%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8A%80%E5%B7%A7.html" class="archive-article-date">
-  	<time datetime="2022-05-13T07:18:34.123Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
-</a>
         
       </header>
     
+
+    <!-- 20220513添加的目录内容 -->
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+  <span class="btn-bg"></span>
+  <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%BC%80%E5%A4%B4%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">文章开头设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81"><span class="toc-number">2.</span> <span class="toc-text">显示文章摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%BD%92%E6%A1%A3%E8%8F%9C%E5%8D%95"><span class="toc-number">3.</span> <span class="toc-text">添加归档菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81%E5%BF%AB%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E5%92%8C%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2"><span class="toc-number">4.</span> <span class="toc-text">修改代码快背景颜色和字体颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="toc-number">5.</span> <span class="toc-text">添加不蒜子统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E5%B7%A6%E4%BE%A7%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%80%BB%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">主页左侧显示文章总数</span></a></li></ol>
+ </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
+     
+          <!-- 目录内容结束 -->
+
     <div class="article-entry" itemprop="articleBody">
       
         <p>Markdown写博客技巧,主要是针对主题hexo-yilia的一些写作技巧汇结。</p>
@@ -327,19 +357,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%BC%80%E5%A4%B4%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">文章开头设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81"><span class="toc-number">2.</span> <span class="toc-text">显示文章摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%BD%92%E6%A1%A3%E8%8F%9C%E5%8D%95"><span class="toc-number">3.</span> <span class="toc-text">添加归档菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81%E5%BF%AB%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E5%92%8C%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2"><span class="toc-number">4.</span> <span class="toc-text">修改代码快背景颜色和字体颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="toc-number">5.</span> <span class="toc-text">添加不蒜子统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E5%B7%A6%E4%BE%A7%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%80%BB%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">主页左侧显示文章总数</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -356,33 +373,7 @@
   
 
 
-<!-- 20220513添加的目录内容 
 
-  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-  <span class="btn-bg"></span>
-  <span class="btn-text">文章导航</span>
-  </p>
-  <div id="toc-article" class="toc-article">
-      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-      <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%BC%80%E5%A4%B4%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">文章开头设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81"><span class="toc-number">2.</span> <span class="toc-text">显示文章摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%BD%92%E6%A1%A3%E8%8F%9C%E5%8D%95"><span class="toc-number">3.</span> <span class="toc-text">添加归档菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%BB%A3%E7%A0%81%E5%BF%AB%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E5%92%8C%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2"><span class="toc-number">4.</span> <span class="toc-text">修改代码快背景颜色和字体颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1"><span class="toc-number">5.</span> <span class="toc-text">添加不蒜子统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E5%B7%A6%E4%BE%A7%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%80%BB%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">主页左侧显示文章总数</span></a></li></ol>
- </div>
- <script type="text/javascript">
-  function showToc(){
-      var toc_article = document.getElementById("toc-article");
-      var show_toc_btn = document.getElementById("show-toc-btn");
-      toc_article.setAttribute("style","display:block");
-      show_toc_btn.setAttribute("style","display:none");
-      };
-  function showBtn(){
-      var toc_article = document.getElementById("toc-article");
-      var show_toc_btn = document.getElementById("show-toc-btn");
-      toc_article.setAttribute("style","display:none");
-      show_toc_btn.setAttribute("style","display:block");
-      };
- </script>
-     
-<!-- 目录内容结束 -->
           </div>
         </div>
       </div>

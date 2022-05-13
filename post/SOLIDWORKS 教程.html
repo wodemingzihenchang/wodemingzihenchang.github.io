@@ -170,6 +170,13 @@
     </h1>
   
 
+        
+          <!--显示阅读次数完毕-->
+          
+          <a href="/post/SOLIDWORKS%20%E6%95%99%E7%A8%8B.html" class="archive-article-date">
+  	<time datetime="2022-05-13T05:17:33.543Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
+</a>
+           
           <!--20220513 显示阅读次数-->
           
            <br/>
@@ -179,15 +186,38 @@
               阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
               </span>
             </a>
-          
-          <!--显示阅读次数完毕-->
-        
-        <a href="/post/SOLIDWORKS%20%E6%95%99%E7%A8%8B.html" class="archive-article-date">
-  	<time datetime="2022-05-13T05:17:33.543Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
-</a>
         
       </header>
     
+
+    <!-- 20220513添加的目录内容 -->
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+  <span class="btn-bg"></span>
+  <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">SOLIDWORKS 介绍</span></a></li></ol>
+ </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
+     
+          <!-- 目录内容结束 -->
+
     <div class="article-entry" itemprop="articleBody">
       
         <p>SOLIDWORKS 零件与装配体基础建模教程</p>
@@ -333,19 +363,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">SOLIDWORKS 介绍</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -362,33 +379,7 @@
   
 
 
-<!-- 20220513添加的目录内容 
 
-  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-  <span class="btn-bg"></span>
-  <span class="btn-text">文章导航</span>
-  </p>
-  <div id="toc-article" class="toc-article">
-      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-      <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">SOLIDWORKS 介绍</span></a></li></ol>
- </div>
- <script type="text/javascript">
-  function showToc(){
-      var toc_article = document.getElementById("toc-article");
-      var show_toc_btn = document.getElementById("show-toc-btn");
-      toc_article.setAttribute("style","display:block");
-      show_toc_btn.setAttribute("style","display:none");
-      };
-  function showBtn(){
-      var toc_article = document.getElementById("toc-article");
-      var show_toc_btn = document.getElementById("show-toc-btn");
-      toc_article.setAttribute("style","display:none");
-      show_toc_btn.setAttribute("style","display:block");
-      };
- </script>
-     
-<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
