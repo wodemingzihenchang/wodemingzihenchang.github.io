@@ -16,7 +16,7 @@
 <meta property="og:description" content="包括SOLIDWORKS本体单机版，网络版，插件类以及PDM的安装向导">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-13T05:20:40.472Z">
-<meta property="article:modified_time" content="2022-05-15T14:50:18.140Z">
+<meta property="article:modified_time" content="2022-05-18T10:42:14.238Z">
 <meta property="article:author" content="littleboy">
 <meta property="article:tag" content="SOLIDWORKS">
 <meta name="twitter:card" content="summary">
@@ -193,7 +193,7 @@
     <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">SOLIDWORKS 单机版安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E7%BD%91%E7%BB%9C%E7%89%88%E7%89%88%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">SOLIDWORKS 网络版版安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">SOLIDWORKS 插件安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-PDM-%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">SOLIDWORKS PDM 安装</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">SOLIDWORKS 单机版安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E7%BD%91%E7%BB%9C%E7%89%88%E7%89%88%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">SOLIDWORKS 网络版版安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">SOLIDWORKS 插件安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-PDM-%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">SOLIDWORKS PDM 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-PDM-%E5%8D%87%E7%BA%A7"><span class="toc-number">5.</span> <span class="toc-text">SOLIDWORKS PDM 升级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SOLIDWORKS-PDM-%E8%BF%81%E7%A7%BB"><span class="toc-number">6.</span> <span class="toc-text">SOLIDWORKS PDM 迁移</span></a></li></ol>
     </div>
     <script type="text/javascript">
       function showToc(){
@@ -218,7 +218,116 @@
 <span id="more"></span>
 
 
-<h2 id="SOLIDWORKS-单机版安装"><a href="#SOLIDWORKS-单机版安装" class="headerlink" title="SOLIDWORKS 单机版安装"></a>SOLIDWORKS 单机版安装</h2><h2 id="SOLIDWORKS-网络版版安装"><a href="#SOLIDWORKS-网络版版安装" class="headerlink" title="SOLIDWORKS 网络版版安装"></a>SOLIDWORKS 网络版版安装</h2><h2 id="SOLIDWORKS-插件安装"><a href="#SOLIDWORKS-插件安装" class="headerlink" title="SOLIDWORKS 插件安装"></a>SOLIDWORKS 插件安装</h2><h2 id="SOLIDWORKS-PDM-安装"><a href="#SOLIDWORKS-PDM-安装" class="headerlink" title="SOLIDWORKS PDM 安装"></a>SOLIDWORKS PDM 安装</h2><p>更新中……</p>
+<h2 id="SOLIDWORKS-单机版安装"><a href="#SOLIDWORKS-单机版安装" class="headerlink" title="SOLIDWORKS 单机版安装"></a>SOLIDWORKS 单机版安装</h2><h2 id="SOLIDWORKS-网络版版安装"><a href="#SOLIDWORKS-网络版版安装" class="headerlink" title="SOLIDWORKS 网络版版安装"></a>SOLIDWORKS 网络版版安装</h2><h2 id="SOLIDWORKS-插件安装"><a href="#SOLIDWORKS-插件安装" class="headerlink" title="SOLIDWORKS 插件安装"></a>SOLIDWORKS 插件安装</h2><h2 id="SOLIDWORKS-PDM-安装"><a href="#SOLIDWORKS-PDM-安装" class="headerlink" title="SOLIDWORKS PDM 安装"></a>SOLIDWORKS PDM 安装</h2><h2 id="SOLIDWORKS-PDM-升级"><a href="#SOLIDWORKS-PDM-升级" class="headerlink" title="SOLIDWORKS PDM 升级"></a>SOLIDWORKS PDM 升级</h2><p>本章默认只考虑本机PDM服务器升级，如需进行PDM迁移阅读下文“SOLIDWORKS PDM 迁移”。升级前，建议检入所有文件；备份数据库和PDM数据库。升级后功能使用测试。</p>
+<p>升级服务器  </p>
+<blockquote>
+<p>..\SOLIDWORKS 20xx SP05 安装包\SWPDMServer\setup.exe</p>
+</blockquote>
+<p>升级库文件  </p>
+<blockquote>
+<p>..\SOLIDWORKS 20xx SP05 安装包\SWPDMServer\Upgrade\Upgrade.exe</p>
+</blockquote>
+<p>升级各客户端  </p>
+<blockquote>
+<p>..\SOLIDWORKS 20xx SP05 安装包\SWPDMClient\setup.exe</p>
+</blockquote>
+<h2 id="SOLIDWORKS-PDM-迁移"><a href="#SOLIDWORKS-PDM-迁移" class="headerlink" title="SOLIDWORKS PDM 迁移"></a>SOLIDWORKS PDM 迁移</h2><p>PDM 迁移会分2种情况：迁移到全新服务器或迁移到已有PDM的服务器。需迁移内容包括：</p>
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 4px; margin-top: 4px; ">
+<tbody>
+<tr><th>内容</th>           <th>输出文件</th>               <th>操作方法</th></tr>
+<tr><th>主服务器备份</th>   <th>ConisioMasterDb.bak</th>    <th>参考SQL server备份方法，备份SQL库数据库后使其脱机并分离</th></tr>
+<tr><td>PDM服务器备份</td>  <td>"PDMDbname".bak</td>        <td>参考SQL server备份方法</td></tr>
+<tr><td>存档服务器备份</td> <td>Backup.dat</td>             <td>存档服务器配置/工具/备份设置/启动备份</td></tr>
+<tr><td>存档文件夹</td>     <td>"..\PDM安装位置\Data"</td>  <td>按原有路径恢复存档文件夹"..\PDM安装位置\Data"</td></tr>
+</tbody></table>
+
+<p>检查注册表：</p>
+<blockquote>
+<p>存档文件夹：确保默认值指向正确的根文件夹，文件库存档存储在该文件夹中。<br>HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\Applications\PDMWorks Enterprise\ArchiveServer\Computers\local\Archives </p>
+</blockquote>
+<blockquote>
+<p>PDM服务器：确保将服务器更新为新 SQL 服务器名称，SQLDbName 与恢复后的文件库数据库名称相匹配。 不更改 DbName 条目。<br>HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\Applications\PDMWorks Enterprise\ArchiveServer\Vaults[库名称]</p>
+</blockquote>
+<blockquote>
+<p>存档服务器：确保所有路径都指向文件库存档位置。<br>HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\Applications\PDMWorks Enterprise\ArchiveServer\Vaults[库名称]\ArchiveTable </p>
+</blockquote>
+<p> 具体步骤：<br> 1.备份旧服务器上的 SQL 库数据库（包括 ConisioMasterDb.bak和PDM服务器.bak）。 - 在备份SQL库数据库后使其脱机并分离，防止客户端意外连接它们。 另一备选方法是停止 SQL 服务器服务。  </p>
+<p> 2.卸载（修改安装）Enterprise PDM 数据库服务器服务。   </p>
+<p> 3.在新服务器安装新的 SQL 服务器。 应用最新的 SQL Service Pack (SP)。 还原步骤 1 中的数据库。   </p>
+<p> 4.创建索引服务器链接 Exec Sys_IndexServerLink 1  </p>
+<p> 5.使用新的 SQL 服务器名称（值为“Server”）更新所有存档服务器上的注册表 - 然后重新启动存档服务器服务：  </p>
+<blockquote>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults[库名称]。   </p>
+</blockquote>
+<p> 6.在新 SQL 服务器上安装 Enterprise PDM 数据库服务器服务。 连接到新服务器。    </p>
+<p> 客户端：<br> 1.更新每个客户端上的注册表：使用新 SQL服务器名称更新值“DbServer”：   </p>
+<blockquote>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases[库名称]<br> HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases[库名称]   </p>
+</blockquote>
+<p> 旧 vault - 删除：  </p>
+<blockquote>
+<p>HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\ConisioAdmin    </p>
+</blockquote>
+<hr>
+已有PDM的服务器  
+
+<p>如果您计划将所有文件库从一个服务器移到新服务器（没有任何库），请按照 SOLIDWORKS® PDM 安装指南“将服务器组件移至另一系统”一章中的说明操作。</p>
+<p>如果您计划将单个文件库移到已托管一个或多个文件库的存档服务器，安装指南中的移动说明可能会导致覆盖现有存档服务器设置。因此，</p>
+<p>您应按照以下步骤将库移到现有存档服务器。</p>
+<p>在执行移动之前，请确保您已完全备份现有和旧服务器上的所有文件库（数据库和存档）。</p>
+<p>在移动文件库之前，请阅读安装指南中的“将服务器组件移至另一系统”一章，以熟悉一般移动步骤。</p>
+<p>以下示例步骤说明如何将库“ACMEVault”从存档服务器“Server2”移到现有服务器“Server1”。</p>
+<p>注意：<br>错误编辑注册表可能严重损坏操作系统。SOLIDWORKS 技术支持团队强烈建议您备份注册表数据，然后再对注册表做出更改。</p>
+<p>在 Server1 上：</p>
+<p>1.临时停止 SOLIDWORKS PDM 存档服务器服务。<br>2.导出此注册表项：    </p>
+<blockquote>
+<p>“HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer”</p>
+</blockquote>
+<p>在 Server2 上：</p>
+<p>3.运行“存档服务器配置”工具。<br>4.转至“工具”&gt;“备份设置”&gt;“备份选择库”。<br>5.备份库“ACMEVault”。<br>6.将“Backup.dat”文件复制到 Server1。</p>
+<p>在 Server1 上：</p>
+<p>7.使用“存档服务器配置”工具恢复“Backup.dat”文件。这将用 Server2 设置覆盖之前的某些 Server1 设置。<br>8.为导入的“ACMEVault”库导出注册表项：</p>
+<blockquote>
+<p>“HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\ACMEVault”</p>
+</blockquote>
+<p>9.对于备份，请从以下位置重命名存档服务器的注册表项：  </p>
+<blockquote>
+<p>“HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer” 可改为: “...\ArchiveServerTemp”。</p>
+</blockquote>
+<p>10.导入原始注册表项（从步骤 2）。</p>
+<p>11.导入“ACMEVault”库注册表并更新服务器名称以及导入的注册表项中的其他值：  </p>
+<blockquote>
+<p>“HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\ACMEVault”</p>
+</blockquote>
+<p>12.将“ACMEVault”添加到以下“库”值中：  </p>
+<blockquote>
+<p>“HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Computers\Archives”</p>
+</blockquote>
+<p>13.在“存档服务器配置”工具中，展开“此计算机”&gt;“存档”&gt; 右键单击“ACMEVault”并选择“属性”。<br>a.如果“登录”选项卡下的“使用默认 SQL 登录”选项处于活动状态，请单击“更改”并指定 SQL 凭据。<br>12.启动存档服务器服务。<br>13.检查存档服务器日志中是否存在任何启动错误。</p>
+<!--方法2
+SolidWorks PDM 库系统迁移更换服务器操作。  
+ 
+ 第一步备份 SolidWorks PDM 文件库对应的数据库。然后在新的服务器数据库上进行相应的还原数据库操作。 
+ 
+ 第二步在还原后的文件数据库中，查找相应的表“SystemInfo”，在数据库管理工具中通过语句“select * from [dbo].[SystemInfo]” 来查看文件数据库的版本。 
+ 
+ 第三步判断现在新服务器上的 PDM 版本与迁移过来的版本是否一致，如果迁移过来的版本比较低，那么需要进行相应的库版本升级操作。具体相应的操作，需要在安装包中使用自带的工具“Upgrade.exe”程序来进行相应的自动升级操作。 
+ 
+ 第四步清除复制信息，在还原后的文件数据库中，查找相应的表“ArchiveServers”，在数据库管理工具中通过语句“select * from [dbo].[ArchiveServers]”来查看相应的记录信息，删除“ArchiveServerID”不等于 1 的所有记录；然后查看表“ArchiveServerStored”中是否有相应的记录，如果存在，则删除所有的记录，通过相应的语句“ delete from [dbo].[ArchiveServerStored]”。 
+ 
+ 第五步为内容搜索重新创建链接服务器，在数据库管理工具中执行相应的语句“Exec Sys_IndexServerLink 1”来自动创建链接服务器。 
+ 
+ 第六步更新 SolidWorks PDM 主数据库“ConisioMasterDb”中的表“FileVaults”中的记录，把相应的迁移过来的文件库记录增加到该表中。 
+ 
+ 第七步创建缺少的存档服务器注册表项和文件归档文件夹。使用 PDM 提供的工具“ArcServCreator32.exe”， 在新服务器相应的注册表和文件库中新建相应的库数据记录以及相应的文件库文件夹。 
+ 
+ 第八步把原文件库数据拷贝覆盖到新服务器上的文件库中，一般文件库的位置在 PDM服务端安装目录下“SOLIDWORKS PDM\Data”文件夹中。 
+ 
+ 第九步在 SolidWorks PDM 管理工具结构树上进行相应的“刷新”操作，把新迁移的文件库记录添加到管理工具结构树中。同时登陆到管理工具中把相应的插件移除，进行重新的加载。 通过上面的步骤介绍，基本就能实现库系统的迁移操作。
+ --> 
+
+<p>测试：错误排查方法：查看日志；注册表查找；SQL密码确认。</p>
+<p>8.如果您有任何 SQL 类型列表，请使用新 SQL 服务器名称更新这些列表。<br>更新中……</p>
 
       
 
