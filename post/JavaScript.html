@@ -16,8 +16,9 @@
 <meta property="og:description" content="JavaScript 是一种可插入 HTML 页面由浏览器执行的编程语言。这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-17T11:50:39.000Z">
-<meta property="article:modified_time" content="2022-05-17T15:37:54.472Z">
+<meta property="article:modified_time" content="2022-05-24T12:59:19.709Z">
 <meta property="article:author" content="littleboy">
+<meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="littleboy" type="application/atom+xml">
@@ -192,7 +193,7 @@
     <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">4.</span> <span class="toc-text">基本结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86"><span class="toc-number">5.</span> <span class="toc-text">补充知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">6.</span> <span class="toc-text">语句标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="toc-number">7.</span> <span class="toc-text">JS内置函数</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">4.</span> <span class="toc-text">基本结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5"><span class="toc-number">6.</span> <span class="toc-text">语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="toc-number">7.</span> <span class="toc-text">JS内置函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS%E4%BA%A4%E4%BA%92"><span class="toc-number">8.</span> <span class="toc-text">JS交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS%E8%B0%83%E8%AF%95"><span class="toc-number">9.</span> <span class="toc-text">JS调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86"><span class="toc-number">10.</span> <span class="toc-text">补充知识</span></a></li></ol>
     </div>
     <script type="text/javascript">
       function showToc(){
@@ -215,15 +216,23 @@
       
         <p>JavaScript 是一种可插入 HTML 页面由浏览器执行的编程语言。这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。</p>
 <span id="more"></span>
-<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量是用于存储信息的”容器”，将信息通过变量形式搭载。</p>
-<blockquote>
-<p>数字：整数或者是小数，或者是科学计数(e)<br> 字符串：单引号或双引号<br> 数组：中括号[40, 100, 1, 5, 25, 10]<br> 表达式：数值 &#x3D;  +  -  *  &#x2F; 条件 &#x3D;&#x3D;  !&#x3D; &lt;  &gt; </p>
-</blockquote>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数是用于执行网页动作的方法，包括必要的function类型关键字，函数名functionname和(){}结构，和非必要的形参var1，执行代码<br>作用域:</p>
-<pre class="line-numbers language-none"><code class="language-none">function functionname(var1,var2)
-&#123;
-    &#x2F;&#x2F; 执行代码
-&#125;</code></pre>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、空（Null）、未定义（Undefined）、Symbol。<br>引用数据类型（对象类型）：对象(Object)、数组(Array)、函数(Function)，还有两个特殊的对象：正则（RegExp）和日期（Date）</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量是用于存储数据信息，作为数据传递的载体单元。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 变量名 = 变量数据 ;</span><br><span class="line"><span class="keyword">let</span> 变量名 = 变量数据 ; <span class="comment">//现在常用let，var会影响作用域造成变量混乱</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数是用于执行网页动作的方法，function关键字定义类型，函数名和(){}结构，和非必要的形参，执行代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;<span class="keyword">function</span> 函数名(形参<span class="number">1</span>,形参<span class="number">2</span>)&#123; 执行代码 &#125;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h3><p>JS可以使用&lt;script&gt;标签说明网页动作。标签可以放在&lt;head&gt;或&lt;body&gt;或.js外部文件。下面展示一个按键切换文本的功能：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">&quot;id&quot;</span>&gt;标记标签id&lt;/p&gt;  </span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;myFunction()&quot;</span>&gt;</span>点击这里<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params"></span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>); <span class="comment">// 获取到元素  </span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	x.<span class="property">innerHTML</span>=<span class="string">&quot;Hello JavaScript!&quot;</span>; <span class="comment">// 改变内容</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p id="id">标记标签id</p>
+<button type="button" onclick="myFunction()">点击测试功能</button>
+<script>function myFunction()
+{
+    x=document.getElementById("id");// 获取到元素
+    x.innerHTML="Hello JavaScript!";// 改变内容
+}</script>
 
 <h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p>HTML 事件可以是浏览器行为，也可以是用户行为。</p>
 <table style="width: 100%; border-collapse: collapse; margin-bottom: 4px; margin-top: 4px; ">
@@ -237,46 +246,92 @@
 <tr><td>onload</td>	        <td>浏览器已完成页面的加载</td></tr>
 </tbody></table>
 
-<pre class="line-numbers language-none"><code class="language-none">&lt;button onclick&#x3D;&quot;this.innerHTML&#x3D;Date()&quot;&gt;现在的时间是?&lt;&#x2F;button&gt;                  &#x2F;&#x2F;onclick 点击事件内容发生在自身this
-&lt;button onclick&#x3D;&quot;getElementById(&#39;id&#39;).innerHTML&#x3D;Date()&quot;&gt;现在的时间是?&lt;&#x2F;button&gt;  &#x2F;&#x2F;onclick 点击事件内容发生在id
-&lt;p id&#x3D;&quot;id&quot;&gt;&lt;&#x2F;p&gt;</code></pre>
-<p><button onclick="this.innerHTML=Date()">现在的时间是?</button><br><button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button></p>
-<p id="demo"></p>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><table style="display:block" id="functiontable"><tbody>
+<tr><th>语句(点击语句展开测试函数)</th>											<th>描述</th></tr>
+<tr><td><input type="button" onclick="ifDisplay()" value="if"></td>			<td>用于基于不同的条件来执行不同的动作。</td></tr>
+<tr><td><input type="button" onclick="forDisplay()" value="for"></td>		<td>在条件语句为 true 时，可以将代码块执行指定的次数。 </td></tr>
+<tr><td><input type="button" onclick="forinDisplay()" value="for in"></td>	<td>用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。</td></tr>
+<tr><td><input type="button" onclick="switchDisplay()" value="switch"></td>	<td>用于基于不同的条件来执行不同的动作。</td></tr>
+<tr><td><input type="button" onclick="whileDisplay()" value="while"></td>	<td>当条件语句为 true 时，执行语句块。 </td></tr>
+<tr><td><input type="button" onclick="dowhileDisplay()" value="do while"></td>	<td>执行一个语句块，在条件语句为 true 时继续执行该语句块。</td></tr>
+</tbody></table>
 
+<div style="display:none" id="if">
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span> =<span class="string">&quot;ifFunction()&quot;</span> &gt;</span>点击这里<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;ifdemo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"><span class="keyword">function</span> <span class="title function_">ifFunction</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">var</span> time=<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getHours</span>(); <span class="keyword">var</span> x=<span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">if</span> (time&lt;<span class="number">20</span>)&#123; x=<span class="string">&quot;Good day&quot;</span>; &#125;</span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">else</span> &#123; x=<span class="string">&quot;Good evening&quot;</span>; &#125;</span></span><br><span class="line"><span class="language-javascript">	<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;ifdemo&quot;</span>).<span class="property">innerHTML</span>=x;</span></span><br><span class="line"><span class="language-javascript">&#125;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<button onclick="ifFunction()">点击这里</button>
+<p id="ifdemo"></p>
+<script>function ifFunction(){
+    var time=new Date().getHours(); var x="";
+    if (time<20){ x="Good day"; }
+    else { x="Good evening"; }
+    document.getElementById("ifdemo").innerHTML=x;
+}</script><input type="button" onclick="ifreDisplay()" value="返回"></div>
 
-<h3 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h3><p>JS文件(&lt;script&gt;)可以放在&lt;head&gt;,&lt;body&gt;,.js外部文件</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;p id&#x3D;&quot;id&quot;&gt;JavaScript基本结构&lt;&#x2F;p&gt;  &#x2F;&#x2F; 标记标签id
-&lt;script&gt;function myFunction()
-&#123;
-	x&#x3D;document.getElementById(&quot;id&quot;);  &#x2F;&#x2F; 获取到元素
-	x.innerHTML&#x3D;&quot;Hello JavaScript!&quot;;    &#x2F;&#x2F; 改变内容
-    x.style.color&#x3D;&quot;#ff0000&quot;;   &#x2F;&#x2F; 改变样式
-&#125;
-&lt;&#x2F;script&gt;
-&lt;button type&#x3D;&quot;button&quot; onclick&#x3D;&quot;myFunction()&quot;&gt;点击这里&lt;&#x2F;button&gt;</code></pre>
-<p id="id">JavaScript基本结构</p>  // 标记标签id
-<script>function myFunction()
-{
-    x=document.getElementById("id");  // 获取到元素
-    x.innerHTML="Hello JavaScript!";    // 改变内容
-    x.style.color="#ff0000";   // 改变样式
-}
+<div style="display:none" id="switch">
+<p>点击下面的按钮来显示今天是周几：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;switchFunction()&quot;</span>&gt;</span>点击这里<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;switchdemo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"><span class="keyword">function</span> <span class="title function_">switchFunction</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">var</span> x;	<span class="keyword">var</span> d=<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getDay</span>();</span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">switch</span> (d)</span></span><br><span class="line"><span class="language-javascript">	&#123;</span></span><br><span class="line"><span class="language-javascript">  		<span class="keyword">case</span> <span class="number">0</span>:x=<span class="string">&quot;今天是星期日&quot;</span>;    	<span class="keyword">break</span>;</span></span><br><span class="line"><span class="language-javascript"> 		<span class="keyword">case</span> <span class="number">1</span>:x=<span class="string">&quot;今天是星期一&quot;</span>;        <span class="keyword">break</span>;</span></span><br><span class="line"><span class="language-javascript">  		<span class="keyword">case</span> <span class="number">2</span>:x=<span class="string">&quot;今天是星期二&quot;</span>;        <span class="keyword">break</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">case</span> <span class="number">3</span>:x=<span class="string">&quot;今天是星期三&quot;</span>;   	 	<span class="keyword">break</span>;</span></span><br><span class="line"><span class="language-javascript">  		<span class="keyword">case</span> <span class="number">4</span>:x=<span class="string">&quot;今天是星期四&quot;</span>;    	<span class="keyword">break</span>;</span></span><br><span class="line"><span class="language-javascript">  		<span class="keyword">case</span> <span class="number">5</span>:x=<span class="string">&quot;今天是星期五&quot;</span>;        <span class="keyword">break</span>;</span></span><br><span class="line"><span class="language-javascript">  		<span class="keyword">case</span> <span class="number">6</span>:x=<span class="string">&quot;今天是星期六&quot;</span>;    	<span class="keyword">break</span>;</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">default</span>:x=<span class="string">&quot;x不在范围内，默认今天是星期天&quot;</span>;	<span class="comment">// default 关键词来规定匹配不存在时做的事情</span></span></span><br><span class="line"><span class="language-javascript"> 	&#125;</span></span><br><span class="line"><span class="language-javascript">	<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;switchdemo&quot;</span>).<span class="property">innerHTML</span>=x;</span></span><br><span class="line"><span class="language-javascript">&#125;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<button onclick="switchFunction()">点击这里</button>
+<p id="switchdemo"></p>
+<script>function switchFunction(){
+    var x;	var d=new Date().getDay();
+    switch (d)
+    {
+          case 0:x="今天是星期日";    	break;
+         case 1:x="今天是星期一";        break;
+          case 2:x="今天是星期二";        break;
+        case 3:x="今天是星期三";   	 	break;
+          case 4:x="今天是星期四";    	break;
+          case 5:x="今天是星期五";        break;
+          case 6:x="今天是星期六";    	break;
+        default:x="x不在范围内，默认今天是星期天";	// default 关键词来规定匹配不存在时做的事情
+     }
+    document.getElementById("switchdemo").innerHTML=x;
+}</script><input type="button" onclick="switchreDisplay()" value="返回"></div>
+
+<div style="display:none" id="for">
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">cars=[<span class="string">&quot;BMW&quot;</span>,<span class="string">&quot;Volvo&quot;</span>,<span class="string">&quot;Saab&quot;</span>,<span class="string">&quot;Ford&quot;</span>];</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;cars.<span class="property">length</span>;i++)&#123;</span></span><br><span class="line"><span class="language-javascript">	<span class="variable language_">document</span>.<span class="title function_">write</span>(cars[i] + <span class="string">&quot;&lt;br&gt;&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">&#125;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+for (var i=0;i<cars.length;i++){
+    document.write(cars[i] + "<br>");
+}</script><input type="button" onclick="forreDisplay()" value="返回"></div>
+
+<div style="display:none" id="while">
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">var</span> x=<span class="string">&quot;&quot;</span>,i=<span class="number">0</span>;</span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">while</span> (i&lt;<span class="number">5</span>)&#123;x=x+<span class="string">&quot;该数字为&quot;</span>+ i +<span class="string">&quot;&lt;br&gt;&quot;</span>;i++;&#125;</span></span><br><span class="line"><span class="language-javascript">	<span class="variable language_">document</span>.<span class="title function_">write</span>(x);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<script>
+    var x="",i=0;
+    while (i<5){x=x+"该数字为"+ i +"<br>";i++;}
+    document.write(x);
+</script><input type="button" onclick="whilereDisplay()" value="返回"></div>
+
+<script>
+    function ifDisplay(){document.getElementById("if").style.display="block";}
+    function ifreDisplay(){document.getElementById("if").style.display="none";}
+    function switchDisplay(){document.getElementById("switch").style.display="block";}
+    function switchreDisplay(){document.getElementById("switch").style.display="none";}
+    function forDisplay(){document.getElementById("for").style.display="block";}
+    function forreDisplay(){document.getElementById("for").style.display="none";}
+    function whileDisplay(){document.getElementById("while").style.display="block";}
+    function whilereDisplay(){document.getElementById("while").style.display="none";}
 </script>
-<button type="button" onclick="myFunction()">点击这里</button>
 
-<h3 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h3><blockquote>
-<p>对象{属性：xx，方法：function(){}}<br> 对象：大括号{firstName:”John”, lastName:”Doe”, age:50, eyeColor:”blue”}</p>
-</blockquote>
-<p>F12,Console 窗口调试 JavaScript 代码</p>
-<h3 id="语句标识符"><a href="#语句标识符" class="headerlink" title="语句标识符"></a>语句标识符</h3><blockquote>
-<p>break	用于跳出循环。<br>catch	语句块，在 try 语句块执行出错时执行 catch 语句块。<br>continue	跳过循环中的一个迭代。<br>do … while	执行一个语句块，在条件语句为 true 时继续执行该语句块。<br>for	在条件语句为 true 时，可以将代码块执行指定的次数。<br>for … in	用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。<br>function	定义一个函数<br>if … else	用于基于不同的条件来执行不同的动作。<br>return	退出函数<br>switch	用于基于不同的条件来执行不同的动作。<br>throw	抛出（生成）错误 。<br>try	实现错误处理，与 catch 一同使用。<br>var	声明一个变量。<br>while	当条件语句为 true 时，执行语句块。</p>
-</blockquote>
-<h3 id="JS内置函数"><a href="#JS内置函数" class="headerlink" title="JS内置函数"></a>JS内置函数</h3><pre class="line-numbers language-none"><code class="language-none">window.alert()      &#x2F;&#x2F;弹出警告框。
-document.write()    &#x2F;&#x2F;方法将内容写到 HTML 文档中。
-innerHTML&#x3D;&quot;&quot;           &#x2F;&#x2F;写入到 HTML 元素。
-console.log()       &#x2F;写入到浏览器的控制台。
-Date() &#x2F;&#x2F;日期</code></pre>
+<h3 id="JS内置函数"><a href="#JS内置函数" class="headerlink" title="JS内置函数"></a>JS内置函数</h3><p>一些常用的内置函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">alert</span>()      <span class="comment">//弹出警告框。</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>()    <span class="comment">//方法将内容写到 HTML 文档中。</span></span><br><span class="line">innerHTML=<span class="string">&quot;&quot;</span>        <span class="comment">//写入到 HTML 元素。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>()       <span class="comment">//写入到浏览器的控制台。</span></span><br><span class="line"><span class="title class_">Date</span>() 				<span class="comment">//日期</span></span><br><span class="line"><span class="keyword">typeof</span> style  	 	<span class="comment">// 返回变量类型</span></span><br><span class="line">style.<span class="property">color</span>=<span class="string">&quot;#ff0000&quot;</span>;   <span class="comment">// 改变样式  </span></span><br></pre></td></tr></table></figure>
 
+<h3 id="JS交互"><a href="#JS交互" class="headerlink" title="JS交互"></a>JS交互</h3><p>1、点击提交按钮，如果输入框是空的，浏览器会提示错误信息。</p>
+<form action="demo_form.php" method="post">
+  <input type="text" name="fname" required="required">
+  <input type="submit" value="提交">
+</form>
+
+<h3 id="JS调试"><a href="#JS调试" class="headerlink" title="JS调试"></a>JS调试</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">错误处理</span><br><span class="line"><span class="keyword">try</span> </span><br><span class="line">&#123;</span><br><span class="line">    ...    <span class="comment">//异常的抛出</span></span><br><span class="line">&#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">    ...    <span class="comment">//异常的捕获与处理</span></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    ...    <span class="comment">//结束处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>网页调试可以开开发者模式（或F12）,调出控制台“Console”输入JavaScript代码调试</p>
+<h3 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h3><p>1、对象：对象是变量的集合，包装了属性和方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title class_">Leon</span>=&#123;<span class="attr">firstName</span>:<span class="string">&quot;Leon&quot;</span>, <span class="attr">lastName</span>:<span class="string">&quot;Lin&quot;</span>, <span class="attr">age</span>:<span class="number">25</span>, <span class="attr">eyeColor</span>:<span class="string">&quot;black&quot;</span>,<span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;&#125; <span class="comment">//对象=&#123;属性，方法&#125;  </span></span><br></pre></td></tr></table></figure>
+<p>2、类型转换：Number() 转换为数字， String() 转换为字符串， Boolean() 转换为布尔值。<br>3、正则表达式： 可用于所有文本搜索和文本替换的操作</p>
+<!--
+<button onclick="this.innerHTML=Date()">现在的时间是?</button>
+<button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button><p id="demo"></p>-->
 
       
 
@@ -285,6 +340,17 @@ Date() &#x2F;&#x2F;日期</code></pre>
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -463,6 +529,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SOLIDWORKS</a>

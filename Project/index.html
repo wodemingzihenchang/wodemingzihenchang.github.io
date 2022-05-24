@@ -252,17 +252,7 @@
 </tr>
 </tbody></table>
 <h2 id="SOLIDWORKS-API功能"><a href="#SOLIDWORKS-API功能" class="headerlink" title="SOLIDWORKS API功能"></a>SOLIDWORKS API功能</h2><p>刚接触SOLIDWORKS API，使用的语言是C#。目前只是按照自己的需要实现了下面的几个功能，具体源码太乱，暂不公布。</p>
-<pre class="line-numbers language-none"><code class="language-none">public static string[] Addfiles()       &#x2F;&#x2F;添加多个文件，用以批量处理
-public static void Add_components       &#x2F;&#x2F;在打开的装配体内添加零件
-public static void Checkopen            &#x2F;&#x2F;获取自定义属性
-public static void GetProperties        &#x2F;&#x2F;获取自定义属性
-public static void TraverseComponent    &#x2F;&#x2F;获得装配体零件名+替换同名带零件
-public static void FreezeFeature        &#x2F;&#x2F;冻结特征
-public static void Makevirtual          &#x2F;&#x2F;虚拟化零部件
-public static void Output_multDrawing   &#x2F;&#x2F;一次性导出多种格式的图纸
-
-（需求更新中......）
-</code></pre>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span>[] <span class="title">Addfiles</span>()       <span class="comment">//添加多个文件，用以批量处理</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> Add_components       <span class="comment">//在打开的装配体内添加零件</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> Checkopen            <span class="comment">//获取自定义属性</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> GetProperties        <span class="comment">//获取自定义属性</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> TraverseComponent    <span class="comment">//获得装配体零件名+替换同名带零件</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> FreezeFeature        <span class="comment">//冻结特征</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> Makevirtual          <span class="comment">//虚拟化零部件</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> Output_multDrawing   <span class="comment">//一次性导出多种格式的图纸</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">（需求更新中......）</span></span><br><span class="line"><span class="function"></span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -438,6 +428,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SOLIDWORKS</a>
