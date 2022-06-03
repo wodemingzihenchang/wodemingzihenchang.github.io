@@ -15,11 +15,15 @@
 <meta property="og:site_name" content="littleboy">
 <meta property="og:description" content="SOLIDWORKS常见问题和解决方法汇总（点击问题可展开解决方法）">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wodemingzihenchang.github.io/post/SOLIDWORKS%20%E9%97%AE%E9%A2%98/Toolbox不是预期版本，更新数据库.png">
+<meta property="og:image" content="https://wodemingzihenchang.github.io/post/SOLIDWORKS%20%E9%97%AE%E9%A2%98/安装卸载程序信息注册表.png">
+<meta property="og:image" content="https://wodemingzihenchang.github.io/post/SOLIDWORKS%20%E9%97%AE%E9%A2%98/材质库报错0xc00ce557%20xml声明无效2.png">
 <meta property="article:published_time" content="2022-05-15T14:52:59.000Z">
-<meta property="article:modified_time" content="2022-06-01T07:41:00.966Z">
+<meta property="article:modified_time" content="2022-06-03T13:04:37.844Z">
 <meta property="article:author" content="littleboy">
 <meta property="article:tag" content="SOLIDWORKS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wodemingzihenchang.github.io/post/SOLIDWORKS%20%E9%97%AE%E9%A2%98/Toolbox不是预期版本，更新数据库.png">
   
     <link rel="alternative" href="/atom.xml" title="littleboy" type="application/atom+xml">
   
@@ -217,7 +221,7 @@
         <p>SOLIDWORKS常见问题和解决方法汇总（点击问题可展开解决方法）<span id="more"></span></p>
 <h3 id="安装-amp-卸载"><a href="#安装-amp-卸载" class="headerlink" title="安装&amp;卸载"></a>安装&amp;卸载</h3><p>Q:非正常卸载后，导致不能重新安装SW。需要检查和清理注册表</p>
 <p class="Question" onclick="elementDisplay('net3.5')">
-Q:.net framework 3.5 安装报错 0x800F0954(展开方法)</p>  
+Q:.net framework 3.5 安装报错 0x800F0954[展开方法]</p>  
 
 <div class="Answer" id="net3.5" style="display:none">
 1、打开注册表：HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU，
@@ -227,19 +231,136 @@ Q:.net framework 3.5 安装报错 0x800F0954(展开方法)</p>
 4、将第二步的修改还原注册表UseWUServer，并重启Windows Update service。<br></div>  
 
 <p class="Question" onclick="elementDisplay('dllerror')">
-Q:提示某XXX.dll文件报错，找不到等问题(展开方法)</p>
+Q:提示某XXX.dll文件报错，找不到等问题[展开方法]</p>
 
 <div class="Answer" id="dllerror" style="display:none">
-1、一般会是dll注册问题，或是文件丢失。
-2、将正常文件复制到C:\Windows\System32
-3、在上述文件夹位置用管理员启动cmd，使用regsvr32 注册.dll文件。
+1、一般会是dll注册问题，或是文件丢失。<br>
+2、将正常文件复制到C:\Windows\System32<br>
+3、在上述文件夹位置用管理员启动cmd，使用regsvr32 注册.dll文件。<br>
 </div>  
 
-<h3 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h3><h3 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h3><h3 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h3><h3 id="选项设置"><a href="#选项设置" class="headerlink" title="选项设置"></a>选项设置</h3><p>Q:钣金焊件的切割清单显示的实体（或基体），导致找不到其钣金或焊件属性</p>
-<div id="dllerror" style="display:none">
+<p class="Question" onclick="elementDisplay('Q4')">
+Q:此SOLIDWORKS版本尚未被适当当地授权，请联系您的供应商。[展开方法]</p>
+
+<div class="Answer" id="Q4" style="display:none">
+1、一般会是安装盗版插件时序列号被更改导致（已发现GearTax插件会出现此问题）。  <br> 
+2、进入注册表路径位置“计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Licenses\Serial Numbers”   <br>
+3、将SolidWorks序列号改回正版序列号即可。  <br>
+</div>  
+
+<p class="Question" onclick="elementDisplay('Q5')">
+Q:Toolbox不是预期版本[展开方法]</p>
+
+<div class="Answer" id="Q5" style="display:none">
+1、打开SOLIDWORKS安装文件夹位置：“X:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\Toolbox\data utilities<br>
+2、右键“UpdateBrowserDatabase.exe”并选择以管理员身份运行<br>
+3、打开更新Toolbox数据库对话,如下图单击“...”按钮，打开浏览对话框，寻找通常位于“..\SOLIDWORKS Data\lang\english”中的文件“swbrowser.sldedb”。开始更新，请单击“更新”按钮。<br>
+<img src="/post/SOLIDWORKS%20%E9%97%AE%E9%A2%98/Toolbox不是预期版本，更新数据库.png"><br>
+</div>  
+
+<p class="Question" onclick="elementDisplay('Q6')">
+Q:Solidworks安装文件夹被删了,控制面板无卸载程序[展开方法]</p>
+
+<div class="Answer" id="Q6" style="display:none">
+1、安装卸载程序信息注册表：计算机\HKEY_CLASSES_ROOT\SOLIDWORKS Installation Manager\SolidWorks Installation Manager 20xx0-40500-1100-100<br>
+<img src="/post/SOLIDWORKS%20%E9%97%AE%E9%A2%98/安装卸载程序信息注册表.png"><br>
+</div>  
+
+
+<h3 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h3><p class="Question" onclick="elementDisplay('partQ1')">
+Q:钣金焊件的切割清单显示的实体（或基体），导致找不到其钣金或焊件属性[展开方法]</p>
+
+<div class="Answer" id="partQ1" style="display:none">
 A:钣金>>开启自动更新切割清单>>重建</div>
 
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>Q:不能加载VBE6EXT.OLB<br>将“VBE6EXT.OLB”文件复制到C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA6</p>
+<p class="Question" onclick="elementDisplay('partQ2')">
+Q:材质库报错0xc00ce557 xml声明无效[展开方法]</p>
+
+<div class="Answer" id="partQ2" style="display:none">
+1、检查“文件位置”所在路径的“自定义材质.sldmat”是否正常。<br>
+2、右键.sldmat文件，用（可支持utf-8格式）浏览器打开。下图展示了问题模板的内容格式和正常模板的内容格式。<br>
+3、	在“选项>>系统选项>>文件位置”删除有问题的自定义材质路径。可以避免每次打开材料编辑的错误弹窗提示。<br>
+4、	找到正常的自定义材质.sldmat文件替换。<br>
+<img src="/post/SOLIDWORKS%20%E9%97%AE%E9%A2%98/材质库报错0xc00ce557 xml声明无效2.png"><br>
+</div>
+
+
+<h3 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h3><p class="Question" onclick="elementDisplay('asmQ1')">
+Q:eDrawings装配体树显示为序列号(assempart*)[展开方法]</p>
+
+<div class="Answer" id="asmQ1" style="display:none">
+根本原因是组件的文件名包含双字节字符，如中文和日文。  <br>
+解决方法:在eDrawings中打开SOLIDWORKS文件，然后保存为eDrawings文件。   <br>
+</div> 
+
+<p class="Question" onclick="elementDisplay('asmQ2')">
+Q:不相符的零部件内部ID[展开方法]</p>
+
+<div class="Answer" id="asmQ2" style="display:none">
+外部ID是零部件的文件名。<br>
+内部ID是自动为零部件分配唯一的内部ID。软件使用这两个 ID 来区分具有相同外部 ID 的文件。内部 ID 对用户不可见，因此无法确定该 ID 值。 <br>
+</div> 
+
+
+
+<h3 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h3><p class="Question" onclick="elementDisplay('drawQ1')">
+Q:SW工程图转其他图纸格式后，出现字体或尺寸大小不一致的问题[展开方法]</p>
+
+<div class="Answer" id="drawQ1" style="display:none">
+ “文档属性”>>“出详图”>>勾选“始终以相同大小显示文字”
+</div> 
+
+
+
+<h3 id="选项设置"><a href="#选项设置" class="headerlink" title="选项设置"></a>选项设置</h3><p class="Question" onclick="elementDisplay('SetQ1')">
+Q:软件显示英文界面问题[展开方法]</p>
+
+<div class="Answer" id="SetQ1" style="display:none">
+1、一般是设置或安装中文包问题  <br>
+2、设置问题，需在选项那里Use English menu勾选去掉了。   <br>
+3、安装问题，需在“..\SolidWorks安装包\swwi\lang\chinese-simplified”内，启动chinese-simplified.msi安装中文包。  <br>
+</div> 
+
+<p class="Question" onclick="elementDisplay('SetQ2')">
+Q:装配体图形区域的左下角坐标轴（参考三重轴）消失了[展开方法]</p>
+
+<div class="Answer" id="SetQ2" style="display:none">
+1、在【选项】-【系统选项】-【显示】-【显示参考三重轴】。
+</div> 
+
+
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p class="Question" onclick="elementDisplay('otherQ1')">
+Q:不能加载VBE6EXT.OLB[展开方法]</p>
+
+<div class="Answer" id="otherQ1" style="display:none">
+ 将“VBE6EXT.OLB”文件复制到C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA6
+</div> 
+
+<p class="Question" onclick="elementDisplay('otherQ2')">
+Q:在PDM的资源管理器，点击PDF会自动打开[展开方法]</p>
+
+<div class="Answer" id="otherQ2" style="display:none">
+1、这是PDM在PDF查看器的选择问题。   <br>
+2、进入注册表：计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\FileFormats\.pdf。把“InsoPlugin.dll”置顶  <br>
+</div> 
+
+<p class="Question" onclick="elementDisplay('otherQ3')">
+Q:右键没出现包括“打包”、“重命名”、“替换”和“移动”的SOLIDWORKS菜单[展开方法]</p>
+
+<div class="Answer" id="otherQ3" style="display:none">
+1、如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件，或者其配置不正确，则会出现此情况。<br> 
+2、方法1：修复您的 SOLIDWORKS 安装。  <br>
+3、方法2：重新注册以下 DLL 文件：  <br>
+C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils14u.dll(SOLIDWORKS 2018-2020)   <br>
+C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils11u.dll(SOLIDWORKS 2015-2017)   <br>
+注册 DLL 文件：    <br>
+1.以管理员身份打开 Windows 命令提示符。  <br>
+2.在命令提示符中输入：cd [DLL 路径]  <br>
+3.接着输入：regsvr32 nameofdll.dll  <br>
+</div> 
+
+
 <!--控制内容展开和收起-->
 <script type="text/javascript">
 function elementDisplay(id){
@@ -248,9 +369,9 @@ function elementDisplay(id){
 }</script>
 
 <style>
-.Question{background-color: #F7F7FF; border-bottom: 1px solid #D5D5D3;}   
+.Question{}   
 .Answer{background-color: #EFEFF7; border-bottom: 1px solid #C8CDDE;    }
-</style>>
+</style>
 
       
 
