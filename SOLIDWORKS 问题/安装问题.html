@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://wodemingzihenchang.github.io">
   <title>安装问题 | littleboy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题描述安装问题 解决方法原因：。1、	 卸载Solidworks安装文件夹被删了,控制面板无卸载程序 1、安装卸载程序信息注册表：计算机\HKEY_CLASSES_ROOT\SOLIDWORKS Installation Manager\SolidWorks Installation Manager 20xx0-40500-1100-100">
+  <meta name="description" content="问题描述安装问题 解决方法原因：。1、	 卸载Solidworks安装文件夹被删了,控制面板无卸载程序 1、安装卸载程序信息注册表：计算机\HKEY_CLASSES_ROOT\SOLIDWORKS Installation Manager\SolidWorks Installation Manager 20xx0-40500-1100-100 Q：安装失败，提示：Register_DocMgrDL">
 <meta property="og:type" content="website">
 <meta property="og:title" content="安装问题">
 <meta property="og:url" content="https://wodemingzihenchang.github.io/SOLIDWORKS%20%E9%97%AE%E9%A2%98/%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98.html">
 <meta property="og:site_name" content="littleboy">
-<meta property="og:description" content="问题描述安装问题 解决方法原因：。1、	 卸载Solidworks安装文件夹被删了,控制面板无卸载程序 1、安装卸载程序信息注册表：计算机\HKEY_CLASSES_ROOT\SOLIDWORKS Installation Manager\SolidWorks Installation Manager 20xx0-40500-1100-100">
+<meta property="og:description" content="问题描述安装问题 解决方法原因：。1、	 卸载Solidworks安装文件夹被删了,控制面板无卸载程序 1、安装卸载程序信息注册表：计算机\HKEY_CLASSES_ROOT\SOLIDWORKS Installation Manager\SolidWorks Installation Manager 20xx0-40500-1100-100 Q：安装失败，提示：Register_DocMgrDL">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wodemingzihenchang.github.io/SOLIDWORKS%20%E9%97%AE%E9%A2%98/%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/#">
 <meta property="og:image" content="https://wodemingzihenchang.github.io/SOLIDWORKS%20%E9%97%AE%E9%A2%98/%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/安装卸载程序信息注册表.png">
 <meta property="og:image" content="https://wodemingzihenchang.github.io/SOLIDWORKS%20%E9%97%AE%E9%A2%98/%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/#">
 <meta property="article:published_time" content="2022-06-18T14:12:59.000Z">
-<meta property="article:modified_time" content="2022-06-18T16:13:53.426Z">
+<meta property="article:modified_time" content="2022-07-01T04:02:09.635Z">
 <meta property="article:author" content="littleboy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wodemingzihenchang.github.io/SOLIDWORKS%20%E9%97%AE%E9%A2%98/%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/#">
@@ -203,6 +203,8 @@
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>原因：。<br>1、	</p>
 <h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><p>Solidworks安装文件夹被删了,控制面板无卸载程序</p>
 <p>1、安装卸载程序信息注册表：计算机\HKEY_CLASSES_ROOT\SOLIDWORKS Installation Manager\SolidWorks Installation Manager 20xx0-40500-1100-100<br><br><img src="/SOLIDWORKS%20%E9%97%AE%E9%A2%98/%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/安装卸载程序信息注册表.png"><br></p>
+<p>Q：安装失败，提示：Register_DocMgrDLL.A48C1CF2_EBF8_48E8_ACAD_68CA04F776A2<br>A：问题参考S-075133，是电脑缺少组件问题（Microsoft® Visual C++ 2015 Redistributable）。装回组件解决。</p>
+<p>（补充一点：该问题存在2015和2017组件是不能共存。建议是直接安装2015-2019的集合包，下载位置：<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-CN/cpp/windows/latest-supported-vc-redist?view=msvc-170%EF%BC%89">https://docs.microsoft.com/zh-CN/cpp/windows/latest-supported-vc-redist?view=msvc-170）</a></p>
 <img src="/SOLIDWORKS%20%E9%97%AE%E9%A2%98/%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/#">
 
       
