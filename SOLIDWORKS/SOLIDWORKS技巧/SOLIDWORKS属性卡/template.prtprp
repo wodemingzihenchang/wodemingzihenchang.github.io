@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CPTemplate>
+  <AppVersion>26</AppVersion>
+  <CPSheet>
+    <MessageBox>自定义属性的说明信息</MessageBox>
+    <GroupBox Label="组框1" PropName="组框4" DefaultState="Expanded">
+      <Control Label="文本框" PropName="文本框1" ApplyTo="Global" Type="TextBox" ReadOnly="False" DefaultValue="文本" Mode="Text" />
+      <Control Label="文本框" PropName="文本框2" ApplyTo="Global" Type="TextBox" ReadOnly="False" DefaultValue="SW-Material" Mode="SWProperty" />
+      <Control Label="列举" PropName="列举1" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="False">
+        <Data Path="" SourceType="List">
+          <Item>1</Item>
+          <Item>2</Item>
+          <Item>3</Item>
+          <Item>4</Item>
+        </Data>
+      </Control>
+      <Control Label="号数" PropName="号数1" ApplyTo="Global" Type="NumericCtrl" ReadOnly="False" DefaultValue="0" />
+      <Control Label="复选框" PropName="复选框1" ApplyTo="Global" Type="CheckBox" ReadOnly="False" DefaultValue="0" PropValueChecked="复选" PropValueUnchecked="消除复选">
+        <ChildControl PropName="组框2" Visibility="IsChecked=true" />
+      </Control>
+      <Control Label="单选钮" PropName="单选钮1" ApplyTo="Global" Type="RadioButton" ReadOnly="False">
+        <Data>
+          <Item Label="圆按钮1" PropValue="">
+            <ChildControl PropName="组框2" Visibility="IsChecked=true" />
+          </Item>
+          <Item Label="圆按钮2" PropValue="">
+            <ChildControl PropName="文本框15" Visibility="IsChecked=true" />
+          </Item>
+        </Data>
+      </Control>
+    </GroupBox>
+    <ListGroup Range="A1:C10" SheetIndex="1" Path="C:\ProgramData\SOLIDWORKS\SOLIDWORKS 2018\lang\Chinese-Simplified\机型分类.xlsx" SourceType="Excel" Label="列表组" PropName="列表组20" DefaultState="Expanded">
+      <Control Label="列举" PropName="列举21" ApplyTo="Global" Type="ComboBox" ReadOnly="False">
+        <Data Column="A" />
+      </Control>
+      <Control Label="列举" PropName="列举22" ApplyTo="Global" Type="ComboBox" ReadOnly="False">
+        <Data Column="B" />
+      </Control>
+      <Control Label="列举" PropName="列举23" ApplyTo="Global" Type="ComboBox" ReadOnly="False">
+        <Data Column="C" />
+      </Control>
+    </ListGroup>
+    <GroupBox Label="组框2" PropName="组框2" DefaultState="Expanded">
+      <Control Label="文本框" PropName="文本框15" ApplyTo="Global" Type="TextBox" ReadOnly="False" DefaultValue="" Mode="Text" />
+    </GroupBox>
+  </CPSheet>
+</CPTemplate>
