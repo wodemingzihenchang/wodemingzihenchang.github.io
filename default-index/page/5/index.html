@@ -156,6 +156,377 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-SOLIDWORKS/SOLIDWORKS问题/【PDM】-点击PDF自动打开" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%90PDM%E3%80%91-%E7%82%B9%E5%87%BBPDF%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80.html">【PDM】-  解决单击PDf直接打开的问题</a>
+    </h1>
+  
+
+        
+        <a href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%90PDM%E3%80%91-%E7%82%B9%E5%87%BBPDF%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80.html" class="archive-article-date">
+  	<time datetime="2022-07-29T08:52:39.164Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-29</time>
+</a>
+        
+      </header>
+    
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在PDM的资源管理器，点击PDF会自动打开（而不是在PDM窗口预览）。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>原因：在安装PDF阅读器时，PDM自带的阅读器被修改。PDM在PDF查看器的选择问题。<br></p>
+<p>1、按“win+R”输入“regedit”打开注册表。<br><img src="https://s1.ax1x.com/2022/09/06/v7T5WR.png"><br><br>2、进入注册表：计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\FileFormats.pdf。把“InsoPlugin.dll”置顶<br><br><img src="https://s1.ax1x.com/2022/09/06/v7TxfA.jpg"><br><br>3、重启“Windows资源管理器”（也就是explorer.exe）。在任务管理器-》Windows进程-》Windows资源管理器-》右键重新启动，完成。<br><br>注意：任务管理器要往下拉到进程项（不是最开始显示的应用项）<br><br><img src="https://s1.ax1x.com/2022/09/06/v7HGb8.png"><br></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%90PDM%E3%80%91-%E7%82%B9%E5%87%BBPDF%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SOLIDWORKS/SOLIDWORKS问题/【4组件】-不能加载VBE6EXT.OLB" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E7%BB%84%E4%BB%B6%E3%80%91-%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDVBE6EXT.OLB.html">问题</a>
+    </h1>
+  
+
+        
+        <a href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E7%BB%84%E4%BB%B6%E3%80%91-%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDVBE6EXT.OLB.html" class="archive-article-date">
+  	<time datetime="2022-07-29T08:52:38.583Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-29</time>
+</a>
+        
+      </header>
+    
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>不能加载VBE6EXT.OLB</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>将“VBE6EXT.OLB”文件复制到C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA6</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E7%BB%84%E4%BB%B6%E3%80%91-%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDVBE6EXT.OLB.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SOLIDWORKS/SOLIDWORKS问题/【4组件】-右键没出现“重命名”SOLIDWORKS菜单" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E7%BB%84%E4%BB%B6%E3%80%91-%E5%8F%B3%E9%94%AE%E6%B2%A1%E5%87%BA%E7%8E%B0%E2%80%9C%E9%87%8D%E5%91%BD%E5%90%8D%E2%80%9DSOLIDWORKS%E8%8F%9C%E5%8D%95.html">问题</a>
+    </h1>
+  
+
+        
+        <a href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E7%BB%84%E4%BB%B6%E3%80%91-%E5%8F%B3%E9%94%AE%E6%B2%A1%E5%87%BA%E7%8E%B0%E2%80%9C%E9%87%8D%E5%91%BD%E5%90%8D%E2%80%9DSOLIDWORKS%E8%8F%9C%E5%8D%95.html" class="archive-article-date">
+  	<time datetime="2022-07-29T08:52:37.383Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-29</time>
+</a>
+        
+      </header>
+    
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>右键没出现包括“打包”、“重命名”、“替换”和“移动”的SOLIDWORKS菜单</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>原因：1、如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件，或者其配置不正确，则会出现此情况。<br>  </p>
+<h3 id="方法1："><a href="#方法1：" class="headerlink" title="方法1："></a>方法1：</h3><p>修复您的 SOLIDWORKS 安装,一般DLL就能打上去。  <br></p>
+<h3 id="方法2："><a href="#方法2：" class="headerlink" title="方法2："></a>方法2：</h3><ol>
+<li>手动重新注册以下DLL文件：将正常文件复制到如下位置：<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:<span class="string">\Program</span> Files<span class="string">\Common</span> Files<span class="string">\SOLIDWORKS</span> Shared<span class="string">\sldshellutils14u.dll(SOLIDWORKS</span> <span class="number">2018</span>-<span class="number">2020</span>是这个dll)   &lt;br&gt;</span><br><span class="line">C:<span class="string">\Program</span> Files<span class="string">\Common</span> Files<span class="string">\SOLIDWORKS</span> Shared<span class="string">\sldshellutils11u.dll(SOLIDWORKS</span> <span class="number">2015</span>-<span class="number">2017</span>是这个dll)   &lt;br&gt;</span><br></pre></td></tr></table></figure></li>
+<li>用管理员启动cmd，cd到在上述文件夹位置，使用regsvr32 注册.dll文件。<br><br><img src="【组件】\cmd.png" ><br><br><img src="【组件】\regsvr32.png" ><br></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E7%BB%84%E4%BB%B6%E3%80%91-%E5%8F%B3%E9%94%AE%E6%B2%A1%E5%87%BA%E7%8E%B0%E2%80%9C%E9%87%8D%E5%91%BD%E5%90%8D%E2%80%9DSOLIDWORKS%E8%8F%9C%E5%8D%95.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SOLIDWORKS/SOLIDWORKS技巧/【2设置】-SOLIDWORKS优化设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/%E3%80%902%E8%AE%BE%E7%BD%AE%E3%80%91-SOLIDWORKS%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE.html">SOLIDWORKS优化设置</a>
+    </h1>
+  
+
+        
+        <a href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/%E3%80%902%E8%AE%BE%E7%BD%AE%E3%80%91-SOLIDWORKS%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE.html" class="archive-article-date">
+  	<time datetime="2022-07-28T09:28:11.510Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-28</time>
+</a>
+        
+      </header>
+    
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>SOLIDWORKS 优化设置</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SOLIDWORKS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/%E3%80%902%E8%AE%BE%E7%BD%AE%E3%80%91-SOLIDWORKS%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SOLIDWORKS/SOLIDWORKS教程/SOLIDWORKS-DriverWorksXpress" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E6%95%99%E7%A8%8B/SOLIDWORKS-DriverWorksXpress.html">SOLIDWORKS-DriverWorksXpress</a>
+    </h1>
+  
+
+        
+        <a href="/SOLIDWORKS/SOLIDWORKS%E6%95%99%E7%A8%8B/SOLIDWORKS-DriverWorksXpress.html" class="archive-article-date">
+  	<time datetime="2022-07-20T03:13:47.687Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-20</time>
+</a>
+        
+      </header>
+    
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用 DriveWorksXpress 实现参数化设计，只进行一次设计工作，识别出关键变量和其相互关系并设计表单来收集所需数据。通过指定新模型的特征和变量参数，软件自动生成新模型。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SOLIDWORKS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E6%95%99%E7%A8%8B/SOLIDWORKS-DriverWorksXpress.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-机械设计/常用焊接工艺" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -566,435 +937,9 @@
 
 
   
-    <article id="post-SOLIDWORKS/SOLIDWORKS技巧/【1模板】-SOLIDWORKS定制文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/%E3%80%901%E6%A8%A1%E6%9D%BF%E3%80%91-SOLIDWORKS%E5%AE%9A%E5%88%B6%E6%96%87%E4%BB%B6.html">SOLIDWORKS技巧-定制文件</a>
-    </h1>
-  
-
-        
-        <a href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/%E3%80%901%E6%A8%A1%E6%9D%BF%E3%80%91-SOLIDWORKS%E5%AE%9A%E5%88%B6%E6%96%87%E4%BB%B6.html" class="archive-article-date">
-  	<time datetime="2022-06-22T07:49:37.738Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-22</time>
-</a>
-        
-      </header>
-    
-
-<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>SOLIDWORKS lang文件夹包含多个SW的定制文件，可对SW软件的部分样式进行定制：</p>
-<blockquote>
-<p>定制文件位置：..\SOLIDWORKS\lang\chinese-simplified\</p>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SOLIDWORKS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/%E3%80%901%E6%A8%A1%E6%9D%BF%E3%80%91-SOLIDWORKS%E5%AE%9A%E5%88%B6%E6%96%87%E4%BB%B6.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SOLIDWORKS/SOLIDWORKS技巧/SOLIDWORKS技巧-干涉检查" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/SOLIDWORKS%E6%8A%80%E5%B7%A7-%E5%B9%B2%E6%B6%89%E6%A3%80%E6%9F%A5.html">SOLIDWORKS技巧-干涉检查</a>
-    </h1>
-  
-
-        
-        <a href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/SOLIDWORKS%E6%8A%80%E5%B7%A7-%E5%B9%B2%E6%B6%89%E6%A3%80%E6%9F%A5.html" class="archive-article-date">
-  	<time datetime="2022-06-22T03:33:08.702Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-22</time>
-</a>
-        
-      </header>
-    
-
-<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>SOLIDWORKS软件针对干涉检查提供了全方位的功能，无论是在装配体还是零部件在静态、动态的环境下都可以快速的进行干涉检查且立即以警示窗口提示将面临的干涉部位，进而快速修正或排除此干涉现象。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SOLIDWORKS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E6%8A%80%E5%B7%A7/SOLIDWORKS%E6%8A%80%E5%B7%A7-%E5%B9%B2%E6%B6%89%E6%A3%80%E6%9F%A5.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SOLIDWORKS/SOLIDWORKS问题/【4设置】-SW提示内存不足问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-SW%E6%8F%90%E7%A4%BA%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3%E9%97%AE%E9%A2%98.html">SW提示内存不足问题</a>
-    </h1>
-  
-
-        
-        <a href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-SW%E6%8F%90%E7%A4%BA%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3%E9%97%AE%E9%A2%98.html" class="archive-article-date">
-  	<time datetime="2022-06-22T03:12:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-22</time>
-</a>
-        
-      </header>
-    
-
-<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h2><p>“SOLIDWORKS资源监控器”检测 “内存使用”限制超过 78% 时，将显示一系列警告。</p>
-<p>SOLIDWORKS 资源监控器：用于监视您的 SOLIDWORKS 软件或您的系统所使用的资源。 当您运行的资源不足时，SOLIDWORKS 资源监控器在 Windows 任务栏的通知区域中提供信息，帮助您采取适当行动以避免系统故障或丢失数据。</p>
-<p>“内存使用”：是系统提供或预留给 SOLIDWORKS 以及任何其他运行在计算机上的进程的内存量。操作系统将建立“内存使用”的限制，即物理随机存储器 (RAM) 的内存加上您的虚拟内存（分页内存）大小。（例如：计算机有 32 GB 的 RAM，分页文件的大小是 8 GB，那么“内存使用”限制为 40 GB）</p>
-<p>即：内存使用&#x3D;物理内存+虚拟内存  </p>
-<h2 id="方法：内存不足警告时，可以采取以下两个步骤帮助管理这种情况。"><a href="#方法：内存不足警告时，可以采取以下两个步骤帮助管理这种情况。" class="headerlink" title="方法：内存不足警告时，可以采取以下两个步骤帮助管理这种情况。"></a>方法：内存不足警告时，可以采取以下两个步骤帮助管理这种情况。</h2><p>步骤1：设置虚拟内存。验证分页文件大小配置。建议使用“系统自动分配大小”。</p>
-<p>要验证您的分页文件大小，请执行以下步骤：</p>
-<p>1.转至“控制面板”&gt;“系统”。<br><br>2.单击“高级系统设置”。<br><br>3.在“性能”组中，单击“设置”。<br><br>4.单击“高级”选项卡。<br><br>5.在“虚拟内存”组中，单击“更改”。<br><br>6.确保“系统自动分配大小”选项至少在一个驱动器上处于激活状态。<br></p>
-<p>通过分页文件确保操作系统和其他进程有更多的可用内存。（例如，如果您没有分页文件，那么操作系统就不得不将物理内存提供给运行的进程。在您的计算机上可能有一个需要 2 GB 内存的进程，但仅使用了 500 MB。这意味着操作系统要强制预留 2 GB 的物理内存，不得由其他进程使用，而其中有 1.5 GB 物理内存未被激活使用。）</p>
-<p>步骤2：排除是确定哪个进程消耗的提交内存最多，请按照以下步骤操作：</p>
-<p>1.按下 Ctrl + Alt + Delete 并启动 Windows®“任务管理器”。<br><br>2.单击“性能”选项卡，然后单击“打开资源监视器”。<br><br>3.单击“兼容性”选项卡。<br><br>4.单击“提交 (KB)”列标题按降序排列。消耗提交内存最多的进程会显示在最顶部。<br></p>
-<p>利用该信息了解和调查管理消耗最多提交内存的进程的必要步骤。您可以尝试结束那些不需要的进程。 <br><br>如果进程是基本进程，则调查其占用太多提交内存的原因。<br></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SOLIDWORKS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-SW%E6%8F%90%E7%A4%BA%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3%E9%97%AE%E9%A2%98.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SOLIDWORKS/SOLIDWORKS问题/【4设置】-solidworks启动问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-solidworks%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98.html">solidworks启动慢的原因在这里</a>
-    </h1>
-  
-
-        
-        <a href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-solidworks%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98.html" class="archive-article-date">
-  	<time datetime="2022-06-22T03:12:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-22</time>
-</a>
-        
-      </header>
-    
-
-<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>solidworks启动慢的原因&amp;可能出现的问题：一般打开SOLIDWORKS会经历这几个过程：  </p>
-<blockquote>
-<ol>
-<li>加载注册表</li>
-<li>验证许可证</li>
-<li>加载用户界面零部件</li>
-<li>初始化VBA引擎</li>
-<li>加载任务窗格</li>
-<li>初始化.NET 环境</li>
-<li>启动SOLIDWORKS</li>
-<li>正在加载插件</li>
-</ol>
-</blockquote>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>我们可以先留意下在哪个过程中用的时间最多，然后对应下面的解决方案进行优化：</p>
-<p>1、加载注册表</p>
-<p>赋予管理员权限，或者以管理员的账户登录系统</p>
-<p>2、验证许可证</p>
-<p>单机&amp;网络：对“C:\ProgramData\FLEXnet”这个文件夹重命名(需要重新激活软件)</p>
-<p>网络版：还可以可对比借出和联网速度差异。同时使用无线和有线网络可能对验证许可证的速度有影响。</p>
-<p>3、初始化VBA引擎、初始化.NET环境</p>
-<p>将安装文件夹中“PreReqs“文件夹中的必备组件重新安装,如“SOLIDWORKS 2018 SP02\PreReqs”对比重新安装没有效果。</p>
-<p>4、加载插件</p>
-<p>打开SOLIDWORKS后，可在插件窗口查看哪个插件加载时间过长，可暂时去除勾选，在需要使用时再加载插件，对于不必要的插件可以取消启动勾选。</p>
-<img src="#" >
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-solidworks%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SOLIDWORKS/SOLIDWORKS问题/【4设置】-保存&amp;恢复设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-%E4%BF%9D%E5%AD%98&%E6%81%A2%E5%A4%8D%E8%AE%BE%E7%BD%AE.html">【4设置】-保存&amp;恢复设置</a>
-    </h1>
-  
-
-        
-        <a href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-%E4%BF%9D%E5%AD%98&%E6%81%A2%E5%A4%8D%E8%AE%BE%E7%BD%AE.html" class="archive-article-date">
-  	<time datetime="2022-06-22T03:12:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-22</time>
-</a>
-        
-      </header>
-    
-
-<!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>当需要统一设置模板时或者快速备份恢复设置时使用。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1、 首先先在一电脑上做好 SW 的设置，然后在设置【保存&#x2F;恢复设置】保存出当前电脑的 SW 设置文件。<br><img src="【模板】\06-设置\保存&恢复设置\1.png" ></p>
-<img src="【模板】\06-设置\保存&恢复设置\2.png" >
-2、 找到保存出的设置文件（.sldreg），可将其发给同事电脑或是放在公共盘使用。
-
-<img src="【模板】\06-设置\保存&恢复设置\3.png" >
-3、 在未设置的电脑上，找到【保存/恢复设置】，在向导窗口选择“恢复设定”。按提示步骤完成即可。
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SOLIDWORKS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/SOLIDWORKS/SOLIDWORKS%E9%97%AE%E9%A2%98/%E3%80%904%E8%AE%BE%E7%BD%AE%E3%80%91-%E4%BF%9D%E5%AD%98&%E6%81%A2%E5%A4%8D%E8%AE%BE%E7%BD%AE.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/default-index/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/default-index/">1</a><span class="space">&hellip;</span><a class="page-number" href="/default-index/page/3/">3</a><a class="page-number" href="/default-index/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/default-index/page/6/">6</a><a class="page-number" href="/default-index/page/7/">7</a><a class="extend next" rel="next" href="/default-index/page/6/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/default-index/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/default-index/">1</a><span class="space">&hellip;</span><a class="page-number" href="/default-index/page/3/">3</a><a class="page-number" href="/default-index/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/default-index/page/6/">6</a><a class="page-number" href="/default-index/page/7/">7</a><a class="page-number" href="/default-index/page/8/">8</a><a class="extend next" rel="next" href="/default-index/page/6/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1089,11 +1034,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bat</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
