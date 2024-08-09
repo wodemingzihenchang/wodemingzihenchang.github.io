@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>OpenClipboard失败</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/OpenClipboard%E5%A4%B1%E8%B4%A5.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/OpenClipboard%E5%A4%B1%E8%B4%A5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="OpenClipboard失败"><a href="#OpenClipboard失败" class="headerlink" title="OpenClipboard失败"></a>OpenClipboard失败</h1><p>装配体插入零部件时提示：OpenClipboard 失败,(测试文本)</p><img src="OpenClipboard失败/OpenClipboard失败.png"><p>当我将组件插入装配体时，为什么会看到”OpenClipboard Failed”错误?</p><h2 id="方法1（带测试）软件冲突"><a href="#方法1（带测试）软件冲突" class="headerlink" title="方法1（带测试）软件冲突"></a>方法1（带测试）软件冲突</h2><p>据说和电脑其他程序冲突有关系。不过该提示关闭它即可，不影响软件使用</p><h2 id="方法2（带测试）"><a href="#方法2（带测试）" class="headerlink" title="方法2（带测试）"></a>方法2（带测试）</h2><p>此消息通常表示计算机上缺乏资源。请查阅以下资料:</p><p>1. 确保%temp%文件夹中有足够的空闲空间。</p><p>2. 确保%temp%文件夹具有适当的权限。</p><p>3. 请确保系统驱动器有足够的空闲磁盘空间。</p><p>此外，重新启动计算机也可能有助于解决此问题。</p><p>为什么从设计库插入零件时出现”OpenClipboard Failed”错误?</p><p>此错误通常表明存在资源问题。尝试以下方法来解决这个问题:</p><p>1. 收到错误后，重新启动计算机。</p><p>2. 确认有足够的可用硬盘空间。</p><p>3. 删除%temp%位置中的文件。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>3D数据解析错误</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E8%AE%BF%E9%97%AE%E6%97%B6%E5%8F%91%E7%94%9F%E6%9C%AA%E7%9F%A5%E9%94%99%E8%AF%AF.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E8%AE%BF%E9%97%AE%E6%97%B6%E5%8F%91%E7%94%9F%E6%9C%AA%E7%9F%A5%E9%94%99%E8%AF%AF.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="访问时发生未知错误"><a href="#访问时发生未知错误" class="headerlink" title="访问时发生未知错误"></a>访问时发生未知错误</h1><h2 id="情况1"><a href="#情况1" class="headerlink" title="情况1"></a>情况1</h2><p>在 SOLIDWORKS® 软件中删除零部件之后，如何解决错误“访问….时发生未知错误”？</p><p>ANSWER<br>在某些特定情况下，当装配体中的数据损坏或未正确对齐时，您可能会看到此消息。</p><p>恢复原始行为的一种可能方法如下所示：</p><p>1.转到“文件”&gt;“打开”。<br>2.选择装配体 &gt; 将“配置”字段更改为“ &lt;高级&gt; ”。<br>3.单击“打开”。<br>4.在“配置文档”对话框中，激活“仅显示装配体结构的新配置”选项 &gt; 键入名称 &gt;“确定”。装配体将打开，并且所有零部件均处于抑制状态。<br>5.使用其他名称保存装配体。<br>6.使用新配置打开新命名的装配体。<br>7.删除零部件，然后单击“全部保存”。<br>8.重新打开装配体并删除新配置。<br>9.保存项目。</p><p>另一个建议是更改配置顺序，如下所示：</p><p>1.打开“ConfigurationManager”。<br>2.将“树顺序”选项更改为“数字”。<br>3.右键单击配置 &gt;“重建所有配置”。<br>4.保存项目。</p><h2 id="情况2"><a href="#情况2" class="headerlink" title="情况2"></a>情况2</h2><p>删除特定零部件之后保存装配体时，如何解决错误“访问时发生未知错误”？<br>ANSWER<br>该装配体可能包含损坏的“镜向零部件”特征。要修复此类装配体，您必须识别并删除损坏的“镜向零部件”特征。有时需要删除多个甚至所有镜向特征。</p><p>如果在删除所有“镜向零部件”阵列后问题仍然可以重现，则请尝试以下工作流程：</p><p>1.创建新的装配体。<br>2.将有问题的装配体作为子装配体插入并将其解散。<br>3.删除所有需要的零部件并尝试保存文件。这应该可以解决问题。</p><h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>A.症状<br>在运行仿真时，出现以下错误且分析失败。“在访问 [驱动器盘符]:[Path]*.GEN 时发生未知错误”</p><p>C.原因</p><p>如果 SOLIDWORKS 文件或结果文件夹位于网络位置（网络文件夹）上，则会出现此情况。<br>与 SOLIDWORKS® 相比，如果文件存储在网络位置，SOLIDWORKS Simulation 必须进行大量数据处理并可能导致输出延迟或类似错误。<br>因此建议将 SOLIDWORKS Simulation 限制为仅用于本地计算机上的文件。</p><p>C.解决方案</p><p>1.检查文件是否位于网络驱动器上。如果是这种情况，请将它们移至本地驱动器上的文件夹。<br>2.在算例的“属性”中检查结果文件夹位置。如果该文件夹位于网络驱动器上，请将其更改为本地计算机上的文件夹。在运行之前，您必须验证所有已定义算例的结果文件夹位置。<br>3.再次运行算例。</p><p>这可避免因网络问题而引起的错误。</p><p>注意：较小的模型在通过网络驱动器运行时也许会正常工作，但在使用较大的模型时更有可能会出现问题。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文件右键功能问题</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E6%96%87%E4%BB%B6%E5%8F%B3%E9%94%AE%E5%8A%9F%E8%83%BD%E9%97%AE%E9%A2%98.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E6%96%87%E4%BB%B6%E5%8F%B3%E9%94%AE%E5%8A%9F%E8%83%BD%E9%97%AE%E9%A2%98.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="文件右键功能问题"><a href="#文件右键功能问题" class="headerlink" title="文件右键功能问题"></a>文件右键功能问题</h1><p>在 Windows® 文件资源管理器中右键单击 SOLIDWORKS 文件时，为什么不会出现包括“打包”、“重命名”、“替换”和“移动”的 SOLIDWORKS® 菜单？。</p><span id="more"></span><h2 id="方法-1：选项设置"><a href="#方法-1：选项设置" class="headerlink" title="方法 1：选项设置"></a>方法 1：选项设置</h2><p>右键单击并以管理员身份运行 SOLIDWORKS。转到“常规”选项卡，然后单击“<strong>恢复文件关联</strong>”</p><p>在 <strong>SOLIDWORKS 2019 及更早版本</strong>中，恢复文件关联”按钮位于“文件资源管理器”选项卡下。</p><p>在 <strong>SOLIDWORKS 2020 及更高版本</strong>中，恢复文件关联位于常规选项卡下。</p><img src="文件右键功能问题/选项设置.png"><h2 id="方法-2：启动程序"><a href="#方法-2：启动程序" class="headerlink" title="方法 2：启动程序"></a>方法 2：启动程序</h2><p>检查是否是“SOLIDWORKS Launcher”为默认打开程序。其他启动程序是没有右键功能的</p><img src="文件右键功能问题/启动程序.png"><h2 id="方法-2：安装修复"><a href="#方法-2：安装修复" class="headerlink" title="方法 2：安装修复"></a>方法 2：安装修复</h2><p>修复您的 SOLIDWORKS 安装。</p><h2 id="方法-3：手动注册"><a href="#方法-3：手动注册" class="headerlink" title="方法 3：手动注册"></a>方法 3：手动注册</h2><p>如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件或其版本不正确，则会出现此情况。可以重新注册以下 DLL 文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils14u.dll</span><br></pre></td></tr></table></figure><p> 1.以管理员身份打开 Windows 命令提示符。</p><img src="文件右键功能问题/image-20240716121209459.png"><p> 2.在命令提示符中输入：cd [DLL 路径]</p><img src="文件右键功能问题/image-20240716121252386.png"><p> 3.接着输入：regsvr32 sldshellutils14u.dll</p><img src="文件右键功能问题/image-20240716121327554.png">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>性能或崩溃问题一般处理方法</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E6%80%A7%E8%83%BD%E6%88%96%E5%B4%A9%E6%BA%83%E9%97%AE%E9%A2%98%E4%B8%80%E8%88%AC%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E6%80%A7%E8%83%BD%E6%88%96%E5%B4%A9%E6%BA%83%E9%97%AE%E9%A2%98%E4%B8%80%E8%88%AC%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="性能或崩溃问题一般处理方法"><a href="#性能或崩溃问题一般处理方法" class="headerlink" title="性能或崩溃问题一般处理方法"></a>性能或崩溃问题一般处理方法</h1><p>SOLIDWORKS 崩溃的一般处理方法流程：一般崩溃的问题来源有：【特定文件】【特定电脑】</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">异常问题检查--&gt;1其他电脑测试--正常--&gt;2检查电脑环境--&gt;加密/C盘权限/等</span><br><span class="line">1其他电脑测试--异常--&gt;检查其他SW文件--正常--&gt;特定文件问题</span><br><span class="line">检查其他SW文件--异常--&gt;3检查SW问题</span><br></pre></td></tr></table></figure><h2 id="方法1：其他电脑测试"><a href="#方法1：其他电脑测试" class="headerlink" title="方法1：其他电脑测试"></a>方法1：其他电脑测试</h2><p>检查电脑环境或 SW 问题：看其他同事是否能打开该问题零件：</p><p>a. 能，则按第 3 点检查 SW 问题操作；</p><p>b. 不能，则可能这个文件的确有问题；建议看看能不能把文件发我们检查；</p><h2 id="方法2：检查电脑环境"><a href="#方法2：检查电脑环境" class="headerlink" title="方法2：检查电脑环境"></a>方法2：检查电脑环境</h2><p>在【控制面板】-【系统和安全】-【安全和维护】-【可靠性监视程序】位置看下方关键事件关于 SW 的问题提示。 按照提示”查看技术详细信息”，看是否与某些组件或程序相关；从而进行下一步排除；<img src="性能或崩溃问题一般处理方法/image1.png" ></p><h2 id="方法3：检查-SW-问题"><a href="#方法3：检查-SW-问题" class="headerlink" title="方法3：检查 SW 问题"></a>方法3：检查 SW 问题</h2><p>在【开始&#x2F;菜单】-【SOLIDWORKS 工具 2022】-【SOLIDWORKS RX】打开RX工具。</p><p><img src="性能或崩溃问题一般处理方法/image2.png" ><br></p><p>1、在Rx程序的”问题捕捉”项（下图 2-标记 1），</p><p>2、选开始录制视频；按提示点击录制。录制内容：打开问题零件，复现操作崩溃的情况，等待一会后，使 SW 程序卡退</p><p>3、打包 RX 文件获得一份”压缩包”，发我们检查。（下图 2-标记 3）</p><img src="性能或崩溃问题一般处理方法/image3.png" ><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>还可能是其他原因或建议：</p><p>1、如果是单个用户电脑问题，可以尝试修复软件安装或重置注册表等操作。注册表操作建议是由熟悉操作的IT同事操作。</p><p>2、你还可以从崩溃界面里获得“审阅报告内容”，将其发给官方支持获得帮助。如果你来不及点击保存，可在如下位置找到日志文件。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\【用户名】\AppData\Local\SolidWorks\CXPA</span><br></pre></td></tr></table></figure><img src="性能或崩溃问题一般处理方法/RX崩溃报告.png" >]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>库无效</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E5%BA%93%E6%97%A0%E6%95%88.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E5%BA%93%E6%97%A0%E6%95%88.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="库无效"><a href="#库无效" class="headerlink" title="库无效"></a>库无效</h1><p>SOLIDWORKS Document Manager 库无效</p><img src="库无效/库无效.png"><p>如果位于 C:\Program Files\CommonFiles\SolidWorks Shared 的“SwDocumentMgr.dll”文件的版本不正确，则可能出现此错误。将计算机上出现此问题的版本和没有出现此问题的版本进行比较。<br>要查找版本，右键单击此文件，选择“属性”，然后转到版本选项卡。</p><span id="more"></span><h2 id="方法1安装SDK"><a href="#方法1安装SDK" class="headerlink" title="方法1安装SDK"></a>方法1安装SDK</h2><img src="库无效/image-20240506111452190.png"><h2 id="方法2：安装修复"><a href="#方法2：安装修复" class="headerlink" title="方法2：安装修复"></a>方法2：安装修复</h2><p>修复您的 SOLIDWORKS 安装。</p><h2 id="方法3：手动注册"><a href="#方法3：手动注册" class="headerlink" title="方法3：手动注册"></a>方法3：手动注册</h2><p>如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件或其版本不正确，则会出现此情况。可以重新注册以下 DLL 文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils14u.dll</span><br></pre></td></tr></table></figure><p> 1.以管理员身份打开 Windows 命令提示符。</p><p> 2.在命令提示符中输入：cd [DLL 路径]</p><p> 3.接着输入：regsvr32 sldshellutils14u.dll</p><h2 id="方法4：设置"><a href="#方法4：设置" class="headerlink" title="方法4：设置"></a>方法4：设置</h2><p>恢复文件关联</p><!-- 方法 1：如果版本不同，则将现有文件重命名为：old_SwDocumentMgr.dll。接着从计算机将没有此问题的版本复制到有问题的计算机，然后重试。 如果您在 2015 年 7 月 15 日之后执行升级或安装，最可能的原因是 Microsoft® 更新 KB 3072630（于 2015 年 7 月 15 日发布）导致的已知冲突。此更新更改了 Windows 安装程序。 https://support.microsoft.com/en-us/kb/3072630  要解决此问题，请在 IT 部门的协助下（若需要）尝试以下步骤：  独立安装： 1.单击“开始”->“运行”，在“打开”对话框中键入“regedit”，然后单击“确定”。 2.找到并单击以下注册表子项：HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer。 注意：如果该子项不存在，请创建它。 3.在“编辑”菜单中，转到“新建”，然后单击“DWORD 值”。 4.对于 DWORD 名称，请键入“RemappedElevatedProxiesPolicy”，然后按“Enter”。 5.右键单击“RemappedElevatedProxiesPolicy”，然后单击“修改”。6.在“值”数据框中键入“1”，然后单击“确定”。 7.运行“修复您的 SOLIDWORKS 安装 (S-050527)”。8.在应用程序安装成功后，将“RemappedElevatedProxiesPolicy”DWORD 重置为“0”，重新启用安全修补程序 KB 3072630。  管理映像安装： 1.从“程序和功能”中卸载 SOLIDWORKS。 2.单击“开始”->“运行”，在“打开”对话框中键入“regedit”，然后单击“确定”。 3.找到并单击以下注册表子项：HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer。 注意：如果该子项不存在，请创建它。 4.在“编辑”菜单中，转到“新建”，然后单击“DWORD 值”。 5.对于 DWORD 名称，请键入“RemappedElevatedProxiesPolicy”，然后按“Enter”。 6.右键单击“RemappedElevatedProxiesPolicy”，然后单击“修改”。 7.在“值”数据框中键入“1”，然后单击“确定”。 8.从管理映像安装 SOLIDWORKS。 9.在应用程序安装成功后，将“RemappedElevatedProxiesPolicy”DWORD 重置为“0”，重新启用安全修补程序 KB 3072630。  您可以使用随附的“RunBeforeRepair_disable_KB3072630.reg.txt”和“RunAfterRepair_enable_KB3072630.reg.txt”文件（删除文件名末尾的 .txt 并按此方法应用注册表项）。  SOLIDWORKS® 开发团队一直在与 Microsoft® 努力合作，以便在 SOLIDWORKS 2015 SP5 和 SOLIDWORKS 2016 SP0 及更高版本中解决此问题。如果您安装了旧版 SOLIDWORKS 软件，请卸载较旧的版本，然后安装更新的版本 -->]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>3D数据解析错误</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/3D%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E9%94%99%E8%AF%AF.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/3D%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E9%94%99%E8%AF%AF.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="3D数据解析错误"><a href="#3D数据解析错误" class="headerlink" title="3D数据解析错误"></a>3D数据解析错误</h1><p>3DPDF问题，配置文件损坏</p><p>使用以下方法之一： 生成新配置文件。关闭Adobe Acrobat Pro版本并重命名以下文件夹：</p><ul><li><em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>DC</em></em><em>到</em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>DC_OLD</em>**</li><li>如果可见，请将<em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>20XX</em></em><em>更改为</em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>20XX_OLD</em>**</li></ul><p>重新打开三维PDF文件以查看</p><img src="3D数据解析错误/出现3D数据解析错误.png">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E6%9B%B2%E9%9D%A2%E6%A8%A1%E5%9E%8B%E4%B8%8D%E6%98%BE%E7%A4%BA.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E6%9B%B2%E9%9D%A2%E6%A8%A1%E5%9E%8B%E4%B8%8D%E6%98%BE%E7%A4%BA.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="曲面模型不显示"><a href="#曲面模型不显示" class="headerlink" title="曲面模型不显示"></a>曲面模型不显示</h1><p>如果创建模型的绘图时混合了实体和曲面实体，则曲面不会自动显示在视图中。</p><p>可以在【插入-模型项目】选择“曲面参考几何”。来插入显示。</p><p><img src="/SOLIDWORKS-Solution/%E6%9B%B2%E9%9D%A2%E6%A8%A1%E5%9E%8B%E4%B8%8D%E6%98%BE%E7%A4%BA/image-20240627170811672.png" alt="image-20240627170811672"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E6%96%87%E4%BB%B6%E5%AD%98%E5%9C%A8%E4%B8%8D%E7%9B%B8%E7%AC%A6%E7%9A%84%E5%86%85%E9%83%A8ID.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E6%96%87%E4%BB%B6%E5%AD%98%E5%9C%A8%E4%B8%8D%E7%9B%B8%E7%AC%A6%E7%9A%84%E5%86%85%E9%83%A8ID.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="文件存在不相符的内部ID"><a href="#文件存在不相符的内部ID" class="headerlink" title="文件存在不相符的内部ID"></a>文件存在不相符的内部ID</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>当装配体中零件被同名替换后，就会出现该提示。常见于：你用其他同名新文件复制粘贴替换原文件时出现。</p><p><img src="/SOLIDWORKS-Solution/%E6%96%87%E4%BB%B6%E5%AD%98%E5%9C%A8%E4%B8%8D%E7%9B%B8%E7%AC%A6%E7%9A%84%E5%86%85%E9%83%A8ID/image-20240411115421895.png" alt="image-20240411115421895"></p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>目的是提醒我们是要找之前的零件，还是使用替换后的同名零件。<br>1、让我浏览原文件：如果原文件丢失则会以压缩方式打开；<br>2、仍使用该文件：使用新的同名文件替换打开；<br>3、为此文件打开：压缩问题文件打开</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>正在配置solidworks</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%AD%A3%E5%9C%A8%E9%85%8D%E7%BD%AEsolidworks.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%AD%A3%E5%9C%A8%E9%85%8D%E7%BD%AEsolidworks.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="正在配置solidworks"><a href="#正在配置solidworks" class="headerlink" title="正在配置solidworks"></a>正在配置solidworks</h1><p>打开SW程序，弹窗：Window:正在配置S0LIIORKS 20xx SP05，清稍等</p><img src="正在配置solidworks/Window正在配置.png"><h2 id="方法1：修改快捷方式"><a href="#方法1：修改快捷方式" class="headerlink" title="方法1：修改快捷方式"></a>方法1：修改快捷方式</h2><p>1、首先选择SOLIDWORKS的快捷方式鼠标右键选择属性可以看到SOLIDWORKS的安装目录。</p><p>2、进入SOLIDWORKS的安装目录，查找到sldProcMon.exe这个文件，将其删除。</p><p>3、找到SLDWORKS.exe选中它然后鼠标右键选择“发送到”-“桌面快捷方式”并删除原有的快捷方式图标。</p><p>4、点击新的SOLIDWORKS快捷方式重新启动。</p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><h2 id="情况1修改硬盘卷盘符"><a href="#情况1修改硬盘卷盘符" class="headerlink" title="情况1修改硬盘卷盘符"></a>情况1修改硬盘卷盘符</h2><p>在已经安装SW的电脑上，修改硬盘卷盘符时（例如：原本SW程序所在的D盘被修改成E盘），会因为当前位置和注册表SW安装信息IM的位置不一致，导致启动SW后会在原来D盘，重新配置安装，出现问题弹窗。</p><h2 id="情况2只对当前安装的产品有效"><a href="#情况2只对当前安装的产品有效" class="headerlink" title="情况2只对当前安装的产品有效"></a>情况2只对当前安装的产品有效</h2><p>出现在多版本使用时的问题，当我的启动操作使用了旧版本（卸载）的程序启动时，则会提示我们，当前“这个操作只对当前安装的产品有效”。</p><p>方法：右键SW文件，选择打开方式，修改设置默认打开方式。（注意，这里需要去浏览到对应的版本文件夹下，的swShellFileLauncher.exe文件进行打开）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="无法生成日志文件"><a href="#无法生成日志文件" class="headerlink" title="无法生成日志文件"></a>无法生成日志文件</h1><img src="无法生成日志文件/无法生成日志文件.png"><h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>“无法生成日志文件”这是在多开SW应用进程时，会出现的正常提示。可以忽略即可。</p><h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>退出SW软件多开的进程，退出SldWorks_fs程序（Solidworks Fast Start）。</p><img src="无法生成日志文件/image-20240417180749750.png"><p>来自 Solidworks 帮助：</p><p>为了更快地启动，SolidWorks 会在您启动计算机时开始在后台加载零部件。Solidworks 快速启动可能会稍微减慢您的 Windows 登录时间。</p><p>要关闭 SolidWorks 快速启动：</p><p>在 Windows 中，单击“开始”&gt;“所有程序”&gt;“启动”。<br>右键单击 SolidWorks 快速启动，然后单击删除。<br>出现对话框时，单击“是”。<br>您可以通过修复 SolidWorks 安装来恢复 SolidWorks 快速启动。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>只对当前安装的产品有效</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E5%8F%AA%E5%AF%B9%E5%BD%93%E5%89%8D%E5%AE%89%E8%A3%85%E7%9A%84%E4%BA%A7%E5%93%81%E6%9C%89%E6%95%88.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E5%8F%AA%E5%AF%B9%E5%BD%93%E5%89%8D%E5%AE%89%E8%A3%85%E7%9A%84%E4%BA%A7%E5%93%81%E6%9C%89%E6%95%88.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="只对当前安装的产品有效"><a href="#只对当前安装的产品有效" class="headerlink" title="只对当前安装的产品有效"></a>只对当前安装的产品有效</h1><p>出现在多版本使用时的问题，当我的启动操作使用了旧版本（卸载）的程序启动时，则会提示我们，当前“这个操作只对当前安装的产品有效”。</p><h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>右键SW文件，选择打开方式，修改设置默认打开方式。（注意，这里需要去浏览到对应的版本文件夹下，的swShellFileLauncher.exe文件进行打开）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/SOLIDWORKS-Solution/A/SOLIDWORKS-Q&amp;A.html"/>
+      <url>/SOLIDWORKS-Solution/A/SOLIDWORKS-Q&amp;A.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="SOLIDWORKS-Q-A"><a href="#SOLIDWORKS-Q-A" class="headerlink" title="SOLIDWORKS-Q&amp;A"></a>SOLIDWORKS-Q&amp;A</h1><p>Q2025新功能“使用书签保存检查文件 ”，如果没有3DE账号或角色。是否有效？</p><p>A</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>导出图片不显示</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E5%AF%BC%E5%87%BA%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E5%AF%BC%E5%87%BA%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="导出图片不显示"><a href="#导出图片不显示" class="headerlink" title="导出图片不显示"></a>导出图片不显示</h1><p>SOLIDWORKS工程图转DWG格式后，图片显示是图标？</p><img src="导出图片不显示/image-20240717161149234.png"><img src="导出图片不显示/image-20240717161854963.png"><span id="more"></span><h2 id="方法1：插入对象"><a href="#方法1：插入对象" class="headerlink" title="方法1：插入对象"></a>方法1：插入对象</h2><p>插入对象方式：<a href="https://www.bilibili.com/video/BV1E84y1v7U2">https://www.bilibili.com/video/BV1E84y1v7U2</a></p><img src="导出图片不显示/image-20240717162032683.png"><img src="导出图片不显示/image-20240717162115018.png"><h2 id="方法2：偶发情况"><a href="#方法2：偶发情况" class="headerlink" title="方法2：偶发情况"></a>方法2：偶发情况</h2><p>似乎CAD程序也有关系，有些电脑打开是正常。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>大型装配体保存失败</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E5%A4%A7%E5%9E%8B%E8%A3%85%E9%85%8D%E4%BD%93%E4%BF%9D%E5%AD%98%E5%A4%B1%E8%B4%A5.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E5%A4%A7%E5%9E%8B%E8%A3%85%E9%85%8D%E4%BD%93%E4%BF%9D%E5%AD%98%E5%A4%B1%E8%B4%A5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="大型装配体保存失败"><a href="#大型装配体保存失败" class="headerlink" title="大型装配体保存失败"></a>大型装配体保存失败</h1><img src="保存文档失败\1.png" ><span id="more"></span><h2 id="方法1大型设计审阅"><a href="#方法1大型设计审阅" class="headerlink" title="方法1大型设计审阅"></a>方法1大型设计审阅</h2><p>1、新建空白装配体文件，并保存关闭；</p><p>2、使用编辑模式的【大型设计审阅】打开刚才的空白装配体；</p><img src="大型装配体保存失败/image-20240516114255859.png" ><p>3、在装配体使用【插入零部件】将部件加载到装配体内，并做好配合</p><img src="大型装配体保存失败/image-20240516114459025.png" ><p>4、保存操作即可</p><h2 id="方法2Speedpak"><a href="#方法2Speedpak" class="headerlink" title="方法2Speedpak"></a>方法2Speedpak</h2><p>1、打开部件装配体</p><p>2、在装配体配置中【右键-创建Speedpak】，并选择保留的几何对象（可以是实体、面等），以便后续做配合选择使用。没有保留的部分，将保留视觉效果并不能被选择。</p><img src="大型装配体保存失败/image-20240516113849458.png" ><img src="大型装配体保存失败/image-20240516114017853.png" ><p>3、打开总装配体文件，操作【插入零部件】将前面的Speedpak部件插入总装文件中进行配合操作</p><img src="大型装配体保存失败/image-20240516114151240.png" ><p>4、保存操作即可</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>服务器出现意外情况</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E7%8E%B0%E6%84%8F%E5%A4%96%E6%83%85%E5%86%B5.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E7%8E%B0%E6%84%8F%E5%A4%96%E6%83%85%E5%86%B5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="服务器出现意外情况"><a href="#服务器出现意外情况" class="headerlink" title="服务器出现意外情况"></a>服务器出现意外情况</h1><p>另存为Excel时，服务器出现意外情况。多数可能于当前office版本于SW等程序的版本兼容问题。</p><span id="more"></span><h2 id="方法1：检查office程序"><a href="#方法1：检查office程序" class="headerlink" title="方法1：检查office程序"></a>方法1：检查office程序</h2><p>安装高版本office后装低版本，会有影响。建议是尝试修复office（或卸载重装）</p><h2 id="方法2：待确认"><a href="#方法2：待确认" class="headerlink" title="方法2：待确认"></a>方法2：待确认</h2><p>原因：Excel的com加载项启用影响。</p><p>方法：在【文件-选项-加载项-管理com加载项】-转到-取消可用加载项的勾选。取消或删除下图中不存在的加载项。重复问题操作验证。</p><img src="服务器出现意外情况/取消COM加载项.png">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>终点合并设置为更小</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E7%BB%88%E7%82%B9%E5%90%88%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%9B%B4%E5%B0%8F.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E7%BB%88%E7%82%B9%E5%90%88%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%9B%B4%E5%B0%8F.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="终点合并设置为更小"><a href="#终点合并设置为更小" class="headerlink" title="终点合并设置为更小"></a>终点合并设置为更小</h1><p>终点合并设置为 0.00001 或更小。由于该设置的精度，工程图几何图形的重新计算对于在导出文件中妥当的合并终点很有必要</p><img src="终点合并设置为更小/终点合并设置为更小.png"><span id="more"></span><h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>从DWG格式的文件导入SW时出现，然后于图形的<strong>“大小”</strong>和导入时<strong>“单位”</strong>有关系</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无法使用剖面线</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E5%89%96%E9%9D%A2%E7%BA%BF.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E5%89%96%E9%9D%A2%E7%BA%BF.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="无法使用剖面线"><a href="#无法使用剖面线" class="headerlink" title="无法使用剖面线"></a>无法使用剖面线</h1><p>无法使用剖面线</p><h2 id="情况1"><a href="#情况1" class="headerlink" title="情况1"></a>情况1</h2><p>剖切线与某个面刚好相切会导致如此，例如剖面线于孔相切，导致产生厚度为0的几何体错误。</p><p>方法：避免出现相切情况。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>装饰螺纹线无显示</title>
+      <link href="/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/sldedb%E5%88%9D%E5%A7%8B%E5%8C%96%E9%94%99%E8%AF%AF.html"/>
+      <url>/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/sldedb%E5%88%9D%E5%A7%8B%E5%8C%96%E9%94%99%E8%AF%AF.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="装饰螺纹线无显示"><a href="#装饰螺纹线无显示" class="headerlink" title="装饰螺纹线无显示"></a>装饰螺纹线无显示</h1><p>内存不足或尝试从标准文件”C:\…\HoleWizardFavorites.sldedb”初始化数据来源时发生其它错误</p><img src="sldedb初始化错误/image-20240711095013883.png"><h2 id="方法1：重置sldedb文件"><a href="#方法1：重置sldedb文件" class="headerlink" title="方法1：重置sldedb文件"></a>方法1：重置sldedb文件</h2><p>找到提示路径（C:\…\HoleWizardFavorites.sldedb）下的HoleWizardFavorites.mdb文件，把其删除，该功能正常使用</p><h2 id="方法2：确定版本"><a href="#方法2：确定版本" class="headerlink" title="方法2：确定版本"></a>方法2：确定版本</h2><p>在正常电脑的HoleWizardFavorites.mdb或.sldedb</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无法旋转模型</title>
+      <link href="/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E6%97%A0%E6%B3%95%E6%97%8B%E8%BD%AC%E6%A8%A1%E5%9E%8B.html"/>
+      <url>/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E6%97%A0%E6%B3%95%E6%97%8B%E8%BD%AC%E6%A8%A1%E5%9E%8B.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="无法旋转模型"><a href="#无法旋转模型" class="headerlink" title="无法旋转模型"></a>无法旋转模型</h1><p>无法旋转模型</p><h2 id="情况1：模型法向旋转"><a href="#情况1：模型法向旋转" class="headerlink" title="情况1：模型法向旋转"></a>情况1：模型法向旋转</h2><p>按住Alt键，再使用鼠标中键时，模型只在一个方向旋转。当前的旋转就是绕当前视图的法向旋转模型；</p><p>用鼠标中键选择“边线”或“面”，也可以实现绕所选择的边线或面的法线方向进行旋转</p><img src="无法旋转模型/法向旋转.gif"><h2 id="情况1：旋转会在卡住"><a href="#情况1：旋转会在卡住" class="headerlink" title="情况1：旋转会在卡住"></a>情况1：旋转会在卡住</h2><p>在某些角度旋转正常，但是在特定角度时，会变成情况1的视图法向旋转。该情况需要检查如图【旋转布景楼板】是否被勾选导致。</p><img src="无法旋转模型/旋转布景楼板.png">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>装饰螺纹线无显示</title>
+      <link href="/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E8%A3%85%E9%A5%B0%E8%9E%BA%E7%BA%B9%E7%BA%BF%E6%97%A0%E6%98%BE%E7%A4%BA.html"/>
+      <url>/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E8%A3%85%E9%A5%B0%E8%9E%BA%E7%BA%B9%E7%BA%BF%E6%97%A0%E6%98%BE%E7%A4%BA.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="装饰螺纹线无显示"><a href="#装饰螺纹线无显示" class="headerlink" title="装饰螺纹线无显示"></a>装饰螺纹线无显示</h1><p>装饰螺纹线无显示</p><img src="装饰螺纹线无显示/装饰螺纹线无显示.png"><h2 id="方法1：检查特征"><a href="#方法1：检查特征" class="headerlink" title="方法1：检查特征"></a>方法1：检查特征</h2><p>方法1：检查特征</p><img src="装饰螺纹线无显示/1.png"><h2 id="方法2：检查显示"><a href="#方法2：检查显示" class="headerlink" title="方法2：检查显示"></a>方法2：检查显示</h2><p>方法2：检查显示</p><img src="装饰螺纹线无显示/2.png"><h2 id="方法3：检查设置"><a href="#方法3：检查设置" class="headerlink" title="方法3：检查设置"></a>方法3：检查设置</h2><p>方法3：检查设置</p><img src="装饰螺纹线无显示/3.png">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无法找到图形注册文件</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0%E5%9B%BE%E5%BD%A2%E6%B3%A8%E5%86%8C%E6%96%87%E4%BB%B6.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0%E5%9B%BE%E5%BD%A2%E6%B3%A8%E5%86%8C%E6%96%87%E4%BB%B6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="无法找到图形注册文件"><a href="#无法找到图形注册文件" class="headerlink" title="无法找到图形注册文件"></a>无法找到图形注册文件</h1><p>无法在文件夹中找到图形注册表文件</p><img src="无法找到图形注册文件/无法找到图形注册文件.png"><h2 id="方法1：用户权限"><a href="#方法1：用户权限" class="headerlink" title="方法1：用户权限"></a>方法1：用户权限</h2><p>您可能对以下注册表项没有足够的权限:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\SolidWorks\SolidWorks [Version]\Performance\Graphics</span><br></pre></td></tr></table></figure><p>SOLIDWORKS®从此注册表位置收集信息，并将注册表项放在安装文件夹内的’ \lang ‘文件夹中，并在启动应用程序时尝试访问该键。如果应用程序无法访问该文件夹，则可能出现错误消息。</p><p>提供足够的权限可以解决此问题:</p><ol><li>打开Windows®注册表编辑器，浏览到上面显示的注册表项。</li><li>右键单击图形键并选择权限。</li><li>确保为活动用户启用了完全控制和读取权限。</li></ol><p>如果问题仍然存在，请尝试重命名完整的\SolidWorks注册表。这在某些情况下是有用的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无法定位该零部件</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E6%97%A0%E6%B3%95%E5%AE%9A%E4%BD%8D%E8%AF%A5%E9%9B%B6%E9%83%A8%E4%BB%B6.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E6%97%A0%E6%B3%95%E5%AE%9A%E4%BD%8D%E8%AF%A5%E9%9B%B6%E9%83%A8%E4%BB%B6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="无法定位该零部件"><a href="#无法定位该零部件" class="headerlink" title="无法定位该零部件"></a>无法定位该零部件</h1><p>文件可能因改名，移动或删除，导致了无法定位改零部件文件以完成操作</p><img src="无法定位该零部件/无法定位该零部件.png"><h2 id="方法1：重新定位"><a href="#方法1：重新定位" class="headerlink" title="方法1：重新定位"></a>方法1：重新定位</h2><p>右键该零件【解除压缩-浏览文件】找到定位到该零件打开</p><h2 id="方法2：清理未使用特征"><a href="#方法2：清理未使用特征" class="headerlink" title="方法2：清理未使用特征"></a>方法2：清理未使用特征</h2><p>在对应的装配体下，清理掉相应的无效特征。然后再重新加载该文件即可。</p><img src="无法定位该零部件/清理未使用特征.png"><img src="无法定位该零部件/清理未使用特征2.png">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>0异常问题方法</title>
+      <link href="/SOLIDWORKS-Solution/A/0%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95.html"/>
+      <url>/SOLIDWORKS-Solution/A/0%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="模型异常"><a href="#模型异常" class="headerlink" title="模型异常"></a>模型异常</h1><p><img src="/SOLIDWORKS-Solution/0%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/image-20240510155610763.png" alt="image-20240510155610763"></p><h2 id="解决配合问题"><a href="#解决配合问题" class="headerlink" title="解决配合问题"></a>解决配合问题</h2><p><a href="https://help.solidworks.com/2024/chinese-simplified/SolidWorks/sldworks/c_Solving_Mate_Problems.htm?verRedirect=1">解决配合问题 - 2024 - SOLIDWORKS 帮助</a></p><p>配合错误<br>MateXpert<br>您可以使用 MateXpert 识别装配体中的配合问题。 可以详细检查不满意的配合，并确定过定义装配体的配合组。</p><p>修复配合问题的技巧<br>许多过定义及冗余配合问题可通过以下步骤而解决。</p><p>配合错误范例<br>配合的实体 PropertyManager<br>在配合的实体 PropertyManager 中，您可重新附加悬空的配合实体。</p><p>全局替换失败的配合参考<br>如果用于装配体中的许多位置的某个部件缺少配合参考，则您可同时替换所有实例的缺失参考。</p><p>遗失实体弹出式工具栏<br>当您替换装配体中的零部件时，可在替换配合参考时利用“遗失的实体”弹出式工具栏来导览现有的配合</p><h2 id="虚拟零部件丢失"><a href="#虚拟零部件丢失" class="headerlink" title="虚拟零部件丢失"></a>虚拟零部件丢失</h2><img src="0异常问题方法/虚拟零件丢失问题.png"><p>方法Solution S-034052</p><p>有一种比较常见的原因是因为文件损坏问题导致内部保存的零部件丢失，</p><p>还有一种原因可能是使用了‘打包’功能，建议多做一个备份。</p><p>目前有一个可行的方法，是需要客户去确认在C:\Users&lt;username&gt;\AppData\Local\Temp\sw（xxxx）中是否有丢失的复件“零件.sldprt”. 如果有，手动再装配体中解压零件，您应该会得到通知无法加载该零件，是否手动浏览选择，手动浏览到该路径，然后选择。</p><h2 id="无法写入错误日志文件，确保磁盘没有写入保护"><a href="#无法写入错误日志文件，确保磁盘没有写入保护" class="headerlink" title="无法写入错误日志文件，确保磁盘没有写入保护"></a>无法写入错误日志文件，确保磁盘没有写入保护</h2><p>常见另存stp时出现，</p><p>说法1、打开别人发过来的step文件，显示“无法写入错误日志文件”。文件名有特殊符号（ф）导致另存失败；</p><p>说法2、是【3Dinterconnect】影响了导入的stp零部件，再次另存时受影响</p><h2 id="重建模型错误"><a href="#重建模型错误" class="headerlink" title="重建模型错误"></a>重建模型错误</h2><p>Q：由于深度较大，开环轮廓盲孔切割失败</p><p>A：切除位置为空导致，需要检查特征应用的范围。（例如：拉伸切除是否使用了“反侧切除”，然后在新位置不能镜像导致）</p><img src="0异常问题方法/由于深度较大，开环轮廓盲孔切割失败.png"><h1 id="显示异常"><a href="#显示异常" class="headerlink" title="显示异常"></a>显示异常</h1><h2 id="任务窗口不显示"><a href="#任务窗口不显示" class="headerlink" title="任务窗口不显示"></a>任务窗口不显示</h2><p><img src="/SOLIDWORKS-Solution/0%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/%E4%BB%BB%E5%8A%A1%E7%AA%97%E5%8F%A3%E4%B8%8D%E6%98%BE%E7%A4%BA/%E4%BB%BB%E5%8A%A1%E7%AA%97%E5%8F%A3%E4%B8%8D%E6%98%BE%E7%A4%BA.png" alt="image-20240606162710988"></p><p><img src="/SOLIDWORKS-Solution/0%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/%E4%BB%BB%E5%8A%A1%E7%AA%97%E5%8F%A3%E4%B8%8D%E6%98%BE%E7%A4%BA/%E4%BB%BB%E5%8A%A1%E7%AA%97%E5%8F%A3%E4%B8%8D%E6%98%BE%E7%A4%BA2.png" alt="image-20240606162813200"></p><h2 id="文件"><a href="#文件" class="headerlink" title="~$文件"></a>~$文件</h2><p>出现~$文件并且不能隐藏。</p><h2 id="注解光标不显示"><a href="#注解光标不显示" class="headerlink" title="注解光标不显示"></a>注解光标不显示</h2><p>工程图注解文字在编辑时，鼠标光标不显示问题。这似乎是SW2022 中其中一个 Microsoft 版本的问题（问题出现于）</p><p>方法1：显卡驱动显示问题，经RX和回退驱动得到验证</p><p>方法2：可以通过关闭（禁用）集成显卡的方式，恢复光标。</p><p>方法3：可以通过【右键注解-在窗口中编辑】来看到光标编辑。</p><h2 id="装配体图形显示"><a href="#装配体图形显示" class="headerlink" title="装配体图形显示"></a>装配体图形显示</h2><h2 id="透明度100-才透明"><a href="#透明度100-才透明" class="headerlink" title="透明度100%才透明"></a>透明度100%才透明</h2><p>透明度不能连续变化，只有不透明（0~99%）和透明（100%）。</p><p>1、尝试【RX工具-OpenGL模式】打开文件，排除显卡显示问题；</p><p>2、如果1正常检查当前显卡的型号和驱动，尝试验证其他电脑是否显示正常，或尝试修改显卡驱动看是否显示正常</p><h2 id="纹理图片黑色"><a href="#纹理图片黑色" class="headerlink" title="纹理图片黑色"></a>纹理图片黑色</h2><p>不同版本效果还不一样</p><h1 id="异常错误信息"><a href="#异常错误信息" class="headerlink" title="异常错误信息"></a>异常错误信息</h1><h2 id="弹窗此副本未通过验证"><a href="#弹窗此副本未通过验证" class="headerlink" title="弹窗此副本未通过验证"></a>弹窗此副本未通过验证</h2><p>sw2022 关闭许可证验证错误弹窗(弹窗此副本未通过验证，你可能是盗版受害者)</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></span><br><span class="line">;关闭 SOLIDWORKS <span class="number">2022</span> 许可证验证错误弹窗</span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS <span class="number">2022</span>\User Interface\MessageBoxes]</span><br><span class="line">&quot;MessageBox30427&quot;=dword:<span class="number">00000000</span></span><br></pre></td></tr></table></figure><h2 id="脚本错误"><a href="#脚本错误" class="headerlink" title="脚本错误"></a>脚本错误</h2><p>file:&#x2F;&#x2F;C:&#x2F;Program%20Files&#x2F;Solidworks%20Comp&#x2F;SolidWorks&#x2F;data&#x2F;taskpane&#x2F;common&#x2F;taskPaneFuncs.js</p><p>方法：</p><p>重新注册 DDL 解决了该问题 ，RegSvr32 C:\Program Files\SOLIDWORKS Corp\SW2021\SOLIDWORKS\swHTMLControl.dll</p><p><img src="/SOLIDWORKS-Solution/0%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/image-20231220095342994.png" alt="image-20231220095342994"></p><h2 id="为什么会出现错误-包含无效路径"><a href="#为什么会出现错误-包含无效路径" class="headerlink" title="为什么会出现错误 包含无效路径"></a>为什么会出现错误<path> 包含无效路径</h2><p>(图)</p><p>之所以出现此问题，是因为 *.obj 纹理文件路径与当前路径不匹配。</p><p>要解决此问题，请执行以下步骤：</p><p>1.在 Windows® 文件资源管理器中，右键单击 *.obj 文件，然后依次选择“打开方式”&gt;“记事本”。<br>2.在记事本中，选择“编辑”&gt;“替换”。<br>3.在“查找内容”文本框中，键入或粘贴 *.mtl 文件的路径。此路径一般显示在 *.obj 文件的第一行。<br>4.在文件资源管理器中，转至 *.mtl 文件的文件夹位置。<br>5.按下键盘上的“Shift”键，同时右键单击该文件，然后选择“复制为路径”。<br>6.返回到“替换”对话框，将该路径（不带引号）粘贴到“替换为”文本框中。然后，单击“全部替换”。</p><p>如需相关的图形参考，请参阅随附的图片文件。请注意，该路径在文件中出现了多次，您必须在所有实例中替换该路径。</p><h2 id="零部件特征显示"><a href="#零部件特征显示" class="headerlink" title="零部件特征显示"></a>零部件特征显示</h2><img src="0异常问题方法/装配体零部件没有特征.png"><h2 id="FeatueManage识别"><a href="#FeatueManage识别" class="headerlink" title="FeatueManage识别"></a>FeatueManage识别</h2><p>FM识别不受支持的实体</p><img src="0异常问题方法/FM识别不受支持的实体.png"><img src="0异常问题方法/特征不受FeatureWorks支持.png"><h1 id="性能挂起"><a href="#性能挂起" class="headerlink" title="性能挂起"></a>性能挂起</h1><h2 id="右键重命名卡"><a href="#右键重命名卡" class="headerlink" title="右键重命名卡"></a>右键重命名卡</h2><p>造成卡死的原因是 SolidWorks2020 与 Windows11 不兼容，把系统换回 Windows10 就 OK 了。SolidWorks 对 Windows 家庭版系统的兼容性也不好！</p><h2 id="sldbgproc-占用-100"><a href="#sldbgproc-占用-100" class="headerlink" title="sldbgproc 占用 100%"></a>sldbgproc 占用 100%</h2><img src="0常见问题方法/sldbgproc占用100%25.png"><h1 id="异常代码"><a href="#异常代码" class="headerlink" title="异常代码"></a>异常代码</h1><h2 id="打开图纸报错"><a href="#打开图纸报错" class="headerlink" title="打开图纸报错"></a>打开图纸报错</h2><p>闪退报错，然后我就去看了下host文件加了个PDM服务器IP，后正常</p><h2 id="sldrsu-0017g51c"><a href="#sldrsu-0017g51c" class="headerlink" title="sldrsu:0017g51c"></a>sldrsu:0017g51c</h2><h2 id="sldappu-0019eacc"><a href="#sldappu-0019eacc" class="headerlink" title="sldappu:0019eacc"></a>sldappu:0019eacc</h2><p>操作“显示零部件”崩溃（可复现）<br>方法：是显示问题，在此SOLIDWORKS官网下载对应的2020版本修补补丁并安装<br><a href="https://www.solidworks.com/zh-hans/support/hardware-certification/">https://www.solidworks.com/zh-hans/support/hardware-certification/</a></p><h2 id="sldrglu-000b1559"><a href="#sldrglu-000b1559" class="headerlink" title="sldrglu:000b1559"></a>sldrglu:000b1559</h2><h2 id="swccu-0001834c"><a href="#swccu-0001834c" class="headerlink" title="swccu:0001834c"></a>swccu:0001834c</h2><p>重建崩溃</p><h2 id="Mscorlib：0059d884"><a href="#Mscorlib：0059d884" class="headerlink" title="Mscorlib：0059d884"></a>Mscorlib：0059d884</h2><p>重建崩溃</p><h2 id="vcruntime140-000012de"><a href="#vcruntime140-000012de" class="headerlink" title="vcruntime140.000012de"></a>vcruntime140.000012de</h2><p>拔模分析崩溃，软件退出。</p><p>方法：出现vcruntime140报错，但是不是最终原因。原因在swatcolorlabel.ocx为注册安装导致。</p><p><a href="https://www.javelin-tech.com/blog/2018/09/solidworks-crash-troubleshooting-guide-part-1/">SOLIDWORKS 崩溃故障排除指南（第 1 部分，共 3 部分） (javelin-tech.com)</a></p><h2 id="sldworks-1000209d8"><a href="#sldworks-1000209d8" class="headerlink" title="sldworks:1000209d8"></a>sldworks:1000209d8</h2><p>打开工程图文件发生错误，软件退出。</p><p>方法：可以在“出详图”模式下，删除该视图，保存，还原（或轻化）打开即可。就不会有错误</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>工程图图纸格式找不到，</p><p>方法1：【系统选项-文件位置-图纸格式】需要做设置，链接到新制的图纸的文件夹位置</p><h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a href="https://www.javelin-tech.com/blog/2018/09/solidworks-crash-troubleshooting-guide-part-1/">SOLIDWORKS 崩溃故障排除指南（第 1 部分，共 3 部分） (javelin-tech.com)</a></p><p>疑似还原崩溃，但可能不是最终原因，需要问题原档或dmp检查。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>保存文档失败</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E4%BF%9D%E5%AD%98%E6%96%87%E6%A1%A3%E5%A4%B1%E8%B4%A5.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E4%BF%9D%E5%AD%98%E6%96%87%E6%A1%A3%E5%A4%B1%E8%B4%A5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="保存文档失败"><a href="#保存文档失败" class="headerlink" title="保存文档失败"></a>保存文档失败</h1><img src="保存文档失败\1.png" ><span id="more"></span><h2 id="RX事件检查"><a href="#RX事件检查" class="headerlink" title="RX事件检查"></a>RX事件检查</h2><p>从Rx文件中识别“未能保存文档”错误。错误将作为多个UNC提供者(MUP)源事件记录在系统事件日志中。此类事件的细节示例包括:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;Delayed Write Failed&#125; Windows® was unable to save all the data for the file ; the data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.</span><br><span class="line"></span><br><span class="line">&#123;Delayed Write Failed&#125;Windows®无法保存文件的所有数据;数据丢失。此错误可能是由计算机硬件或网络连接失败引起的。请尝试在其他地方保存此文件。</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;Delayed Write Failed&#125; Windows was unable to save all the data for the file ; the data has been lost. This error was returned by the server on which the file exists. Please try to save this file elsewhere.</span><br><span class="line"></span><br><span class="line">&#123;Delayed Write Failed&#125;Windows无法保存文件的所有数据;数据丢失。存在该文件的服务器返回此错误。请尝试在其他地方保存此文件。</span><br></pre></td></tr></table></figure><p>通常，这些事件标识网络位置，并且根据记录，网络连接或服务器可能是问题的根源。如果在客户端计算机的系统事件日志中发现这些事件之一，请联系IT代表寻求帮助。</p><h2 id="排除原因"><a href="#排除原因" class="headerlink" title="排除原因"></a>排除原因</h2><p>“保存失败”错误信息排查。以下是一些已知的情况，它们应该有助于缩小问题的范围：</p><ol><li><p>检查<a href="https://help.solidworks.com/2015/chinese-simplified/SolidWorks/sldworks/c_SOLIDWORKS_Journal_File.htm">SOLIDWORKS日志文件</a>文件的位置;它应该存在于本地驱动器而不是网络驱动器上。</p></li><li><p>在【工具-&gt;选项→系统选项-&gt;备份&#x2F;恢复】，将“每次保存自动恢复信息”选项从“x”更改到更高的值。此外，将每个文档的备份数量减少到1。如果备份文件位置与原始文件相同，请将其更改为本地驱动器上的其他位置。</p></li><li><p>插件也可能会导致问题。禁用所有插件并重新测试问题，或者关闭SolidWorks删除以下注册表项的内容，然后重新测试问题:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\软件SolidWorks\AddInsStartup</span><br><span class="line">HKEY_LOCAL_MACHINE\软件SolidWorks\外接程序</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SolidWorks 200X\AddIns</span><br></pre></td></tr></table></figure></li><li><p>检查问题是否只发生在SolidWorks文件上。假设文件位于网络位置，以不同的用户创建一个非solidworks文档，并将其保存在相同的网络位置。</p></li><li><p>确定是否有其他进程正在访问该文件。在存放文件的机器上，我们进入【控制面板→系统与维护→管理工具→计算机管理→系统工具→共享文件夹→打开文件】，并注意指向正在保存的文件的打开会话。如果有多个，则意味着有另一个进程使用该文件。如果是这种情况，可以考虑另存为操作。</p></li><li><p>将文件移动到本地驱动器上，并尝试以不同的用户(例如本地管理员)登录。验证是否与网盘权限使用问题。</p></li><li><p>创建一个新的用户配置文件并登录，然后查看该文件是否可以同时保存在网络驱动器和本地驱动器上。</p></li><li><p>如果安装了Windows桌面搜索程序，请在保存文件时确保没有对文件进行索引，因为这可能会中断保存过程。可暂时卸载Windows桌面搜索，看看是否可以隔离原因。</p></li><li><p>如果系统上安装并运行了任何防病毒或防间谍软件，请尝试暂时禁用它们，看看问题是否仍然存在。</p></li></ol><h1 id="保存Step失败-："><a href="#保存Step失败-：" class="headerlink" title="保存Step失败 ："></a>保存Step失败 ：</h1><p>在使用step类零件保存时出现，文件被其他程序占用时，保存失败</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>如果项目包含特殊字符或特定字符串，则会出现此错误。</p><p>中间格式(如STEP文件)包含未知字符或定义组装环境中组件名称的路径。</p><p>对于STEP格式的文件，建议使用文本编辑器打开该文件，搜索文本“PRODUCT_DEFINITION”(不带引号)，并替换该字符串。</p><p>例如，STEP文件中的以下字符串:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\#7281180=PRODUCT_DEFINITION(“Presse/X/模型”、“Presse/X/模型”,#7282479,#7281179);</span><br></pre></td></tr></table></figure><p>注意，字符串包含文本’&#x2F;X&#x2F;‘。必须使用空格和标准字符(如“X”)替换该文本，如下所示。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\#7281180=PRODUCT_DEFINITION(&#x27;PresseX模型&#x27;，&#x27;PresseX模型&#x27;，#7282479，#7281179);</span><br></pre></td></tr></table></figure><p>其他类似的情况也会影响保存文件的过程。</p><!--  1． 关闭所有不相关的和非必需的程序和文档     把它们全部关闭，可能您开打了很多应用程序和文档，而使用了大量的内存以至于内存信息交换的通道被阻塞。关闭后再尝试保存Solidworks文档，如果没有效果，请试第二步     2． 尝试保存工程图     有时候出现这个问题是因为没有正确的重建造成的，如果您同时工作在3D建模和2D工程图，尝试切换到工程图部分，保存和关闭工程图，你会得到“你想重建模型吗？”的提示，点击是的后，看看还有没有效。     3． 新建或切换到另外的配置     如还没效果，再请尝试新建戒切换到另外的配置，有可能其中一个配置的一部分信息还没有读入内存。同样的方法，您可以试试压缩特征戒零部件然后解压它们，再保存。     4． 删除和再重新建立一个配置     如上述没有效果，我会切换另外配置，删除我上一个编辑的配置，而然后点击Undo（退回）看看能不能还原先前状态，然后再保存。很多时候，这样做都有效。如还没有效果，可能就要删除和再重新建立一个配置，做尝试了。     5． 寻找参考文件，并复制它     在您将要放弃和重新开始没保存前的工作，您可以最后再做一次尝试。这一步可以使您能从要重新开始没保存前的工作中解救出来。您可以试试点击下拉菜单：文件.查找相关文件。这个命令将读入全部参考文件，然后点击复制文件，在Solidworks2007及以上版本，将会到打包命令的界面。这时候有时会出现提示您重建模型的对话框，那么这可能表明这些参考文件造成的问题，检查和打开这些文件，按Ctrl+Q强制重生，并保存。检查完后，回到原来界面尝试保存看是否有效。一般这步都对这个问题比较有效。  --><h1 id="保存操作失败"><a href="#保存操作失败" class="headerlink" title="保存操作失败"></a>保存操作失败</h1><p>保存操作失败，因为文档集(要保存的文档和它引用的任何文档)内项目的重命名与只读状态之间存在冲突。</p><p>  <img src="/SOLIDWORKS-Solution/%E4%BF%9D%E5%AD%98%E6%96%87%E6%A1%A3%E5%A4%B1%E8%B4%A5/%E4%BF%9D%E5%AD%98%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%B4%A5%EF%BC%8C.png" alt="保存操作失败，"></p><h1 id="大型装配体保存失败"><a href="#大型装配体保存失败" class="headerlink" title="大型装配体保存失败"></a>大型装配体保存失败</h1><h2 id="方法1大型设计审阅"><a href="#方法1大型设计审阅" class="headerlink" title="方法1大型设计审阅"></a>方法1大型设计审阅</h2><p>1、新建空白装配体文件，并保存关闭；</p><p>2、使用编辑模式的【大型设计审阅】打开刚才的空白装配体；</p><p>3、在装配体使用【插入零部件】将部件加载到装配体内，并做好配合</p><p>4、保存操作即可</p><h2 id="方法2Speedpak"><a href="#方法2Speedpak" class="headerlink" title="方法2Speedpak"></a>方法2Speedpak</h2><p>1、打开部件装配体</p><p>2、在装配体配置中【右键-创建Speedpak】，并选择保留的几何对象（可以是实体、面等），以便后续做配合选择使用。没有保留的部分，将保留视觉效果并不能被选择。</p><p>3、打开总装配体文件，操作【插入零部件】将前面的Speedpak部件插入总装文件中进行配合操作</p><p>4、保存操作即可</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>显示问题和异常</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E5%92%8C%E5%BC%82%E5%B8%B8.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E5%92%8C%E5%BC%82%E5%B8%B8.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="显示问题和异常"><a href="#显示问题和异常" class="headerlink" title="显示问题和异常"></a>显示问题和异常</h1><h1 id="异常线条"><a href="#异常线条" class="headerlink" title="异常线条"></a>异常线条</h1><p>奇怪异常的蓝色放射线，像刺猬</p><img src="显示问题和异常/异常线条.png" ><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h1 id="透明黑框"><a href="#透明黑框" class="headerlink" title="透明黑框"></a>透明黑框</h1><p>装配体模式界面显示很多黑色轮廓线。（即使显示是“带边线上色”的模式）零件出现透明黑框</p><img src="显示问题和异常/透明黑框.png" ><h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>【系统选项-显示-未薄壁零件优化】勾选。</p><img src="显示问题和异常/为薄壁零件优化.png" ><h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>选项-系统选项-显示&#x2F;选择-在带边线上色模式下显示边线（点亮消除隐藏线）</p><h1 id="上色模式但显示线框"><a href="#上色模式但显示线框" class="headerlink" title="上色模式但显示线框"></a>上色模式但显示线框</h1><p>上色模式但显示线框</p><img src="显示问题和异常\上色模式但显示线框.png" ><h2 id="方法1-1"><a href="#方法1-1" class="headerlink" title="方法1"></a>方法1</h2><p>取消勾选【系统选项-显示-为薄壁零件优化】</p><img src="显示问题和异常\为薄壁零件优化.png" ><h2 id="方法2-1"><a href="#方法2-1" class="headerlink" title="方法2"></a>方法2</h2><p>如果当前显卡和驱动有异常，可以通过取消勾选“增强的图形性能”选项解决。</p><img src="显示问题和异常\增强的图形性能.png" ><h2 id="方法3：待确认"><a href="#方法3：待确认" class="headerlink" title="方法3：待确认"></a>方法3：待确认</h2><p>该问题是 NIVIDIA GPU 驱动程序已知问题，从 530.xx 开始，在 535.xx 中修复。</p><h1 id="透明度无效"><a href="#透明度无效" class="headerlink" title="透明度无效"></a>透明度无效</h1><p>在装配体零部件设置“透明度显示”后，模型还是实体上色的样子，而不是透明的。</p><h2 id="方法：取消上层外观"><a href="#方法：取消上层外观" class="headerlink" title="方法：取消上层外观"></a>方法：取消上层外观</h2><p>检查该装配体的上层文件是否被设置了外观上色（如下图）。该情况下会以顶层的装配体外观为主覆盖零部件的显示，即透明度显示也会被外观覆盖。</p><img src="显示问题和异常\透明度无效.png" >]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>模型线条加载慢</title>
+      <link href="/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E6%A8%A1%E5%9E%8B%E7%BA%BF%E6%9D%A1%E5%8A%A0%E8%BD%BD%E6%85%A2.html"/>
+      <url>/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E6%A8%A1%E5%9E%8B%E7%BA%BF%E6%9D%A1%E5%8A%A0%E8%BD%BD%E6%85%A2.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="模型线条加载慢"><a href="#模型线条加载慢" class="headerlink" title="模型线条加载慢"></a>模型线条加载慢</h1><p>模型线条加载慢，这种情况通常是软件设置勾选【系统选项-性能-OpenGL】导致，一般OpenGL是利用了CUP做显卡显示，这在SW软件里的优化是比较差的。会出现如下的情况：</p><img src="模型线条加载慢/模型线条加载慢.gif" ><h2 id="方法-1：关闭OpenGL"><a href="#方法-1：关闭OpenGL" class="headerlink" title="方法 1：关闭OpenGL"></a>方法 1：关闭OpenGL</h2><img src="模型线条加载慢/关闭OpenGL.png"><h2 id="方法-2：检查显卡启动"><a href="#方法-2：检查显卡启动" class="headerlink" title="方法 2：检查显卡启动"></a>方法 2：检查显卡启动</h2><p>如果不能关闭关闭OpenGL。英伟达的显卡在打开软件时可以选择是：集显打开（错误），还是独显打开（正确），可右键软件程序检查。</p><h2 id="方法-3：检查显卡驱动"><a href="#方法-3：检查显卡驱动" class="headerlink" title="方法 3：检查显卡驱动"></a>方法 3：检查显卡驱动</h2><p>如果不能关闭关闭OpenGL。请检查您电脑的显卡情况是否使用正常。特别是重装系统的电脑因缺少显卡驱动导致“只能打开OpenGL显示模式”。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>拖动放置失败</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E6%8B%96%E5%8A%A8%E6%94%BE%E7%BD%AE%E5%A4%B1%E8%B4%A5.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E6%8B%96%E5%8A%A8%E6%94%BE%E7%BD%AE%E5%A4%B1%E8%B4%A5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="拖动放置失败"><a href="#拖动放置失败" class="headerlink" title="拖动放置失败"></a>拖动放置失败</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>常见于自定义标准件使用时。</p><img src="拖动放置失败\1.png" ><h2 id="解决方法-1："><a href="#解决方法-1：" class="headerlink" title="解决方法 1："></a>解决方法 1：</h2><p>重启SW程序可临时解决问题，但问题似乎会重现（偶然的）。</p><h2 id="情况2"><a href="#情况2" class="headerlink" title="情况2"></a>情况2</h2><p>拖动失败代表此装配体存在与库中要拖出的文件相同文件名称的件，你从设计树顶层搜索那里过滤下关键字看看</p><h1 id="Routing拖放失败"><a href="#Routing拖放失败" class="headerlink" title="Routing拖放失败"></a>Routing拖放失败</h1><p>根据解决方案S-034629，如果从不同于现有位置的位置打开了正在插入的组件，则会出现“拖放失败”错误。</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>可能是，如果选择了将所有引用文档与程序集一起保存的选项，则现有引用文档的位置也会更新到新位置。如果随后尝试从设计库中插入路由组件，则会出现错误。</p><h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>•保存程序集时不要选择“包括所有引用的文档”选项。这确保只有程序集文件保存到新位置，而没有引用文档。</p><p>•在保存组装时，使用“包含所有引用文档”选项中的“高级”选项卡，使用“为选定项目指定文件夹”选项，指定组件的现有位置(可能是设计库)以引用文档。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>生成有冲突的前后关系</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E7%94%9F%E6%88%90%E6%9C%89%E5%86%B2%E7%AA%81%E7%9A%84%E5%89%8D%E5%90%8E%E5%85%B3%E7%B3%BB.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E7%94%9F%E6%88%90%E6%9C%89%E5%86%B2%E7%AA%81%E7%9A%84%E5%89%8D%E5%90%8E%E5%85%B3%E7%B3%BB.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="生成有冲突的前后关系"><a href="#生成有冲突的前后关系" class="headerlink" title="生成有冲突的前后关系"></a>生成有冲突的前后关系</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>产生新参考的零件已有被其他装配体参考，此时会出现下图提示：</p><img src="生成有冲突的前后关系\1.png" ><h2 id="方法-："><a href="#方法-：" class="headerlink" title="方法 ："></a>方法 ：</h2><p>【系统选项-外部参考】勾选“单边机装配体时，允许零件具有多个关联”</p><img src="生成有冲突的前后关系\2.png" >]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>打开外部参考的零件</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%89%93%E5%BC%80%E5%A4%96%E9%83%A8%E5%8F%82%E8%80%83%E7%9A%84%E9%9B%B6%E4%BB%B6.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%89%93%E5%BC%80%E5%A4%96%E9%83%A8%E5%8F%82%E8%80%83%E7%9A%84%E9%9B%B6%E4%BB%B6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="打开外部参考的零件"><a href="#打开外部参考的零件" class="headerlink" title="打开外部参考的零件"></a>打开外部参考的零件</h1><p>这是因为当前打开的文件内，包含有外部参考的特征。那么软件在默认在打开该文件时就会提醒你如下图片的选项：会提示你打开参考的文件，来更新打开零件的参考特征</p><img src="打开外部参考的零件/打开外部参考的零件.png"><!--打开所有参考的零件：不打卡任何参考的文档：打开任何已更改的文件：打开包括装配体在内的任何已更改文档： --><h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>如果出现打开一个文件，软件会自动帮你把其他的零件也打开的情况时。</p><p>你可以在【系统选项-外部参考】设置不加载。这和本文章所提及的“打开参考文档”有关系。</p><img src="打开外部参考的零件/加载参考文档.png">]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无法装入xxx.Dll</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%97%A0%E6%B3%95%E8%A3%85%E5%85%A5xxx.Dll.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%97%A0%E6%B3%95%E8%A3%85%E5%85%A5xxx.Dll.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="无法装入xxx-Dll"><a href="#无法装入xxx-Dll" class="headerlink" title="无法装入xxx.Dll"></a>无法装入xxx.Dll</h1><p>如果您的更新或安装是在2015年7月15日之后进行的，最有可能的解释是由2015年7月15日发布的Microsoft®update KB 3072630引起的已知冲突。此更新对Windows安装程序进行了更改。</p><img src="无法装入xxx.Dll/1.png"><h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>\1. 点击“开始”，点击“运行”，在“打开”对话框中输入“regedit”，然后点击“确定”。</p><p>\2. 在注册表中找到并单击以下子键:注意:如果此子键不存在，请创建它。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer。</span><br></pre></td></tr></table></figure><p>\3. 在“编辑”菜单中，转到“新建”，然后点击“DWORD值”。</p><p>\4. 对于DWORD名称，输入“RemappedElevatedProxiesPolicy”，然后按“Enter”。</p><p>\5. 右键单击“RemappedElevatedProxiesPolicy”，然后单击“Modify”。</p><p>\6. 在“value”数据框中输入“1”，然后单击“确定”。</p><p>\7. 修复SOLIDWORKS安装(S-050527)。</p><p>\8. 安装应用程序后，将DWORD值“RemappedElevatedProxiesPolicy”重置为“0”，以恢复KB 3072630安全修复。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>不能加载VBE6EXT</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDVBE6EXT.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDVBE6EXT.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="不能加载-VBE6EXT"><a href="#不能加载-VBE6EXT" class="headerlink" title="不能加载 VBE6EXT"></a>不能加载 VBE6EXT</h1><p>原因：可能是因为安装又卸载了Office所致，根据经验，Office和WPS卸载均可产生上述问题。</p><img src="不能加载VBE6EXT/image1.png" ><h2 id="方法1-改变文件位置"><a href="#方法1-改变文件位置" class="headerlink" title="方法1:改变文件位置"></a>方法1:改变文件位置</h2><p>1、更改 VB6EXT.OLB 的文件位置（网上最常用方法），重启程序。操作如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">文件从C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA7.1\VB6EXT.OLB</span><br><span class="line">复制到C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA6\VB6EXT.OLB</span><br></pre></td></tr></table></figure><h2 id="方法2-修改注册表"><a href="#方法2-修改注册表" class="headerlink" title="方法2:修改注册表"></a>方法2:修改注册表</h2><p>1、按 win+R 打开运行，输入 regedit 进入注册表：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CLASSES_ROOT\TypeLib\&#123;0002E157-0000-0000-C000-000000000046&#125;\5.3\0\win32</span><br><span class="line">计算机\HKEY_CLASSES_ROOT\TypeLib\&#123;0002E157-0000-0000-C000-000000000046&#125;\5.3\0\win64</span><br></pre></td></tr></table></figure><p>右击，然后点击修改（或者鼠标连点两次），将下面目录改成你的 VB6EXT.OLB 的目录：C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA7.1\VB6EXT.OLB</p><img src="不能加载VBE6EXT/image2.png" ><h2 id="方法3-安装运行库"><a href="#方法3-安装运行库" class="headerlink" title="方法3:安装运行库"></a>方法3:安装运行库</h2><p>尝试覆盖安装了一下【微软常用运行库】搜索安装Microsoft visualBasic for Application 7.1 Chinese （Simpified）包，文件名：VBA71_2052.msi</p><h1 id="没能启动应用程序Visual-Basic"><a href="#没能启动应用程序Visual-Basic" class="headerlink" title="没能启动应用程序Visual Basic"></a>没能启动应用程序Visual Basic</h1><p><img src="/SOLIDWORKS-Solution/%E4%B8%8D%E8%83%BD%E5%8A%A0%E8%BD%BDVBE6EXT/image-20240620110934594.png" alt="image-20240620110934594"></p><p>没能启动应用程序 Visual Basic</p><p>解决办法就是将C:\Program Files\Common Files\Microsoft Shared下的VBA文件夹删除即可。（不影响office正常使用）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>0常见问题方法</title>
+      <link href="/SOLIDWORKS-Solution/A/0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95.html"/>
+      <url>/SOLIDWORKS-Solution/A/0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="F-常见错误信息"><a href="#F-常见错误信息" class="headerlink" title="F-常见错误信息"></a>F-常见错误信息</h1><p>错误信息以及在生成 SOLIDWORKS 草图和模型时可能解决错误的方法。</p><p><a href="https://help.solidworks.com/2022/Chinese-Simplified/solidworks/sldworks/c_Error_Messages_Overview.htm">https://help.solidworks.com/2022/Chinese-Simplified/solidworks/sldworks/c_Error_Messages_Overview.htm</a></p><h1 id="打开问题"><a href="#打开问题" class="headerlink" title="打开问题"></a>打开问题</h1><h2 id="无法图形注册表文件"><a href="#无法图形注册表文件" class="headerlink" title="无法图形注册表文件"></a>无法图形注册表文件</h2><p>无法在文件夹中找到图形注册表文件</p><h2 id="无法找到文件"><a href="#无法找到文件" class="headerlink" title="无法找到文件"></a>无法找到文件</h2><p>文件移动或改名导致的装配体“丢失参考”的问题，可以手动【浏览文件】来加载需要的文件，或是暂时【压缩此零部件】的方式打开装配体。</p><p><img src="/SOLIDWORKS-Solution/0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0%E6%96%87%E4%BB%B6.png" alt="无法找到文件"></p><h2 id="Window-正在配置"><a href="#Window-正在配置" class="headerlink" title="Window:正在配置"></a>Window:正在配置</h2><p>打开SW程序，弹窗：Window:正在配置S0LIIORKS2018 SP05，清稍等</p><img src="0常见问题方法/Window正在配置.png"><p>方法：</p><p>1、首先选择SOLIDWORKS的快捷方式鼠标右键选择属性可以看到SOLIDWORKS的安装目录。<br>2、进入SOLIDWORKS的安装目录，查找到sldProcMon.exe这个文件，将其删除。<br>3、找到SLDWORKS.exe选中它然后鼠标右键选择“发送到”-“桌面快捷方式”并删除原有的快捷方式图标。<br>4、点击新的SOLIDWORKS快捷方式重新启动。</p><h2 id="这个操作只对当前安装的产品有效"><a href="#这个操作只对当前安装的产品有效" class="headerlink" title="这个操作只对当前安装的产品有效"></a>这个操作只对当前安装的产品有效</h2><p>出现在多版本使用时的问题，当我的启动操作使用了旧版本（卸载）的程序启动时，则会提示我们，当前“这个操作只对当前安装的产品有效”。</p><p>方法：</p><p>右键SW文件，选择打开方式，修改设置默认打开方式。（注意，这里需要去浏览到对应的版本文件夹下，的swShellFileLauncher.exe文件进行打开）</p><h2 id="版本尚未被适当地授权"><a href="#版本尚未被适当地授权" class="headerlink" title="版本尚未被适当地授权"></a>版本尚未被适当地授权</h2><p>F-版本尚未被适当地授权，请联系您的供应商 (A100,68)</p><img src="0常见问题方法/版本尚未被适当地授权.png"><h2 id="F-VBE6EXT-OLB-不能被加载"><a href="#F-VBE6EXT-OLB-不能被加载" class="headerlink" title="F-VBE6EXT.OLB 不能被加载"></a>F-VBE6EXT.OLB 不能被加载</h2><img src="0常见问题方法/VBE6EXT.OLB不能被加载.png"><h2 id="重建"><a href="#重建" class="headerlink" title="重建"></a>重建</h2><img src="0常见问题方法/重建.png"><h2 id="打开可用于-xxx-的摘要"><a href="#打开可用于-xxx-的摘要" class="headerlink" title="打开可用于 xxx 的摘要"></a>打开可用于 xxx 的摘要</h2><img src="0常见问题方法/打开可用于xxx的摘要.png"><h2 id="链接的系列零件设计表"><a href="#链接的系列零件设计表" class="headerlink" title="链接的系列零件设计表"></a>链接的系列零件设计表</h2><img src="0常见问题方法/链接的系列零件设计表.png"><h2 id="F-找不到标准数据库"><a href="#F-找不到标准数据库" class="headerlink" title="F-找不到标准数据库"></a>F-找不到标准数据库</h2><p>顾名思义，就是没有.sldedb 的文件，你可能需要去复制正常使用 Toolbox 的文件夹来使用，或者修复一下 SW。</p><p>（D:\Program Files\SolidWorks 2022\SOLIDWORKS Data\lang\english）</p><img src="0常见问题方法/找不到标注数据库.png"><p>A：【系统选项-异形孔向导】Toolbox文件夹路径需要有数据库swbrowser内容。</p><img src="0常见问题方法/数据库swbrowser遗失.png"><h2 id="F-模板无效"><a href="#F-模板无效" class="headerlink" title="F-模板无效"></a>F-模板无效</h2><img src="0常见问题方法/默认模板无效.png"><h2 id="F-不匹配的内部-ID"><a href="#F-不匹配的内部-ID" class="headerlink" title="F-不匹配的内部 ID"></a>F-不匹配的内部 ID</h2><p>所参考的文档具有不匹配的内部 ID。此提示通常在文件夹界面下，你用其他同名新文件替换原文件时出现。</p><ol><li><p>让我浏览原文件：如果原文件丢失则会以压缩方式打开；</p></li><li><p>仍使用该文件：使用新的同名文件替换打开；</p></li><li><p>为此文件打开：压缩问题文件打开</p></li></ol><img src="0常见问题方法/所参考的文档具有不匹配的内部ID.png"><h2 id="同名打开"><a href="#同名打开" class="headerlink" title="同名打开"></a>同名打开</h2><p>在软件如果已经打开了同名的文件时，则会出现下面的提示。同名打开会以软件当前的文件加载</p><p>（那么你可能需要注意的是：使用到该同名零件的装配体会出现文件参考改变的情况）</p><img src="0常见问题方法/同名打开.png"><h2 id="F-打开崩溃问题排查"><a href="#F-打开崩溃问题排查" class="headerlink" title="F-打开崩溃问题排查"></a>F-打开崩溃问题排查</h2><p>问题 1：【装配体】- 打开崩溃问题排查</p><img src="0常见问题方法/在打开文件时遇到错误.png"><h2 id="特征识别"><a href="#特征识别" class="headerlink" title="特征识别"></a>特征识别</h2><p>featureWork 的操作</p><img src="0常见问题方法/特征识别.png"><h2 id="F-包含退回状态零件"><a href="#F-包含退回状态零件" class="headerlink" title="F-包含退回状态零件"></a>F-包含退回状态零件</h2><p>该文档包含有以退回状态保存的零件 xxx。您想将之往前推进吗</p><img src="0常见问题方法/该文档包含有以退回状态保存的零件.png"><h2 id="F-高版本属性卡"><a href="#F-高版本属性卡" class="headerlink" title="F-高版本属性卡"></a>F-高版本属性卡</h2><p>The template file being opened is created in a newer version of Propety TabBuilder. All the new features may not be supported.</p><img src="0常见问题方法/newer version of Propety TabBuilder.png"><h2 id="F-打开外部参考的零件"><a href="#F-打开外部参考的零件" class="headerlink" title="F-打开外部参考的零件"></a>F-打开外部参考的零件</h2><img src="0常见问题方法/外部参考在智能零部件中禁用.png"><img src="0常见问题方法/打开外部参考的零件.png"><h2 id="重命名文档"><a href="#重命名文档" class="headerlink" title="重命名文档"></a>重命名文档</h2><p>该提示出现在软件内重命名后保存时提示，提示主要是该零件改名后的参考问题。默认只在当前文件生效参考，其他未打开的文件将因改名而丢失参考引用。</p><p>你可能需要在下面**”更新使用参考的位置处”**搜索与改名零部件相关的文件位置</p><img src="0常见问题方法/重命名文档.png"><h1 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h1><h2 id="折弯系数表无效"><a href="#折弯系数表无效" class="headerlink" title="折弯系数表无效"></a>折弯系数表无效</h2><p>折弯系数表无效。是钣金规格表有问题，已知在使用【材料-钣金-规格表】时，在修改镜像的材质（且材质的规格表不一致）时出现。</p><img src="0常见问题方法/折弯系数表无效.png"><h2 id="F-材质不能编辑"><a href="#F-材质不能编辑" class="headerlink" title="F-材质不能编辑"></a>F-材质不能编辑</h2><p>在此材料更改之前，组件的总质量被覆盖。这种新材料的密度不会影响部件的质量。</p><img src="0常见问题方法//在此材料更改之前，组件的总质量被覆盖。这种新材料的密度不会影响部件的质量.png"><h2 id="F-xml-声明无效"><a href="#F-xml-声明无效" class="headerlink" title="F-xml 声明无效"></a>F-xml 声明无效</h2><p>材质库文件的元素在高低SW版本问题</p><img src="0常见问题方法/xml声明无效.png"><h2 id="F-材质库意外元素"><a href="#F-材质库意外元素" class="headerlink" title="F-材质库意外元素"></a>F-材质库意外元素</h2><p>元素 sheetmetalOption 为意外元素。是 2019 新功能材料增加”钣金属性”的问题，此时低版本的文件不会启用 2019 后的材质库文件。</p><p>需要删除高版本的 sheetmetalOption 元素才能使用（不过比较麻烦，所以自己开发了个修改工具）。</p><img src="0常见问题方法/元素sheetmetalOption为意外元素.png"><h2 id="F-升级螺纹线"><a href="#F-升级螺纹线" class="headerlink" title="F-升级螺纹线"></a>F-升级螺纹线</h2><p>升级螺纹线（包括 2018 之前为旧，2019 之后有升级螺纹线功能）</p><img src="0常见问题方法/升级螺纹线.png"><h1 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h1><p>一个或多个干涉不能被计算。在”干涉结果”清单中选择每个失败的项目以显示可能干涉的零部件。</p><img src="0常见问题方法/image-20240521184341088.png"><h2 id="配合问题"><a href="#配合问题" class="headerlink" title="配合问题"></a>配合问题</h2><p>此配合的某个实体或参考特征已经被压缩、无效或已不再存在。</p><img src="0常见问题方法/image-20240228120343006.png"><h2 id="F-无法定位该零部件"><a href="#F-无法定位该零部件" class="headerlink" title="F-无法定位该零部件"></a>F-无法定位该零部件</h2><img src="0常见问题方法/无法定位该零部件.png"><h2 id="打包位置有文件同名"><a href="#打包位置有文件同名" class="headerlink" title="打包位置有文件同名"></a>打包位置有文件同名</h2><img src="0常见问题方法/打包位置有文件同名.png"><h2 id="F-生成有冲突的前后关系"><a href="#F-生成有冲突的前后关系" class="headerlink" title="F-生成有冲突的前后关系"></a>F-生成有冲突的前后关系</h2><img src="装配体\生成有冲突的前后关系\1.png" ><h2 id="外部参考在智能零部件中禁用"><a href="#外部参考在智能零部件中禁用" class="headerlink" title="外部参考在智能零部件中禁用"></a>外部参考在智能零部件中禁用</h2><img src="0常见问题方法/外部参考在智能零部件中禁用.png"><h2 id="参考将自动断开"><a href="#参考将自动断开" class="headerlink" title="参考将自动断开"></a>参考将自动断开</h2><p>您的选择为已外部参考;由于当前设定，参考将自动断开</p><p>方法：</p><p>似乎是哪里【系统选项】设定问题，可以尝试恢复默认设置看看（有点怀疑【系统选项-外部参考】问题）</p><img src="0常见问题方法/参考将自动断开.png"><h1 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h1><h2 id="服务器出现意外情况"><a href="#服务器出现意外情况" class="headerlink" title="服务器出现意外情况"></a>服务器出现意外情况</h2><img src="0常见问题方法\服务器出现意外情况.png"><p>方法1：参考</p><p>另存为Excel时，服务器出现意外情况。多数可能于当前office版本于SW等程序的版本兼容问题。</p><p>例如安装高版本office后装低版本，会有影响。建议是尝试修复office（或卸载重装）</p><p>方法2：待确认</p><p>原因：Excel的com加载项启用影响。在【文件-选项-加载项-管理com加载项】-转到-取消可用加载项的勾选。<br>取消或删除下图中不存在的加载项。重复问题操作验证。</p><p><img src="/SOLIDWORKS-Solution/0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/image-20240313093349928.png" alt="image-20240313093349928"></p><h2 id="F-找不到calloutformat"><a href="#F-找不到calloutformat" class="headerlink" title="F-找不到calloutformat"></a>F-找不到calloutformat</h2><img src="工程图\找不到calloutformat\找不到calloutformat.png"><h2 id="终点合并设置为更小"><a href="#终点合并设置为更小" class="headerlink" title="终点合并设置为更小"></a>终点合并设置为更小</h2><img src="0常见问题方法\终点合并设置为0.00001或更小.PNG"><h2 id="F-符号库文件缺失"><a href="#F-符号库文件缺失" class="headerlink" title="F-符号库文件缺失"></a>F-符号库文件缺失</h2><img src="工程图\符号图库文件缺失\符号图库文件缺失.png"><h2 id="不能替换相同视图"><a href="#不能替换相同视图" class="headerlink" title="不能替换相同视图"></a>不能替换相同视图</h2><p>工程图视图引用相同模型并且不会被替换</p><img src="0常见问题方法/工程图视图引用相同模型并且不会被替换.png"><h2 id="该工程图可能需要更新"><a href="#该工程图可能需要更新" class="headerlink" title="该工程图可能需要更新"></a>该工程图可能需要更新</h2><p>当你编辑零部件修改后，工程图没有打开同步做保存时会出现。（因为出详图是打开工程图最后一次保存的，装配体有改动就会有如下弹窗提示）</p><img src="0常见问题方法/该工程图可能需要更新.png"><h2 id="字体缺失"><a href="#字体缺失" class="headerlink" title="字体缺失"></a>字体缺失</h2><p>工程图另存PDF时出现，Arial Unicode M5字体缺失 ，保存失败。</p><p>A：可以尝试用打印方式，选择“Microsoft To PDF的打印机打印。</p><p>A2：安装缺少的字体；</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="出现3D数据解析错误"><a href="#出现3D数据解析错误" class="headerlink" title="出现3D数据解析错误"></a>出现3D数据解析错误</h2><p>3DPDF问题，配置文件损坏使用以下方法之一： 生成新配置文件</p><p>关闭Adobe Acrobat Pro版本并重命名以下文件夹：</p><ul><li><em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>DC</em></em><em>到</em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>DC_OLD</em>**</li><li>如果可见，请将<em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>20XX</em></em><em>更改为</em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>20XX_OLD</em>**</li></ul><p>重新打开三维PDF文件以查看</p><img src="0常见问题方法\出现3D数据解析错误.png"><h2 id="所选模板中已有实体存在"><a href="#所选模板中已有实体存在" class="headerlink" title="所选模板中已有实体存在"></a>所选模板中已有实体存在</h2><img src="0常见问题方法/所选模板中已有实体存在.png"><h2 id="无法运行SW2016"><a href="#无法运行SW2016" class="headerlink" title="无法运行SW2016"></a>无法运行SW2016</h2><p>“To perform a new user reset, please run RnDTools\SWNewUserReset.exe.SolidWorks will now exit”。我如何修复此问题？</p><p>要解决此问题，请执行以下步骤：</p><p>1.在计算机上，打开注册表编辑器。<br>a.单击“开始”按钮 &gt; 键入“regedit”&gt; 按下“Enter”。</p><p>2.找到以下注册表项：</p><p>HKEY_LOCAL_MACHINE\Software\SolidWorks\General</p><p>3。右键单击以选择“INITIALIZE_ALL_SETTINGS”&gt; 单击“修改”。</p><p>4.将“Value data”设置为“0”。</p><p>5.单击“确定”，然后退出注册表编辑器。</p><p>6.打开 SOLIDWORKS® 应用程序。</p><h2 id="不相容样条曲线"><a href="#不相容样条曲线" class="headerlink" title="不相容样条曲线"></a>不相容样条曲线</h2><img src="0常见问题方法/不相容样条曲线.png"><h2 id="不支持的曲线类型"><a href="#不支持的曲线类型" class="headerlink" title="不支持的曲线类型"></a>不支持的曲线类型</h2><img src="0常见问题方法/不支持的曲线类型.png"><h2 id="OpenClipboard-失败"><a href="#OpenClipboard-失败" class="headerlink" title="OpenClipboard 失败"></a>OpenClipboard 失败</h2><p>装配体插入零部件时提示：OpenClipboard 失败</p><img src="0常见问题方法/OpenClipboard失败.png"><p>当我将组件插入装配体时，为什么会看到”OpenClipboard Failed”错误?</p><p>此消息通常表示计算机上缺乏资源。请查阅以下资料:</p><p>1. 确保%temp%文件夹中有足够的空闲空间。</p><p>2. 确保%temp%文件夹具有适当的权限。</p><p>3. 请确保系统驱动器有足够的空闲磁盘空间。</p><p>此外，重新启动计算机也可能有助于解决此问题。</p><p>为什么从设计库插入零件时出现”OpenClipboard Failed”错误?</p><p>此错误通常表明存在资源问题。尝试以下方法来解决这个问题:</p><p>1. 收到错误后，重新启动计算机。</p><p>2. 确认有足够的可用硬盘空间。</p><p>3. 删除%temp%位置中的文件。</p><h2 id="F-库无效"><a href="#F-库无效" class="headerlink" title="F-库无效"></a>F-库无效</h2><p>SOLIDWORKS Document Manage 库无效</p><img src="0常见问题方法/SOLIDWORKS Document Manage库无效.png"><h2 id="找不到-xxx-dll"><a href="#找不到-xxx-dll" class="headerlink" title="找不到 xxx.dll"></a>找不到 xxx.dll</h2><img src="0常见问题方法/找不到xxx.dll.png"><h1 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h1><h2 id="F-内存不足"><a href="#F-内存不足" class="headerlink" title="F-内存不足"></a>F-内存不足</h2><p>SOLIDWORKS 资源监控器”检测 “内存使用”限制超过 78% 时，将显示一系列警告。</p><img src="0常见问题方法/检查您的系统.png"><h2 id="内存耗尽"><a href="#内存耗尽" class="headerlink" title="内存耗尽"></a>内存耗尽</h2><img src="0常见问题方法/内存耗尽.png"><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.javelin-tech.com/blog/tag/solidworks-error/">SOLIDWORKS Error Archives (javelin-tech.com)</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>realview无法使用问题</title>
+      <link href="/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/realview%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98.html"/>
+      <url>/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/realview%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>realview（小金球）无法正常显示材质的问题或 realview 无法开启问题。</p><p>原因：多数是显卡兼容问题或是版本支持问题。</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1、打开注册表位置：计算机\HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Solidworks 2020\Performance\Graphics\Hardware\Current<br><br>2、找到 Renderer 项，双击 Renderer，在打开的窗口中复制你的显卡的名字；<br><br><img src="realview无法使用问题\image001.png"><br><br>3、打开注册表位置：计算机\HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Solidworks 2020\Performance\Graphics\Hardware\Gl2Shaders<br><br>4、在左侧的列表中展开 R420 然后在 R420 处右键单击，选择新建项，并重命名为第三步中复制的显卡的名字：（笔者这里是 AMD 的显卡，如果是英伟达的显卡，就展开 NV40 目录，如果是 Intel 的核显，就展开 Other 目录）<br><br><img src="realview无法使用问题\image002.png"><br><br>5、在刚刚新建的以显卡命名的项那里点击右键，再次新建一个 DWORD（32 位）值：<br><br><img src="realview无法使用问题\image003.png"><br><br>6、将新建的 32 位值命名为 Workarounds，双击命名后的 Workarounds，将数值数据改为 30008：<br><br><img src="realview无法使用问题\image004.png"><br><br>7、检查 realview 是否能启用。<br></p><p>似乎了解到不同版本和显卡和驱动的设置也是有所不同的，下面是在网上收集的一些：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">A卡</span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\SolidWorks\SOLIDWORKS 2017\Performance\Graphics\Hardware\Gl2Shaders\R420\Radeon]</span><br><span class="line">&quot;Workarounds&quot;=dword:00030008</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2018\Performance\Graphics\Hardware\Gl2Shaders\R420\Radeon]</span><br><span class="line">&quot;Workarounds&quot;=dword:00030408</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2019\Performance\Graphics\Hardware\Gl2Shaders\R420\Radeon]</span><br><span class="line">&quot;Workarounds&quot;=dword:00030408</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2020\Performance\Graphics\Hardware\Gl2Shaders\R420\Radeon]</span><br><span class="line">&quot;Workarounds&quot;=dword:00032408</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">N卡</span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\SolidWorks\SOLIDWORKS 2017\Performance\Graphics\Hardware\Gl2Shaders\NV40\GeForce]</span><br><span class="line">&quot;Workarounds&quot;=dword:00060008</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2018\Performance\Graphics\Hardware\Gl2Shaders\NV40\GeForce]</span><br><span class="line">&quot;Workarounds&quot;=dword:00080408</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2019\Performance\Graphics\Hardware\Gl2Shaders\NV40\GeForce]</span><br><span class="line">&quot;Workarounds&quot;=dword:00080408</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2020\Performance\Graphics\Hardware\Gl2Shaders\NV40\Geforce]</span><br><span class="line">&quot;Workarounds&quot;=dword:00031408</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>拔模分析崩溃</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E6%8B%94%E6%A8%A1%E5%88%86%E6%9E%90%E5%B4%A9%E6%BA%83.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E6%8B%94%E6%A8%A1%E5%88%86%E6%9E%90%E5%B4%A9%E6%BA%83.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="SW-异常-拔模分析崩溃"><a href="#SW-异常-拔模分析崩溃" class="headerlink" title="SW 异常-拔模分析崩溃"></a>SW 异常-拔模分析崩溃</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用拔模分析时崩溃 vcruntime140</p><img src="拔模分析崩溃/image1.png" ><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1、使用【开始菜单栏-Windows 系统-命令提示符】”以管理员身份运行”。</p><img src="拔模分析崩溃/image2.png" ><p>2、在命令提示符内：依次输入一下内容。</p><p>输入：D:（回车调整到 D 盘）</p><p>输入：cd D:\Program Files\SolidWorks 2020\SOLIDWORKS Corp\SOLIDWORKS（回车进入 ocx 文件目录）</p><p>输入：regsvr32 swatcolorlabel.ocx （回车 regsvr 注册加载 ocx 文件）</p><img src="拔模分析崩溃/image3.png" ><p>3、确认 regsvr 操作，重启 SW 使用【评估-拔模分析】检查崩溃是否继续复现？</p><img src="拔模分析崩溃/image4.png" ><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>VCRuntime140_1:00002743，是指在运行 SolidWorks 时缺失了 Microsoft Visual C++ Redistributable for Visual Studio 2015 库文件而导致的错误。这个错误通常是由于 SolidWorks 和 Windows 操作系统不兼容、操作系统损坏、注册表损坏、防病毒软件以及硬件驱动程序等问题引起的。解决此错误的方法如下：</p><p>1. 安装 Microsoft Visual C++ Redistributable for Visual Studio 2015 库文件。</p><p>2. 更新操作系统到最新版本以确保与 SolidWorks 兼容。</p><p>3. 通过 SolidWorks Rx 工具来检测和修复相关错误。</p><p>4. 禁用或卸载防病毒软件程序。</p><p>5. 确定计算机硬件驱动程序都是最新版本并进行更新。</p><p>6. 使用 Windows 自带的 sfc &#x2F;scannow 命令来检查和修复操作系统的损坏问题。</p><p>如果以上方法都没有解决问题，请考虑卸载并重新安装 SolidWorks 软件。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>试图执行系统不支持的操作</title>
+      <link href="/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E8%AF%95%E5%9B%BE%E6%89%A7%E8%A1%8C%E7%B3%BB%E7%BB%9F%E4%B8%8D%E6%94%AF%E6%8C%81%E7%9A%84%E6%93%8D%E4%BD%9C.html"/>
+      <url>/SOLIDWORKS-Solution/A/6-%E5%85%B6%E4%BB%96/%E8%AF%95%E5%9B%BE%E6%89%A7%E8%A1%8C%E7%B3%BB%E7%BB%9F%E4%B8%8D%E6%94%AF%E6%8C%81%E7%9A%84%E6%93%8D%E4%BD%9C.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="试图执行系统不支持的操作"><a href="#试图执行系统不支持的操作" class="headerlink" title="试图执行系统不支持的操作"></a>试图执行系统不支持的操作</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>移动，标注，调整视图会出现在，点击后奔溃。随机出现</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>C++等组件问题，<!-- S-073627--></p><p>1、</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Step格式文件无法编辑</title>
+      <link href="/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/Step%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%E6%97%A0%E6%B3%95%E7%BC%96%E8%BE%91.html"/>
+      <url>/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/Step%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%E6%97%A0%E6%B3%95%E7%BC%96%E8%BE%91.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Step格式文件无法编辑"><a href="#Step格式文件无法编辑" class="headerlink" title="Step格式文件无法编辑"></a>Step格式文件无法编辑</h1><p>为什么打开 STEP 格式，保存到本地了还是没办法编辑。图中显示的零件的图标是开启了”3D interconnect”功能，是为了关联原格式（step）的设计信息，修改需要在原格式文件进行（在SW里是不能进行修改）。</p><img src="Step格式文件无法编辑/image1.png" ><h2 id="方法-1：断开链接"><a href="#方法-1：断开链接" class="headerlink" title="方法 1：断开链接"></a>方法 1：断开链接</h2><p>你可以右键设计树需要编辑的零件，有个【解散特征】的选项。（解散特征是不可逆的）</p><img src="Step格式文件无法编辑/image2.png" ><h2 id="方法-2：系统选项设置"><a href="#方法-2：系统选项设置" class="headerlink" title="方法 2：系统选项设置"></a>方法 2：系统选项设置</h2><p>或者是关闭【系统选项-导入-3D interconnect】功能，再打开 Step，使不关联原格式的设计信息，自己独立一份实体模型。</p><img src="Step格式文件无法编辑/image3.png" ><h2 id="3Dinterconnect-功能介绍"><a href="#3Dinterconnect-功能介绍" class="headerlink" title="3Dinterconnect 功能介绍"></a>3Dinterconnect 功能介绍</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>openclipboard失败</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/openclipboard%E5%A4%B1%E8%B4%A5.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/openclipboard%E5%A4%B1%E8%B4%A5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="openclipboard-失败"><a href="#openclipboard-失败" class="headerlink" title="openclipboard 失败"></a>openclipboard 失败</h1><p>插入零部件提示</p><h2 id="方法-1："><a href="#方法-1：" class="headerlink" title="方法 1："></a>方法 1：</h2><p>该提示大概率与电脑的剪贴板有关，重新电脑是直接有效的验证和解决方法。 建议在下次重启电脑时，操作装配体【插入零部件】验证是否还存在此情况</p><h2 id="方法-2："><a href="#方法-2：" class="headerlink" title="方法 2："></a>方法 2：</h2><p>在一种情况下，”FSL Launcher 快捷管理器应用程序”导致了这个问题。如果您有此应用程序，或类似的应用程序，我们建议您卸载该应用程序，以验证它是否是原因。</p><p>根据网上说法还存在其他相似软件，具体到用户问题电脑，建议是暂时所有能退的程序（或卸载）进行验证。</p><h2 id="方法-3："><a href="#方法-3：" class="headerlink" title="方法 3："></a>方法 3：</h2><p>1.开始菜单打开设置页面</p><p>2.进入系统设置</p><p>3.选择剪切板，若清除按钮未置灰，则说明剪切板中有内容，点击清除则清除剪切板内容成功。</p><img src="openclipboard失败/image1.png" ><h2 id="方法-4："><a href="#方法-4：" class="headerlink" title="方法 4："></a>方法 4：</h2><!-- 参考 S-01516 --><p>原因：此消息通常可能表示机器上缺乏资源。请检查下面情况：</p><p>1、确保%temp%文件夹中有足够的空闲空间。</p><p>2、确保%temp%文件夹具有适当的权限。</p><p>3、确保系统驱动器有足够的剩余磁盘空间。</p><p>4、确认后，重复问题操作验证</p><h2 id="其补充说明："><a href="#其补充说明：" class="headerlink" title="其补充说明："></a>其补充说明：</h2><p>OpenClipboard (作为 winuser.h 的功能)用于打开剪贴板进行检查，并阻止其他应用程序修改剪贴板内容。理论讲一般对 SW 插入零部件情况无大影响，在出现体现后关闭弹窗即可。（当然具体情况具体分析）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>编辑零部件出现只读情况</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E7%BC%96%E8%BE%91%E9%9B%B6%E9%83%A8%E4%BB%B6%E5%87%BA%E7%8E%B0%E5%8F%AA%E8%AF%BB%E6%83%85%E5%86%B5.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E7%BC%96%E8%BE%91%E9%9B%B6%E9%83%A8%E4%BB%B6%E5%87%BA%E7%8E%B0%E5%8F%AA%E8%AF%BB%E6%83%85%E5%86%B5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="编辑零部件出现只读情况"><a href="#编辑零部件出现只读情况" class="headerlink" title="编辑零部件出现只读情况"></a>编辑零部件出现只读情况</h1><p>在装配体界面中，我们可以通过零部件【右键-编辑】来修改设计，但如果模型文件是只读属性，那在编辑时会出现如下弹窗提示：“文件XXX已打开为只读访问并不可以用于可写入的访问，您必须获得可写入的访问方式于此文件内方可完成此项操作。”</p><img src="编辑零部件出现只读情况/只读编辑1.png"><h2 id="恢复只读提示"><a href="#恢复只读提示" class="headerlink" title="恢复只读提示"></a>恢复只读提示</h2><p>如果没有弹窗的话，你可能需要检查下：是不是被点了不再提示。</p><img src="编辑零部件出现只读情况/微信截图_20240423160123.png"><p>确定弹窗后，进入到零件界面下的文件名称也会有“[只读]”的标识。</p><img src="编辑零部件出现只读情况/只读编辑2.png"><h2 id="设置只读-写入"><a href="#设置只读-写入" class="headerlink" title="设置只读&#x2F;写入"></a>设置只读&#x2F;写入</h2><p>正常情况下，我们可以检查当前文件夹的当前零件的属性。大概率是文件设置了“只读”的属性。需将其取消勾选，恢复写入访问权限。</p><img src="编辑零部件出现只读情况/只读编辑3.1.png"><p>如果文件是在打开状态下，修改的文件只读属性，那你还需要在【系统选项-协作】勾选激活多用户环境。</p><img src="编辑零部件出现只读情况/只读编辑3.png"><p>激活后，你便可以在文件打开的模式下修改写入权限。在菜单栏【文件-获取写入访问】</p><img src="编辑零部件出现只读情况/只读编辑4.png"><p>获取写入访问后，文件名称的”[只读]”就会消失，然后“获取写入访问”位置会变成“使之为只读”。</p><img src="编辑零部件出现只读情况/只读编辑5.png"><h2 id="保存所有"><a href="#保存所有" class="headerlink" title="保存所有"></a>保存所有</h2><p>在编辑修改“可写入”的零件时，在保存时会提示“保存所有”。如果修改了“只读”零件时，保存会在零件后标记“[只读]”，并且会已【另存为】的方式保存。</p><p>注意：这里的【另存为】是会修改装配体的零部件参考的，会参考到另存为的零件。</p><img src="编辑零部件出现只读情况/只读编辑6.png"><img src="编辑零部件出现只读情况/只读编辑7.png"><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>零件是旧属性未更新</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E9%9B%B6%E4%BB%B6%E6%98%AF%E6%97%A7%E5%B1%9E%E6%80%A7%E6%9C%AA%E6%9B%B4%E6%96%B0.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E9%9B%B6%E4%BB%B6%E6%98%AF%E6%97%A7%E5%B1%9E%E6%80%A7%E6%9C%AA%E6%9B%B4%E6%96%B0.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="零件是旧属性未更新"><a href="#零件是旧属性未更新" class="headerlink" title="零件是旧属性未更新"></a>零件是旧属性未更新</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>当使用 SW API 批量修改属性时，装配体里的零件属性未进行同步更新。此情况会造成差异文件的覆盖问题，导致新属性被旧属性覆盖无法做到修改。</p><img src="零件是旧属性未更新/image1.png" ><h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>【计算机\HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2022\Performance】设置 Autoload Components&#x3D;1，属性才正常</p><img src="零件是旧属性未更新/image2.png" >]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>尺寸与实际不一样</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E5%B7%A5%E7%A8%8B%E5%9B%BE%E5%B0%BA%E5%AF%B8%E9%97%AE%E9%A2%98.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E5%B7%A5%E7%A8%8B%E5%9B%BE%E5%B0%BA%E5%AF%B8%E9%97%AE%E9%A2%98.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="工程图尺寸与实际不一样"><a href="#工程图尺寸与实际不一样" class="headerlink" title="工程图尺寸与实际不一样"></a>工程图尺寸与实际不一样</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>主视图的尺寸和局部视图的尺寸不同</p><img src="工程图尺寸问题/image1.png" ><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>是”2D 投影尺寸类型”和”3D 真实尺寸类型”有关系</p><img src="工程图尺寸问题/image2.png" ><ul><li><strong>投影：2D 尺寸</strong></li></ul><p>一般是按这个尺寸类型标注在工程图上。</p><ul><li><strong>真实：精确模型值。</strong></li></ul><p>•SOLIDWORKS 为标准和自定义正交视图指定投影类型尺寸，为等轴测、左右二等角轴测和上下二等角轴测视图指定真实类型尺寸</p><p>（下图已真实尺寸为例，该尺寸会标注成 3D 尺寸，反应在工程图上则是非投影的尺寸。理想尺寸应该是 3.0mm）</p><img src="工程图尺寸问题/image3.png" ><h1 id="形位公差问题"><a href="#形位公差问题" class="headerlink" title="形位公差问题"></a>形位公差问题</h1><p>Q2022新引入的形位公差附加到尺寸线，如果从形位公差左侧插入符号，形位公差右侧会与尺寸线重叠<br>A已知SPR1251798：22更新版本后，形位公差中间不能加符号，可以在21以下版本编辑形位公差，然后复制到高版本使用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>工程图视图空白</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E5%B7%A5%E7%A8%8B%E5%9B%BE%E8%A7%86%E5%9B%BE%E7%A9%BA%E7%99%BD.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E5%B7%A5%E7%A8%8B%E5%9B%BE%E8%A7%86%E5%9B%BE%E7%A9%BA%E7%99%BD.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="工程图视图空白"><a href="#工程图视图空白" class="headerlink" title="工程图视图空白"></a>工程图视图空白</h1><p>参考的零部件模型已从发生移动，导致工程图参考丢失，因此它以空白视图打开。</p><img src="工程图视图空白/工程图视图空白.png"><p>如果在将模型保存到新位置时图形处于打开状态，则不会出现此问题…图形的参照将更新。就像在 Windows 中使用右键单击 SOLIDWORKS &gt; 移动模型一样 &gt; 移动 &gt; 更新。</p><span id="more"></span><h2 id="方法1：打开参考替换"><a href="#方法1：打开参考替换" class="headerlink" title="方法1：打开参考替换"></a>方法1：打开参考替换</h2><p>选择“文件”&gt;“打开”。找到打开对话框下的【参考】按钮，双击旧模型的路径，来浏览到模型的新位置(替换后，模型名字会变绿)</p><img src="工程图视图空白/工程图视图空白方法.png"><p>然后打开工程图，此时模型可能会出现尺寸悬空的情况，我们可以忽略。在后续修改即可。</p><h2 id="方法2：替换模型"><a href="#方法2：替换模型" class="headerlink" title="方法2：替换模型"></a>方法2：替换模型</h2><p>在打开工程图界面里，右键丢失参考的空白视图【替换模型】，浏览到新位置下的模型进行替换参考即可。</p><img src="工程图视图空白/工程图视图空白方法2.png"><h2 id="方法3：显示视图"><a href="#方法3：显示视图" class="headerlink" title="方法3：显示视图"></a>方法3：显示视图</h2><p>替换完成，并且可以从工程图打开零件，但是模型显示还是空白。可以将模型【显示】恢复</p><img src="工程图视图空白/显示视图.png">]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>直径标注不了</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E7%9B%B4%E5%BE%84%E6%A0%87%E6%B3%A8%E4%B8%8D%E4%BA%86.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E7%9B%B4%E5%BE%84%E6%A0%87%E6%B3%A8%E4%B8%8D%E4%BA%86.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="直径标注不了"><a href="#直径标注不了" class="headerlink" title="直径标注不了"></a>直径标注不了</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>中间格式导入SW时，直径边线被识别成圆弧导致标注不了的问题</p><img src="直径标注不了/image-20240701110234236.png"><img src="直径标注不了/image-20240701110826305.png"><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>取消【系统选项-导入-3Dinterconnect】功能，确保圆边线不被识别成圆弧</p><img src="直径标注不了/image-20240701110010260.png"><p>再重新操作中间格式文件的导入操作。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>找不到calloutformat</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E6%89%BE%E4%B8%8D%E5%88%B0calloutformat.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E6%89%BE%E4%B8%8D%E5%88%B0calloutformat.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="找不到calloutformat-txt"><a href="#找不到calloutformat-txt" class="headerlink" title="找不到calloutformat.txt"></a>找不到calloutformat.txt</h1><p>找不到 calloutformat.txt 标注将由几何体定义。这个文件会影响在工程图里“孔标注“的显示情况。</p><img src="找不到calloutformat/找不到calloutformat.png" ><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>找到 calloutformat.txt 文件，一般在：SW 程序位置-lang-chinese-simplified 文件夹内。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\lang\chinese-simplified</span><br></pre></td></tr></table></figure><img src="找不到calloutformat/孔标注文件位置2.png" ><p>在【系统选项-文件位置-孔标注格式文件】添加 calloutformat 所在文件夹路径。</p><img src="找不到calloutformat/孔标注文件位置.png" >]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Failed to load sldresu.dll</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/Failed%20to%20load%20sldresu.dll.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/Failed%20to%20load%20sldresu.dll.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Failed-to-load-sldresu-dll"><a href="#Failed-to-load-sldresu-dll" class="headerlink" title="Failed to load sldresu.dll"></a>Failed to load sldresu.dll</h1><span id="more"></span><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>如果您在安装 SOLIDWORKS 软件的英文版本后更改系统语言设置，则您可能会看到此错误。</p><p>SOLIDWORKS 软件会在安装路径下的语言文件夹中搜索与系统语言匹配的“sldresu.dll“文件。当 找得到该文件时，该软件将无法打开文件。</p><h2 id="方法1：设置英文语言"><a href="#方法1：设置英文语言" class="headerlink" title="方法1：设置英文语言"></a>方法1：设置英文语言</h2><p>可以将系统语言更改为英语</p><h2 id="方法2：修改安装中文"><a href="#方法2：修改安装中文" class="headerlink" title="方法2：修改安装中文"></a>方法2：修改安装中文</h2><p>打开 SOLIDWORKS 安装程序，添加所需的语言</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>打开文件速度卡慢</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%8D%A1%E6%85%A2.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%8D%A1%E6%85%A2.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="打开文件速度卡慢"><a href="#打开文件速度卡慢" class="headerlink" title="打开文件速度卡慢"></a>打开文件速度卡慢</h1><p>我们在打开SW文件时会经过一些我们看不到的流程（如图）。针对过程中，可能会出现的卡慢现象我们进行如下分析：</p><img src="打开文件遇到错误/111.png"><span id="more"></span><h1 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h1><p>针对问题零件，我们最终目标是确认它是否还能通过 SW 打开，如果不行则需考虑重新设计该零件。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">检查--&gt;是否有加密问题--no--&gt;是否有网盘问题--no--&gt;是否电脑问题</span><br><span class="line">是否有加密问题--yes--&gt;验证解密并在未加密环境打开</span><br><span class="line">是否有网盘问题--yes--&gt;验证在本地打开能否打开</span><br><span class="line">是否电脑问题--yes--&gt;验证在其他电脑打开</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>通过改变问题文件的使用环境打开该文件，验证是否为特定电脑或特定文件的限制问题。</p><p>其他情况：例如使用了第三方API操作情况导致，需要具体问题文件进行分析。或者是当作文件损坏（建议查找备份或新建）</p><h1 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h1><h2 id="参考文件夹"><a href="#参考文件夹" class="headerlink" title="参考文件夹"></a>参考文件夹</h2><p>【】</p><h1 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h1><h1 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h1><h2 id="索引选项"><a href="#索引选项" class="headerlink" title="索引选项"></a>索引选项</h2><p>同份文件在打开时卡慢，</p><p>打开后保存，再打开恢复正常。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>打开文件遇到错误</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="打开文件遇到错误"><a href="#打开文件遇到错误" class="headerlink" title="打开文件遇到错误"></a>打开文件遇到错误</h1><p>通过该问题于加密的关系会很大，你可以以这篇文章作为参考，但请不要抱有太大的希望。并且我希望你能做好重建零件的心理准备。</p><img src="打开文件遇到错误/1.png" ><span id="more"></span><h2 id="自动修复功能"><a href="#自动修复功能" class="headerlink" title="自动修复功能"></a>自动修复功能</h2><p>SOLIDWORKS 2017 添加了用于修复损坏文件的自动功能。如果您尝试打开一个损坏的文件，该工具会尝试识别损坏的片段，将其删除并保存原始片段的副本。</p><h2 id="从备份还原"><a href="#从备份还原" class="headerlink" title="从备份还原"></a>从备份还原</h2><p>如果启用了【系统选项-备份&#x2F;恢复】的“自动恢复”和“备份”选项，你可以尝试从选项中的文件路径进行还原，来替换问题文件使用。</p><img src="打开文件遇到错误/备份.png"><p>除了上述两种方法之外，你还可以参考下面的操作进行尝试。</p><h2 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h2><p>针对问题零件，我们最终目标是确认它是否还能通过 SW 打开，如果不行则需考虑重新设计该零件。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">检查--&gt;是否有加密问题--no--&gt;是否有网盘问题--no--&gt;是否电脑问题</span><br><span class="line">是否有加密问题--yes--&gt;验证解密并在未加密环境打开</span><br><span class="line">是否有网盘问题--yes--&gt;验证在本地打开能否打开</span><br><span class="line">是否电脑问题--yes--&gt;验证在其他电脑打开</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>通过改变问题文件的使用环境打开该文件，验证是否为特定电脑或特定文件的限制问题。</p><p>其他情况：例如使用了第三方API操作情况导致，需要具体问题文件进行分析。或者是当作文件损坏（建议查找备份或新建）</p><h2 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h2><h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>在使用【打开文件】时，选择“配置-&lt;高级&gt;”。在配置中选择“只显示装配体结构的新配置，并且随便写个配置名称“1”。完成后确定打开文件。</p><img src="打开文件遇到错误/高级配置打开.png"><p>此时文件的设计树是以全压缩的形式，我们可以使用二分排查方式（一半一半的解压），当解压到问题文件时，装配体会报错或是闪退，此时我们就能定位到问题零件，并进行删除处理。</p><img src="打开文件遇到错误/高级配置打开3.png"><h3 id="大型设计审阅方法"><a href="#大型设计审阅方法" class="headerlink" title="大型设计审阅方法"></a>大型设计审阅方法</h3><p>此方法加载的数据比高级配置方法多，但它仍可能用于故障排除。这里的一个主要区别是，您将能够在将组件完全加载到 RAM 之前看到它们。使用以下过程：</p><p>在未打开任何文件的情况下启动 SOLIDWORKS。单击<em>“打开</em>”。在“<em>模式</em>设置”下，选择<em>“大型设计评审</em>”，然后打开文件。</p><p><img src="https://store.trimech.com/wp-content/uploads/2020/08/Large_design_review_in_SOLIDWORKS-1.png" alt="Large_design_review_in_SOLIDWORKS"></p><p>单击“<em>大型设计审阅</em>”弹出窗口中的<em>“确定</em>”。单击“<em>大型设计审查</em>命令管理器”选项卡上的“<em>选择性打开</em>”。</p><p><img src="https://store.trimech.com/wp-content/uploads/2020/08/Selective_open_option_in_SOLIDWORKS-1.png" alt="Selective open option in SOLIDWORKS"></p><p>在设计树中选择您认为可能未损坏的零件，然后单击<em>打开所选部分。</em></p><p>如果你走到了这一步，你将不再处于<em>大型设计评审</em>模式。您选择的部件将完全加载到内存中，所有其他组件将被隐藏。弹出窗口将警告您内存中正在加载隐藏的组件注释。</p><p>在正常情况下，隐藏组件只会使它们对我们不可见，但所有数据仍保存在 RAM 中供 SOLIDWORKS 使用。使用这种方法，您可以开始一个接一个地显示组件，并且随着每个组件的显示，它也将被完全加载。当其中一个失败时，您已经找到了损坏的组件。</p><p>我建议扩展<em>显示窗格</em>以加快这项工作。（树上方的“管理器”选项卡右上角的小浮出箭头。您无需一次选择一个组件并从弹出工具栏中选择令人毛骨悚然的眼球图标，而是只需单击一下即可切换隐藏&#x2F;显示状态。但是，如果未选中“<em>打开”对话框</em>中“<em>大型设计审阅</em>”旁边的<em>“编辑程序集</em>”复选框，则它可能不可用。</p><p><img src="https://store.trimech.com/wp-content/uploads/2020/08/Edit_assembly_option_in_SOLIDWORKS-1.png" alt="Edit assembly option in SOLIDWORKS"></p><h2 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h2><p>欸。。。。，等我遇到了再写</p><h1 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h1><h2 id="重复打开操作"><a href="#重复打开操作" class="headerlink" title="重复打开操作"></a>重复打开操作</h2><p>有时重启软件，重开文件也能恢复正常</p><h2 id="Swshellfilelauncher"><a href="#Swshellfilelauncher" class="headerlink" title="Swshellfilelauncher"></a>Swshellfilelauncher</h2><p>如果是出现Swshellfilelauncher.exe程序的弹窗，则可以检查下面几种情况：</p><p>A1：据说是多版本问题，先打开SW再拖拽文件到程序界面即可？</p><p>A2：据说复制换个名字也能打开？</p><p>A3：内存不足：建议您尝试关闭其他程序，然后重新打开SW并尝试打开该文件。</p><p>Swshellfilelauncher这是 SolidWorks® 文件启动程序。SolidWorks 2012 SP4 中引入的 SolidWorks 文件启动程序让用户能够选择从 Windows 资源管理器中打开文件时要在哪个版本的 SolidWorks 中打开文件（安装有多个版本时）。</p><h2 id="方法3：替换文件"><a href="#方法3：替换文件" class="headerlink" title="方法3：替换文件"></a>方法3：替换文件</h2><p>有时文件存在有些人能打不开的情况。那可以让正常打开的电脑进行问题文件的另存尝试。（相当于把问题文件更换，但内容不变）</p><p>1、打开此装配体；<br>2、新建一个装配体；<br>3、将有问题装配体插入到新装配体内，并勾选“确定”，固定到原三视基准面；<br>4、解散插入的问题装配体；<br>5、替换或另存此新装配体，后续，用此新装配体工作；</p><img src="打开文件遇到错误/3.png"><h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>1、在【系统选项-备份&#x2F;恢复】中找到备份文件夹，</p><p>2、在文件夹中知道“备份于 文件名称”的文件，用此文件改名替换原来的“文件名称”文件即可</p><img src="打开文件遇到错误/备份.png"><!--flowst=>start: 检查cond1=>condition: 加密问题cond2=>condition: 网盘问题cond3=>condition: 电脑问题cond4=>condition: API操作cond11=>operation: 解密并在未加密环境打开cond22=>operation: 在其他电脑打开cond33=>operation: 在本地打开e=>end: 结束节点st(right)->cond1(right)cond1(yes,right)->cond11cond2(yes,right)->cond22cond3(yes,right)->cond33cond4(yes,right)->econd1(no,)->cond2cond2(no,)->cond3cond3(no,)->cond4-->]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无法在SW打开STEP文件</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%97%A0%E6%B3%95%E5%9C%A8SW%E6%89%93%E5%BC%80STEP%E6%96%87%E4%BB%B6.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E6%97%A0%E6%B3%95%E5%9C%A8SW%E6%89%93%E5%BC%80STEP%E6%96%87%E4%BB%B6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="无法在SW打开STEP文件"><a href="#无法在SW打开STEP文件" class="headerlink" title="无法在SW打开STEP文件"></a>无法在SW打开STEP文件</h1><p>双击 STEP 文件时，为什么无法在 SOLIDWORKS 应用程序中打开该文件？</p><h2 id="方法1：选择启动程序"><a href="#方法1：选择启动程序" class="headerlink" title="方法1：选择启动程序"></a>方法1：选择启动程序</h2><p>导致此行为的一个原因是：没有与”.step”文件格式关联的正确打开的 shell。可执行以下步骤解决：</p><p>1.打开 Windows® 控制面板。</p><p>2.转到”程序”&gt;“默认程序”&gt; 单击”将文件类型或协议与程序关联”。</p><img src="无法在SW打开STEP文件/image1.png" ><p>3.在”默认应用程序”中，单击”按文件类型选择默认应用程序”。</p><img src="无法在SW打开STEP文件/image2.png" ><p>4.找到”.step”格式类型，并确保默认应用程序指定为”SOLIDWORKS Launcher”。</p><img src="无法在SW打开STEP文件/image3.png" ><h2 id="方法2：注册表设置"><a href="#方法2：注册表设置" class="headerlink" title="方法2：注册表设置"></a>方法2：注册表设置</h2><p>(注意：错误编辑注册表可能严重损坏操作系统。强烈建议您备份注册表数据，然后再对注册表做出更改。)</p><p>在注册表【计算机\HKEY_CLASSES_ROOT.step】中，（默认）值指定为”.STEP_auto_file”。</p><img src="无法在SW打开STEP文件/image4.png" ><p>在注册表【计算机\HKEY_CLASSES_ROOT\.STEP_auto_file\shell\open\command】确保”.STEP_auto_file”存在并具有正确的SOLIDWORKS 应用程序路径，例如：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\swShellFileLauncher.exe\&quot; \&quot;%1&quot;</span><br></pre></td></tr></table></figure><img src="无法在SW打开STEP文件/image5.png" ><p>如果计算机包含这些注册表项的错误数据值，则可以导入随附的”S-078065 step_registry.reg”和”S-078065 和STEP_auto_file_registry.reg”文件来自动重置值。</p><h1 id="无效的记录索引"><a href="#无效的记录索引" class="headerlink" title="无效的记录索引"></a>无效的记录索引</h1><p>打开STEP遇到无效的记录索引</p><p>方法：使用记事本打开STP，使用取代功能來修改，完成后保存，重新打开Step文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查找: PRESENTATION_STYLE_ASSIGNMENT 替换成: PRES</span><br></pre></td></tr></table></figure><h1 id="不相容样条曲线"><a href="#不相容样条曲线" class="headerlink" title="不相容样条曲线"></a>不相容样条曲线</h1><img src="无法在SW打开STEP文件/不相容样条曲线.png"><h1 id="不支持的曲线类型"><a href="#不支持的曲线类型" class="headerlink" title="不支持的曲线类型"></a>不支持的曲线类型</h1><img src="无法在SW打开STEP文件/不支持的曲线类型.png"><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>默认模板无效-A</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E9%BB%98%E8%AE%A4%E6%A8%A1%E6%9D%BF%E6%97%A0%E6%95%88-A.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E9%BB%98%E8%AE%A4%E6%A8%A1%E6%9D%BF%E6%97%A0%E6%95%88-A.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="默认模板无效"><a href="#默认模板无效" class="headerlink" title="默认模板无效"></a>默认模板无效</h1><h2 id="问题：打开文件时弹窗默认模板无效"><a href="#问题：打开文件时弹窗默认模板无效" class="headerlink" title="问题：打开文件时弹窗默认模板无效"></a>问题：打开文件时弹窗默认模板无效</h2><img src="默认模板无效-A/image1.png" ><h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>原因：可能是你的模板文件无设置或丢失，打开 STP、x-t 、IGES等格式的零件时出现提示。</p><p>1、找到【工具-选项】系统选项，默认模板。</p><img src="默认模板无效-A/image2.png" ><p>2、设置零件、装配体、工程图的默认模板。这个模板会在打开 STP、x-t 等格式的零件时，起作用，在需要用到模板时，预设模板作用。</p><img src="默认模板无效-A/image3.png" >]]></content>
+      
+      
+      <categories>
+          
+          <category> SOLIDWORKS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>升级自定义属性</title>
+      <link href="/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E5%8D%87%E7%BA%A7%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7.html"/>
+      <url>/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E5%8D%87%E7%BA%A7%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="升级自定义属性"><a href="#升级自定义属性" class="headerlink" title="升级自定义属性"></a>升级自定义属性</h1><p>SOLIDWORKS 2017 或更早版本中创建的文件的自定义属性，是旧的属性结构。在之后版本会出现更新需要在设计树，对文件右键-升级自定义属性。</p><p>在旧文件上运行<strong>升级自定义属性</strong>时，其自定义属性将升级到新的体系结构。 升级后，以下功能可用于旧文件：</p><ul><li>自定义属性对话框中的<strong>链接</strong>列</li><li>配置特定的切割清单和自定义属性</li><li><strong>文件属性</strong>中的方程式</li><li>增强的配置特定属性对话框</li></ul><h2 id="方法1：手动升级"><a href="#方法1：手动升级" class="headerlink" title="方法1：手动升级"></a>方法1：手动升级</h2><p>1</p><img src="升级自定义属性/升级自定义属性.jpg" ><h2 id="方法2：批量升级"><a href="#方法2：批量升级" class="headerlink" title="方法2：批量升级"></a>方法2：批量升级</h2><p>API (IModelDocExtension:: UpgradeCustomProps)</p><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p><a href="https://help.solidworks.com/2023/chinese-simplified/solidworks/sldworks/c_custom_properties_architecture.htm">自定义属性体系结构 - 2023 - SOLIDWORKS 帮助</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>升级装饰螺纹线</title>
+      <link href="/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E5%8D%87%E7%BA%A7%E8%A3%85%E9%A5%B0%E8%9E%BA%E7%BA%B9%E7%BA%BF.html"/>
+      <url>/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E5%8D%87%E7%BA%A7%E8%A3%85%E9%A5%B0%E8%9E%BA%E7%BA%B9%E7%BA%BF.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="升级装饰螺纹线"><a href="#升级装饰螺纹线" class="headerlink" title="升级装饰螺纹线"></a>升级装饰螺纹线</h1><p>SOLIDWORKS 2019及以后版本，装饰螺纹线做了改进：</p><ul><li>支持锥形螺纹</li><li>镜向和阵列几何体</li><li>更好地映射到非平面曲面</li><li>锥形轴标准</li></ul><img src="升级装饰螺纹线/image1.png" ><h2 id="方法1：手动操作"><a href="#方法1：手动操作" class="headerlink" title="方法1：手动操作"></a>方法1：手动操作</h2><p>要升级零件、装配体或工程图中的旧装饰螺纹线：</p><p>1、在 工具 &gt; 选项 &gt; 系统选项 &gt; 常规 中，选择允许升级装饰螺纹线，然后单击确定。</p><img src="升级装饰螺纹线/设置.png" ><p>2、打开模型，右键单击 FeatureManager 设计树中的顶层项目，然后单击升级装饰螺纹线特征。在升级后，命令升级装饰螺纹线特征对该模型不再可用。</p><h2 id="方法2：批量处理"><a href="#方法2：批量处理" class="headerlink" title="方法2：批量处理"></a>方法2：批量处理</h2><p>API (IModelDocExtension::UpgradeLegacyCThreads) </p><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p><a href="https://help.solidworks.com/2023/chinese-simplified/solidworks/sldworks/t_upgrade_legacy_documents_to_use_cosmetic_threads_improvements.htm">https://help.solidworks.com/2023/chinese-simplified/solidworks/sldworks/t_upgrade_legacy_documents_to_use_cosmetic_threads_improvements.htm</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>高版本属性卡不支持使用</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E9%AB%98%E7%89%88%E6%9C%AC%E5%B1%9E%E6%80%A7%E5%8D%A1%E4%B8%8D%E6%94%AF%E6%8C%81%E4%BD%BF%E7%94%A8.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E9%AB%98%E7%89%88%E6%9C%AC%E5%B1%9E%E6%80%A7%E5%8D%A1%E4%B8%8D%E6%94%AF%E6%8C%81%E4%BD%BF%E7%94%A8.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="高版本属性卡不支持使用"><a href="#高版本属性卡不支持使用" class="headerlink" title="高版本属性卡不支持使用"></a>高版本属性卡不支持使用</h1><p>正在打开的模板文件是在较新版本的属性卡中创建的。可能不支持所有新功能。<br>The template file being opened is created in a newer version of Propety TabBuilder. All the new features may not be supported.</p><img src="高版本属性卡不支持使用/image1.png" ><h2 id="方法：检查属性卡版本"><a href="#方法：检查属性卡版本" class="headerlink" title="方法：检查属性卡版本"></a>方法：检查属性卡版本</h2><p>问题多出现在多版本的时候，自定义属性文件的高版本不兼容造成。</p><img src="高版本属性卡不支持使用/image2.png" ><p>我们需要找到【系统选项-文件位置-自定义属性文件】找到高版本属性卡的路径，选择删除即可。（或者换成当前版本的属性卡路径）</p><img src="高版本属性卡不支持使用/image3.png" ><h1 id="模板正常但弹窗"><a href="#模板正常但弹窗" class="headerlink" title="模板正常但弹窗"></a>模板正常但弹窗</h1><p>在装配体选择零部件时出现，似乎多出现在从高版本转低版本的SW文件（带属性卡的文件）。在激活这些零件时，程序就会弹窗提示。</p><h2 id="方法：修改零件属性卡"><a href="#方法：修改零件属性卡" class="headerlink" title="方法：修改零件属性卡"></a>方法：修改零件属性卡</h2><p>这种问题零件可能占少数，如果有出现的话，我们在零件右侧【任务窗口-属性卡界面，选项，选择新属性卡】 应该就行的</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SOLIDWORKS工具栏显示</title>
+      <link href="/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E5%B7%A5%E5%85%B7%E6%A0%8F%E6%98%BE%E7%A4%BA.html"/>
+      <url>/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E5%B7%A5%E5%85%B7%E6%A0%8F%E6%98%BE%E7%A4%BA.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="工具栏显示"><a href="#工具栏显示" class="headerlink" title="工具栏显示"></a>工具栏显示</h1><p>工具栏的操作在菜单栏【工具-自定义】里进行设置，</p><img src="工具栏显示/自定义.png"><h2 id="恢复工具栏设置"><a href="#恢复工具栏设置" class="headerlink" title="恢复工具栏设置"></a>恢复工具栏设置</h2><img src="工具栏显示/恢复工具栏设置.png"><h2 id="工具栏位置问题"><a href="#工具栏位置问题" class="headerlink" title="工具栏位置问题"></a>工具栏位置问题</h2><img src="工具栏显示/工具栏位置问题2.png"><img src="工具栏显示/工具栏位置问题1.png">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>搜索路径无法修改</title>
+      <link href="/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E6%90%9C%E7%B4%A2%E8%B7%AF%E5%BE%84%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9.html"/>
+      <url>/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E6%90%9C%E7%B4%A2%E8%B7%AF%E5%BE%84%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="搜索路径无法修改"><a href="#搜索路径无法修改" class="headerlink" title="搜索路径无法修改"></a>搜索路径无法修改</h1><p>搜索路径可以帮助我们在指定的位置快速找到我们所需要的模型，SOLIDWORKS<br>搜索比其他搜索引擎要快，甚至我们可以使用关键字或者自定义属性来进行搜索，同时文件可以在右侧窗口预览，提高我们对零部件重用的效率。</p><p>（下图 1 是无设置的情况，下图 2 是设置后的情况）</p><img src="搜索路径无法修改/image1.png"><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>但是你在【系统选项-文件位置-搜索路径】尝试将需要建立索引时，却发现不能将文件夹位置进行设置添加。而且也不能删除现有的。</p><img src="搜索路径无法修改/image2.png"><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>为了解决该问题，我们需要修改系统的索引选项。打开【控制面板-索引选项】</p><img src="搜索路径无法修改/image3.png"><p>选择修改，在所选位置的摘要里点击需要修改的对象，勾选（或取消勾选）即可建议（或断开）索引。</p><img src="搜索路径无法修改/image4.png">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SOLIDWORKS系统选项</title>
+      <link href="/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9.html"/>
+      <url>/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="系统选项"><a href="#系统选项" class="headerlink" title="系统选项"></a>系统选项</h1><h1 id="普通"><a href="#普通" class="headerlink" title="普通"></a>普通</h1><h3 id="输入尺寸值"><a href="#输入尺寸值" class="headerlink" title="输入尺寸值"></a>输入尺寸值</h3><h3 id="恢复文件关联"><a href="#恢复文件关联" class="headerlink" title="恢复文件关联"></a>恢复文件关联</h3><p>如果将系统设置为使用特定版本的 SOLIDWORKS 从文件资源管理器打开所有 SOLIDWORKS 文件，则单击此选项以恢复文件关联。</p><p>要使用此选项，您必须使用以管理员身份运行权限启动 SOLIDWORKS。 这些步骤因操作系统而异。 对于相关信息，请参阅 Microsoft 知识库。</p><h1 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h1><h1 id="草图设置"><a href="#草图设置" class="headerlink" title="草图设置"></a>草图设置</h1><h2 id="标注无进编辑问题"><a href="#标注无进编辑问题" class="headerlink" title="标注无进编辑问题"></a>标注无进编辑问题</h2><p>标注尺寸时，发现标注完无法输入尺寸值，需要额外双击才能进入编辑。你可以勾选【系统选项-普通-输入尺寸值】</p><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image002-17000153139931.jpg" alt="img"></p><h2 id="自动标注问题"><a href="#自动标注问题" class="headerlink" title="自动标注问题"></a>自动标注问题</h2><p>勾选【系统选项-草图-在生成实体时启用荧屏上数字输入】，那么在绘制草图的同时输入尺寸值，仅在输入值的情况下创建尺寸（该选项会顺便生成尺寸标注）</p><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image003.png" alt="img"></p><p>下面是设置前后，在绘制草图时的编辑页。其中“选项”中就会多一项“添加尺寸”的可选项。</p><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image005.jpg" alt="img"></p><p>在你绘制草图实体的同时，输入尺寸数值。则这个尺寸也会自动添加。</p><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image006.png" alt="img"></p><h2 id="草图端点显示问题"><a href="#草图端点显示问题" class="headerlink" title="草图端点显示问题"></a>草图端点显示问题</h2><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image007.png" alt="img"></p><h1 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h1><h2 id="显示参考三重轴"><a href="#显示参考三重轴" class="headerlink" title="显示参考三重轴"></a>显示参考三重轴</h2><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image002.jpg" alt="img"></p><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image004.jpg" alt="img"></p><h1 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h1><h2 id="细节层次："><a href="#细节层次：" class="headerlink" title="细节层次："></a>细节层次：</h2><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image005.png" alt="img"></p><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image007.jpg" alt="img"></p><h2 id="增强图形性能"><a href="#增强图形性能" class="headerlink" title="增强图形性能"></a>增强图形性能</h2><p>（需要重启SOLIDWORKS）</p><p>目前发现会影响文本注解的显示，造成模糊情况。</p><p>标注尺寸时，发现标注完无法输入尺寸值，需要额外双击才能进入编辑。</p><p><strong>注意：</strong><br> *对于 SOLIDWORKS 2020 和更高版本，如果您的专业显卡无法识别 RealView 和 Enhanced Graphics Performance，请安装此 <a href="https://files.solidworks.com/videocarddriver/patches/allow-list-installer/SolidWorks_GraphicsCards_Support.msi">修补</a> 程序。<br> 受支持的显卡已更新 <a href="https://files.solidworks.com/videocarddriver/patches/Release_Notes_Graphics_Support_Patch.txt">发行说明</a></p><p> *对于 SOLIDWORKS 2018 用户，请安装此项 <a href="https://files.solidworks.com/videocarddriver/patches/sw2018/SW2018_GraphicsCards_Support.msi">修补</a> 以启用最新显卡的性能增强功能。<br> *对于 SOLIDWORKS 2019 用户，请安装此项 <a href="https://files.solidworks.com/videocarddriver/patches/sw2019/SW2019_GraphicsCards_Support.msi">修补</a> 以启用最新显卡的性能增强功能。<br> 对应的已存档 <a href="https://files.solidworks.com/videocarddriver/patches/Release_Notes_SW20xx_Patch.txt">发行说明</a></p><h1 id="文件位置"><a href="#文件位置" class="headerlink" title="文件位置"></a>文件位置</h1><h2 id="搜索路径不能设置问题："><a href="#搜索路径不能设置问题：" class="headerlink" title="搜索路径不能设置问题："></a>搜索路径不能设置问题：</h2><p>SOLIDWORKS® 搜索路径由 Windows®“控制面板”中的“索引选项”项目控制, 转到“控制面板”&gt;“索引选项”&gt;“修改”，并禁用或选中您不希望出现在搜索路径中的任何位置的复选框。</p><h1 id="FeatureManage"><a href="#FeatureManage" class="headerlink" title="FeatureManage"></a>FeatureManage</h1><p>使用3DE UES模块后，此处的装配体特征树重命名将被禁用。</p><p><img src="/SOLIDWORKS-Solution/%E7%B3%BB%E7%BB%9F%E9%80%89%E9%A1%B9/clip_image009.jpg" alt="img"></p><h1 id="外部参考"><a href="#外部参考" class="headerlink" title="外部参考"></a>外部参考</h1><h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><img src="系统选项/5-反转鼠标滚轮缩放方向.png" ><h1 id="信息-错误-警告"><a href="#信息-错误-警告" class="headerlink" title="信息&#x2F;错误&#x2F;警告"></a>信息&#x2F;错误&#x2F;警告</h1><h2 id="解除的信息"><a href="#解除的信息" class="headerlink" title="解除的信息"></a>解除的信息</h2><p>这里将收集一些在软件使用中经常遇到的一些弹窗提示问题，并对其做下解释说明。对于一些”不再提示”的弹窗。你可以勾选弹窗底部的勾选框，默认不再提示。恢复提示</p><img src="系统选项/常规提醒（恢复再次弹窗）.png"><h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><h2 id="3D-interconnector"><a href="#3D-interconnector" class="headerlink" title="3D interconnector"></a>3D interconnector</h2><p>直径测量显示异常</p><img src="系统选项/image-20240429145205721.png"><h1 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>设计树名称不更新</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E8%AE%BE%E8%AE%A1%E6%A0%91%E5%90%8D%E7%A7%B0%E4%B8%8D%E6%9B%B4%E6%96%B0.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E8%AE%BE%E8%AE%A1%E6%A0%91%E5%90%8D%E7%A7%B0%E4%B8%8D%E6%9B%B4%E6%96%B0.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="设计树名称不更新"><a href="#设计树名称不更新" class="headerlink" title="设计树名称不更新"></a>设计树名称不更新</h1><p>零部件另存为或替换时，装配体树中的名称不更新。但模型文件路径（外部参考）已经更新到新文件了。</p><img src="设计树名称不更新/image1.png" ><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>很可能清除了 &quot; 系统选项 &quot;&gt;&quot; 外部参考 &quot;&gt;&quot;当文件被替换时更新零部件名称 &quot; 选项。</p><img src="设计树名称不更新/image2.png" ><ol><li><p>选择 &quot; 当文件被替换时更新零部件名称 &quot; 复选框。</p></li><li><p>再次从装配体中打开零部件，即使零部件已打开。</p></li><li><p>点击 ‘Save ‘（保存）</p></li><li><p>切换到组件，然后使用键盘快捷键 ‘Ctrl+Q&#39;</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>包含有以退回状态的零件</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E5%8C%85%E5%90%AB%E6%9C%89%E4%BB%A5%E9%80%80%E5%9B%9E%E7%8A%B6%E6%80%81%E7%9A%84%E9%9B%B6%E4%BB%B6.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/%E5%8C%85%E5%90%AB%E6%9C%89%E4%BB%A5%E9%80%80%E5%9B%9E%E7%8A%B6%E6%80%81%E7%9A%84%E9%9B%B6%E4%BB%B6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="包含有以退回状态的零件"><a href="#包含有以退回状态的零件" class="headerlink" title="包含有以退回状态的零件"></a>包含有以退回状态的零件</h1><p>该文档包含有以退回状态保存的零件</p><p>在装配体中，如果有零部件正处于退回状态时，即会出现如下弹窗：该文档包含有以退回状态保存的零件。一般你只需要工具提示找到该退回零件，解除退回状态即可。如果无提示具体哪个零件时，你可以参考下列方法处理：</p><img src="包含有以退回状态的零件/image1.png" ><h2 id="方法-1：回退棒调整"><a href="#方法-1：回退棒调整" class="headerlink" title="方法 1：回退棒调整"></a>方法 1：回退棒调整</h2><ol><li>我们可以在设计树搜索快速定位到零件并编辑，如下：</li></ol><img src="包含有以退回状态的零件/image2.png" ><p>2、编辑零件，把零件的回退棒移至最低（解除退回状态）即可。</p><img src="包含有以退回状态的零件/image3.png" ><h2 id="方法-2：宏检查"><a href="#方法-2：宏检查" class="headerlink" title="方法 2：宏检查"></a>方法 2：宏检查</h2><p>有时我们发现弹窗并无提示具体哪个零件是退回状态时，你可能需要借助如下宏做查找。”RollBack.swp”宏将生成显示”退回状态”的报告；</p><p>注意：该宏不适用于轻化或大型装配体模式，你需要以”还原”模式打开装配体。</p><img src="包含有以退回状态的零件/打开宏.png" ><p>1、运行宏命令，并找到”RollBack.swp”宏文件；</p><img src="包含有以退回状态的零件/image4.png" ><p>2、进入宏窗口，使用此宏列举退回状态信息，查询到零部件；</p><img src="包含有以退回状态的零件/image5.png" ><p>3、重复操作方法1将退回棒移至底部即可。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文件预览图不显示</title>
+      <link href="/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E6%96%87%E4%BB%B6%E5%A4%B9%E9%A2%84%E8%A7%88%E5%9B%BE%E4%B8%8D%E6%98%BE%E7%A4%BA.html"/>
+      <url>/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E6%96%87%E4%BB%B6%E5%A4%B9%E9%A2%84%E8%A7%88%E5%9B%BE%E4%B8%8D%E6%98%BE%E7%A4%BA.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="文件预览图不显示"><a href="#文件预览图不显示" class="headerlink" title="文件预览图不显示"></a>文件预览图不显示</h1><p>SOLIDWORKS 缩略图能够便于识别想要打开的模型，并会有图形显示如下图：</p><span id="more"></span><img src="文件夹预览图不显示\image-20231012171244241.png" ><h2 id="方法1：检查设置"><a href="#方法1：检查设置" class="headerlink" title="方法1：检查设置"></a>方法1：检查设置</h2><p>1.首先确保 Windows 文件夹选项设置，显示的是缩略图而不是图标。所以，不勾选“始终显示图标，从不显示缩略图”，win7 和 win10 的选项位置略有不同，下图是 win7 的截图。</p><img src="文件夹预览图不显示\image2.jpeg" ><p>2.检查 windows 的性能选项，找到视觉效果标签栏，勾选“显示缩略图，而不是显示图标”：</p><img src="文件夹预览图不显示\image3.jpeg" ><p>3.当 Windows 设定完成后，若还是不显示缩略图，需检查 SOLIDWORKS 系统选项</p><img src="文件夹预览图不显示\image4.jpeg" ><h2 id="方法2：修复安装"><a href="#方法2：修复安装" class="headerlink" title="方法2：修复安装"></a>方法2：修复安装</h2><p>选项若都没有问题，可再检查 SOLIDWORKS 的文档是否是旧版本，例如电脑上先安装高版本再安装低版本SW，那会有可能导致缩略图不显示的问题(如图部分文件显示)。</p><p>此时需要用高版本修复安装，修复时注意关闭杀毒软件并且有管理员权限。</p><img src="文件夹预览图不显示\image-20231012170615178.png" ><h2 id="方法3：选择默认启动"><a href="#方法3：选择默认启动" class="headerlink" title="方法3：选择默认启动"></a>方法3：选择默认启动</h2><p>SWLauncher启动方法：文件的预览和文件类型图标是由swshellLauncher.exe程序作用。因此，如果SW文件的启动方式被修改了那么。文件的图标以及预览图也会异常。如图</p><img src="文件夹预览图不显示\文件启动异常1.png" ><p>方法：则需要SW文件【右键-打开方式-选择其他应用】修改默认启动程序。</p><img src="文件夹预览图不显示\文件启动异常2.png" ><p>这个默认启动也可以在【window设置-默认应用-按文件类型指导默认应用】里设置，这点可以参考：</p><ol><li>在”<strong>开始”<strong>菜单上，选择”设置</strong>&gt;</strong> <strong>应用&gt;</strong> **默认应用”**。</li><li>选择你想要设置的默认程序，然后选择该应用。 你还可以在 Microsoft Store 中获取新的应用。 必须先安装应用，然后才可以将其设置为默认应用。 <img src="https://support.content.office.net/zh-cn/media/5a39720d-1114-4c9f-9d53-e5b8553d847d.jpg" alt="替换文本"></li><li>你可能希望你的.pdf、电子邮件或音乐使用 Microsoft 提供的应用自动打开。 按文件类型选择默认应用。 向下滚动并选择 **”按文件类型选择默认应用”**。</li></ol><h2 id="方法4：手动注册-dll"><a href="#方法4：手动注册-dll" class="headerlink" title="方法4：手动注册 dll"></a>方法4：手动注册 dll</h2><p>（不大建议的方法：是手动把预览图的动态链接库进行注册使用，遇到高低版本时也是没用的）</p><p>手动注册 dll 文件。在安装目录中找到 sldwinshellextu.dll 和 sldthumbnailprovider.dll。通常文件的路径如下：X 代表安装盘：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X:\ProgramFiles\CommonFiles\SolidWorksShared\sldwinshellextu.dll</span><br><span class="line">X:\Program Files\SolidWorks Corp\SolidWorks\sldthumbnailprovider.dll</span><br></pre></td></tr></table></figure><p>然后拷贝到 c:\windows\system32 文件夹中。</p><p>在 windows 的搜索工具里输入 CMD，输入或复制如下命令，按回车，等待注册结束后即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for %1 in (%windir%\system32\*.dll) do regsvr32.exe /s %1</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>solidworks启动问题</title>
+      <link href="/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/SOLIDWORKS%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98.html"/>
+      <url>/SOLIDWORKS-Solution/A/1-%E6%89%93%E5%BC%80/SOLIDWORKS%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="程序启动慢"><a href="#程序启动慢" class="headerlink" title="程序启动慢"></a>程序启动慢</h1><p>solidworks启动慢的原因&amp;可能出现的问题：一般打开SOLIDWORKS会经历这几个过程：  </p><blockquote><ol><li>加载注册表</li><li>验证许可证</li><li>加载用户界面零部件</li><li>初始化VBA引擎</li><li>加载任务窗格</li><li>初始化.NET 环境</li><li>启动SOLIDWORKS</li><li>正在加载插件</li></ol></blockquote><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>我们可以先留意下在哪个过程中用的时间最多，然后对应下面的解决方案进行优化：</p><h2 id="1、加载注册表"><a href="#1、加载注册表" class="headerlink" title="1、加载注册表"></a>1、加载注册表</h2><p>赋予管理员权限，或者以管理员的账户登录系统</p><h2 id="2、验证许可证"><a href="#2、验证许可证" class="headerlink" title="2、验证许可证"></a>2、验证许可证</h2><p>单机&amp;网络：对“C:\ProgramData\FLEXnet”这个文件夹重命名(需要重新激活软件)</p><p>网络版：还可以可对比借出和联网速度差异。同时使用无线和有线网络可能对验证许可证的速度有影响。</p><p>方法： </p><p>删掉C:\ProgramData\FLEXnet文件夹的几个文件。由于ProgramData这个文件夹默认是隐藏的，所以我们要把文件隐藏属性打开，方法如下：</p><p>　　1、打开“我的电脑”，然后点击顶部的【查看】-【选项】：</p><p>　　2、打开文件夹选项后，点击查看-找到显示隐藏的文件、文件夹和驱动器，并选中。并且把“隐藏受保护的系统文件”前边的对勾去掉</p><p>　　3、找到C:\ProgramData\FLEXnet文件夹，将下面的图示文件sw_D_三个文件删除，或者剪切到别的地方备份，如果不行好在粘回来(推荐)。现在试试打开SolidWorks的速度正常了没。</p><h2 id="3、初始化-NET环境"><a href="#3、初始化-NET环境" class="headerlink" title="3、初始化.NET环境"></a>3、初始化.NET环境</h2><p>将安装文件夹中“PreReqs“文件夹中的必备组件重新安装,如“SOLIDWORKS 2018 SP02\PreReqs”对比重新安装没有效果。</p><h2 id="4、加载插件"><a href="#4、加载插件" class="headerlink" title="4、加载插件"></a>4、加载插件</h2><p>打开SOLIDWORKS后，可在插件窗口查看哪个插件加载时间过长，可暂时去除勾选，在需要使用时再加载插件，对于不必要的插件可以取消启动勾选。</p><img src="SOLIDWORKS启动问题/image-20240301094113781.png" ><h1 id="文件打开慢"><a href="#文件打开慢" class="headerlink" title="文件打开慢"></a>文件打开慢</h1><iframe src="https://www.edrawmax.cn/online/share.html?code=97e5f6d6957f11eea622dbd80885ff13"></iframe><p>当【系统选项-文件位置-参考文件夹】设置过多导致。打开装配体时，软件去多路径下寻找参考影响打开时间。 </p><p>方法：取消【系统选项-文件位置-参考文件夹】无用路径设置即可。</p><h2 id="影响因素："><a href="#影响因素：" class="headerlink" title="影响因素："></a>影响因素：</h2><p>打开零件大小</p><p>打开零件数量</p><p>配置：</p><h2 id="“打开进度指示器”"><a href="#“打开进度指示器”" class="headerlink" title="“打开进度指示器”"></a>“打开进度指示器”</h2><p>工具可用于识别在文件打开期间花费最多时间的操作。</p><p>装配体打开信息：<br>• “打开零部件”操作是驱动器的读&#x2F;写速度缓慢，或者网盘连接缓慢。<br>• “更新装配体”操作是<br>• “已用时间”<br>• “上次打开时间”</p><img src="SOLIDWORKS启动问题/image-20240408103356875.png" ><p>工程图打开信息：<br>• “加载零部件”操作是驱动器的读&#x2F;写速度缓慢，或者网盘连接缓慢<br>• “更新工程图”操作是<br>• “更新图形”操作是<br>• “已用时间”<br>• 工程图中的“上次打开时间”。</p><img src="SOLIDWORKS启动问题/image-20240408103443323.png" ><h2 id="“性能评估”"><a href="#“性能评估”" class="headerlink" title="“性能评估”"></a>“性能评估”</h2><p>工具检查装配体和工程图的性能，然后显示多个统计数据和建议以提高性能。在某些情况下，您可以允许该软件对您的装配体或工程图进行更改以提高性能。“性能评估”工具位于“工具”&gt;“评估”&gt;“性能评估”中。</p><h2 id="“装配体可视化”"><a href="#“装配体可视化”" class="headerlink" title="“装配体可视化”"></a>“装配体可视化”</h2><p>工具验证图形问题。例如，在“打开进度指示器”（请参阅 B 部分）显示“更新图形”操作花费了打开装配体所用的大部分时间后，您可以将该工具用作调查的辅助步骤。“装配体可视化”工具位于“工具”&gt;“评估”&gt;“装配体可视化”中。</p><p>激活“装配体可视化”后，您可以通过包括在 SOLIDWORKS 图形区域中显示零部件所需的“图形-三角形”和“三角形图形总数”参数对装配体可视化列表进行排序。这些参数随着图像质量的提高而增加，这会随着三角形数量的增加而影响性能。</p><h1 id="默认启动程序"><a href="#默认启动程序" class="headerlink" title="默认启动程序"></a>默认启动程序</h1><img src="SOLIDWORKS启动问题/默认启动程序.png" >]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>材质库使用问题</title>
+      <link href="/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E6%9D%90%E8%B4%A8%E5%BA%93%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98.html"/>
+      <url>/SOLIDWORKS-Solution/A/2-%E9%9B%B6%E4%BB%B6/%E6%9D%90%E8%B4%A8%E5%BA%93%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="材质库使用问题"><a href="#材质库使用问题" class="headerlink" title="材质库使用问题"></a>材质库使用问题</h1><span id="more"></span><h1 id="xml声明无效"><a href="#xml声明无效" class="headerlink" title="xml声明无效"></a>xml声明无效</h1><p>材质库报错 0xc00ce557 xml 声明无效。原因：一般为文件格式错误（或损坏）</p><img src="材质库使用问题/材质库报错0xc00ce557 xml声明无效.png" ><h2 id="方法：删除异常模板"><a href="#方法：删除异常模板" class="headerlink" title="方法：删除异常模板"></a>方法：删除异常模板</h2><p>1、检查“文件位置”所在路径下的“自定义材质.sldmat”是否正常；<br><br>2、右键.sldmat 文件，用（支持 utf-8 格式）浏览器打开；<br><br>3、删除异常的自定义材质.sldmat 文件即可。<br></p><img src="材质库使用问题/材质库报错0xc00ce557 xml声明无效2.png"><img src="材质库使用问题/image-20240322154315586.png"><h1 id="意外元素"><a href="#意外元素" class="headerlink" title="意外元素"></a>意外元素</h1><p>sheetmetalOption 为意外元素：在打开材质库编辑时出现的弹窗。该情况是高低版本的材质库问题，出现在 2019 材质更新的新功能导致 2019 以下的低版本不能使用高版本的材质库.sldmat。</p><img src="材质库使用问题/image1.png" ><h2 id="方法1：手动修改"><a href="#方法1：手动修改" class="headerlink" title="方法1：手动修改"></a>方法1：手动修改</h2><p>因为材质库是以 XML 文件的格式储存材质信息，那么我们可以找到 2019 更新增加的元素，并将其删除即可（因为这段元素在低版本是没有的，不支持使用的）</p><p>补充说明：2019 后材质库更新了”钣金属性”可以对材质进行钣金规格的预定义，在使用该材质时就默认了使用改材质的钣金规格</p><img src="材质库使用问题/image2.png" ><p>通常情况是建议找到旧的版本材质库还原替换新版本使用；这是因为手动删除这些元素需要耗费挺多时间。</p><img src="材质库使用问题/image3.png" ><h2 id="方法2：批量修改"><a href="#方法2：批量修改" class="headerlink" title="方法2：批量修改"></a>方法2：批量修改</h2><p>另一种方法是借助 XML 编辑工具修改。</p><p>2-1【选择文件】选择有问题的材质库文件.sldmat</p><p>2-2 输入”sheetmetalOption”，选择【删除元素】</p><p>2-3 你还需要删除”sheetmetalThicknessRange”元素</p><p>2-4 删除后，再用 SW 打开材质库编辑，检查是否还出现问题弹窗。</p><img src="材质库使用问题/批量修改.png" ><h1 id="材料无法修改"><a href="#材料无法修改" class="headerlink" title="材料无法修改"></a>材料无法修改</h1><p>零部件的总质量在该材料更改之前被费盖。该新材料的密度将不影要部件的居量。</p><img src="材质库使用问题/image1-17098021273821.png" ><h2 id="方法：取消属性覆盖"><a href="#方法：取消属性覆盖" class="headerlink" title="方法：取消属性覆盖"></a>方法：取消属性覆盖</h2><p>是因为 stp 标准件导入时，自带的质量信息设置覆盖了。在如下位置取消覆盖质量即可：</p><p>在零件工具栏界面【评估】-【质量属性】-【覆盖质量属性】取消勾选覆盖</p><img src="材质库使用问题/image2.jpeg" >]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>工程图字体问题</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="工程图字体问题"><a href="#工程图字体问题" class="headerlink" title="工程图字体问题"></a>工程图字体问题</h1><p>SW 工程图转其他图纸格式后，出现字体或尺寸大小不一致的问题</p><span id="more"></span><h1 id="字体导出DWG问题"><a href="#字体导出DWG问题" class="headerlink" title="字体导出DWG问题"></a>字体导出DWG问题</h1><p>出现字体或大小不一致的问题</p><h2 id="方法1：设置TrueType"><a href="#方法1：设置TrueType" class="headerlink" title="方法1：设置TrueType"></a>方法1：设置TrueType</h2><p>【选项-系统选项-导出DXF&#x2F;DWG】 的字体选项处选择【TrueType】，然后再工程图另存为*.dwg 格式即可。</p><img src="字体问题/工程图字体问题.png"><p>3.回到导出界面，单击【保存】。打开检查图纸字体样式和大小。</p><h2 id="方法2：drawfrontmap"><a href="#方法2：drawfrontmap" class="headerlink" title="方法2：drawfrontmap"></a>方法2：drawfrontmap</h2><p>找到 SOLIDWOKRS 安装目录下的“drawfrontmap.txt”文件，使用记事本程序打开。（一般是：C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\data\drawfrontmap.txt”)</p><img src="字体问题/drawfrontmap.png"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">使用方法：在文本末尾添加一行</span><br><span class="line">CAD字体格式（空格）SW字体格式（空格）SW到CAD缩放的比例</span><br><span class="line">例如：汉仪长仿宋体 汉仪长仿宋体 1.0（注意空格隔开）</span><br></pre></td></tr></table></figure><p>保存drawfrontmap文件后。重新在 SOLIDWORKS 中另存为 DWG 格式，选择【选项】，选择【TrueType】，单击【保存】即可</p><h2 id="方法3：待确认"><a href="#方法3：待确认" class="headerlink" title="方法3：待确认"></a>方法3：待确认</h2><p>此时可将SOLIDWORKS另存DWG，并选择truetype字体格式导出即可实现预期宽度调整。下面是关于ttfontratiomap的内容说明：</p><img src="字体问题/ttfontratiomap.png"><p>Ｑ：已知SPR1214251：[系统 Win10 20H2:TTF type Chinese font scale mapping is notworking when there is a setting in ttfontratiomap.txt。系统 Win10 20H2当ttfontratiomap.txt中有设置时，type Chinese字体比例映射不工作。</p><p>A：绕行办法:即将ttfontratiomap.txt文件备份到其它位置，添加要导出字体的调整比例如”汉仪长仿宋体;0.88”，再另存txt文件为ANSI编码格式。将ttfontratiomap.txt文件放回原位置，</p><h1 id="字体导出PDF问题"><a href="#字体导出PDF问题" class="headerlink" title="字体导出PDF问题"></a>字体导出PDF问题</h1><p>使用Arial字体做PDF导出时，PDF文件出现乱码。</p><p>A1：Arial 在使用中文字体的兼容性比较差。可以安装Arial UNIcode或Arial UNIcode MS</p><p>A2：可以尝试用打印方式，选择“Microsoft To PDF的打印机打印。</p><p>A3：在【系统选项-导出-PDF】默认设置是勾选“嵌入字体”选项的。如果出现乱码的问题，请检查该选项是否取消勾选了。</p><p><img src="http://www.sipworks.com.cn/upload/202104/06/202104061146590826.png" alt="img"></p><h1 id="字体导出eDrawing问题"><a href="#字体导出eDrawing问题" class="headerlink" title="字体导出eDrawing问题"></a>字体导出eDrawing问题</h1><p>工程图常用中文字体注释用eDrawings打开时字体显示异常</p><p>A：确认字体兼容问题来处理。eDrawings一系列的常用中文字体问题已经由研发确认为是eDrawings API对非英文字符支持有限导致</p><h1 id="工程图字体模糊"><a href="#工程图字体模糊" class="headerlink" title="工程图字体模糊"></a>工程图字体模糊</h1><p>在低版本工程图转高版本文字显示模糊</p><p>方法：在【系统选项-性能】关闭增强图形性能即可，功能对抗锯齿有优化功能，字体的锐度被削弱导致模糊</p><img src="字体问题/工程图字体模糊1.png" ><p>这个个版本及打开关闭增强图形性能的测试结果：</p><img src="字体问题/工程图字体模糊2.png" ><h1 id="该字体不可用"><a href="#该字体不可用" class="headerlink" title="该字体不可用"></a>该字体不可用</h1><p>可以考虑安装字体或将【工程图模板】使用其他字体保存更新</p><img src="字体问题/该字体不可用/image-20240403161800356.png" ><p>待确认</p><img src="字体问题/该字体不可用/image-20240403161735167.png" >]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>符号图库文件缺失</title>
+      <link href="/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E7%AC%A6%E5%8F%B7%E5%9B%BE%E5%BA%93%E6%96%87%E4%BB%B6%E7%BC%BA%E5%A4%B1.html"/>
+      <url>/SOLIDWORKS-Solution/A/4-%E5%B7%A5%E7%A8%8B%E5%9B%BE/%E7%AC%A6%E5%8F%B7%E5%9B%BE%E5%BA%93%E6%96%87%E4%BB%B6%E7%BC%BA%E5%A4%B1.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="符号图库文件缺失"><a href="#符号图库文件缺失" class="headerlink" title="符号图库文件缺失"></a>符号图库文件缺失</h1><p>原因：Solidworks 软件安装新版或删除旧版后，往往会出现软件默认符号库文件缺失的问题。比如用 Solidworks 2016 打开原来设计的 2D 工程图时，则图纸上出现乱码文字。点击符号标识时，则显示“符号图库文件（GTOL.SYM）缺失”的提示。</p><img src="符号图库文件缺失/符号图库文件缺失.png"><h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>可以从正常使用的电脑中，找到一份完整的当前版本的“GTOL.SYM”文件。一般会在如下地址找到：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\SOLIDWORKS\SOLIDWORKS 20xx\lang\Chinese-Simplified</span><br></pre></td></tr></table></figure><p>并且将其设置到【系统选项-文件位置】符号图库文件</p><img src="符号图库文件缺失/系统选项-文件位置.png"><h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>修复软件</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>配合文件夹不见</title>
+      <link href="/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E9%85%8D%E5%90%88%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8D%E8%A7%81.html"/>
+      <url>/SOLIDWORKS-Solution/A/3-%E8%A3%85%E9%85%8D%E4%BD%93/%E9%85%8D%E5%90%88%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8D%E8%A7%81.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="配合文件夹不见"><a href="#配合文件夹不见" class="headerlink" title="配合文件夹不见"></a>配合文件夹不见</h1><p>装配体特征树的配合文件夹不见，配合是展开排列。零件的特征被打包成特征文件夹。</p><h2 id="解决方法-1："><a href="#解决方法-1：" class="headerlink" title="解决方法 1："></a>解决方法 1：</h2><p>右键总装关闭【树显示-查看配合和从属关系】。</p><img src="配合文件夹不见\配合文件夹不见.png" ><h2 id="解决方法-2："><a href="#解决方法-2：" class="headerlink" title="解决方法 2："></a>解决方法 2：</h2><p>需修改注册表如下设置的：“AsmDocBrowserViewType”项。（值为 1 时：配合会展开；值为 0 时：配合会在文件夹内）</p><blockquote><p>计算机\HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2021\General</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>软件显示英文界面问题</title>
+      <link href="/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E8%BD%AF%E4%BB%B6%E6%98%BE%E7%A4%BA%E8%8B%B1%E6%96%87%E7%95%8C%E9%9D%A2%E9%97%AE%E9%A2%98.html"/>
+      <url>/SOLIDWORKS-Solution/A/5-%E8%AE%BE%E7%BD%AE/%E8%BD%AF%E4%BB%B6%E6%98%BE%E7%A4%BA%E8%8B%B1%E6%96%87%E7%95%8C%E9%9D%A2%E9%97%AE%E9%A2%98.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="软件显示英文界面问题"><a href="#软件显示英文界面问题" class="headerlink" title="软件显示英文界面问题"></a>软件显示英文界面问题</h1><p>软件显示英文界面问题（或其他语言）</p><h2 id="方法-1：设置"><a href="#方法-1：设置" class="headerlink" title="方法 1：设置"></a>方法 1：设置</h2><p>设置问题导致，需在系统选项将 Use English menu 勾选去掉了。</p><p>请留意：未勾选时，默认是按电脑系统设定的环境语言。即电脑地区选择国内则为中文。</p><p><img src="软件显示英文界面问题\英文界面.png" ><br></p><p>如果还是其他英文，那就可能是未安装中文包导致。参考下面方法 2.</p><h2 id="方法-2：中文包"><a href="#方法-2：中文包" class="headerlink" title="方法 2：中文包"></a>方法 2：中文包</h2><p>未安装中文包导致的，需在如下安装包”内，启动 chinese-simplified.msi 安装中文库。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SolidWorks 安装包\swwi\lang\chinese-simplified</span><br></pre></td></tr></table></figure><h2 id="方法-3：系统地区"><a href="#方法-3：系统地区" class="headerlink" title="方法 3：系统地区"></a>方法 3：系统地区</h2><p>在window设置里，找到区域设置。设置电脑的“国家或地区”</p><img src="软件显示英文界面问题\Windows中文.png" ><h1 id="PDM语言"><a href="#PDM语言" class="headerlink" title="PDM语言"></a>PDM语言</h1><p>PDM管理端设置一下语言，用户和组，右键用户-&gt;设置-&gt;语言-&gt;设置为简体中文Chinese Simple后，再重启计算机看看。</p><img src="软件显示英文界面问题\PDM中文.png" >]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SOLIDWORKS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

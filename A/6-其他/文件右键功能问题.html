@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="" class="menu-item-link" target="_blank">null</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-07-29 12:17:19</span>
+</div>
+
+<div id="article"><h1 id="文件右键功能问题"><a href="#文件右键功能问题" class="headerlink" title="文件右键功能问题"></a>文件右键功能问题</h1><p>在 Windows® 文件资源管理器中右键单击 SOLIDWORKS 文件时，为什么不会出现包括“打包”、“重命名”、“替换”和“移动”的 SOLIDWORKS® 菜单？。</p>
+<span id="more"></span>
+
+
+<h2 id="方法-1：选项设置"><a href="#方法-1：选项设置" class="headerlink" title="方法 1：选项设置"></a>方法 1：选项设置</h2><p>右键单击并以管理员身份运行 SOLIDWORKS。转到“常规”选项卡，然后单击“<strong>恢复文件关联</strong>”</p>
+<p>在 <strong>SOLIDWORKS 2019 及更早版本</strong>中，恢复文件关联”按钮位于“文件资源管理器”选项卡下。</p>
+<p>在 <strong>SOLIDWORKS 2020 及更高版本</strong>中，恢复文件关联位于常规选项卡下。</p>
+<img src="文件右键功能问题/选项设置.png">
+
+<h2 id="方法-2：启动程序"><a href="#方法-2：启动程序" class="headerlink" title="方法 2：启动程序"></a>方法 2：启动程序</h2><p>检查是否是“SOLIDWORKS Launcher”为默认打开程序。其他启动程序是没有右键功能的</p>
+<img src="文件右键功能问题/启动程序.png">
+
+<h2 id="方法-2：安装修复"><a href="#方法-2：安装修复" class="headerlink" title="方法 2：安装修复"></a>方法 2：安装修复</h2><p>修复您的 SOLIDWORKS 安装。</p>
+<h2 id="方法-3：手动注册"><a href="#方法-3：手动注册" class="headerlink" title="方法 3：手动注册"></a>方法 3：手动注册</h2><p>如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件或其版本不正确，则会出现此情况。可以重新注册以下 DLL 文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils14u.dll</span><br></pre></td></tr></table></figure>
+
+<p> 1.以管理员身份打开 Windows 命令提示符。</p>
+<img src="文件右键功能问题/image-20240716121209459.png">
+
+<p> 2.在命令提示符中输入：cd [DLL 路径]</p>
+<img src="文件右键功能问题/image-20240716121252386.png">
+
+<p> 3.接着输入：regsvr32 sldshellutils14u.dll</p>
+<img src="文件右键功能问题/image-20240716121327554.png">
+
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
