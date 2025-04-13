@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-26 10:34:17</span>
+</div>
+
+<div id="article"><h1 id="群晖Synology-Photos"><a href="#群晖Synology-Photos" class="headerlink" title="群晖Synology-Photos"></a>群晖Synology-Photos</h1><p>说明，这里可以搜索官网介绍。简而言之就是一种管理照片的服务程序</p>
+<p>优点是作为手机<strong>照片云盘</strong>，可以上传你手机的照片作存档，并且通过网络方式进行【查看】、【下载】、【分享】等操作。</p>
+<h2 id="安装套件-服务端"><a href="#安装套件-服务端" class="headerlink" title="安装套件-服务端"></a>安装套件-服务端</h2><p><a target="_blank" rel="noopener" href="https://www.synology.cn/zh-cn/dsm/feature/photos">Synology Photos | 群晖科技 Synology Inc.</a></p>
+<p>这一步已经部署完成了，是在NAS服务器上安装群晖Synology-Photos套件即可。</p>
+<h2 id="移动端程序"><a href="#移动端程序" class="headerlink" title="移动端程序"></a>移动端程序</h2><p>可扫描下方二维码下载程序：左边是苹果，右边是安卓</p>
+<img src="群晖-Photos/image-20250309203932704.png">
+
+<h2 id="账号登录"><a href="#账号登录" class="headerlink" title="账号登录"></a>账号登录</h2><p>输入网址：113.219.237.121:26419</p>
+<p>账号：自己名字</p>
+<p>密码：”家里Wifi密码，首字母大写“</p>
+<p>协议：HTTPS（貌似我用的内网穿透工具，http是不能识别的）</p>
+<p>其他说明：如果登录过程有弹窗提示，按提示继续即可。</p>
+<img src="群晖-Photos/image-20250309210331913.png">
+
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><p>登录后，如下是程序的界面。下面我将大致介绍几种功能使用：</p>
+<img src="群晖-Photos/image-20250309210535172.png">
+
+<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>如果你的NAS账号下，是完全没图片的话，那会是显示上面的界面。点击【添加照片】即可进行上传；或者可以点击右上角的【…】，也是可以上传文件</p>
+<h2 id="相册"><a href="#相册" class="headerlink" title="相册"></a>相册</h2><p>首先你需要知道，相册不是文件夹（相册是需要手动选择放入，组成一组照片的集合）。创建相册后选择前一步上传到NAS的照片到相册即可。</p>
+<img src="群晖-Photos/image-20250309211714805.png">
+
+<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p>在程序左下角【更多】，找到照片备份未启用，进行备份设置。</p>
+<p>补充说明：似乎苹果的备份和安卓的备份界面是不一样的，苹果没有备份源（手机的相册地址）选择。</p>
+<img src="群晖-Photos/image-20250309220415545.png">
+
+<img src="群晖-Photos/image-20250309220901596.png">
+
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>这个操作比较简单，选择照片后，点击右上角的【…】操作下载照片；</p>
+<img src="群晖-Photos/image-20250309211135675.png">
+
+<h2 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h2><p>我认为分享有两种方式：<strong>分享单张照片</strong> 或 <strong>分享相册</strong></p>
+<p>单张分享：可以选择照片后，点击右上角的【…】操作分享照片；</p>
+<p>分享相册：在分享前你需要先创建相册，在选择相册，点击分享，启动后会出现一个“共享链接”。注意：链接是内网（家里2楼WiFi）的链接，如果需要在外网查看则将IP（192.168.0.100:5000）替换成外网地址（113.219.237.121:26419）即可。</p>
+<img src="群晖-Photos/image-20250309215541101.png">
+
+<p>相册分享后，根据权限的设置，可以分享给其他人观看（公开分享，是非NAS账号也可以看到）</p>
+<img src="群晖-Photos/image-20250309221026817.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>Q系统里文件夹可以看见照片文件，不过在Synology-Photos程序里没见到。</p>
+<p>A登录到Synology-Photos程序，点击右上角的账号，【设置，重建索引】</p>
+<img src="群晖-Photos/image-20250309202102099.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

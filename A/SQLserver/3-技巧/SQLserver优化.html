@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-05-15 21:48:58</span>
+</div>
+
+<div id="article"><h1 id="SQLserver优化"><a href="#SQLserver优化" class="headerlink" title="SQLserver优化"></a>SQLserver优化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>数据库稳定性</p>
+<p>很多数据库问题都是由于低效的查询引起的。随着时间的推移，系统变得极其臃肿数据库中的数据量越来越大，数据检索越来越困难，对整个系统带来的资源消耗也就越来越大，系统越发不稳定</p>
+<p>优化用户体验</p>
+<p>流畅页面访问速度，良好的网站功能体验数据库连接池已经满了或者查询的数据量比较大，引起数据库线程的挂死。</p>
+<h1 id="如何优化"><a href="#如何优化" class="headerlink" title="如何优化"></a>如何优化</h1><p>数据库优化可以从<strong>架构优化，硬件优化，DB优化，SQL优化</strong>四个维度入手。此上而下，位置越靠前优化越明显，对数据库的性能提升越高。我们常说的SQL优化反而是对性能提高最小的优化。</p>
+<h2 id="架构优化"><a href="#架构优化" class="headerlink" title="架构优化"></a>架构优化</h2><img src="SQLserver优化/image-20250114173251859.png">
+
+
+
+<h3 id="分布式缓存"><a href="#分布式缓存" class="headerlink" title="分布式缓存"></a>分布式缓存</h3><p>当接收到查询请求后，我们先查询缓存，判断缓存中是否有数据，有数据就直接返回给应用，如若没有再查询数据库，并加载到缓存中，这样就大大减少了对数据库的访问次数，自然而然也提高了数据库性能。</p>
+<p>不过需要注意的是，引入分布式缓存后系统需要考虑如何应对缓存穿透、缓存击穿和缓存雪崩的问题。</p>
+<img src="SQLserver优化/image-20250114173402864.png">
+
+
+
+<h3 id="读写分离"><a href="#读写分离" class="headerlink" title="读写分离"></a>读写分离</h3><p>一主多从读写分离，主动同步，是一种常见的数据库架构优化手段。<br>一般来说当你的应用是读多写少，数据库扛不住读压力的时候，采用读写分离，通过增加从库数量可以线性提升系统读性能。当准备实施读写分离时，为了保证高可用，需要实现故障的自动转移，主从架构会有潜在主从不一致性问题。</p>
+<img src="SQLserver优化/image-20250114173447112.png">
+
+<h3 id="水平切分"><a href="#水平切分" class="headerlink" title="水平切分"></a>水平切分</h3><p>也是一种常见的数据库架构优化手段。<br>当你的应用业务数据量很大，单库容量成为性能瓶颈后，采用水平切分，可以降低数据库单库容量，提升数据库写性能。<br>当准备实施水平切分时需要结合实际业务选取合理的分片键(sharding-key)</p>
+<img src="SQLserver优化/image-20250114173519626.png">
+
+<h2 id="硬件优化"><a href="#硬件优化" class="headerlink" title="硬件优化"></a>硬件优化</h2><p>我们使用数据库，不管是读操作还是写操作，最终都是要访问磁盘，所以说磁盘的性能决定了数据库的性能。块PCIE固态硬盘的性能是普通机械硬盘的几十倍不止。这里我们可以从吞吐率、IOPS两个维度看一下机械硬盘普通固态硬盘、PCIE固态硬盘之间的性能指标。</p>
+<h3 id="吞吐率"><a href="#吞吐率" class="headerlink" title="吞吐率"></a>吞吐率</h3><p>:单位时间内读写的数据量<br>机械硬盘:约100MB&#x2F;s<del>200MB&#x2F;s<br>普通固态硬盘:<br>200MB&#x2F;S</del>500MB&#x2F;s<br>PCIE固态硬盘:900MB&#x2F;s ~3GB&#x2F;S</p>
+<h3 id="IOPS"><a href="#IOPS" class="headerlink" title="IOPS"></a>IOPS</h3><p>:每秒I0操作的次数<br>机械硬盘:100~200<br>普通固态硬盘:<br>30000 ~50000<br>PCIE固态硬盘:数十万</p>
+<h2 id="DB优化"><a href="#DB优化" class="headerlink" title="DB优化"></a>DB优化</h2><p>SQL执行慢有时候不一定完全是SQL问题，手动安装一台数据库而不做任何参数调整，再怎么优化SQL都无法让其性能最大化。要让一台数据库实例完全发挥其性能，首先我们就得先优化数据库的实例参数。<br>数据库实例参数优化遵循三句口诀:<strong>日志不能小、缓存足够大、连接要够用</strong>。</p>
+<p>数据库事务提交后需要将事务对数据页的修改刷(fsync)到磁盘上，才能保证数据的持久性。这个刷盘，是一个随机写，性能较低，如果每次事务提交都要刷盘，会极大影响数据库的性能。数据库在架构设计中都会采用如下两个优化手法:</p>
+<p>1、先将事务写到日志文件RedoLog(WAL)，将随机写优化成顺序写</p>
+<p>2、加一层缓存结构Buffer，将单次写优化成顺序写</p>
+<p>所以日志跟缓存对数据库实例尤其重要。而连接如果不够用，数据库会直接抛出异常，系统无法访问。</p>
+<h2 id="SQL语句优化"><a href="#SQL语句优化" class="headerlink" title="SQL语句优化"></a>SQL语句优化</h2><p>SQL优化很容易理解，就是通过给查询字段添加索引或者改写SQL提高其执行效率</p>
+<p>合理使用索引</p>
+<p>索引少了查询慢;索引多了占用空间大，执行增删改语句的时候需要动态维护索引影响性能 选择率高(重复值少)且被wbere频繁引用需要建立B树索引;一般ioin列需要建立索引;复杂文档类型查询采用全文索引效率更好;索引的建立要在查询和DML性能之间取得平衡;复合索引创建时要注意基于非前导列查询的情况</p>
+<p>使用UNION ALL替代UNION<br>UNION ALL的执行效率比UNION高，因为UNION执行时需要排重;</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

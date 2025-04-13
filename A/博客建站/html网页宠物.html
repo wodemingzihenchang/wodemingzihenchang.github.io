@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-08-05 19:54:01</span>
+</div>
+
+<div id="article"><h1 id="html网页宠物"><a href="#html网页宠物" class="headerlink" title="html网页宠物"></a>html网页宠物</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Pan_peter/article/details/131264676">前端——原生HTML猫猫max桌宠（附源码）_html 桌宠-CSDN博客</a></p>
+<script src="js/pet.js"></script>
+
+<style>
+    .cywl {
+        position: fixed;
+        width: 500px;
+        height: 500px;
+        z-index: 9999;
+        left: 150px;
+        bottom: 150px;
+        cursor: url(./Max/alternate.ico),
+            default;
+        display: flex;
+        /* background-color: #5ee7df; */
+    }
+    .cywl img {
+        width: 500px;
+        height: 500px;
+        pointer-events: none;
+        user-select: none;
+    }
+</style>
+
+<!--宠物开始-->
+
+<div id="pet" class="cywl"><img id="pet-img" src="./max/stand1.png" style="box-shadow:0px 0px 0px #000"></div>
+<!--宠物结束-->
+
+<script>
+// -------处理用户交互
+// 定位
+const petDiv = document.querySelector('#pet');
+petDiv.style.left = pet.x + 'px';   // 更新宠物所在 div 元素的横坐标位置
+petDiv.style.bottom = pet.y + 'px';
+// 禁用图片点击
+const petImg = document.querySelector('#pet-img');
+petImg.style.pointerEvents = 'none';
+var isDragging = false;   // 标记是否正在拖拽中
+var diffX = 0;    // 鼠标指针与盒子左上角的偏移量
+var diffY = 0;
+let animationId = null;
+// 鼠标按下
+petDiv.addEventListener('mousedown', function (event) {
+    action = '';
+    clearInterval(petTimer); // 暂停宠物行动的定时器
+    // 判断鼠标是否在 div 元素内按下，并记录下偏移量
+    if (event.target === petDiv) {
+isDragging = true;
+diffX = event.clientX - petDiv.offsetLeft;
+diffY = event.clientY - petDiv.offsetTop;
+// 拖拽定时器
+dragTime = setInterval(function drag() {
+    // 显示拖拽 图片
+    drawPet(DragFrames);
+    // 这里不能用这个，会导致开启多个loop
+    // animationId = requestAnimationFrame(loop);  // 浏览器提供的 API，用于优化动画性能并在重绘之前在主线程上执行指定的函数
+}, 100);
+    }
+});
+// 启动循环
+loop();
+</script>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

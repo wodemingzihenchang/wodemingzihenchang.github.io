@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2025-03-04 16:19:07</span>
+</div>
+
+<div id="article"><h1 id="Sw-模型尺寸标注"><a href="#Sw-模型尺寸标注" class="headerlink" title="Sw_模型尺寸标注"></a>Sw_模型尺寸标注</h1><p>模型尺寸标注</p>
+<span id="more"></span>
+
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>使用【注解-模型项目】倒是可以实现自动获得模型草图的尺寸标注。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新建图纸文件</span></span><br><span class="line"><span class="built_in">string</span> Templatepath = swApp.GetUserPreferenceStringValue((<span class="built_in">int</span>)swUserPreferenceStringValue_e.swDefaultTemplateDrawing);</span><br><span class="line">swModel = (ModelDoc2)swApp.NewDocument(Templatepath, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"><span class="comment">//从文件路径创建标准3视图</span></span><br><span class="line">swDrawing.Create3rdAngleViews(filepath);</span><br><span class="line"><span class="comment">//插入模型项目</span></span><br><span class="line">swDrawing.InsertModelAnnotations3(<span class="number">0</span>, <span class="number">32768</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">false</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>参考：作者：Paine Zeng API-尺寸链标注链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/597967278">https://zhuanlan.zhihu.com/p/597967278</a></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Dim</span> swModel <span class="keyword">As</span> ModelDoc2</span><br><span class="line"><span class="keyword">Dim</span> swDrawing <span class="keyword">As</span> DrawingDoc</span><br><span class="line"><span class="keyword">Dim</span> boolstatus <span class="keyword">As</span> <span class="type">Boolean</span></span><br><span class="line"><span class="keyword">Dim</span> longstatus <span class="keyword">As</span> <span class="type">Long</span>, longwarnings <span class="keyword">As</span> <span class="type">Long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Sub</span> main()</span><br><span class="line"></span><br><span class="line"><span class="keyword">Set</span> swApp = Application.SldWorks</span><br><span class="line"><span class="keyword">Set</span> swModel = swApp.ActiveDoc</span><br><span class="line"></span><br><span class="line"><span class="keyword">Set</span> swDrawing = swApp.ActiveDoc</span><br><span class="line"><span class="keyword">Dim</span> vAnnotations <span class="keyword">As</span> Variant</span><br><span class="line">vAnnotations = swDrawing.InsertModelAnnotations3(<span class="number">0</span>, <span class="number">32768</span>, <span class="literal">True</span>, <span class="literal">False</span>, <span class="literal">False</span>, <span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">swModel.Save</span><br><span class="line"></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

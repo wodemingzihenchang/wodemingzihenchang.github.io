@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-30 21:48:58</span>
+</div>
+
+<div id="article"><h1 id="SQLserver-定期自动备份和自动删除"><a href="#SQLserver-定期自动备份和自动删除" class="headerlink" title="SQLserver-定期自动备份和自动删除"></a>SQLserver-定期自动备份和自动删除</h1><p>打开数据库管理工具，选择管理–&gt;维护计划</p>
+<img src="SQL定期备份/c8bd73350f476bcfe38368d7b0a2bc5b.png">
+
+<p>右键–&gt;维护计划向导</p>
+<img src="SQL定期备份/f44df51c441d8f96c6c1330816ab0c9e.png">
+
+<p>点击下一步，计划名称可以自定义，在计划选项上，点击更改，频率更改为每天（可以自己的实际情况设置时间，每周、每月、或者周几），每天频率：设置自动备份的时间</p>
+<img src="SQL定期备份/3b69bef73575d4c5330782b0f8ee2b19.png">
+
+<p>设置完成后点击下一步，我这是的是每天三点。</p>
+<img src="SQL定期备份/51c1d31fccd403d8af65e5a8980f7206.png">
+
+<p>设置计划内容，选择<code>“备份数据库(完整)”任务</code>和<code>“清除维护”任务</code>，然后下一步</p>
+<img src="SQL定期备份/9bcd7edcace0d12fe182a21e0a575fa3.png">
+
+<p>设置执行顺序，默认即可。</p>
+<img src="SQL定期备份/28a7be4ddd6e999dcb7fbba8dbee4324.png">
+
+<p>下一步，选择需要备份的数据库，备份文件存放位置。</p>
+<img src="SQL定期备份/c19507353c8c69027217208697e0d37a.png">
+
+<p>定义“清楚维护”任务，选择备份文件的文件夹和删除超过多长时间的文件</p>
+<img src="SQL定期备份/332066954898fb3e0656ad563882fc83.png">
+
+<p>选择报告选项，选择报告存放位置，点击下一步。</p>
+<img src="SQL定期备份/b73ea0319ecf1bd4fbf91a825ee1b34e.png">
+
+<p>即可完成对数据库的自动备份和自动删除操作</p>
+<img src="SQL定期备份/c3fba63421bd8b0099876a1204b44f94.png">
+
+<p>在维护计划中就能看到自动备份的计划。<br><img src="SQL定期备份/2c8abefbff2813b9e8f58b9ab2a3242a.png"></p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="作业失败"><a href="#作业失败" class="headerlink" title="作业失败"></a>作业失败</h2><p>服务器访问权限</p>
+<p>该作业失败。  无法确定所有者 DESKTOP-T12SOL0\LeonLin (拥有作业 数据库备份.Subplan_1)是否有服务器访问权限 (原因: 无法获取有关 Windows NT 组&#x2F;用户 ‘DESKTOP-T12SOL0\LeonLin’ 的信息，错误代码 0x534。 [SQLSTATE 42000] (错误 15404)).</p>
+<img src="SQL定期备份/作业权限1.png">
+
+<img src="SQL定期备份/作业权限2.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

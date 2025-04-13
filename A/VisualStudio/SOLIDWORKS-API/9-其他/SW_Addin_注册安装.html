@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2025-03-04 16:19:07</span>
+</div>
+
+<div id="article"><h1 id="插件-注册安装"><a href="#插件-注册安装" class="headerlink" title="插件_注册安装"></a>插件_注册安装</h1><p>.net的dll都是要注册才能使用，注册的话我们要用到regasm.exe这个文件。我们要用到的是64位的，v4.0的</p>
+<img src="SW_Addin_注册安装/image-20241203103431209.png">
+
+<p>任意文件夹目录下，新建两个bat文件，用来执行regasm程序的注册操作。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> path=%~d0</span><br><span class="line">cd %path%</span><br><span class="line">cd /d %~dp0</span><br><span class="line"></span><br><span class="line">C:\Windows\Microsoft.NET\Framework64\v4<span class="number">.0</span><span class="number">.30319</span>\RegAsm.exe &lt;插件名称&gt;.dll /codebase</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set path=%~d0</span><br><span class="line">cd %path%</span><br><span class="line">cd /d %~dp0</span><br><span class="line"></span><br><span class="line">C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe &lt;插件名称&gt;.dll /u</span><br><span class="line">pauses</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="插件-程序安装"><a href="#插件-程序安装" class="headerlink" title="插件_程序安装"></a>插件_程序安装</h1><p>这一种情况感觉比较高端一点，可以生成msi格式的安装包。</p>
+<p>这种方式我经常使用的是Inno Setup 5这个软件，来制作安装包。它的功能比较强大，大家可以自行学习。</p>
+<p>它的好处就是当前有很多文件需要包装的时候，压缩比还是不错的。</p>
+<p>能够生成快捷方式，插件注册，文件释放，程序菜单的生成，自动生成删除程序的信息，可以在windows的程序列表中显示。</p>
+<p>可以设置多种语言文件，还有安装时显示各种许可信息</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-12 11:53:21</span>
+</div>
+
+<div id="article"><h1 id="进度条使用技巧"><a href="#进度条使用技巧" class="headerlink" title="进度条使用技巧"></a>进度条使用技巧</h1><p>Application.DoEvents()方法</p>
+<span id="more"></span>
+
+<h2 id="新建窗口类"><a href="#新建窗口类" class="headerlink" title="新建窗口类"></a>新建窗口类</h2><p><img src="/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/image-20250212162104478.png" alt="image-20250212162104478"></p>
+<h2 id="调用窗口"><a href="#调用窗口" class="headerlink" title="调用窗口"></a>调用窗口</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//进度条</span></span><br><span class="line">进度条 form1 = <span class="keyword">new</span> 进度条(); form1.Show();</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化进度长度</span></span><br><span class="line">form1.progressBar1.Value = <span class="number">0</span>; ;</span><br><span class="line">form1.progressBar1.Maximum = childrencomps.Length;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>进度更新功能实现</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; childrencomps.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//命令操作</span></span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">    <span class="comment">//命令操作</span></span><br><span class="line">        </span><br><span class="line">    <span class="comment">//进度条+1</span></span><br><span class="line">    form1.progressBar1.Value += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//进度条完成</span></span><br><span class="line">form1.progressBar1.Value = form1.progressBar1.Maximum; form1.Close();</span><br></pre></td></tr></table></figure>
+
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>在程序点击运行时，弹窗进度条窗口。并开始显示进度</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

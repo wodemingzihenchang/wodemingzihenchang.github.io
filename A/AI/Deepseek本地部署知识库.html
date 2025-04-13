@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2025-02-09 18:59:59</span>
+</div>
+
+<div id="article"><h1 id="Deepseek本地部署知识库"><a href="#Deepseek本地部署知识库" class="headerlink" title="Deepseek本地部署知识库"></a>Deepseek本地部署知识库</h1><span id="more"></span>
+
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>AI知识库的实现主要依赖2种技术：<strong>语言大模型</strong>+<strong>知识向量化</strong></p>
+<p>简单概述，利用已有的文档、内部知识生成向量知识库，在提问的时候结合库的内容一起给大模型，让其做回答。</p>
+<img src="Deepseek本地部署知识库/image-20250306203842084.png">
+
+<h2 id="安装ollama"><a href="#安装ollama" class="headerlink" title="安装ollama"></a>安装ollama</h2><p>下载</p>
+<p><a target="_blank" rel="noopener" href="https://ollama.com/">Ollama</a></p>
+<p>安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama</span><br></pre></td></tr></table></figure>
+
+<img src="Deepseek本地部署知识库/image-20250214154126499.png">
+
+<p>安装Deepseek</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama run deepseek-r1:14b</span><br></pre></td></tr></table></figure>
+
+<img src="Deepseek本地部署知识库/image-20250214160451330.png">
+
+
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><img src="Deepseek本地部署知识库/image-20250214160553693.png">
+
+<img src="PBR\材质参数.png">
+
+<h1 id="RAG工具Anything"><a href="#RAG工具Anything" class="headerlink" title="RAG工具Anything"></a>RAG工具Anything</h1><h2 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h2><p>下面我们访问<a target="_blank" rel="noopener" href="https://anythingllm.com/desktop">Anything LLM的官网</a>下载Windows客户端：下载后，双击应用程序进行安装：</p>
+<h2 id="选择模型"><a href="#选择模型" class="headerlink" title="选择模型"></a>选择模型</h2><p>安装完毕后打开软件后，点击get started按钮进入使用界面：</p>
+<img src="Deepseek本地部署知识库/Anything/202502141752406.png">
+
+<h2 id="配置与使用"><a href="#配置与使用" class="headerlink" title="配置与使用"></a>配置与使用</h2><p>第一步选择Ollama：</p>
+<img src="Deepseek本地部署知识库/Anything/202502141753130.png">
+
+<p>选择好之后，点击右侧的箭头，下方会出现选择使用哪个大模型的下拉框，我们可以在这里看到之前本地部署的deepseek-r1:1.5b模型，如果你本地还有其他模型，也会出现在这里。</p>
+<img src="Deepseek本地部署知识库/Anything/202502141755484.png">
+
+<p>下一步确认信息后，点击右侧箭头继续：</p>
+<img src="Deepseek本地部署知识库/Anything/202502141756018.png">
+
+<p>现在我们需要创建一个工作区，并给它取个名字，输入后继续点击右侧箭头：</p>
+<img src="Deepseek本地部署知识库/Anything/202502141757301.png">
+
+<p>在Anything LLM中配置好了大模型，并创建了一个工作区后就可以看到欢迎界面了：</p>
+<img src="Deepseek本地部署知识库/Anything/202502141759305.png">
+
+<p>点击左下角的扳手（设置），我们可以对界面语言进行修改：</p>
+<img src="Deepseek本地部署知识库/Anything/202502141800392.png">
+
+<p>设置好之后，点击同一位置的返回按钮，即可回到工作区，在下方的输入框中，就可以和大模型聊天了！</p>
+<img src="Deepseek本地部署知识库/Anything/202502141802612.png">
+
+<p>如果我们需要上传文件或是图片等资料，点击工作区名称标签后的上传按钮即可打开上传界面：</p>
+<img src="Deepseek本地部署知识库/Anything/202502141803196.png">
+
+<img src="Deepseek本地部署知识库/Anything/202502141803764.png">
+
+<p>除了支持多种文档类型（PDF、TXT、DOCX等），在上传按钮下方还可以直接粘贴网址，真的是非常方便又全面。勾选你要上传的文件，</p>
+<img src="Deepseek本地部署知识库/Anything/202502141806876.png">
+
+<p>点击右下角的保存和嵌入按钮即可上传你的资料。通过Anything LLM管理超大文档时高效、低耗。只需要一次就可以嵌入（Embedding)一个庞大的文档或文字记录，比其他文档聊天机器人解决方案节省超多成本。</p>
+<h2 id="异地调用"><a href="#异地调用" class="headerlink" title="异地调用"></a>异地调用</h2><p>在设置界面的LLM首选项中，我们能看到刚才选择的LLM提供商是ollama，下方是模型信息，最底部有ollama运行的地址和端口：</p>
+<img src="Deepseek本地部署知识库/Anything/202502141814984.png">
+
+<p>如果我们想要在局域网内让其他的小伙伴也能远程使用Anything LLM调用ollama使用大模型进行聊天，那么我们需要进行对ollama进行一下环境变量设置！</p>
+<p>打开cmd终端，执行下面两个命令：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setx OLLAMA_HOST &quot;<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>&quot;</span><br><span class="line">setx OLLAMA_ORIGINS &quot;*&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Cmd</p>
+<p>Copy</p>
+<p>然后点击电脑桌面右下角的ollama图标退出并重启服务：</p>
+<img src="https://images1.cpolar.com/img/202502141816863.png">
+
+<p>重新开启ollama服务后，同一局域网下的小伙伴在Anything LLM中将ollama的地址改为你的电脑IP加上端口号11434后，就能使用你在本地部署的大模型进行聊天或者上传文件训练了。</p>
+<img src="Deepseek本地部署知识库/202502141818528.png">
+
+
+
+<p>安装内网穿透</p>
+<p>不过我们目前只能在本地局域网内多人使用Anything LLM远程访问大模型，如果想让异地好友、让更多人也能使用你在部署的deepseek大模型应该怎么办呢？很简单，只要安装一个cpolar内网穿透工具就能轻松实现远程访问内网主机中部署的服务了，接下来介绍一下如何安装cpolar内网穿透。</p>
+<h1 id="资源网站："><a href="#资源网站：" class="headerlink" title="资源网站："></a>资源网站：</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qingkahui24689/article/details/144421519">【万字详解】手把手带你一步步搭建RAGFlow（超干货）_ragflow安装教程-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://ollama.com/download/windows">Download Ollama on Windows</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
