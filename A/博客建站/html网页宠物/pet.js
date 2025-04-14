@@ -26,25 +26,25 @@ var actionList = Object.keys(actions).map(function (key) { return { name: key, w
 
 // -------------------------------------------------------------动作
 const img111 = new Image();
-img111.src = `./html网页宠物/Max/falling1.png`;
+img111.src = `./html网页宠物/max/falling1.png`;
 fallingFrames.push(img111);
 // 创建动画序列//将行走动画帧添加到 walkFrames 数组中
 for (let i = 1; i < 13; i++) {
 
     const img = new Image();
-    img.src = `./html网页宠物/Max/walkright${i}.png`;
+    img.src = `./html网页宠物/max/walkright${i}.png`;
     RightwalkFrames.push(img);
 
     const img2 = new Image();
-    img2.src = `./html网页宠物/Max/walkleft${i}.png`;
+    img2.src = `./html网页宠物/max/walkleft${i}.png`;
     LeftwalkFrames.push(img2);
 
     const img3 = new Image();
-    img3.src = `./html网页宠物/Max/drag${i}.png`;
+    img3.src = `./html网页宠物/max/drag${i}.png`;
     DragFrames.push(img3);
 
     const img7 = new Image();
-    img7.src = `./html网页宠物/Max/stand${i}.png`;
+    img7.src = `./html网页宠物/max/stand${i}.png`;
     standFrames.push(img7);
 }
 
