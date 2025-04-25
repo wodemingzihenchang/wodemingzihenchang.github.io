@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-26 10:34:17</span>
+</div>
+
+<div id="article"><h1 id="群晖-内网穿透"><a href="#群晖-内网穿透" class="headerlink" title="群晖-内网穿透"></a>群晖-内网穿透</h1><p>这里对无外部网络访问的情况下，进行内网穿透的方法操作参考</p>
+<p>简单说一下内网穿透的原理：</p>
+<p>（图）</p>
+<h1 id="樱花Frp"><a href="#樱花Frp" class="headerlink" title="樱花Frp"></a>樱花Frp</h1><h2 id="创建隧道"><a href="#创建隧道" class="headerlink" title="创建隧道"></a>创建隧道</h2><img src="群晖-内网穿透/创建隧道.png">
+
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>创建隧道后，点击这个配置文件</p>
+<img src="群晖-内网穿透/隧道配置文件.png">
+
+<p>复制这串内容。这个在后面群晖NAS里做内网穿透有用。</p>
+<img src="群晖-内网穿透/image-20250408180403287.png">
+
+<h1 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h1><p>低版本的群晖NAS可能没有樱花Frp等套件，这里可以使用Docker安装的方式。在套件中间找到Docker并下载</p>
+<img src="群晖-内网穿透/image-20250408180649447.png">
+
+<h2 id="拉取Frp镜像"><a href="#拉取Frp镜像" class="headerlink" title="拉取Frp镜像"></a>拉取Frp镜像</h2><p>可以借助Putty工具，使用Shell命令行方式进行拉取。在使用群晖NAS的终端服务时，您还需把终端服务器的端口启用。</p>
+<img src="群晖-内网穿透/image-20250408180801839.png">
+
+<p>在其他平台电脑，例如window电脑，安装Putty工具。打开并输入NAS的IP及终端端口22</p>
+<img src="群晖-内网穿透/image-20250408175322843.png">
+
+<p>输入NAS用户名，再输入密码，注意：输入密码时是不会显示内容的，输入后按回车即可，进到如下界面就是成功了</p>
+<img src="群晖-内网穿透/image-20250408181219335.png">
+
+<p>再输入“sudo -i”回车，再输入密码，进入root权限。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
+
+<p>输入拉取镜像，回车即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull docker.1ms.run/natfrp/frpc</span><br></pre></td></tr></table></figure>
+
+<img src="群晖-内网穿透/image-20250408181243440.png">
+
+<h2 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h2><p>拉取镜像后，可以在Docker镜像里看到，并且选择该镜像进行启动，创建容器。</p>
+<img src="群晖-内网穿透/image-20250408175407495.png">
+
+<p>默认网络即可</p>
+<img src="群晖-内网穿透/image-20250408175421456.png">
+
+<p>进入高级设置，把网址的配置文件复制，粘贴在容器的高级设置里的执行命令里。</p>
+<img src="群晖-内网穿透/image-20250408175443847.png">
+
+<p>如果遇到空值错误，直接删除这两项即可</p>
+<img src="群晖-内网穿透/image-20250408182357697.png">
+
+<p>下一步</p>
+<img src="群晖-内网穿透/image-20250408183002008.png">
+
+<p>下一步</p>
+<img src="群晖-内网穿透/image-20250408183008648.png">
+
+<p>下一步</p>
+<img src="群晖-内网穿透/image-20250408183022585.png">
+
+<h2 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h2><p>在日志里，穿透成功后，可以看到有连接的网址或IP的提示，在浏览器输入该IP地址，即可在外网访问NAS。</p>
+<img src="群晖-内网穿透/image-20250408184234450.png">
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://doc.natfrp.com/app/synology-dsm7.html">群晖 DSM 7 穿透指南 (frpc) | SakuraFrp 帮助文档 (natfrp.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://console.openfrp.net/download">OpenFrp Next</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -41,12 +41,41 @@
     <span id="post-date">2024-03-27 10:34:17</span>
 </div>
 
-<div id="article"><h1 id="群晖-备份"><a href="#群晖-备份" class="headerlink" title="群晖-备份"></a>群晖-备份</h1><h1 id="虚拟机备份"><a href="#虚拟机备份" class="headerlink" title="虚拟机备份"></a>虚拟机备份</h1><p>PVE虚拟机备份</p>
+<div id="article"><h1 id="群晖NAS-备份"><a href="#群晖NAS-备份" class="headerlink" title="群晖NAS-备份"></a>群晖NAS-备份</h1><p>备份图示：</p>
+<pre class="mermaid">graph LR
+手机--同步-->NAS
+电脑--同步-->NAS
+NAS--备份-->NAS_2
+NAS_2--异地备份-->家里电脑</pre>
+
+<p>按我理解的备份321原则：</p>
+<p>3份数据在：手机电脑端、NAS端、家里电脑</p>
+<p>2种储存介质：备份在【NAS】【NAS_2】这两个不同硬盘</p>
+<p>1异地备份：保留一份在家里电脑，也算是物理隔离。</p>
+<h2 id="热备份-Drive"><a href="#热备份-Drive" class="headerlink" title="热备份-Drive"></a>热备份-Drive</h2><p>在NAS服务器上安装套件【Drive】。</p>
+<p>对于一些变更频繁的文件，使用Driver仅上传的方式，到“另一个NAS远程”</p>
+<pre class="mermaid">graph LR
+NAS--备份-->NAS_2--异地备份-->家里电脑</pre>
+
+
+
+<h2 id="冷备份-Hyper"><a href="#冷备份-Hyper" class="headerlink" title="冷备份-Hyper"></a>冷备份-Hyper</h2><p>在NAS服务器上安装套件【Hyper-backup】。</p>
+<p>对于一些基本不变的照片，使用Hyper-backup的数据备份方式，到“另一个NAS远程”</p>
+<pre class="mermaid">graph LR
+NAS--备份-->NAS_2</pre>
+
+<h1 id="PVE虚拟机"><a href="#PVE虚拟机" class="headerlink" title="PVE虚拟机"></a>PVE虚拟机</h1><h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p>PVE虚拟机备份</p>
 <img src="群晖-备份/image-20250408173705422.png">
 
-<h1 id="NAS环境备份"><a href="#NAS环境备份" class="headerlink" title="NAS环境备份"></a>NAS环境备份</h1><h2 id="Hyper-backup"><a href="#Hyper-backup" class="headerlink" title="Hyper-backup"></a>Hyper-backup</h2><img src="群晖-备份/image-20250408173926829.png">
 
-<h1 id="NAS文件备份"><a href="#NAS文件备份" class="headerlink" title="NAS文件备份"></a>NAS文件备份</h1><h2 id="Hyper-backup-1"><a href="#Hyper-backup-1" class="headerlink" title="Hyper-backup"></a>Hyper-backup</h2><h2 id="Drive"><a href="#Drive" class="headerlink" title="Drive"></a>Drive</h2><p>仅下载的方式</p>
+
+<p><img src="/%E7%BE%A4%E6%99%96-%E5%A4%87%E4%BB%BD/image-20250415004026441.png" alt="image-20250415004026441"></p>
+<p>当然这份备份还是留存在PVE里面的（本地备份）。我们求稳的话，还可以将这个备份文件.zst，拷贝到异地硬盘保存。</p>
+<h2 id="还原"><a href="#还原" class="headerlink" title="还原"></a>还原</h2><p>导入备份：虚拟机备份文件导入</p>
+<p>还原备份：选泽文件还原（这里还原的是否会带有储存的数据，还是说只是系统环境？）</p>
+<h1 id="NAS环境备份"><a href="#NAS环境备份" class="headerlink" title="NAS环境备份"></a>NAS环境备份</h1><p>Hyper-backup的LUN备份</p>
+<img src="群晖-备份/image-20250408173926829.png">
+
 <h1 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Nx411f7eq">迁移助手 Migration Assistant</a></p>
 </div>
  			<!-- 引入正文 -->

@@ -59,12 +59,35 @@
 <h2 id="查询表内字段列的信息"><a href="#查询表内字段列的信息" class="headerlink" title="查询表内字段列的信息"></a>查询表内字段列的信息</h2><p>select 字段名 form 表名</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select FullName</span><br><span class="line">From Users</span><br><span class="line">Order by Fullname</span><br></pre></td></tr></table></figure>
 
+<h2 id="增"><a href="#增" class="headerlink" title="增"></a>增</h2><p>在已有表，添加数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表 <span class="keyword">values</span>(<span class="string">&#x27;[列]&#x27;</span>, <span class="string">&#x27;[列 2]&#x27;</span>，......)</span><br></pre></td></tr></table></figure>
 
+<p>新建表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> 表([列], [列 <span class="number">2</span>]) <span class="keyword">values</span>(@内容 <span class="number">1</span>,@内容 <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="修改表记录"><a href="#修改表记录" class="headerlink" title="修改表记录"></a>修改表记录</h2><p>update 表名</p>
-<h2 id="修改第一行的字段内容"><a href="#修改第一行的字段内容" class="headerlink" title="修改第一行的字段内容"></a>修改第一行的字段内容</h2><p>set 字段名 &#x3D;&#39;修改新内容&#39; where sysno &#x3D; 1</p>
+<h2 id="删"><a href="#删" class="headerlink" title="删"></a>删</h2><p>删除，筛选指定值的行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> 表 <span class="keyword">where</span> 列<span class="operator">=</span><span class="string">&#x27;列名&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>删除多行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> 表 <span class="keyword">where</span> 列 <span class="keyword">in</span>(<span class="string">&#x27;内容1&#x27;</span>,<span class="string">&#x27;内容2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="改"><a href="#改" class="headerlink" title="改"></a>改</h2><p>修改，筛选指定值的行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> 表 <span class="keyword">set</span> 列<span class="number">1</span><span class="operator">=</span><span class="string">&#x27;列名1&#x27;</span>,列<span class="number">2</span><span class="operator">=</span><span class="string">&#x27;列名2&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>修改第一行的字段内容</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> 表 <span class="keyword">set</span> 字段名 <span class="operator">=</span>\<span class="string">&#x27;修改新内容\&#x27;</span> <span class="keyword">where</span> sysno <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="查"><a href="#查" class="headerlink" title="查"></a>查</h2><p>获得指定列</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> 列 <span class="keyword">from</span> 表;</span><br></pre></td></tr></table></figure>
+
+<p>筛选指定值</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> 表 <span class="keyword">where</span> 列<span class="operator">=</span>值;</span><br></pre></td></tr></table></figure>
+
+<p>其他：Text 类型</p>
+<p>SELECT *FROM 表 WHERE CONVERT(VARCHAR, 列) &#x3D; &#39;值&#39;</p>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><h2 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h2><h2 id="微软手册"><a href="#微软手册" class="headerlink" title="微软手册"></a>微软手册</h2><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sql/sql-server/?view=sql-server-ver16">https://learn.microsoft.com/zh-cn/sql/sql-server/?view=sql-server-ver16</a></p>
 <h2 id="菜鸟教程"><a href="#菜鸟教程" class="headerlink" title="菜鸟教程"></a>菜鸟教程</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/sql/sql-intro.html">https://www.runoob.com/sql/sql-intro.html</a></p>
+<p><img src="/SQLserver%E7%AC%94%E8%AE%B0/%E6%A3%80%E6%B5%8B%E7%BA%A6%E6%9D%9F.png" alt="image-20250417122930913"></p>
 </div>
  			<!-- 引入正文 -->
     </div>	

@@ -88,6 +88,12 @@
 <p>代码：string?str?&#x3D;?System.Windows.Forms.Application.StartupPath;<br>结果：result: X:xxxxxx (.exe 文件所在的目录)</p>
 <p><strong>7）获取启动了应用程序的可执行文件的路径，包括可执行文件的名称。</strong></p>
 <p>代码：string?str?&#x3D;?System.Windows.Forms.Application.ExecutablePath;<br>结果：result: X:xxxxxxxxx.exe (.exe 文件所在的目录+.exe 文件名)</p>
+<h1 id="using用法"><a href="#using用法" class="headerlink" title="using用法"></a>using用法</h1><p>除了使用异常处理的方式释放资源外，还可以使用 using 的方式释放资源。</p>
+<p>具体的语句如下。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span>(SqlConnection 连接对象名 = <span class="keyword">new</span> SQLConnection( 数据库连接串 ))</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//打开数据库连接</span></span><br><span class="line"><span class="comment">//对数据库先关操作的语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>using 关键字的用法主要有两个，一个是引用命名空间，一个是创建非托管资源对象。</p>
+<p>在 .NET 平台上资源分为托管资源和非托管资源，托管资源是由 .NET 框架直接提供对其资源在内存中的管理，例如声明的变量；非托管资源则不能直接由.NET 框架对其管理，需要使用代码来释放资源，例如数据库资源、操作系统资源等。</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

@@ -1,0 +1,11 @@
+<script>
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('ipAddress').innerHTML = "Your IP address is: " + data.ip;
+    })
+    .catch(error => console.error('Unable to get IP address:', error));
+</script>
+
+
+<p id="ipAddress"></p>
