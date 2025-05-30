@@ -100,9 +100,11 @@
 
 
 
-<h2 id="查看版本库"><a href="#查看版本库" class="headerlink" title="查看版本库"></a>查看版本库</h2><p>通过commit后的那串数字，可以找到每次的提交</p>
-<p>head-&gt;指向当前的分支</p>
+<h2 id="查看版本库"><a href="#查看版本库" class="headerlink" title="查看版本库"></a>查看版本库</h2><p>文件在评论过程会形成一次log记录，然后可通过git log查看记录来获取</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+
+<p>通过commit后的那串数字，可以找到每次的提交</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --head &lt;commitID&gt;</span><br></pre></td></tr></table></figure>
 
 
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-05-15 21:48:58</span>
+</div>
+
+<div id="article"><h1 id="SQLserver清理日志"><a href="#SQLserver清理日志" class="headerlink" title="SQLserver清理日志"></a>SQLserver清理日志</h1><p>随着系统运行时间的推移，数据库日志文件会变得越来越大，这时我们需要对日志文件进行备份或清理。</p>
+<h2 id="直接删除"><a href="#直接删除" class="headerlink" title="直接删除"></a>直接删除</h2><img src="清理日志/image-20250517111048174.png">
+
+<p>在SQL管理器分离数据库。</p>
+<p>对数据库日志文件进行压缩备份（rar, zip）</p>
+<p>直接删除ldf文件。</p>
+<p>再附加数据库。若出现下图错误，选择日志文件记录（提示文件找不到），点下面的【按钮】删除！</p>
+<p>附加数据库文件成后，查阅本地数据库文件，发现重新生成的日志文件为504KB。</p>
+<h2 id="收缩文件"><a href="#收缩文件" class="headerlink" title="收缩文件"></a>收缩文件</h2><p>分两步操作：</p>
+<p>step 1.操作步骤：在数据库右键 –&gt; 数据库属性 –&gt; 选项 –&gt; 将数据库【恢复模式】修改为【简单】。 点确定按钮。</p>
+<p>step 2.在数据库右键 –&gt; 任务 –&gt; 收缩 –&gt;文件 –&gt;文件类型选择【日志】 –&gt; 将文件收缩到1MB。 点确定按钮。</p>
+<p>最后：为了安全最好再改回 step 1。</p>
+<img src="https://i-blog.csdnimg.cn/blog_migrate/09e1c746d34e68c8dc0ec1fe1e215a3b.png">
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>转：<a target="_blank" rel="noopener" href="http://www.csframework.com/archive/1/arc-1-20201126-2946.htm">http://www.csframework.com/archive/1/arc-1-20201126-2946.htm</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -71,7 +71,8 @@
 <img src="Sw_属性编辑工具-B/更新配置特定的属性.png">
 
 <h2 id="2024-01-18"><a href="#2024-01-18" class="headerlink" title="2024&#x2F;01&#x2F;18"></a>2024&#x2F;01&#x2F;18</h2><p>修复【选择文件】不能获得空属性的文件的问题。原先代码是会跳过没有属性的文件导致获取不到操作对象。</p>
-<h2 id="2024-08-30"><a href="#2024-08-30" class="headerlink" title="2024&#x2F;08&#x2F;30"></a>2024&#x2F;08&#x2F;30</h2><p>增加错误文件的日志记录功能，起因是部分只读和加密文件在导入程序时，会被阻止。原本的是直接程序退出，现在改成将错误填到log日志文本里（并且不会程序退出，而是忽略错误文件继续）</p>
+<h2 id="2024-08-30"><a href="#2024-08-30" class="headerlink" title="2024&#x2F;08&#x2F;30"></a>2024&#x2F;08&#x2F;30</h2><p>增加错误文件的日志记录功能，起因是部分只读和加密文件在导入程序时，会被阻止并且程序退出。</p>
+<p>现在改成将错误文件路径填到log日志文本里（并且不会程序退出，而是忽略错误文件继续）</p>
 <h2 id="2024-11-02"><a href="#2024-11-02" class="headerlink" title="2024&#x2F;11&#x2F;02"></a>2024&#x2F;11&#x2F;02</h2><p>增加数字进度显示，可用知道：进行操作的当前文件数 &#x2F; 总文件数的值</p>
 <img src="Sw_属性编辑工具-B/增加数字进度显示.png">
 
@@ -94,8 +95,13 @@
 <p>3、文件加密，和2类似读写权限被限制了；</p>
 <img src="Sw_属性编辑工具-B/image-20240828142916196.png">
 
-<h2 id="无法创建-ActiveX"><a href="#无法创建-ActiveX" class="headerlink" title="无法创建 ActiveX"></a>无法创建 ActiveX</h2><p><img src="/Sw_%E5%B1%9E%E6%80%A7%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7-B/image-20240828143141115.png" alt="image-20240828143141115"></p>
-<h2 id="不是有效名称"><a href="#不是有效名称" class="headerlink" title="不是有效名称"></a>不是有效名称</h2><p><img src="/Sw_%E5%B1%9E%E6%80%A7%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7-B/%E4%B8%8D%E6%98%AF%E6%9C%89%E6%95%88%E5%90%8D%E7%A7%B0.png" alt="不是有效名称"></p>
+<img src="Sw_属性编辑工具-B/image-20250507151812467.png">
+
+<h2 id="无法创建-ActiveX"><a href="#无法创建-ActiveX" class="headerlink" title="无法创建 ActiveX"></a>无法创建 ActiveX</h2><img src="Sw_属性编辑工具-B/image-20240828143141115.png">
+
+<h2 id="不是有效名称"><a href="#不是有效名称" class="headerlink" title="不是有效名称"></a>不是有效名称</h2><p>已知有属性名或属性值是空格时会出现该情况。</p>
+<img src="Sw_属性编辑工具-B/不是有效名称.png">
+
 <h2 id="低版本文件"><a href="#低版本文件" class="headerlink" title="低版本文件"></a>低版本文件</h2><p>目前发现2013版本文件是支持使用该工具的，底层的程序处理不一样，方法不同。识别不了</p>
 <p>A目前方式是跳过并作出提示：如下：</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123; configs = configmgr.GetConfigurationNames(); &#125;</span><br><span class="line"><span class="keyword">catch</span> (Exception) &#123; Error_file += filepath[j] + <span class="string">&quot;\n&quot;</span>; Error_Switch = <span class="literal">true</span>; Error_Alert = Error_Alert2; <span class="keyword">continue</span>; &#125;</span><br></pre></td></tr></table></figure>
