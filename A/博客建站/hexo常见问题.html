@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,10 +40,11 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2022-08-12 11:53:21</span>
 </div>
-
 <div id="article"><h1 id="hexo-常见问题"><a href="#hexo-常见问题" class="headerlink" title="hexo 常见问题"></a>hexo 常见问题</h1><span id="more"></span>
 
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-theme-&lt;themename&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><h2 id="卸载插件"><a href="#卸载插件" class="headerlink" title="卸载插件"></a>卸载插件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall 插件名</span><br></pre></td></tr></table></figure>
 
 
 
@@ -53,34 +54,128 @@
 <p>这是因为没有安装<code>hexo-deployer-git</code>插件,在<strong>站点目录</strong>下输入下面的命令安装插件就好了。执行下面这行命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
+<h2 id="命令未发现"><a href="#命令未发现" class="headerlink" title="命令未发现"></a>命令未发现</h2><p>bash: hexo: command not found</p>
+<p>这个命令是随同NodeJS一起安装的包管理工具，重新在输入命令安装hexo：命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
+<h1 id="自定义主页"><a href="#自定义主页" class="headerlink" title="自定义主页"></a>自定义主页</h1><p>自定义文件需要配置_config.yml文件：index_generator:  path: ‘index’</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Home page setting</span><br><span class="line"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span><br><span class="line"># per_page: Posts displayed per page. (0 = disable pagination)</span><br><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line">index_generator:</span><br><span class="line">  path: &#x27;index&#x27;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
 
+<p>在source&#x2F;index.md文件里，就可以自定义主页内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source/index.md</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="command-not-found"><a href="#command-not-found" class="headerlink" title="command not found"></a>command not found</h2><p>这个命令是随同NodeJS一起安装的包管理工具，重新在输入命令安装hexo：命令： npm install hexo-cli -g</p>
-<h2 id="图片链接乱码"><a href="#图片链接乱码" class="headerlink" title="图片链接乱码"></a>图片链接乱码</h2><p>使用 hexo 写博客时，在文章里面插入图片，最后 hexo g 的时候总会在图片前面插一个.io<br>update link as:–&gt;&#x2F;.io&#x2F;&#x2F;06&#x2F;01&#x2F;vim&#x2F;1561905818946.png</p>
+<h1 id="图片问题"><a href="#图片问题" class="headerlink" title="图片问题"></a>图片问题</h1><p>给大家介绍一款用于Hexo博客图片md处理方法，</p>
+<h2 id="图片链接乱码"><a href="#图片链接乱码" class="headerlink" title="图片链接乱码"></a>图片链接乱码</h2><p>使用 hexo 写博客时，在文章里面插入图片，最后 hexo g 的时候总会在图片前面插一个.ioupdate link as:–&gt;&#x2F;.io&#x2F;&#x2F;06&#x2F;01&#x2F;vim&#x2F;1561905818946.png</p>
 <p>A：是 hexo-asset-image 这个插件的 bug,hexo 版本 3.0 以上获取网站 url 的方式与 3.0 以下有些不同。照着文章修改 hexo.js 的 index.js 就行，或者直接卸载 hexo-asset-image</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo uninstall hexo-asset-image</span><br></pre></td></tr></table></figure>
 
+<h2 id="图片链接乱码2"><a href="#图片链接乱码2" class="headerlink" title="图片链接乱码2"></a>图片链接乱码2</h2><p>Typoral在复制图片时，默认是按如下格式显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![image-20240617100626090](hexo图片问题/image-20240617100626090.png)</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="提交主题到官网收录"><a href="#提交主题到官网收录" class="headerlink" title="提交主题到官网收录"></a>提交主题到官网收录</h2><p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/smileyan9/article/details/124368376">https://blog.csdn.net/smileyan9/article/details/124368376</a></p>
-<p>5.2.1 提交方法<br>hexo.io 官网的源码地址是：<a target="_blank" rel="noopener" href="https://github.com/hexojs/site">https://github.com/hexojs/site</a> 为了提交自己的主题，需要更新这个源码，但是很明显我们没有权限直接修改。所以</p>
-<p>Fork <a target="_blank" rel="noopener" href="https://github.com/hexojs/site">https://github.com/hexojs/site</a> 到自己的仓库。</p>
-<p>修改 Fork 过来的 site ，编辑其中的 source&#x2F;_data&#x2F;themes.yml 文件 ，在后面添加自己的主题信息：</p>
-<p>这个猫咪照片是百度上找的，主要目的也是为了吸引别人注意。</p>
-<p>git add&#x2F;commit&#x2F;push 到自己fork的仓库中，然后提交 pull request。可以理解为合并的请求，提交以后会进入一个自动的审核过程，并且也有提示自己需要关注的问题。 </p>
-<p>等待有权限的 hexo-site 管理人员看到，然后进行合并操作。可能需要一些时间（我总共等待不超过两天）。</p>
-<p>最后就可以在 hexo 主题网站上搜索自己的主题名字，看看是否能查到了。</p>
-<h1 id="hexo自定义主页"><a href="#hexo自定义主页" class="headerlink" title="hexo自定义主页"></a>hexo自定义主页</h1><p>无文件时</p>
-<p>自定义文件时</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source/index.md</span><br></pre></td></tr></table></figure>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240617102529202.png">
 
 
 
+<p>我们需要改成如下格式，这样的路径才会固定且正常。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;hexo图片问题/image-20240617100626090.png&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当有很多图片格式需替换时。我们可以在桌面新建个word文档（或其他支持”通配符转换“的编辑器）。把md内容全部复制到word文档里。打开【查找和替换】依次替换如下两部分。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查找内容：\!\[image-*\]\(</span><br><span class="line">替换为：&lt;img src=&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查找内容：.png)</span><br><span class="line">替换为：.png&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240617100626090.png">
+
+<p>完成后，见替换的文本内容复制回Typora文档中，即完成图片格式批量转换。</p>
+<p>另外，补充一句：据说高版本的Typora以支持通配符查找替换。</p>
+<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h2 id="嵌入视频不要自动播放"><a href="#嵌入视频不要自动播放" class="headerlink" title="嵌入视频不要自动播放"></a>嵌入视频不要自动播放</h2><p>B站iframe嵌入视频不要自动播放，</p>
+<p><strong>方法：</strong></p>
+<p>来自：<a target="_blank" rel="noopener" href="https://www.ymhave.com/archives/bilibiliiframe.html">https://www.ymhave.com/archives/bilibiliiframe.html</a></p>
+<p>禁用方法很简单，就是在视频 url 链接最后加上 autoplay&#x3D;0。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=114314581251432&amp;bvid=BV1fpd5YSELk&amp;cid=29343813041&amp;p=1【&amp;autoplay=0】&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其他常用参数</p>
+<table>
+<thead>
+<tr>
+<th>参数用途</th>
+<th>参数名</th>
+<th>使用方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是否自动播放(默认否)</td>
+<td>autoplay</td>
+<td>1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td>默认弹幕开关(默认开启)</td>
+<td>danmaku</td>
+<td>1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td>是否默认静音(默认否)</td>
+<td>muted</td>
+<td>1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td>一键静音按钮是否显示(默认不显示</td>
+<td>hasMuteButton</td>
+<td>1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td>视频封面下方是都显示播放量弹幕量等信息(默认显示)</td>
+<td>hideCoverInfo</td>
+<td>1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td>是否隐藏弹幕按钮（默认不隐藏）</td>
+<td>hideDanmakuButton</td>
+<td>1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td>是否隐藏全屏按钮(默认显示)</td>
+<td>noFullScreenButton</td>
+<td>1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td>是否开始记忆播放(默认开启)</td>
+<td>fjw</td>
+<td>1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td>默认开始时间(默认0)</td>
+<td>t</td>
+<td>直接填写数值，单位秒</td>
+</tr>
+<tr>
+<td>是否显示高清(默认否）</td>
+<td>highQuality</td>
+<td>1: 开启, 0: 关闭（貌似是无用的，各位可以试试）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 <h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">GitHub - Yue-plus&#x2F;hexo-theme-arknights: 明日方舟罗德岛阵营的 Hexo 主题，支持数学公式、Valine&amp;Gitalk&amp;Waline评论系统、Mermaid图表</a></p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands#list">指令 | Hexo</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/博客建站/hexo常见问题.html',
+  pageTitle: 'hexo 常见问题',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -106,4 +201,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

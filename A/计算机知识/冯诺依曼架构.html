@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-10-18 17:40:43</span>
 </div>
-
 <div id="article"><h1 id="冯诺依曼架构"><a href="#冯诺依曼架构" class="headerlink" title="冯诺依曼架构"></a>冯诺依曼架构</h1><span id="more"></span>
 
 <h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><p>利用率</p>
@@ -73,7 +72,20 @@
 <p>以太网</p>
 <p>GPU</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/计算机知识/冯诺依曼架构.html',
+  pageTitle: '冯诺依曼架构',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

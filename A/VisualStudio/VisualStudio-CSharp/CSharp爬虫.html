@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-14 16:09:22</span>
+</div>
+<div id="article"><h1 id="C-爬虫"><a href="#C-爬虫" class="headerlink" title="C#-爬虫"></a>C#-爬虫</h1><p>在大数据时代，网络爬虫（Web Crawler）已成为获取数据的重要工具。C# 作为一种功能强大的编程语言，虽然不像 Python 那样在数据处理领域占据主导地位，但它同样可以借助一些第三方库实现强大的网络爬取功能。本文将详细介绍如何使用 C# 编写网络爬虫，并调用第三方库来实现复杂的功能。</p>
+<span id="more"></span>
+
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>网络爬虫的工作流程通常如下：</p>
+<p>发送 HTTP 请求：爬虫通过 HTTP 协议访问目标网站。</p>
+<p>解析 HTML 文档：获取到目标网页的 HTML 代码后，对其进行解析，提取需要的数据。</p>
+<p>处理与存储：提取的数据可以存储到数据库、文件或其他数据存储方式中。</p>
+<p>循环爬取：通过遍历多个链接，重复上述过程，实现深度或广度爬取。</p>
+<p>C# 中，可以通过标准库和第三方库来实现以上步骤。</p>
+<h2 id="使用的工具和库"><a href="#使用的工具和库" class="headerlink" title="使用的工具和库"></a>使用的工具和库</h2><p>为了简化开发并增强功能，我们将使用以下工具和第三方库：</p>
+<p>HttpClient：用于发送 HTTP 请求。<br>HtmlAgilityPack：用于解析 HTML 文档。<br>AngleSharp：更强大的 HTML 解析和操作库，支持 CSS 选择器等高级特性。<br>Newtonsoft.Json：用于处理 JSON 数据。</p>
+<p>安装所需的 NuGet 包</p>
+<p>在开始之前，请确保在项目中安装了以下 NuGet 包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Install-Package HtmlAgilityPack</span><br><span class="line">Install-Package AngleSharp</span><br><span class="line">Install-Package Newtonsoft.Json</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>首先，我们创建一个基本的爬虫，从一个网站获取 HTML 数据并提取其中的特定信息。</p>
+<ol>
+<li><p>发送 HTTP 请求<br>我们使用 HttpClient 发送 GET 请求获取网页内容。</p>
+<p> using System;<br> using System.Net.Http;<br> using System.Threading.Tasks;</p>
+<p> public class SimpleCrawler<br> {<br> private static readonly HttpClient client &#x3D; new HttpClient();public async Task<string> GetHtmlContent(string url)<br> {<br>     try<br>     {<br>         HttpResponseMessage response &#x3D; await client.GetAsync(url);<br>         response.EnsureSuccessStatusCode();  &#x2F;&#x2F; 确保请求成功<br>         string responseBody &#x3D; await response.Content.ReadAsStringAsync();<br>         return responseBody;<br>     }<br>     catch (HttpRequestException e)<br>     {<br>         Console.WriteLine($”请求异常: {e.Message}”);<br>         return null;<br>     }<br> }<br> }</p>
+</li>
+<li><p>解析 HTML 内容<br>我们使用 HtmlAgilityPack 来解析 HTML 内容。它能够轻松地遍历 DOM 树并提取节点数据。</p>
+</li>
+</ol>
+<p>安装 HtmlAgilityPack<br>通过 NuGet 安装 HtmlAgilityPack：</p>
+<p>Install-Package HtmlAgilityPack</p>
+<p>解析 HTML 示例</p>
+<pre><code>using HtmlAgilityPack;
+using System;
+
+public class HtmlParser
+&#123;
+    public void ParseHtml(string html)
+    &#123;
+        HtmlDocument document = new HtmlDocument();
+        document.LoadHtml(html);
+        // 提取所有 &lt;a&gt; 标签中的链接
+    var links = document.DocumentNode.SelectNodes(&quot;//a[@href]&quot;);
+    if (links != null)
+    &#123;
+        foreach (var link in links)
+        &#123;
+            Console.WriteLine(link.Attributes[&quot;href&quot;].Value);
+        &#125;
+    &#125;
+&#125;&#125; 
+</code></pre>
+<ol start="3">
+<li>使用 AngleSharp 进行高级解析<br>HtmlAgilityPack 虽然强大，但在解析复杂 HTML 和处理 CSS 选择器时并不完美。为此，AngleSharp 是一个更强大的工具，它可以更好地处理复杂的网页结构和 CSS。</li>
+</ol>
+<p>安装 AngleSharp<br>通过 NuGet 安装 AngleSharp：</p>
+<p>Install-Package AngleSharp<br>一键获取完整项目代码<br>bash<br>1<br>使用 AngleSharp 进行解析<br>using AngleSharp;<br>using System;<br>using System.Threading.Tasks;</p>
+<p>public class AdvancedHtmlParser<br>{<br>    public async Task ParseHtmlWithAngleSharp(string html)<br>    {<br>        var config &#x3D; Configuration.Default;<br>        var context &#x3D; BrowsingContext.New(config);<br>        var document &#x3D; await context.OpenAsync(req &#x3D;&gt; req.Content(html));</p>
+<pre><code>    // 使用 CSS 选择器获取所有 &lt;a&gt; 标签中的链接
+    var links = document.QuerySelectorAll(&quot;a&quot;);
+    foreach (var link in links)
+    &#123;
+        Console.WriteLine(link.GetAttribute(&quot;href&quot;));
+    &#125;
+&#125;
+</code></pre>
+<p>}</p>
+<ol start="4">
+<li>爬取 JSON 数据<br>很多现代网站使用 API 返回 JSON 数据，而不是直接返回 HTML 页面。Newtonsoft.Json 是处理 JSON 数据的一个强大工具。</li>
+</ol>
+<p>安装 Newtonsoft.Json<br>通过 NuGet 安装：</p>
+<p>Install-Package Newtonsoft.Json<br>一键获取完整项目代码<br>bash<br>1<br>处理 JSON 响应<br>using Newtonsoft.Json;<br>using System;<br>using System.Collections.Generic;</p>
+<p>public class JsonParser<br>{<br>    public void ParseJson(string json)<br>    {<br>        var data &#x3D; JsonConvert.DeserializeObject&lt;Dictionary&lt;string, object&gt;&gt;(json);<br>        foreach (var item in data)<br>        {<br>            Console.WriteLine($”{item.Key}: {item.Value}”);<br>        }<br>    }<br>}</p>
+<ol start="5">
+<li><p>完整爬虫示例<br>现在我们结合所有部分，创建一个完整的爬虫，能够从网页中提取链接，并且如果检测到 JSON 数据，能够解析和处理。</p>
+<p> using System;<br> using System.Threading.Tasks;</p>
+<p> public class WebCrawler<br> {<br> private SimpleCrawler _crawler &#x3D; new SimpleCrawler();<br> private HtmlParser _htmlParser &#x3D; new HtmlParser();<br> private AdvancedHtmlParser _advancedParser &#x3D; new AdvancedHtmlParser();<br> private JsonParser _jsonParser &#x3D; new JsonParser();<br> public async Task RunCrawler(string url)<br> {<br> string content &#x3D; await _crawler.GetHtmlContent(url);<br><br> if (content !&#x3D; null)<br> {<br>     if (content.TrimStart().StartsWith(“{“))<br>     {<br>         &#x2F;&#x2F; 处理 JSON 响应<br>         _jsonParser.ParseJson(content);<br>     }<br>     else<br>     {<br>         &#x2F;&#x2F; 处理 HTML 响应<br>         Console.WriteLine(“HTML 内容:”);<br>         _htmlParser.ParseHtml(content);<br><br>         &#x2F;&#x2F; 使用 AngleSharp 进行高级解析<br>         Console.WriteLine(“使用 AngleSharp 进行高级解析:”);<br>         await _advancedParser.ParseHtmlWithAngleSharp(content);<br>     }<br> }<br> }</p>
+</li>
+</ol>
+<p>}</p>
+<ol start="6">
+<li>运行爬虫<br>你可以通过以下代码启动爬虫，输入一个 URL 进行爬取。</li>
+</ol>
+<p>class Program<br>{<br>    static async Task Main(string[] args)<br>    {<br>        WebCrawler crawler &#x3D; new WebCrawler();</p>
+<pre><code>    // 目标 URL
+    string url = &quot;https://example.com&quot;;
+    
+    await crawler.RunCrawler(url);
+&#125;
+</code></pre>
+<p>}</p>
+<h2 id="扩展功能"><a href="#扩展功能" class="headerlink" title="扩展功能"></a>扩展功能</h2><p>为了让爬虫更加灵活和强大，你可以进一步扩展功能，比如：</p>
+<p>处理分页数据：通过分析网页中的分页按钮，自动抓取多页数据。<br>多线程并发爬取：使用 Task 并行处理多个 URL，提高爬取效率。<br>自动登录与表单提交：对于需要登录的网站，可以使用爬虫自动登录并提交表单。<br>规避反爬虫机制：通过修改 User-Agent、添加请求头、使用代理等方式规避网站的反爬虫机制。<br>数据存储：将爬取的数据存储到数据库、文件或其他存储系统中。<br>示例：并发爬取多个 URL</p>
+<pre><code>using System.Collections.Generic;
+using System.Threading.Tasks;
+
+public class ConcurrentCrawler
+&#123;
+    public async Task RunConcurrentCrawling(List&lt;string&gt; urls)
+    &#123;
+        List&lt;Task&gt; tasks = new List&lt;Task&gt;();
+        
+        foreach (var url in urls)
+    &#123;
+        tasks.Add(Task.Run(async () =&gt;
+        &#123;
+            WebCrawler crawler = new WebCrawler();
+            await crawler.RunCrawler(url);
+        &#125;));
+    &#125;
+    
+    await Task.WhenAll(tasks);
+&#125;
+&#125;
+</code></pre>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>本文详细介绍了如何在 C# 中构建一个强大的网络爬虫，涵盖了从 HTTP 请求、HTML 解析到 JSON 数据处理等各个方面。通过使用 HtmlAgilityPack、AngleSharp 和 Newtonsoft.Json 等第三方库，你可以轻松实现对网页内容的提取，并扩展爬虫的功能。</p>
+<p>虽然 C# 在爬虫领域可能不像 Python 那么流行，但它提供了强大的语言特性和丰富的库支持，足以应对大多数网络爬虫任务。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43535970/article/details/142817080">使用 C# 构建强大的网络爬虫：从基础到高级功能实现_c# 爬虫-CSDN博客</a></p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/VisualStudio/VisualStudio-CSharp/CSharp爬虫.html',
+  pageTitle: 'C#-CSharp爬虫',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

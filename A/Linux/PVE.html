@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,15 +40,15 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-26 10:34:17</span>
 </div>
-
 <div id="article"><h1 id="PVE系统"><a href="#PVE系统" class="headerlink" title="PVE系统"></a>PVE系统</h1><p>家用云服务器系统</p>
 <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a target="_blank" rel="noopener" href="https://pve.proxmox.com/wiki/Downloads">Downloads - Proxmox VE</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>利用rufus制作：启动u盘的PVE镜像</p>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><h2 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h2><p><a target="_blank" rel="noopener" href="https://skyao.io/learning-pve/docs/installation/source/">配置国内的更新源 | PVE学习笔记</a></p>
-<h1 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h1><h2 id="硬盘直通"><a href="#硬盘直通" class="headerlink" title="硬盘直通"></a>硬盘直通</h2><p>1.查看硬盘信息（知道硬盘名字）</p>
+<h1 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h1><h2 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h2><p>WinSCP 是一款 Windows 系统下运行的图形化 SFTP 文件传输工具，它可实现本地与远程服务器之间的文件复制工作，且具有可拖拽文件进行文件传输和双击实现文件编辑的功能。</p>
+<p>官网下载：<a target="_blank" rel="noopener" href="https://winscp.net/">https://winscp.net/</a></p>
+<h2 id="硬盘直通"><a href="#硬盘直通" class="headerlink" title="硬盘直通"></a>硬盘直通</h2><p>1.查看硬盘信息（知道硬盘名字）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /dev/disk/by-id/</span><br></pre></td></tr></table></figure>
 
-<img src="PVE/image-20250415012614418.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250415012614418.png">
 
 <p>2.设置硬盘直通</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qm set &lt;ID&gt; -sata1 /dev/disk/byid/&lt;硬盘路径编号&gt;</span><br><span class="line">qm set 100 -sata2 /dev/disk/byid/ata-WDC_WD5000AAKX-00ERMA0_WD-WCC2E6DHKRCXqm</span><br></pre></td></tr></table></figure>
@@ -61,17 +61,26 @@
 <h2 id="查看PCI编号"><a href="#查看PCI编号" class="headerlink" title="查看PCI编号"></a>查看PCI编号</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -la /sys/dev/block/|grep -v loop |grep -v dm</span><br></pre></td></tr></table></figure>
 
 <h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/best-lwj/p/14605908.html">https://www.cnblogs.com/best-lwj/p/14605908.html</a></p>
-<img src="PVE/image-20240502160656074.png">
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aM4m1U7Fy/"> 哔哩哔哩_bilibili</a></p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240502160656074.png">
 
+<p>stop模式(停止)</p>
+<p>该模式能提供最强的数据一致性保障，代价是备份过程中虚拟机要停机。该模式的执行流程依次是，停止虚拟机运行，后台执行Qemu进程备份虚拟机数据。备份完成后，Qemu进程将虚拟机恢复到备份开始前的运行状态。通过live backup特性可以保证数据一致性。</p>
+<p>suspend模式(挂起)</p>
+<p>提供该模式的唯一原因是兼容性。该模式首先会挂起虚拟机，然后执行snapshot模式。鉴于该模式会挂起虚拟机，导致虚拟机长时间停止运行，而同时并没有改进备份数据一致性，因此建议直接使用snapshot模式。</p>
+<p>snapshot模式(快照)</p>
+<p>采用该模式虚拟机停机时间最短，代价是备份数据有可能不一致。该模式实际上采用的是ProxmoxVE在线备份，也就是在虚拟机运行状态下复制数据。如果启用了guestagent(agent:1)，该模式将调用guest-fsfreeze-freeze和guest-fsfreeze-thaw以改进数据一致性。</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="PVE设置定时开关机"><a href="#PVE设置定时开关机" class="headerlink" title="PVE设置定时开关机"></a>PVE设置定时开关机</h2><p><a target="_blank" rel="noopener" href="https://blog.ospyo.com/computer/linux/PVE-virtual-machine-system-starts-and-shuts-down-at-regular-intervals">PVE虚拟机系统定时开机、关机 - SPYomarBlog</a></p>
+<p>​	</p>
+<h2 id="虚拟机定时开关机"><a href="#虚拟机定时开关机" class="headerlink" title="虚拟机定时开关机"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/pdblogs/p/16485887.html">虚拟机定时开关机</a></h2><p>shell中输入命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><h2 id="收发邮件"><a href="#收发邮件" class="headerlink" title="收发邮件"></a>收发邮件</h2><h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h2><h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="PVE设置定时开关机"><a href="#PVE设置定时开关机" class="headerlink" title="PVE设置定时开关机"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/pdblogs/p/16485887.html">PVE设置定时开关机</a></h2><p>shell中输入命令：crontab -e</p>
-<img src="https://img2022.cnblogs.com/blog/2599317/202207/2599317-20220717083240995-1030793308.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/2599317-20220717083240995-1030793308.png">
 
 <p> 添加命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">00 &lt;时间&gt; * * &lt;周几&gt; pvesh create /nodes/&lt;节点&gt;/qemu/&lt;虚拟机编号&gt;/status/stop</span><br><span class="line">00 2 * * * pvesh create /nodes/pve/qemu/102/status/stop</span><br><span class="line">00 6 * * * pvesh create /nodes/pve/qemu/102/status/start</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">00 &lt;时间&gt; * * &lt;周几&gt; pvesh create /nodes/&lt;节点&gt;/qemu/&lt;虚拟机编号&gt;/status/stop</span><br><span class="line">00 2 * * * pvesh create /nodes/pve/qemu/102/status/stop</span><br><span class="line">00 6 * * * pvesh create /nodes/pve/qemu/102/status/start</span><br><span class="line">24 23 * * 1-4,7 root /sbin/shutdown -h now</span><br><span class="line">（每周的星期一至星期四和星期日的23:24，执行关机命令）</span><br></pre></td></tr></table></figure>
 
-<h2 id="更新软件包数据库"><a href="#更新软件包数据库" class="headerlink" title="更新软件包数据库"></a>更新软件包数据库</h2><img src="PVE/image-20250414182642876.png">
+<h2 id="更新软件包数据库"><a href="#更新软件包数据库" class="headerlink" title="更新软件包数据库"></a>更新软件包数据库</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250414182642876.png">
 
 <p>更新软件包数据库报错：TASK ERROR: command ‘apt-get update’ failed: exit code 100</p>
 <p><strong>方法：</strong></p>
@@ -93,8 +102,22 @@
 
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://github.com/awesome-selfhosted/awesome-selfhosted">GitHub云服务器托管项目</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ba4y117Yn/?spm_id_from=333.880.my_history.page.click&vd_source=61426b94de87e3e2baee96fc2f5b14f2">pve8.1安装黑群晖</a></p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><h2 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h2><p><a target="_blank" rel="noopener" href="https://skyao.io/learning-pve/docs/installation/source/">配置国内的更新源 | PVE学习笔记</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Linux/PVE.html',
+  pageTitle: 'PVE',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -120,4 +143,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

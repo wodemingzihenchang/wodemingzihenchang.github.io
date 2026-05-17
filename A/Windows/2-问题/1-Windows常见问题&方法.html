@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-10-18 17:40:43</span>
 </div>
-
 <div id="article"><h1 id="Windows常见问题-方法"><a href="#Windows常见问题-方法" class="headerlink" title="Windows常见问题&amp;方法"></a>Windows常见问题&amp;方法</h1><p>本文章将记录收集有关Windows的杂七杂八知识点，其他Windows问题可以查询<a target="_blank" rel="noopener" href="https://answers.microsoft.com/zh-hans">Microsoft Community</a></p>
 <span id="more"></span>
 
@@ -56,6 +55,15 @@
 <p>glTF 格式其实是一个文件夹，包含一个基于 json 的属性文件，一个二进制文件用来放顶点数据，以及各种图片作为纹理。这样解析起来就很简单。<br></p>
 <p>资源网站：<a target="_blank" rel="noopener" href="http://glbxz.com/">http://glbxz.com</a></p>
 <p>在线查看 gltf：<a target="_blank" rel="noopener" href="http://gltf.bimant.com/">http://gltf.bimant.com/</a></p>
+<h1 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="动态端口"><a href="#动态端口" class="headerlink" title="动态端口"></a>动态端口</h2><p>在客户端上分配动态端口时，可能会遇到 Microsoft® 问题，无法自动找到动态端口值。这仅发生在某些 SQL Server 安装上;它不是所有命名实例的通用。但是，有些情况是由于客户端无法使用动态端口分配而发生的。</p>
+<p>如果遇到此问题，建议在服务器上禁用动态端口选项，这会强制命名实例使用静态端口。有关如何完成此作的信息，请参阅 Microsoft 知识库文章 823938：<a target="_blank" rel="noopener" href="http://support.microsoft.com/kb/823938/en-us">http://support.microsoft.com/kb/823938/en-us</a></p>
+<p>ODBC 连接可能解决此问题的原因很可能是因为它将连接别名和端口号添加到以下字符串注册表项：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\ConnectTo\[hostname]\[instance name] = DBMSSOCN,[hostname]\[instance name],1433</span><br><span class="line"></span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\ConnectTo\[主机名]\[实例名称] = DBMSSOCN，[主机名]\[实例名称]，1433*</span><br></pre></td></tr></table></figure>
+
+<h2 id="空密码远程桌面"><a href="#空密码远程桌面" class="headerlink" title="空密码远程桌面"></a>空密码远程桌面</h2><p>在本地策略编辑器中定位到Windows 设置—&gt;安全设置—&gt;本地策略—&gt;安全选项，</p>
+<p>然后禁用配置项【账户：使用空白密码的本地帐户只允许进行控制台登录】。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260316153118488.png">
+
 <h1 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><p>在【“开始”菜单-Windows 管理工具-“系统信息”】打开工具。或“运行”对话框。键入msinfo32打开系统信息工具。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">系统摘要</span><br><span class="line">	——硬件资源</span><br><span class="line">		——冲突共享</span><br><span class="line">		——DMA</span><br><span class="line">		——强制硬件</span><br><span class="line">		——I/O</span><br><span class="line">		——IRQ</span><br><span class="line">		——内存</span><br><span class="line">	——组件</span><br><span class="line">		——多媒体</span><br><span class="line">		——CD-ROM</span><br><span class="line">		——声音设备</span><br><span class="line">		——显示</span><br><span class="line">		——红外线</span><br><span class="line">		——输入</span><br><span class="line">			——键盘</span><br><span class="line">			——鼠标指针设备</span><br><span class="line">		——调制解调器</span><br><span class="line">		——网络</span><br><span class="line">			——适配器</span><br><span class="line">			——协议</span><br><span class="line">			——WinSock</span><br><span class="line">		——端口</span><br><span class="line">			——串口</span><br><span class="line">			——并口</span><br><span class="line">		——存储</span><br><span class="line">			——驱动器</span><br><span class="line">			——磁盘</span><br><span class="line">			——SCSI</span><br><span class="line">			——IDE</span><br><span class="line">		——打印</span><br><span class="line">		——有问题设备</span><br><span class="line">		——USB</span><br><span class="line">	——软件环境</span><br><span class="line">		——系统启动程序</span><br><span class="line">		——环境变量</span><br><span class="line">		——打印作业</span><br><span class="line">		——网络连接</span><br><span class="line">		——正在运行任务</span><br><span class="line">		——加载的模块</span><br><span class="line">		——服务</span><br><span class="line">		——程序组</span><br><span class="line">		——启动程序</span><br><span class="line">		——OLE注册</span><br><span class="line">		——Windows错误报告</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
 
@@ -69,7 +77,7 @@
 <p>按Windows键+R，打开“运行”对话框：输入regedit，回车或确定。依次找到以下键值： 右键“EnableLUA 选“修改”。把值改成0，确定。然后重启电脑</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system</span><br></pre></td></tr></table></figure>
 
-<img src="https://i0.hdslb.com/bfs/article/76e996728ebbb5ad278ea44a31d3e776ce5c5143.jpg@1256w_1078h_!web-article-pic.avif">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/76e996728ebbb5ad278ea44a31d3e776ce5c5143.jpg@1256w_1078h_!web-article-pic.avif">
 
 <p>方法二：</p>
 <p>按下“Win+R”，再出现的运行命令中输入“gpedit.msc”后回车。</p>
@@ -86,7 +94,20 @@
 <p>可以在开机时，按F8进入“安全模式”。在安全模式下卸载问题程序即可。</p>
 <p>当卸载程序异常时，可以开了使用“MicrosoftProgram_Install_and_Uninstall.meta”微软卸载助手，进行卸载。</p>
 <h2 id="0xc0000374"><a href="#0xc0000374" class="headerlink" title="0xc0000374"></a>0xc0000374</h2><h2 id="c0000409"><a href="#c0000409" class="headerlink" title="c0000409"></a>c0000409</h2></div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Windows/2-问题/1-Windows常见问题&amp;方法.html',
+  pageTitle: 'Windows常见问题&amp;方法',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -112,4 +133,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

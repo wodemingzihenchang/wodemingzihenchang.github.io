@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,185 +40,180 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-09-30 20:31:20</span>
 </div>
-
-<div id="article"><h1 id="Git-入门"><a href="#Git-入门" class="headerlink" title="Git-入门"></a>Git-入门</h1><p>流程</p>
+<div id="article"><h1 id="Git-入门"><a href="#Git-入门" class="headerlink" title="Git-入门"></a>Git-入门</h1><p>Git</p>
 <h2 id="下载-安装"><a href="#下载-安装" class="headerlink" title="下载&amp;安装"></a>下载&amp;安装</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></p>
 <h2 id="打开Git"><a href="#打开Git" class="headerlink" title="打开Git"></a>打开Git</h2><p>右键-Open git bash here</p>
 <p>菜单&#x2F;程序-git bash</p>
 <p>cmd命令提示符</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd 查看程序允许的目录位置</span><br></pre></td></tr></table></figure>
 
-
-
-
-
 <h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;&lt;你的用户名&gt;&quot;</span><br><span class="line">git config --global user.email &quot;&lt;你的注册邮箱&gt;&quot;</span><br></pre></td></tr></table></figure>
 
 <p>查看配置</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 
-
-
 <h1 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h1><p>需要Git服务器进行代码托管，可以自建Git服务器，也可以使用Github或Gitee的免费服务器。本文章以Gitee为例进行演示，</p>
-<h2 id="远端初始化仓库"><a href="#远端初始化仓库" class="headerlink" title="远端初始化仓库"></a>远端初始化仓库</h2><img src="Git-入门/image-20240511121708886.png">
+<h2 id="远端初始化仓库"><a href="#远端初始化仓库" class="headerlink" title="远端初始化仓库"></a>远端初始化仓库</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511121708886.png">
 
 
 
-<img src="Git-入门/image-20240511122318355.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511122318355.png">
 
-<img src="Git-入门/image-20240511122440744.png">
-
-
-
-<h2 id="本地初始化仓库"><a href="#本地初始化仓库" class="headerlink" title="本地初始化仓库"></a>本地初始化仓库</h2><img src="Git-入门/image-20240511153537003.png">
-
-<h2 id="绑定远端仓库"><a href="#绑定远端仓库" class="headerlink" title="绑定远端仓库"></a>绑定远端仓库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://gitee.com/littleboy97/git-practice</span><br></pre></td></tr></table></figure>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511122440744.png">
 
 
+
+<h2 id="本地初始化仓库"><a href="#本地初始化仓库" class="headerlink" title="本地初始化仓库"></a>本地初始化仓库</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511153537003.png">
+
+<h2 id="绑定远端仓库"><a href="#绑定远端仓库" class="headerlink" title="绑定远端仓库"></a>绑定远端仓库</h2><p>git remote add</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://gitee.com/littleboy97/git-practice</span><br></pre></td></tr></table></figure>
 
 <h1 id="修改仓库"><a href="#修改仓库" class="headerlink" title="修改仓库"></a>修改仓库</h1><h2 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h2><p>将远端仓库克隆到本地</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方式1：HTTPS</span><br><span class="line"></span><br><span class="line">方式2：SSH</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;链接&gt;</span><br><span class="line">方式1：HTTPS</span><br><span class="line">方式2：SSH</span><br></pre></td></tr></table></figure>
 
-<img src="Git-入门/image-20240511153205040.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511153205040.png">
 
+<p>查看当前仓库状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511160637584.png">
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看当前仓库状态</span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
-
-<img src="Git-入门/image-20240511160637584.png">
-
-
-
-<h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><p>添加git缓冲区</p>
+<h2 id="添加暂存文件"><a href="#添加暂存文件" class="headerlink" title="添加暂存文件"></a>添加暂存文件</h2><p>添加git缓冲区</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">添加指定文件</span><br><span class="line">git add &lt;指定文件&gt;</span><br><span class="line">添加全部文件</span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
-<img src="Git-入门/image-20240511161431036.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511161431036.png">
 
+<h2 id="添加版本评论"><a href="#添加版本评论" class="headerlink" title="添加版本评论"></a>添加版本评论</h2><p>添加版本评论</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit</span><br><span class="line">git commit -m &quot;&lt;commit&gt;&quot;</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="添加版本评论"><a href="#添加版本评论" class="headerlink" title="添加版本评论"></a>添加版本评论</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git commit</span><br><span class="line"></span><br><span class="line">git commit -m &quot;&lt;commit&gt;&quot;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="查看版本库"><a href="#查看版本库" class="headerlink" title="查看版本库"></a>查看版本库</h2><p>文件在评论过程会形成一次log记录，然后可通过git log查看记录来获取</p>
+<p>文件在评论过程会形成一次log记录，然后可通过git log查看记录来获取</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
 
-<p>通过commit后的那串数字，可以找到每次的提交</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --head &lt;commitID&gt;</span><br></pre></td></tr></table></figure>
+<p>git reset评论记录里的那串数字，可以找到每次的提交</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard &lt;commitID&gt;</span><br><span class="line">git reset --mixed &lt;commitID&gt;</span><br><span class="line">git reset --soft &lt;commitID&gt;</span><br></pre></td></tr></table></figure>
+
+<p>是否能删除评论？</p>
+<h2 id="查看文件差异"><a href="#查看文件差异" class="headerlink" title="查看文件差异"></a>查看文件差异</h2><p>查看文件差异</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;commit ID1&gt; &lt;commit ID12&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511172645829.png">
 
 
 
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511172738986.png">
 
+<h2 id="推送至远端仓库"><a href="#推送至远端仓库" class="headerlink" title="推送至远端仓库"></a>推送至远端仓库</h2><p>推送更新到远端仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
 
-<h2 id="查看文件差异"><a href="#查看文件差异" class="headerlink" title="查看文件差异"></a>查看文件差异</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;commit ID1&gt; &lt;commit ID12&gt;</span><br></pre></td></tr></table></figure>
-
-<img src="Git-入门/image-20240511172645829.png">
-
-
-
-<img src="Git-入门/image-20240511172738986.png">
-
-
-
-
-
-<h2 id="同步更新远端仓库"><a href="#同步更新远端仓库" class="headerlink" title="同步更新远端仓库"></a>同步更新远端仓库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<img src="Git-入门/image-20240511173051923.png">
-
-
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240511173051923.png">
 
 <h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><p>分支，创建用于功能的编写和功能的测试使用的环境。</p>
-<p>设计流程：</p>
-<pre class="mermaid">graph LR
-develop-->masterV1.0
-master-->develop
-develop-->Feature</pre>
+<p>设计流程：首次生成的main主分支，在设计过程会需要进行功能develop分支的开发（这样就不会动到原先的main主分支）。这个有点类似我们在复制一版文件进行修改。开发分支设计好后，会合并到main主分支里。</p>
+<p><a target="_blank" rel="noopener" href="https://mermaid-live.nodejs.cn/edit#pako:eNptkEFuhDAMRa8y8hqhDFASsp1KXc0FKjYp8YSoJEGepGqLuHtTqFBV1Sv7-79vyQsMQSNIMDY-kZrH3p9yDcE5G_f-hZQfxpPGN5zC_LMfcXgNKf5Rf1GHwynrd8khGfyPgAIMWQ3ypqY7FpCNmcozLN-2HuKIDnuQudV4U2mKPfR-zdys_HMIDmSklEkKyYxHTpq1ivholSHlDpXQa6RLSD6CrBu-hYBc4B1kxdqyZl0jqrbteHPuRAEfWa5F2XTizComKt6xiq8FfG53WSn4QwGobQx03X-5vXT9AnnkbcU"><img src="https://img.r77817520.nyat.app:18981/Hexo/eNptkEFuhDAMRa8y8hqhDFASsp1KXc0FKjYp8YSoJEGepGqLuHtTqFBV1Sv7-79vyQsMQSNIMDY-kZrH3p9yDcE5G_f-hZQfxpPGN5zC_LMfcXgNKf5Rf1GHwynrd8khGfyPgAIMWQ3ypqY7FpCNmcozLN-2HuKIDnuQudV4U2mKPfR-zdys_HMIDmSklEkKyYxHTpq1ivholSHlDpXQa6RLSD6CrBu-hYBc4B1kxdqyZl0jqrbteHPuRAEfWa5F2XTizComKt6xiq8FfG53WSn4QwGobQx03X-5vXT9AnnkbcU?type=png"></a></p>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
 
-<p>查看分支</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>分支，但是是没有切换到新建的分支的，需要checkout检出</p>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>这只是创建，没有直接检出切换到新建的分支的，需要checkout检出</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h2><p>然后本地是否变化？似乎不能</p>
+<h2 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h2><p>切换不同分支，其文件夹内容显示和分支是有关系的（图），不同分支有不同的内容的。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
 
-<img src="Git-入门/image-20240518114935199.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240518114935199.png">
 
-<p>文件夹内容显示和分支的关系（图）</p>
-<p>问题：</p>
-<p>当我们正常使用Git切换分支时，会出现以下提示（请在切换分支之前提交您的更改或隐藏它们）Please commit your changes or stash them before you switch branches.</p>
-<p>方法</p>
-<p>解决方案：</p>
+<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>分支也是可以上传到远端仓库的，可以按前面操作。git push将本地分支推送到远端仓库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>如果远端无分支则设置下面方法上传推送</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push -u &lt;远端仓库名&gt; &lt;分支名&gt;</span><br><span class="line">示例：</span><br><span class="line">git push -u github master</span><br></pre></td></tr></table></figure>
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240518133925042.png">
+
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>将远端仓库拉取到本地分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<p>如果远端无分支则</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull &lt;remote&gt; &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><p>作为完成分支功能开发的分支，可将设计完成的功能分支进行合并汇总到主分支上。</p>
+<p>在分支做好的内容有两种处理：</p>
+<p>1、上传分支后，切换到需要汇总的分支，输入如下代码，将其他分支合并进来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">切换汇总分支</span><br><span class="line">git checkout &lt;分支名&gt;</span><br><span class="line"></span><br><span class="line">合并</span><br><span class="line">git merge &lt;分支名&gt;</span><br><span class="line"></span><br><span class="line">提交代码至主干（master）</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240518142700349.png">
+
+<p>2、git staus将当前分支暂存起来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git staus</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>删除本地分支</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240518143726544.png">
+
+<p>更新远端分支，并删除远端分支</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin -d &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240518143857761.png">
+
+<h2 id="文件复制"><a href="#文件复制" class="headerlink" title="文件复制"></a>文件复制</h2><p>&lt;分支1&gt;:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">├── README.md</span><br><span class="line">├── cpp</span><br><span class="line">│   ├── include</span><br><span class="line">│   │   └── test.hpp</span><br><span class="line">│   └── src</span><br><span class="line">│       └── test.cpp</span><br><span class="line">└── python</span><br><span class="line">    └── setup.py</span><br></pre></td></tr></table></figure>
+
+<p>&lt;分支2&gt;:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">├── README.md</span><br><span class="line">└── java</span><br><span class="line">    └── test.java</span><br><span class="line">    └── main.java</span><br></pre></td></tr></table></figure>
+
+<p>假设我们当前在<code>&lt;分支1&gt;</code>, 目录为仓库根目录，想要复制<code>&lt;分支2&gt;</code> 的<code> java/test.java</code> 到当前目录，执行下面的语句:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;分支2&gt; -- java/test.java</span><br></pre></td></tr></table></figure>
+
+<p><strong>⚠️注意：这里还是会创建一个<code>java</code>目录，而不是把<code>test.java</code>放到根目录下。</strong></p>
+<p>如果当前进入了<code>cpp</code> 子目录，后面的路径也需要改成相对路径:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;分支2&gt; -- ../java/test.java</span><br></pre></td></tr></table></figure>
+
+<p>如果想要复制整个目录，也是一样的:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;分支2&gt; -- java/</span><br></pre></td></tr></table></figure>
+
+<p>此外还可以利用提交的<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=180084770&content_type=Article&match_order=1&q=hash%E5%80%BC&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTU1ODkyMzEsInEiOiJoYXNo5YC8IiwiemhpZGFfc291cmNlIjoiZW50aXR5IiwiY29udGVudF9pZCI6MTgwMDg0NzcwLCJjb250ZW50X3R5cGUiOiJBcnRpY2xlIiwibWF0Y2hfb3JkZXIiOjEsInpkX3Rva2VuIjpudWxsfQ.GVDJ50oOIQzr45TGfzUVhGFL8_bkzKHvpeFWDOIMWBQ&zhida_source=entity">hash值</a>来复制文件，这样就会复制当次提交时候的文件内容:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 941b6dd java/test.java</span><br></pre></td></tr></table></figure>
+
+<h1 id="协同"><a href="#协同" class="headerlink" title="协同"></a>协同</h1><h2 id="代码冲突"><a href="#代码冲突" class="headerlink" title="代码冲突"></a>代码冲突</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240518144354560.png">
+
+<h2 id="revert回退版本"><a href="#revert回退版本" class="headerlink" title="revert回退版本"></a>revert回退版本</h2><p>本地回退版本，revert会按照某个commit版本，并会当作新版本使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git revert HEAD^</span><br><span class="line"></span><br><span class="line">git revert HEAD^^</span><br><span class="line"></span><br><span class="line">git revert HEAD^2</span><br><span class="line"></span><br><span class="line">git revert &lt;版本ID&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="reset回退版本"><a href="#reset回退版本" class="headerlink" title="reset回退版本"></a>reset回退版本</h2><p>本地回退版本，reset会回退到某个commit版本，并会删除后续版本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^</span><br><span class="line"></span><br><span class="line">git reset HEAD^^</span><br><span class="line"></span><br><span class="line">git reset HEAD^2</span><br><span class="line"></span><br><span class="line">git reset &lt;版本ID&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="rebase切换提交"><a href="#rebase切换提交" class="headerlink" title="rebase切换提交"></a>rebase切换提交</h2><h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h2><p>当我们正常使用Git切换分支时，会出现以下提示（请在切换分支之前提交您的更改或隐藏它们）Please commit your changes or stash them before you switch branches.</p>
+<p>方法：</p>
 <ol>
 <li><p>因为当前的分支dev 最初也是从master 分支上衍生出来的。而此时你要再从该分支上切换到其主分支。那么你需要先把该dev分支上的改动提交后才能切换，但是该dev分支上还没有完成全部的修改，你不想提交。那么此时你就要选择 stash (存放)它们（你在当前分支上改动的却没有提交commit的内容）。<br>所以第一步，在当前分支上执行 git stash 命令。将当前分支存起来，id为 807be186826</p>
 </li>
 <li><p>这时候再执行 git status 命令，显示没有东西需要提交，接着就可以在主分支master上创建并切换到新的分支去修复另一个Bug了。</p>
 </li>
 <li><p>那修改完那个Bug也提交后，就该回到dev 分支上去继续修改那个未完成的Bug。<br>执行 git checkout dev 切换到 dev 分支，这个时候执行 git status 命令仍旧显示没有东西需要提交。毕竟我们前边已经成功将dev上未提交的改动给“隐藏“了，这时，用 $ git stash list 命令去查看我们“存储”的列表。</p>
-</li>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241125123352445.png"></li>
 </ol>
-<p><img src="/Git-%E5%85%A5%E9%97%A8/image-20241125123352445.png" alt="image-20241125123352445"></p>
-<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>将本地分支推送到远端仓库。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<p>如果远端无分支则设置下面方法上传推送</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
-
-<img src="Git-入门/image-20240518133925042.png">
-
-
-
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>将远端仓库推送到本地分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>如果远端无分支则设</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull &lt;remote&gt; &lt;branch&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><p>将设计完成的功能分支进行合并到汇总分支master。</p>
-<p>在分支做好的内容有两种处理：1、上传分支再切换主分支合并；2、git staus将当前分支暂存起来</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git staus</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">切换汇总分支</span><br><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
-
-<p>切换到需要汇总的分支，输入如下代码，将其他分支合并进来</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">合并</span><br><span class="line">git merge &lt;分支名&gt;</span><br><span class="line"></span><br><span class="line">提交代码至主干（master）</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<img src="Git-入门/image-20240518142700349.png">
-
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>删除本地分支</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
-
-<img src="Git-入门/image-20240518143726544.png">
-
-<p>更新远端分支，并删除远端分支</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin -d &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
-
-<img src="Git-入门/image-20240518143857761.png">
-
-<h1 id="协同"><a href="#协同" class="headerlink" title="协同"></a>协同</h1><h2 id="代码冲突"><a href="#代码冲突" class="headerlink" title="代码冲突"></a>代码冲突</h2><img src="Git-入门/image-20240518144354560.png">
-
-<h2 id="回退版本"><a href="#回退版本" class="headerlink" title="回退版本"></a>回退版本</h2><p>本地回退版本，revert会按照某个commit版本，并会当作新版本使用。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git revert HEAD^</span><br><span class="line"></span><br><span class="line">git revert HEAD^^</span><br><span class="line"></span><br><span class="line">git revert HEAD^2</span><br><span class="line"></span><br><span class="line">git revert &lt;版本ID&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>本地回退版本，reset会回退到某个commit版本，并会删除后续版本。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^</span><br><span class="line"></span><br><span class="line">git reset HEAD^^</span><br><span class="line"></span><br><span class="line">git reset HEAD^2</span><br><span class="line"></span><br><span class="line">git reset &lt;版本ID&gt;</span><br></pre></td></tr></table></figure>
-
-
-
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>菜鸟教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-tutorial.html">https://www.runoob.com/git/git-tutorial.html</a></p>
 <p><a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2">Git - 书籍 (git-scm.com)</a></p>
 <p>vim编辑器</p>
 <p>标签</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Git/Git-入门.html',
+  pageTitle: 'Git-入门',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -244,4 +239,4 @@ develop-->Feature</pre>
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

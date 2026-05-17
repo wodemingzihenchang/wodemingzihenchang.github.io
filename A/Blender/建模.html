@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,10 +40,9 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-10-13 23:34:17</span>
 </div>
-
 <div id="article"><h1 id="Blender建模"><a href="#Blender建模" class="headerlink" title="Blender建模"></a>Blender建模</h1><span id="more"></span>
 
-<h2 id="界面介绍"><a href="#界面介绍" class="headerlink" title="界面介绍"></a>界面介绍</h2><p><img src="/%E5%BB%BA%E6%A8%A1/Blender%E7%95%8C%E9%9D%A2%E4%BB%8B%E7%BB%8D.jpg" alt="Blender界面介绍"></p>
+<h2 id="界面介绍"><a href="#界面介绍" class="headerlink" title="界面介绍"></a>界面介绍</h2><p><img src="https://img.r77817520.nyat.app:18981/Hexo/Blender界面介绍.jpg" alt="Blender界面介绍"></p>
 <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p>位置 N</p>
 <p>视角移动 shift 中键 ctrl 中键</p>
 <p>选中框内物体 B 取消就是 shift+鼠标中键</p>
@@ -71,12 +70,12 @@
 <p>物体原点：坐标归零 alt+G</p>
 <p>自定义原点：shift+右键</p>
 <p>定位原点：编辑模式，网格-吸附；“吸附类型”</p>
-<img src="建模\基本操作.jpg">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/基本操作.jpg">
 
 <p>.（小数点）： 回到对象显示窗口</p>
 <p>0： 进入相机视角</p>
 <h2 id="建模操作"><a href="#建模操作" class="headerlink" title="建模操作"></a>建模操作</h2><p>Tab： 编辑模式</p>
-<img src="建模\常用建模操作.jpg">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/常用建模操作.jpg">
 
 <p>十大操作快捷键：</p>
 <p>挤出: E，连续挤出: CTRL + 右键</p>
@@ -90,7 +89,7 @@
 <p>桥接:CTRL+E，桥接必须是同一个物体，合并物体:CTRL+J</p>
 <p>分离: P</p>
 <h2 id="修改器"><a href="#修改器" class="headerlink" title="修改器"></a>修改器</h2><p>特定：在不改变原来模型的基础上，可以很精确地控制参数</p>
-<img src="建模\常用修改器.jpg">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/常用修改器.jpg">
 
 <p>表面细分：细分实体网格</p>
 <p>实体化：面片加厚</p>
@@ -169,7 +168,20 @@
 <p>把第一个物体选择好参数 新建一个物体  </p>
 <p>选择新建的物体 按住shift选择原来的物体 CTRL+L （关联材质）就OK</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Blender/建模.html',
+  pageTitle: 'Blender建模',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -195,4 +207,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

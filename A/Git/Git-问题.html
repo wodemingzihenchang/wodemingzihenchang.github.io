@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-09-30 20:31:20</span>
 </div>
-
 <div id="article"><h1 id="Git-问题"><a href="#Git-问题" class="headerlink" title="Git-问题"></a>Git-问题</h1><h2 id="符号转义"><a href="#符号转义" class="headerlink" title="符号转义"></a>符号转义</h2><p>提示：warning: LF will be replaced by CRLF</p>
 <p>这种错误的原因是存在有文件的内容符号转义问题，在windows中的换行符为 CRLF， 而在linux下的换行符为LF，所以在执行git add . 或git deploy语句的时候可能就会出现这个错误</p>
 <p>使用如下命令便可解决：</p>
@@ -51,9 +50,46 @@
 <p>true时，Git会将你add的所有文件视为文本问价你，将结尾的CRLF转换为LF，而checkout时会再将文件的LF格式转为CRLF格式。</p>
 <p>为false时，line endings不做任何改变，文本文件保持其原来的样子。</p>
 <p>为input时，add时Git会把CRLF转换为LF，而check时仍旧为LF，所以Windows操作系统不建议设置此值。</p>
+<h1 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h1><h2 id="文件已存在"><a href="#文件已存在" class="headerlink" title="文件已存在"></a>文件已存在</h2><p>fatal: destination path xxx already exists and is not an  empty directory</p>
+<p>当本地已有git库文件夹时，会提示文件已存在，无法克隆git库到本地</p>
+<h1 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h1><img src="https://img.r77817520.nyat.app:18981/Hexo/image8-1779002535875-1.png">
+
+<p>Q：git push 失败？</p>
+<p>A：有修改 README.MD 文件，需要先 git.pull 在操作上传。<a target="_blank" rel="noopener" href="https://blog.csdn.net/INTZhou/article/details/81677009">关于Git推送error：failed to push some refs to ‘git@gitee.com:name/project.git'-CSDN博客</a></p>
+<p>Q：使用 ssh 提交代码却提示：DeployKey does not support push code fatal: Could not read from remote repository</p>
+<p>A：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46253682/article/details/125897811">https://blog.csdn.net/weixin_46253682/article/details/125897811</a></p>
+<p>Q：同时推送到gitee和GitHub</p>
+<p>A：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/szrs/p/18258159">git本地项目同时推送提交到github和gitee同步（十四） - 慎终若始 - 博客园</a></p>
+<h2 id="远程和本地冲突"><a href="#远程和本地冲突" class="headerlink" title="远程和本地冲突"></a>远程和本地冲突</h2><p>Q：rejected Updates were rejected because the remote contains work that you do not have locally. This is usually caused by another repository pushing to the same ref. You may want to first integrate the remote changes before pushing again.</p>
+<p>当出现上图所示错误时，原因在于：远程仓库存在本地仓库不存在的提交，可以先pull，也就是把远程仓库上的提交合并到本地再push。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+
+<p>如果你觉得远程仓库上的提交不需要，可以直接强行让本地仓库覆盖远程仓库。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master -f</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[warning: LF will be replaced by CRLF in 解决办法 - 知乎](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/347405055#:~:text=%E8%BF%99%E7%A7%8D%E9%94%99%E8%AF%AF%E7%9A%84%E5%8E%9F%E5%9B%A0%E6%98%AF%E5%AD%98%E5%9C%A8">https://zhuanlan.zhihu.com/p/347405055#:~:text=这种错误的原因是存在</a> 符号转义 问题，在windows中的换行符为 CRLF， 而在linux下的换行符为LF，所以在执行git add,. 或git deploy语句的时候可能就会出现这个错误 使用如下命令便可解决： 解析： 此命令会有三个输出，“true”，“false”或者“input”)</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Git/Git-问题.html',
+  pageTitle: 'Git-问题',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -79,4 +115,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

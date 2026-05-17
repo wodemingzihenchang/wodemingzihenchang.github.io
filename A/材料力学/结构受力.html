@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-10-27 17:18:29</span>
 </div>
-
 <div id="article"><h1 id="结构受力"><a href="#结构受力" class="headerlink" title="结构受力"></a>结构受力</h1><span id="more"></span>
 
 <h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><p>拉力</p>
@@ -48,8 +47,44 @@
 <p>剪力</p>
 <p>弯矩</p>
 <p>扭转</p>
+<h1 id="应力集中"><a href="#应力集中" class="headerlink" title="应力集中"></a>应力集中</h1><!--more-->
+
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><p>开孔</p>
+<p>开槽</p>
+<p>阶梯轴</p>
+<p>折弯</p>
+<p>气孔</p>
+<p>夹杂</p>
+<h2 id="典型"><a href="#典型" class="headerlink" title="典型"></a>典型</h2><h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><h2 id="减少应力集中："><a href="#减少应力集中：" class="headerlink" title="减少应力集中："></a>减少应力集中：</h2><h1 id="应力奇异"><a href="#应力奇异" class="headerlink" title="应力奇异"></a>应力奇异</h1><!--more-->
+
+<h1 id="应力奇异判断"><a href="#应力奇异判断" class="headerlink" title="应力奇异判断"></a>应力奇异判断</h1><p>根据弹性理论在结构内部尖角处，或说非光滑连续处的应力是无限大。在使用有限元求解过程中，</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>单元网格越细化，越会引起计算应力无限增大，而且不再收敛；</p>
+<p>网格稀疏不均匀时，网格离散误差也大小不一；</p>
+<p>添加在节点上的集中载荷与施加在与该节点相连的单元上的均布载荷相当的话，这些节点就会成为应力奇异点；</p>
+<p>离散约束点导致非零反力的出现，就像在一个节点上施加一个集中力，这时约束点也就成为应力奇异点。但实际中，当考虑应力奇异点的区域时，这些假设都是错误的，只要该点受载荷，就一定有位移；</p>
+<p>锐利的拐角处。如果模型中存在尖角（直角），那么网格的细分会改变尖角处的应力计算值，值不收敛。实际中该情况并不绝对存在。</p>
+<p>在有限元计算分析实践中发现，应力奇异的区域应力集中系数较高，理论上是无限大，应力集中度会很高，应力衰减明显。因此在分析中，首先需要关注的是结构上那些不光滑连续的区域；其次，对不连续区域的邻域进行划分，并在网格细化，寻找网格无关解的过程，比较确认不同区域计算值的收敛程度。当不连续区域邻域内的解已趋于收敛，且满足误差要求，但不连续区域的解始终差异较大时，就可以确认该区域出现了应力奇异。</p>
+<h1 id="应力奇异处理"><a href="#应力奇异处理" class="headerlink" title="应力奇异处理"></a>应力奇异处理</h1><p>在遇到应力奇异时，可以考虑采用以下方法进行处理：</p>
+<h2 id="细化模型"><a href="#细化模型" class="headerlink" title="细化模型"></a>细化模型</h2><p>主要是在模型中添加细节特征（如倒角、过渡面等），再重新计算或者采用子模型法进行分析。</p>
+<h2 id="外插值法或路径法"><a href="#外插值法或路径法" class="headerlink" title="外插值法或路径法"></a>外插值法或路径法</h2><p>假设应力奇异在该区域没有发生用来推断奇异点的应力值，可使用应力集中系数来计算真实应力。</p>
+<h2 id="局部细化网格"><a href="#局部细化网格" class="headerlink" title="局部细化网格"></a>局部细化网格</h2><p>在几何尖角处，应力解梯度大的区域网格应细分，其他远离的位置可以粗划。如果远离奇异点的解是收敛的，则粗糙网格也会较为准确的估计这部分的解，但对于接近奇异点的解是不可靠的。</p>
+<h2 id="网格模型转化"><a href="#网格模型转化" class="headerlink" title="网格模型转化"></a>网格模型转化</h2><p>将模型转化为可借用理论公式计算的形式，并根据设计手册查找该模型结构及尺寸的应力集中系数来预测真实应力。 </p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv12079135/">材料力学笔记之——应力集中与应力奇异 - 哔哩哔哩 (bilibili.com)</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/材料力学/结构受力.html',
+  pageTitle: '结构受力',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

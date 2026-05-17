@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-27 10:34:17</span>
 </div>
-
 <div id="article"><h1 id="群晖NAS-备份"><a href="#群晖NAS-备份" class="headerlink" title="群晖NAS-备份"></a>群晖NAS-备份</h1><p>备份图示：</p>
 <pre class="mermaid">graph LR
 手机--同步-->NAS
@@ -64,21 +63,25 @@ NAS--备份-->NAS_2--异地备份-->家里电脑</pre>
 <pre class="mermaid">graph LR
 NAS--备份-->NAS_2</pre>
 
-<h1 id="PVE虚拟机"><a href="#PVE虚拟机" class="headerlink" title="PVE虚拟机"></a>PVE虚拟机</h1><h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p>PVE虚拟机备份</p>
-<img src="群晖-备份/image-20250408173705422.png">
-
-
-
-<p><img src="/%E7%BE%A4%E6%99%96-%E5%A4%87%E4%BB%BD/image-20250415004026441.png" alt="image-20250415004026441"></p>
-<p>当然这份备份还是留存在PVE里面的（本地备份）。我们求稳的话，还可以将这个备份文件.zst，拷贝到异地硬盘保存。</p>
-<h2 id="还原"><a href="#还原" class="headerlink" title="还原"></a>还原</h2><p>导入备份：虚拟机备份文件导入</p>
-<p>还原备份：选泽文件还原（这里还原的是否会带有储存的数据，还是说只是系统环境？）</p>
 <h1 id="NAS环境备份"><a href="#NAS环境备份" class="headerlink" title="NAS环境备份"></a>NAS环境备份</h1><p>Hyper-backup的LUN备份</p>
-<img src="群晖-备份/image-20250408173926829.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250408173926829.png">
 
 <h1 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Nx411f7eq">迁移助手 Migration Assistant</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/NAS/4-维护/群晖-备份.html',
+  pageTitle: '群晖NAS-备份',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -104,4 +107,4 @@ NAS--备份-->NAS_2</pre>
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

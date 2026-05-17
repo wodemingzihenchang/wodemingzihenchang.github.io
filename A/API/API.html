@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2025-02-09 18:59:59</span>
+</div>
+<div id="article"><h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><p>API（应用程序接口，Application Programming Interface）是一组规则和协议，用于让不同的软件或系统之间进行通信。简单来说，API就像一个“服务员”，它负责接收请求，然后返回相应的数据或执行任务。</p>
+<pre class="mermaid">graph LR
+对话-->回答</pre>
+
+<span id="more"></span>
+
+<h2 id="接口说明"><a href="#接口说明" class="headerlink" title="接口说明"></a>接口说明</h2><p>一个完整的API通常由以下部分组成：</p>
+<p>端点（Endpoint）：API的访问地址，例如 <a target="_blank" rel="noopener" href="https://api.example.com/get_data%E3%80%82">https://api.example.com/get_data。</a></p>
+<p>请求（Request）：由客户端发送给API的指令，例如“获取天气信息”或“发送电子邮件”。</p>
+<p>响应（Response）：API返回给客户端的数据，通常是JSON格式的结构化信息。</p>
+<p>认证（Authentication）：某些API需要身份验证，例如使用API Key或OAuth授权。</p>
+<p>什么是API调用（API Call）？</p>
+<p>API调用（API Call）就是向API发送请求并获取响应的过程。可以把它想象成：</p>
+<p>你（客户端）去餐厅点菜（API请求）。服务员（API服务器）把你的订单传给厨房（系统后台）。厨房准备食物后，服务员把菜送到你桌上（API响应）。</p>
+<pre class="mermaid">graph LR
+你:客户端-->菜单:API--API服务器-->厨房:系统后台-->你:客户端</pre>
+
+<p>API调用的常见方法（HTTP请求方式）：在Web API中，常见的请求方式包括：	</p>
+<p>GET：获取数据（例如，查询天气 GET &#x2F;weather?city&#x3D;Beijing）。</p>
+<p>POST：提交数据（例如，创建用户 POST &#x2F;users）。</p>
+<p>PUT：更新数据（例如，修改用户信息 PUT &#x2F;users&#x2F;123）。</p>
+<p>DELETE：删除数据（例如，删除用户 DELETE &#x2F;users&#x2F;123）。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><h2 id="调用天气API"><a href="#调用天气API" class="headerlink" title="调用天气API"></a>调用天气API</h2><p>调用天气API获取天气信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X GET &quot;https://api.weather.com/v1/location/Beijing?apiKey=your_api_key&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>API服务器会返回一条JSON数据，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;city&quot;: &quot;Beijing&quot;,</span><br><span class="line">  &quot;temperature&quot;: &quot;25°C&quot;,</span><br><span class="line">  &quot;weather&quot;: &quot;Sunny&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>这就是API调用的基本流程。</p>
+<h2 id="Coze扣子AI"><a href="#Coze扣子AI" class="headerlink" title="Coze扣子AI"></a>Coze扣子AI</h2><p>非流式对话<a target="_blank" rel="noopener" href="https://www.coze.cn/open/playground">Playground - 扣子</a></p>
+<p>无论对话是否处理完毕，立即发送响应消息。开发者可以通过接口<a target="_blank" rel="noopener" href="https://www.coze.cn/open/docs/developer_guides/retrieve_chat">查看对话详情</a>确认本次对话处理结束后，再调用<a target="_blank" rel="noopener" href="https://www.coze.cn/open/docs/developer_guides/list_chat_messages">查看对话消息详情</a>接口查看模型回复等完整响应内容。详细说明可参考<a target="_blank" rel="noopener" href="https://www.coze.cn/open/docs/developer_guides/chat_v3#337f3d53">非流式响应</a>。</p>
+<p>这说明我们需要进行3段的接口调用才能得到最后结果。</p>
+<pre class="mermaid">graph LR
+发起对话-->查看对话详情--status=in_progress-->查看对话详情
+查看对话详情--status=completed-->查看对话消息详情</pre>
+
+<p>发起对话：接口报文</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>查看对话详情：接口报文</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>查看对话消息详情：接口报文</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="报文转C"><a href="#报文转C" class="headerlink" title="报文转C#"></a>报文转C#</h2><p><a target="_blank" rel="noopener" href="https://curlconverter.com/csharp/">Convert curl commands to C#</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.modelscope.cn/my/modelService/deploy?page=1&type=platform">模型服务 · 魔搭社区</a></p>
+<h1 id="API用途"><a href="#API用途" class="headerlink" title="API用途"></a>API用途</h1><p>API如何与AI智能体结合？</p>
+<p>AI智能体（AI Agents）通常需要与外部系统交互，而API正是实现这一能力的关键。通过API，AI智能体可以访问各种服务，实现更强的自动化能力。</p>
+<h2 id="获取实时数据"><a href="#获取实时数据" class="headerlink" title="获取实时数据"></a>获取实时数据</h2><p>例如，AI助手调用新闻API，获取最新资讯，并进行智能摘要。AI助手可以分析新闻并生成摘要，提供用户友好的阅读体验。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">response = requests.get(&quot;https://api.news.com/latest?apiKey=your_api_key&quot;)</span><br><span class="line">print(response.json())</span><br></pre></td></tr></table></figure>
+
+<h2 id="自动化任务"><a href="#自动化任务" class="headerlink" title="自动化任务"></a>自动化任务</h2><p>例如，AI智能体调用邮件API，自动发送电子邮件或短信。这可以用于客户支持、自动通知等场景。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requests.post(&quot;https://api.mail.com/send&quot;, json=&#123;&quot;to&quot;: &quot;user@example.com&quot;, &quot;subject&quot;: &quot;Hello&quot;, &quot;body&quot;: &quot;This is an AI-generated email.&quot;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据库交互"><a href="#数据库交互" class="headerlink" title="数据库交互"></a>数据库交互</h2><p>AI智能体可以调用数据库API，查询企业的库存、客户信息等。例如，企业客服AI可以查询客户订单状态并实时回复。</p>
+<h2 id="影音处理"><a href="#影音处理" class="headerlink" title="影音处理"></a>影音处理</h2><p>AI可以通过API调用图像识别、语音转换、视频生成等服务，调用DALL·E 3 API生成图片，示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = requests.post(&quot;https://api.openai.com/v1/images/generate&quot;, json=&#123;&quot;prompt&quot;: &quot;a futuristic city&quot;, &quot;size&quot;: &quot;1024x1024&quot;&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="AI客服系统"><a href="#AI客服系统" class="headerlink" title="AI客服系统"></a>AI客服系统</h2><p>  结合API的能力：调用数据库API 查询订单状态，调用支付API 进行自动结算，调用邮件API 发送订单确认。</p>
+<p>  示例：用户问：“我的订单12345什么时候发货？”</p>
+<p>  AI助手查询 GET &#x2F;order&#x2F;12345，返回订单状态：已发货，预计2天送达。</p>
+<h2 id="AI财务分析助手"><a href="#AI财务分析助手" class="headerlink" title="AI财务分析助手"></a>AI财务分析助手</h2><p>结合API的能力：调用股票市场API 获取实时股价，调用财务数据API 获取公司盈利报告。</p>
+<p>示例：用户问：“特斯拉最近的财报怎么样？”</p>
+<p>AI助手查询 GET &#x2F;stock&#x2F;TSLA&#x2F;earnings，返回最新的财务数据，并给出智能解读。</p>
+<h2 id="AI智能自动化办公（RPA）"><a href="#AI智能自动化办公（RPA）" class="headerlink" title="AI智能自动化办公（RPA）"></a>AI智能自动化办公（RPA）</h2><p>结合API的能力：AI可以调用日程API 规划会议、调用文档API 生成报告、调用翻译API 实时翻译文件。</p>
+<p>示例：AI自动查询 GET &#x2F;calendar 获取日程，找到空闲时间，并自动发送会议邀请。</p>
+<h1 id="未来发展"><a href="#未来发展" class="headerlink" title="未来发展"></a>未来发展</h1><p>随着API和AI技术的不断发展，未来API调用在AI智能体中的作用将越来越重要。趋势预测：</p>
+<p>1、更强的自动化能力：</p>
+<p>AI将通过API实现更深入的企业级自动化，如智能财务管理、智能供应链优化。</p>
+<p>2、API标准化：</p>
+<p>未来更多企业将提供专门针对AI优化的API，让AI可以更流畅地访问数据和服务。</p>
+<p>3、AI智能体之间的协作：</p>
+<p>不同AI智能体可以通过API相互通信，实现更高级的协同工作，比如一个AI负责分析数据，另一个AI负责生成报告。</p>
+<h1 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h1><p>API是AI智能体的强力助手</p>
+<p>API是连接AI智能体与现实世界的桥梁，它让AI不再局限于“回答问题”，而是能够真正执行任务、调用数据、自动化工作。通过API调用，AI可以与各种服务对接，扩展能力，实现更高级的智能化。</p>
+<p>无论是企业自动化、智能客服、数据分析，还是图像和语音处理，API都将是AI智能体成功应用的关键。未来，随着API和AI技术的不断融合，我们将看到更加智能、高效的AI解决方案，为各行各业带来变革。</p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/API/API.html',
+  pageTitle: 'API',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

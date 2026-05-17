@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2025-02-09 18:59:59</span>
+</div>
+<div id="article"><h1 id="Deepseek使用API"><a href="#Deepseek使用API" class="headerlink" title="Deepseek使用API"></a>Deepseek使用API</h1><p>我们都知道Deepseek提供了可以在网页端直接访问：<a target="_blank" rel="noopener" href="https://chat.deepseek.com/">https://chat.deepseek.com/</a> 进行AI对话的服务。我们能得到的是AI回答给我们的网页端的【回答】结果</p>
+<pre class="mermaid">graph LR
+对话-->回答</pre>
+
+<p>但假如，我们有自己的应用程序，我们需要AI【回答】的结果，能被作为变量的方式输入到我们的程序内，那输出的这一步就是API调用的方式。</p>
+<pre class="mermaid">graph LR
+对话-->回答--作为变量输出-->自定义的程序</pre>
+
+
+
+<span id="more"></span>
+
+<h2 id="接口说明"><a href="#接口说明" class="headerlink" title="接口说明"></a>接口说明</h2><p>API全名为 Application Programming Interface（应用程序接口），允许不同的应用程序、服务或系统之间能够共享信息与功能，以约定好的 API 接口实现互联互通。</p>
+<p>如果是第一次了解API的那可能会比较抽象，你可以简单把API理解成一个对接暗号的Deepseek神秘人。你需要告诉他特定的暗号【接口】，神秘人会告诉你【结果】</p>
+<p>而Deepseek的暗号【接口】如下：本文章只举例一种命令行信息传递的接口方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">curl https://api.deepseek.com/chat/completions \</span><br><span class="line">  -H &quot;Content-Type: application/json&quot; \</span><br><span class="line">  -H &quot;Authorization: Bearer &lt;DeepSeek API Key&gt;&quot; \</span><br><span class="line">  -d &#x27;&#123;</span><br><span class="line">        &quot;model&quot;: &quot;deepseek-chat&quot;,</span><br><span class="line">        &quot;messages&quot;: [</span><br><span class="line">          &#123;&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are a helpful assistant.&quot;&#125;,</span><br><span class="line">          &#123;&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Hello!&quot;&#125;</span><br><span class="line">        ],</span><br><span class="line">        &quot;stream&quot;: false</span><br><span class="line">      &#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口API-Key"><a href="#接口API-Key" class="headerlink" title="接口API Key"></a>接口API Key</h2><p>在<a target="_blank" rel="noopener" href="https://platform.deepseek.com/usage">DeepSeek 开放平台</a>已有详细的说明介绍，这里着重说明这个API Key的申请操作。在<a target="_blank" rel="noopener" href="https://platform.deepseek.com/api_keys">DeepSeek 开放平台</a>申请后的号码，你可以替换掉下面&lt;DeepSeek API Key&gt;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-H &quot;Authorization: Bearer &lt;DeepSeek API Key&gt;&quot; \</span><br></pre></td></tr></table></figure>
+
+<h1 id="程序写法"><a href="#程序写法" class="headerlink" title="程序写法"></a>程序写法</h1><p>以C#为例：使用System.Net.Http将接口文档的报文转成C#可写的内容，</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Net.Http;</span><br><span class="line"><span class="keyword">using</span> Newtonsoft.Json;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> _12_<span class="title">AI</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Deepseek</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">static</span> <span class="built_in">string</span> answer;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">Deepseek_API</span>(<span class="params"><span class="built_in">string</span> question</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> client = <span class="keyword">new</span> HttpClient();</span><br><span class="line">            client.DefaultRequestHeaders.Add(<span class="string">&quot;Authorization&quot;</span>, <span class="string">$&quot;Bearer sk-d634f7fbdac64175b80fc8465a761744&quot;</span>);</span><br><span class="line">            <span class="keyword">var</span> requestData = <span class="keyword">new</span></span><br><span class="line">            &#123;</span><br><span class="line">                model = <span class="string">&quot;deepseek-chat&quot;</span>,<span class="comment">//DeepSeek-V3</span></span><br><span class="line">                messages = <span class="keyword">new</span>[]</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">new</span>&#123;</span><br><span class="line">                            role= <span class="string">&quot;user&quot;</span> ,</span><br><span class="line">                            content=question</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;;<span class="comment">//请求参数</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> jsonContent = JsonConvert.SerializeObject(requestData);<span class="comment">//转换成json格式</span></span><br><span class="line">            <span class="keyword">var</span> content = <span class="keyword">new</span> StringContent(jsonContent, Encoding.UTF8, <span class="string">&quot;application/json&quot;</span>);</span><br><span class="line">            <span class="keyword">var</span> response = <span class="keyword">await</span> client.PostAsync(<span class="string">$&quot;https://api.deepseek.com/chat/completions&quot;</span>, content);</span><br><span class="line">            <span class="keyword">var</span> responseContet = <span class="keyword">await</span> response.Content.ReadAsStringAsync();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">dynamic</span> result = JsonConvert.DeserializeObject(responseContet);</span><br><span class="line">            answer = result.choices[<span class="number">0</span>].message.content;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>返回的内容存在response里，</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> responseContet = <span class="keyword">await</span> response.Content.ReadAsStringAsync();</span><br></pre></td></tr></table></figure>
+
+<p>例如如下方法，将返回值里的内容进行摘取。摘取的结果值你就可以当作变量在程序其他位置使用了。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dynamic</span> result = JsonConvert.DeserializeObject(responseContet);</span><br><span class="line">answer = result.choices[<span class="number">0</span>].message.content;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a target="_blank" rel="noopener" href="https://platform.deepseek.com/usage">DeepSeek 开放平台</a></p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/AI/Deepseek使用API.html',
+  pageTitle: 'Deepseek使用API',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

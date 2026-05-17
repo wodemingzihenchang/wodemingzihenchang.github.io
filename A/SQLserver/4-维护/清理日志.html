@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,24 +40,40 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-05-15 21:48:58</span>
 </div>
-
 <div id="article"><h1 id="SQLserver清理日志"><a href="#SQLserver清理日志" class="headerlink" title="SQLserver清理日志"></a>SQLserver清理日志</h1><p>随着系统运行时间的推移，数据库日志文件会变得越来越大，这时我们需要对日志文件进行备份或清理。</p>
-<h2 id="直接删除"><a href="#直接删除" class="headerlink" title="直接删除"></a>直接删除</h2><img src="清理日志/image-20250517111048174.png">
+<h2 id="直接删除"><a href="#直接删除" class="headerlink" title="直接删除"></a>直接删除</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250517111048174.png">
 
-<p>在SQL管理器分离数据库。</p>
-<p>对数据库日志文件进行压缩备份（rar, zip）</p>
-<p>直接删除ldf文件。</p>
-<p>再附加数据库。若出现下图错误，选择日志文件记录（提示文件找不到），点下面的【按钮】删除！</p>
+<p>在SQL管理器【分离数据库】。</p>
+<p>对数据库日志文件进行压缩备份（rar, zip）备份后，直接删除ldf文件。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/50c4f480ddec60b1b741236edd546784.png">
+
+<p>再【附加数据库】。若出现下图错误，选择日志文件记录（提示文件找不到），点下面的【按钮】删除！</p>
 <p>附加数据库文件成后，查阅本地数据库文件，发现重新生成的日志文件为504KB。</p>
 <h2 id="收缩文件"><a href="#收缩文件" class="headerlink" title="收缩文件"></a>收缩文件</h2><p>分两步操作：</p>
 <p>step 1.操作步骤：在数据库右键 –&gt; 数据库属性 –&gt; 选项 –&gt; 将数据库【恢复模式】修改为【简单】。 点确定按钮。</p>
 <p>step 2.在数据库右键 –&gt; 任务 –&gt; 收缩 –&gt;文件 –&gt;文件类型选择【日志】 –&gt; 将文件收缩到1MB。 点确定按钮。</p>
 <p>最后：为了安全最好再改回 step 1。</p>
-<img src="https://i-blog.csdnimg.cn/blog_migrate/09e1c746d34e68c8dc0ec1fe1e215a3b.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/09e1c746d34e68c8dc0ec1fe1e215a3b.png">
 
+<h1 id="移动日志"><a href="#移动日志" class="headerlink" title="移动日志"></a>移动日志</h1><p>在SQL管理器【分离】数据库。</p>
+<p>对数据库日志文件移动文件夹目录。注意：新目录下的文件需有足够权限；</p>
+<p>再【附加】数据库。新附件的日志就是新目录</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>转：<a target="_blank" rel="noopener" href="http://www.csframework.com/archive/1/arc-1-20201126-2946.htm">http://www.csframework.com/archive/1/arc-1-20201126-2946.htm</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/SQLserver/4-维护/清理日志.html',
+  pageTitle: 'SQLserver清理日志',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -83,4 +99,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-10-18 17:40:43</span>
 </div>
-
 <div id="article"><h1 id="Net安装失败"><a href="#Net安装失败" class="headerlink" title=".Net安装失败"></a>.Net安装失败</h1><p>在安装Microsoft .NET Framework 4.6.2脱机包时提示 无法建立到信任根颁发机构的证书链。实际上是要安装一个根证书，操作如下：</p>
 <p>1.下载证书：MicrosoftRootCertificateAuthority2011.cer </p>
 <p>2.开始→运行→MMC</p>
@@ -49,8 +48,21 @@
 <p>5.回到窗体，展开：证书→受信任的根证书颁发机构→证书</p>
 <p>6.右击展开菜单，所有任务→导入</p>
 <p>7.选择cer文件，下一步。</p>
-<img src="Net安装失败/.NET未安装.png"></div>
- 			<!-- 引入正文 -->
+<img src="https://img.r77817520.nyat.app:18981/Hexo/.NET未安装.png"></div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Windows/2-问题/Net安装失败.html',
+  pageTitle: '.Net安装失败',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -76,4 +88,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

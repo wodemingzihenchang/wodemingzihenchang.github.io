@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-05-15 21:48:58</span>
+</div>
+<div id="article"><h1 id="SQLServer安装向导"><a href="#SQLServer安装向导" class="headerlink" title="SQLServer安装向导"></a>SQLServer安装向导</h1><p>安装前建议关闭所有Windows 应用程序，包括Windows 资源管理器，建议关闭防火墙</p>
+<p>插入SQL Server 2019 安装包。右键“setup.exe”，选择“以管理员身份运行”，运行过程如果出现弹窗（是否允许更改），选择“是”</p>
+<p>在SQL Server 安装中心的左侧窗格中单击“安装”，在SQL Server 安装中心的右侧窗格中选择“新的SQL Server 独立安装或添加功能到现有安装”</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807142340262.png" alt="image-20250807142340262"></p>
+<h2 id="安装检查"><a href="#安装检查" class="headerlink" title="安装检查"></a>安装检查</h2><p>安装检查</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807142445945.png" alt="image-20250807142445945"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807142502777.png" alt="image-20250807142502777"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807142522242.png" alt="image-20250807142522242"></p>
+<p>无需输入产品序列号，直接下一步</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807142540193-17545479405121.png" alt="image-20250807142540193"></p>
+<p>5.阅读许可并勾选“我接受许可条款和隐私声明”并点击“下一步”</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807142849749.png" alt="image-20250807142849749"></p>
+<p>6.点击下一步</p>
+<p>安装规则检查，如下图，检查通过，点击“下一步”（由于未关闭防火墙产生警告）<br>注意：若安装规则检查出现错误，单击“显示细节”，检查安装失败的组件或提示警告；点击“取消”停止安装，并解决对应问题提示</p>
+<h2 id="功能选择"><a href="#功能选择" class="headerlink" title="功能选择"></a>功能选择</h2><p>选择安装功能：<br>a.	在实例功能下，选择数据库引擎服务<br>b.	在共享功能下，选择：<br>•	客户端工具连接<br>•	Integration Services<br>•	客户端工具后向兼容<br>•	SQL Server 联机丛书<br>•	管理工具– 基本<br>•	管理工具– 完整</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143103960.png" alt="image-20250807143103960">		</p>
+<p>c.安装路径建议默认安装,点击下一步</p>
+<h2 id="实例配置"><a href="#实例配置" class="headerlink" title="实例配置"></a>实例配置</h2><p>首次安装选择默认安装（可多次安装配置不同实例，建议为PDM、Electrical、Manage等不同软件分配不同数据库实例），点击“下一步”<br>注意：若计算机&#x2F;服务器之前已安装SQL Server，则需要自定义不同实例名称</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143204137.png" alt="image-20250807143204137"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143302317.png" alt="image-20250807143302317"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143317770.png" alt="image-20250807143317770"></p>
+<h2 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h2><ol start="4">
+<li><p>   数据库引擎配置<br> a.选择混合模式（SQL Server 身份验证和Windows 身份验证）身份验证。SOLIDWORKS PDM<br> 使用SQL Server 身份验证进行数据库通信。一般不要改变数据目录或文件流选项卡中的设置。<br> b.为系统管理员帐户(sa) 输入安全级别较高的密码。不要将密码保留为空。有关密码规则， 请单击帮助。重新输入密码进行确认。记住该密码，因为在设置 SOLIDWORKS PDM 文件库数据库时要用到。<br> c.数据库引擎配置&#x2F;数据目录选项卡<br> d.若需要设置创建的数据库的默认存储文件夹，更选择【数据目录】界面，更改用户数据库目录和用户数据库日志目录的位置</p>
+<p> <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143400734.png" alt="image-20250807143400734"></p>
+<p> <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807141927784.png" alt="image-20250807141927784"></p>
+<p> <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143540060.png" alt="image-20250807143540060"></p>
+<p> <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143551258.png" alt="image-20250807143551258"></p>
+<p> <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143601295.png" alt="image-20250807143601295"></p>
+<p> <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143613775.png" alt="image-20250807143613775"></p>
+</li>
+<li><p>准备安装，点击“安装”</p>
+</li>
+</ol>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250807143634027.png" alt="image-20250807143634027"></p>
+<p>安装成功，点击“关闭”如图界面，关闭“SQL Server安装中心”</p>
+<h1 id="安装管理工具"><a href="#安装管理工具" class="headerlink" title="安装管理工具"></a>安装管理工具</h1><p>安装SQLServer管理工具</p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/SQLserver/1-安装/SQLServer安装向导.html',
+  pageTitle: 'SQLServer安装向导',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</div></body></html>

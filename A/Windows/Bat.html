@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2022-09-12 11:53:19</span>
 </div>
-
 <div id="article"><h1 id="Bat-学习笔记"><a href="#Bat-学习笔记" class="headerlink" title="Bat 学习笔记"></a>Bat 学习笔记</h1><span id="more"></span>
 
 <h3 id="Echo"><a href="#Echo" class="headerlink" title="Echo"></a>Echo</h3><p>#显示当前是 echo off 状态还是 echo on 状态</p>
@@ -50,16 +49,22 @@
 
 <h3 id="cd：访问"><a href="#cd：访问" class="headerlink" title="cd：访问"></a>cd：访问</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd\ #进入根目录</span><br><span class="line">cd #显示当前目录</span><br><span class="line">cd /d d:\sdk #可以同时更改盘符和目录</span><br></pre></td></tr></table></figure>
 
-<h3 id="rd："><a href="#rd：" class="headerlink" title="rd："></a>rd：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rd abc #删除当前目录里的 abc 子目录，要求为空目录</span><br><span class="line">rd /s/q d:\temp #删除 d:\temp 文件夹及其子文件夹和文件，/q 安静模式</span><br></pre></td></tr></table></figure>
+<h3 id="rd：删除"><a href="#rd：删除" class="headerlink" title="rd：删除"></a>rd：删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rd abc #删除当前目录里的 abc 子目录，要求为空目录</span><br><span class="line">rd /s/q d:\temp #删除 d:\temp 文件夹及其子文件夹和文件，/q 安静模式</span><br></pre></td></tr></table></figure>
 
 <h3 id="del：删除"><a href="#del：删除" class="headerlink" title="del：删除"></a>del：删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">del d:\test.txt #删除指定文件，不能是隐藏、系统、只读文件</span><br><span class="line">del /q/a/f d:\temp\*._ #删除 d:\temp 文件夹里面的所有文件，包括隐藏、只读、系统文件，不包括子目录</span><br><span class="line">del /q/a/f/s d:\temp\*._ #删除 d:\temp 及子文件夹里面的所有文件，包括隐藏、只读、系统文件</span><br></pre></td></tr></table></figure>
 
-<h3 id="ren：重命名"><a href="#ren：重命名" class="headerlink" title="ren：重命名"></a>ren：重命名</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ren d:\temp tmp #支持对文件夹的重命名</span><br></pre></td></tr></table></figure>
+<h3 id="ren：重命名"><a href="#ren：重命名" class="headerlink" title="ren：重命名"></a>ren：重命名</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ren &quot;旧路径&quot; &quot;新路径&quot;</span><br><span class="line">示例：</span><br><span class="line">ren d:\temp-old d:\temp-new #支持对文件夹的重命名</span><br></pre></td></tr></table></figure>
 
 <h3 id="cls：清屏"><a href="#cls：清屏" class="headerlink" title="cls：清屏"></a>cls：清屏</h3><h3 id="type：显示文件内容"><a href="#type：显示文件内容" class="headerlink" title="type：显示文件内容"></a>type：显示文件内容</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type c:\boot.ini #显示指定文件的内容，程序文件一般会显示乱码</span><br><span class="line">type \_.txt #显示当前目录里所有.txt 文件的内容</span><br></pre></td></tr></table></figure>
 
 <h3 id="copy：复制文件"><a href="#copy：复制文件" class="headerlink" title="copy：复制文件"></a>copy：复制文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">copy c:\test.txt d:\test.bak #复制 c:\test.txt 文件到 d:\ ，并重命名为 test.bak</span><br><span class="line">copy 1.txt + 2.txt 3.txt #合并 1.txt 和 2.txt 的内容，保存为 3.txt 文件。如果不指定 3.txt ，则保存到 1.txt</span><br><span class="line">copy test.txt + #复制文件到自己，实际上是修改了文件日期</span><br><span class="line">copy con test.txt #从屏幕上等待输入，按 Ctrl+Z 结束输入，</span><br><span class="line">    输入内容存为 test.txt 文件。con 代表屏幕，prn 代表打印机，nul 代表空设备</span><br></pre></td></tr></table></figure>
 
+<h3 id="robocopy：复制全部文件"><a href="#robocopy：复制全部文件" class="headerlink" title="robocopy：复制全部文件"></a>robocopy：复制全部文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">robocopy &quot;源路径 &quot;新路径&quot; &lt;参数设置&gt;</span><br><span class="line">示例：</span><br><span class="line">robocopy &quot;E:\BaiduNetdiskDownload&quot; &quot;D:\backup&quot; /E /CREAT</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>**<code>/E</code>**：复制所有子目录，包括空目录。</li>
+<li>**<code>/CREATE</code>**：核心参数，只创建目录树和零长度的文件占位符（不复制真实文件内容）。</li>
+</ul>
 <h3 id="title：设置-cmd-窗口的标题"><a href="#title：设置-cmd-窗口的标题" class="headerlink" title="title：设置 cmd 窗口的标题"></a>title：设置 cmd 窗口的标题</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title 新标题 #可以看到 cmd 窗口的标题栏变了</span><br></pre></td></tr></table></figure>
 
 <h3 id="ver：显示系统版本"><a href="#ver：显示系统版本" class="headerlink" title="ver：显示系统版本"></a>ver：显示系统版本</h3><h3 id="label-和-vol：设置卷标"><a href="#label-和-vol：设置卷标" class="headerlink" title="label 和 vol：设置卷标"></a>label 和 vol：设置卷标</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vol #显示卷标</span><br><span class="line">label #显示卷标，同时提示输入新卷标</span><br><span class="line">label c:system #设置 C 盘的卷标为 system</span><br></pre></td></tr></table></figure>
@@ -135,7 +140,20 @@
 
 <h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43331089/article/details/124222342">https://blog.csdn.net/qq_43331089/article/details/124222342</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Windows/Bat.html',
+  pageTitle: 'Bat学习笔记',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

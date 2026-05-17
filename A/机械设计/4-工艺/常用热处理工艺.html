@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,13 +40,25 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-11-04 13:08:31</span>
 </div>
-
 <div id="article"><h1 id="常用热处理工艺"><a href="#常用热处理工艺" class="headerlink" title="常用热处理工艺"></a>常用热处理工艺</h1><span id="more"></span>
 
 <h2 id="常用的热处理方法："><a href="#常用的热处理方法：" class="headerlink" title="常用的热处理方法："></a>常用的热处理方法：</h2><p>退火，正火，淬火，回火，调质等。<br>调质处理：淬火后高温回火，高温回火是指在500-650℃之间进行回火。</p>
-<img src="#.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/#.png">
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/机械设计/4-工艺/常用热处理工艺.html',
+  pageTitle: '常用热处理工艺',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -72,4 +84,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2022-09-12 11:53:21</span>
 </div>
-
 <div id="article"><h1 id="C-学习笔记"><a href="#C-学习笔记" class="headerlink" title="C# 学习笔记"></a>C# 学习笔记</h1><span id="more"></span>
 
 <h2 id="C-基本结构"><a href="#C-基本结构" class="headerlink" title="C#基本结构"></a>C#基本结构</h2><p>程序的执行从 Main 方法开始。</p>
@@ -91,7 +90,7 @@
 <p>封箱&#x2F;拆箱：</p>
 <p>封箱：是把值类型转换为引用类型（System.Object），或者转换为值类型实现的接口类型。</p>
 <p>拆箱：是将引用类型转换为值类型。</p>
-<h2 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h2><p>++，–        （一元运算符）优先，且运算完返回变量。 </p>
+<h2 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h2><p>++，–（一元运算符）优先，且运算完返回变量。 </p>
 <p>+，-，*，&#x2F;，%    （二元运算符）</p>
 <p>+&#x3D;，-&#x3D;，*&#x3D;，&#x2F;&#x3D;，%&#x3D;  （二元运算符）缩写写法</p>
 <p>（举例：）</p>
@@ -163,6 +162,13 @@
 
 <p>接口特点：&#x2F;&#x2F;不能实例化&#x2F;&#x2F; 不允许写具体方法体函数&#x2F;&#x2F;自动属性</p>
 <p>显示实现接口：</p>
+<h2 id="委托"><a href="#委托" class="headerlink" title="委托"></a>委托</h2><p>1、定义委托类：delegate void MyDelegate();</p>
+<p>2、定义委托方法：Function(MyDelegate mydel)，可以把委托类作为参数，这样就可以传方法到另一个中间执行了，</p>
+<p>3、定义功能方法：f1(); 这个方法就可以在委托里作为参数使用：例如：Function(f1);</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义委托（声明一个方法模板） 这个委托可以指向：无参数、无返回值的方法</span></span><br><span class="line"><span class="function"><span class="built_in">delegate</span> <span class="keyword">void</span> <span class="title">MyDelegate</span>()</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Function</span>(<span class="params">MyDelegate mydel</span>)</span>&#123; mydel(); &#125;<span class="comment">//委托方法//★把方法赋值给委托★//</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f1</span>()</span>&#123; Console.WriteLine(<span class="string">&quot;1&quot;</span>);&#125;<span class="comment">//功能1方法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f2</span>()</span>&#123; Console.WriteLine(<span class="string">&quot;2&quot;</span>);&#125;<span class="comment">//功能2方法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//执行方法</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">&#123; </span><br><span class="line">    Function(f1);</span><br><span class="line">    Function(f2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <h1 id="其他知识点"><a href="#其他知识点" class="headerlink" title="其他知识点"></a>其他知识点</h1><h2 id="COM"><a href="#COM" class="headerlink" title="COM"></a>COM</h2><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/win32/com/com-technical-overview">COM 技术概述 - Win32 apps | Microsoft Learn</a></p>
 <p>\1.     ref，需单独初始赋值</p>
 <p>\2.     数组长度定义需新建对象：int[ ] x &#x3D; new int[ 100]</p>
@@ -181,73 +187,27 @@
 <p>计算几何: </p>
 <p>深度优先搜索（穷举）： </p>
 <p>贪心：</p>
-<h2 id="默认快捷键："><a href="#默认快捷键：" class="headerlink" title="默认快捷键："></a>默认快捷键：</h2><p>CTRL+k,c 注释选中行</p>
-<p>CTRL+k,u 取消对选中行的注释</p>
-<p>CTRL + SHIFT + B：生成解决方案</p>
-<p>CTRL + F7 ：生成编译</p>
-<p>CTRL + SHIFT + O：打开项目</p>
-<p>CTRL + SHIFT + C：显示类视图窗口</p>
-<p>F1 ：帮助</p>
-<p>F4 ：显示属性窗口</p>
-<p>F5：开始调试，遇到断电停止</p>
-<p>F9：设一个断点</p>
-<p>F10：执行下一个函数</p>
-<p>F11：执行下一个语句</p>
-<p>F12 ：转到定义</p>
-<p>CTRL + F5：运行不调试</p>
-<p>Shift+F11就会执行到当前函数末尾</p>
-<p>F5就会执行到下一个断点</p>
-<p>SHIFT + F4：显示项目属性窗口</p>
-<p>CTRL + SHIFT + E：显示资源视图</p>
-<p>CTRL + F12：转到声明</p>
-<p>CTRL + ALT + J：对象浏览</p>
-<p>CTRL + ALT + F1：帮助目录</p>
-<p>CTRL + F1 ：动态帮助</p>
-<p>SHIFT + F1：当前窗口帮助</p>
-<p>CTRL + ALT + F3：帮助-搜索</p>
-<p>SHIFT + ALT + ENTER：全屏显示</p>
-<p>CTRL + -：向后定位</p>
-<p>CTRL + SHIFT + -：向前定位</p>
-<p>CTRL + PAGE DOWN：光标定位到窗口上方</p>
-<p>CTRL + PAGE UP：光标定位到窗口下方</p>
-<p>CTRL + F6 ：</p>
-<p>CTRL + TAB：下一个文档窗口</p>
-<p>CTRL + SHIFT + F6 ：</p>
-<p>CTRL + SHIFT + TAB：上一个文档窗口</p>
-<p>ALT + F6：下一个面板窗口</p>
-<p>CTRL + K, CTRL + L：取消remark</p>
-<p>CTRL + K, CTRL + C：注释选择的代码</p>
-<p>CTRL + K, CTRL + U：取消对选择代码的注释</p>
-<p>CTRL + M, CTRL + O：折叠代码定义</p>
-<p>CTRL + M, CTRL + L：展开代码定义</p>
-<p>CTRL + DELETE：删除至词尾</p>
-<p>CTRL + BACKSPACE：删除至词头</p>
-<p>SHIFT + TAB：取消制表符</p>
-<p>CTRL + U：转小写</p>
-<p>CTRL + SHIFT + U：转大写</p>
-<p>CTRL + SHIFT + END：选择至文档末尾</p>
-<p>CTRL + SHIFT + HOME：选择至文档末尾开始</p>
-<p>SHIFT + END：选择至行尾</p>
-<p>SHIFT + HOME：选择至行开始处</p>
-<p>SHIFT + ALT + END：垂直选择到最后尾</p>
-<p>SHIFT + ALT + HOME：垂直选择到最前面</p>
-<p>CTRL + A：全选 CTRL + W：选择当前单词</p>
-<p>CTRL + SHIFT + PAGE UP：选择至本页前面</p>
-<p>CTRL + SHIFT + PAGE DOWN：选择至本页后面</p>
-<p>CTRL + END：文档定位到最后</p>
-<p>CTRL + HOME：文档定位到最前</p>
-<p>CTRL + G：转到…</p>
-<p>CTRL + K, CTRL + P：上一个标签</p>
-<p>CTRL + K, CTRL + N：下一个标签</p>
-<p>ALT + F10：调试-ApplyCodeChanges</p>
-<p>CTRL + ALT+ Break：停止调试</p>
-<p>CTRL + SHIFT + F9 ：取消所有断点</p>
-<p>CTRL + F9：允许中断</p>
-<p>CTRL + SHIFT + F5：调试-重新开始</p>
-<p>CTRL + J：列出成员</p>
-<p>CTRL + PAGE DOWN：下一个视图</p>
-</div>
- 			<!-- 引入正文 -->
+<h2 id="默认快捷键："><a href="#默认快捷键：" class="headerlink" title="默认快捷键："></a>默认快捷键：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">CTRL+k,c 注释选中行</span><br><span class="line">CTRL+k,u 取消对选中行的注释</span><br><span class="line">CTRL + SHIFT + B：生成解决方案</span><br><span class="line">CTRL + F7 ：生成编译</span><br><span class="line">CTRL + SHIFT + O：打开项目</span><br><span class="line">CTRL + SHIFT + C：显示类视图窗口</span><br><span class="line">F1 ：帮助</span><br><span class="line">F4 ：显示属性窗口</span><br><span class="line">F5：开始调试，遇到断电停止</span><br><span class="line">F9：设一个断点</span><br><span class="line">F10：执行下一个函数</span><br><span class="line">F11：执行下一个语句</span><br><span class="line">F12 ：转到定义</span><br><span class="line">CTRL + F5：运行不调试</span><br><span class="line">Shift+F11就会执行到当前函数末尾</span><br><span class="line">F5就会执行到下一个断点</span><br><span class="line">SHIFT + F4：显示项目属性窗口</span><br><span class="line">CTRL + SHIFT + E：显示资源视图</span><br><span class="line">CTRL + F12：转到声明</span><br><span class="line">CTRL + ALT + J：对象浏览</span><br><span class="line">CTRL + ALT + F1：帮助目录</span><br><span class="line">CTRL + F1 ：动态帮助</span><br><span class="line">SHIFT + F1：当前窗口帮助</span><br><span class="line">CTRL + ALT + F3：帮助-搜索</span><br><span class="line">SHIFT + ALT + ENTER：全屏显示</span><br><span class="line">CTRL + -：向后定位</span><br><span class="line">CTRL + SHIFT + -：向前定位</span><br><span class="line">CTRL + PAGE DOWN：光标定位到窗口上方</span><br><span class="line">CTRL + PAGE UP：光标定位到窗口下方</span><br><span class="line">CTRL + F6 ：</span><br><span class="line">CTRL + TAB：下一个文档窗口</span><br><span class="line">CTRL + SHIFT + F6 ：</span><br><span class="line">CTRL + SHIFT + TAB：上一个文档窗口</span><br><span class="line">ALT + F6：下一个面板窗口</span><br><span class="line">CTRL + K, CTRL + L：取消remark</span><br><span class="line">CTRL + K, CTRL + C：注释选择的代码</span><br><span class="line">CTRL + K, CTRL + U：取消对选择代码的注释</span><br><span class="line">CTRL + M, CTRL + O：折叠代码定义</span><br><span class="line">CTRL + M, CTRL + L：展开代码定义</span><br><span class="line">CTRL + DELETE：删除至词尾</span><br><span class="line">CTRL + BACKSPACE：删除至词头</span><br><span class="line">SHIFT + TAB：取消制表符</span><br><span class="line">CTRL + U：转小写</span><br><span class="line">CTRL + SHIFT + U：转大写</span><br><span class="line">CTRL + SHIFT + END：选择至文档末尾</span><br><span class="line">CTRL + SHIFT + HOME：选择至文档末尾开始</span><br><span class="line">SHIFT + END：选择至行尾</span><br><span class="line">SHIFT + HOME：选择至行开始处</span><br><span class="line">SHIFT + ALT + END：垂直选择到最后尾</span><br><span class="line">SHIFT + ALT + HOME：垂直选择到最前面</span><br><span class="line">CTRL + A：全选 CTRL + W：选择当前单词</span><br><span class="line">CTRL + SHIFT + PAGE UP：选择至本页前面</span><br><span class="line">CTRL + SHIFT + PAGE DOWN：选择至本页后面</span><br><span class="line">CTRL + END：文档定位到最后</span><br><span class="line">CTRL + HOME：文档定位到最前</span><br><span class="line">CTRL + G：转到…</span><br><span class="line">CTRL + K, CTRL + P：上一个标签</span><br><span class="line">CTRL + K, CTRL + N：下一个标签</span><br><span class="line">ALT + F10：调试-ApplyCodeChanges</span><br><span class="line">CTRL + ALT+ Break：停止调试</span><br><span class="line">CTRL + SHIFT + F9 ：取消所有断点</span><br><span class="line">CTRL + F9：允许中断</span><br><span class="line">CTRL + SHIFT + F5：调试-重新开始</span><br><span class="line">CTRL + J：列出成员</span><br><span class="line">CTRL + PAGE DOWN：下一个视图</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1></div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/VisualStudio/VisualStudio-CSharp/CSharp学习笔记.html',
+  pageTitle: 'CSharp学习笔记',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

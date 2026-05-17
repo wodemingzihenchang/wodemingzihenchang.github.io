@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-14 16:09:22</span>
+</div>
+<div id="article"><h1 id="DataGradview"><a href="#DataGradview" class="headerlink" title="DataGradview"></a>DataGradview</h1><span id="more"></span>
+
+
+
+<h2 id="获得选择表格"><a href="#获得选择表格" class="headerlink" title="获得选择表格"></a>获得选择表格</h2><p>要获取 DataGridView 中选定的单元格，可以使用 SelectedCells 属性。以下是一个示例：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;<span class="built_in">object</span>&gt; selectedValues = <span class="keyword">new</span> List&lt;<span class="built_in">object</span>&gt;();</span><br><span class="line"><span class="keyword">foreach</span> (DataGridViewCell cell <span class="keyword">in</span> dataGridView1.SelectedCells)</span><br><span class="line">&#123;selectedValues.Add(cell.Value);&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="获得列数据"><a href="#获得列数据" class="headerlink" title="获得列数据"></a>获得列数据</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DataTablRow</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="meta">#<span class="keyword">region</span> 方法1：基于行的循环</span></span><br><span class="line">            <span class="comment">// 用于存储结果的列表</span></span><br><span class="line">            List&lt;<span class="built_in">object</span>&gt; columnDataList = <span class="keyword">new</span> List&lt;<span class="built_in">object</span>&gt;();</span><br><span class="line">            <span class="built_in">int</span> columnIndex = <span class="number">1</span>; <span class="comment">// 或者通过名称获取索引:  </span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 遍历所有行</span></span><br><span class="line">            <span class="keyword">foreach</span> (DataGridViewRow row <span class="keyword">in</span> dataGridView1.Rows)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 排除最后的“新行”（如果AllowUserToAddRows为true）</span></span><br><span class="line">                <span class="keyword">if</span> (!row.IsNewRow)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 获取单元格的值</span></span><br><span class="line">                    <span class="built_in">object</span> cellValue = row.Cells[columnIndex].Value;</span><br><span class="line">                    columnDataList.Add(cellValue);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">#<span class="keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">            <span class="meta">#<span class="keyword">region</span> 方法2：LINQ </span></span><br><span class="line">            <span class="comment">// 获取“Age”列的所有值，跳过空行和新行</span></span><br><span class="line">            <span class="keyword">var</span> cellValueCollection = dataGridView1.Rows</span><br><span class="line">                .Cast&lt;DataGridViewRow&gt;()</span><br><span class="line">                .Where(row =&gt; !row.IsNewRow) <span class="comment">// 跳过新行</span></span><br><span class="line">                .Select(row =&gt; row.Cells[<span class="string">&quot;Age&quot;</span>].Value) <span class="comment">// 选择指定单元格的值</span></span><br><span class="line">                .ToList(); <span class="comment">// 生成List&lt;object&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 转换为object数组</span></span><br><span class="line">            <span class="built_in">object</span>[] columnDataArray = cellValueCollection.ToArray();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果明确类型，可以直接转换（例如转为int?，支持null）</span></span><br><span class="line">            <span class="built_in">int</span>?[] ageArray = dataGridView1.Rows</span><br><span class="line">                .Cast&lt;DataGridViewRow&gt;()</span><br><span class="line">                .Where(row =&gt; !row.IsNewRow)</span><br><span class="line">                .Select(row =&gt;</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (row.Cells[<span class="string">&quot;Age&quot;</span>].Value != <span class="literal">null</span> &amp;&amp;</span><br><span class="line">                        <span class="built_in">int</span>.TryParse(row.Cells[<span class="string">&quot;Age&quot;</span>].Value.ToString(), <span class="keyword">out</span> <span class="built_in">int</span> val))</span><br><span class="line">                        <span class="keyword">return</span> (<span class="built_in">int</span>?)val;</span><br><span class="line">                    <span class="keyword">return</span> (<span class="built_in">int</span>?)<span class="literal">null</span>; <span class="comment">// 处理转换失败或为空的情况</span></span><br><span class="line">                &#125;)</span><br><span class="line">                .ToArray();</span><br><span class="line">            <span class="meta">#<span class="keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">            <span class="meta">#<span class="keyword">region</span> 方法3：DataTable</span></span><br><span class="line">            <span class="comment">//假设你明确知道数据源是DataTable</span></span><br><span class="line">            <span class="keyword">if</span> (dataGridView1.DataSource <span class="keyword">is</span> DataTable dt)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 通过列名获取该列的所有数据（是一个object数组）</span></span><br><span class="line">                <span class="built_in">object</span>[] columnDataList2 = dt.AsEnumerable().Select(row =&gt; row[<span class="string">&quot;ERP物料编号&quot;</span>]).ToArray();</span><br><span class="line">                DataRow[] rows = dt.Select();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">#<span class="keyword">endregion</span></span></span><br><span class="line"></span><br><span class="line">            <span class="built_in">string</span> 机壳编码 = (<span class="built_in">string</span>)Microsoft.VisualBasic.Interaction.Switch(columnDataList.ToArray());</span><br><span class="line">        &#125;equationMgr.Equation[i].Split(<span class="string">&#x27;=&#x27;</span>)[<span class="number">1</span>].Trim().All(<span class="built_in">char</span>.IsNumber)</span><br></pre></td></tr></table></figure>
+
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/VisualStudio/VisualStudio-CSharp/DataGradview.html',
+  pageTitle: 'C#-DataGradview',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

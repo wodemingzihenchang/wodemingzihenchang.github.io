@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,10 +40,9 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2022-08-22 11:27:11</span>
 </div>
-
 <div id="article"><h1 id="常见电气元件"><a href="#常见电气元件" class="headerlink" title="常见电气元件"></a>常见电气元件</h1><span id="more"></span>
 
-<img src="常见电气元件/常见电气元件.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/常见电气元件.png">
 
 <h2 id="电器元件选型"><a href="#电器元件选型" class="headerlink" title="电器元件选型"></a>电器元件选型</h2><p>西门子：<a target="_blank" rel="noopener" href="https://www.automation.siemens.com/bilddb/search.aspx?lang=en">Industry Image Database V4.20 (siemens.com)</a></p>
 <p>天工直通车选型软件：</p>
@@ -170,7 +169,20 @@
 </tr>
 </tbody></table>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/电气设计/常见电气元件.html',
+  pageTitle: '常见电气元件',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -196,4 +208,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

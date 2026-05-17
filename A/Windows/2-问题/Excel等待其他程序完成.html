@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,18 +40,30 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-10-18 17:40:43</span>
 </div>
-
 <div id="article"><h1 id="Excel等待其他程序完成"><a href="#Excel等待其他程序完成" class="headerlink" title="Excel等待其他程序完成"></a>Excel等待其他程序完成</h1><p>microsoft excel正在等待其他某个应用程序以完成对象链接与嵌入操作</p>
-<img src="Excel等待其他程序完成/.NET未安装.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/.NET未安装.png">
 
 <h2 id="插件问题"><a href="#插件问题" class="headerlink" title="插件问题"></a>插件问题</h2><p>Excel与其他软件的兼容性问题，产生冲突的软件会自动在Excel中装插件、加载项，有时候进度过慢会拖累Excel运行速度</p>
-<img src="Excel等待其他程序完成/插件.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/插件.png">
 
 
 
 <h2 id="引用问题"><a href="#引用问题" class="headerlink" title="引用问题"></a>引用问题</h2><p>2.Excel工作表格里引用了外部数据。例如图片，数据源。</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Windows/2-问题/Excel等待其他程序完成.html',
+  pageTitle: 'Excel等待其他程序完成',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -77,4 +89,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,33 +40,45 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-26 10:34:17</span>
 </div>
-
 <div id="article"><h1 id="Openp2p"><a href="#Openp2p" class="headerlink" title="Openp2p"></a>Openp2p</h1><p>1</p>
 <h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p>前往<a href="https://gitee.com/link?target=https://console.openp2p.cn">https://console.openp2p.cn</a> 注册新用户，暂无需任何认证</p>
-<img src="https://gitee.com/szq19980627/openp2p/raw/master/doc/images/register.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/register.png">
 
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Windows安装"><a href="#Windows安装" class="headerlink" title="Windows安装"></a>Windows安装</h3><p>分别在本地和远程电脑下载后双击运行，一键安装</p>
-<p><img src="https://gitee.com/szq19980627/openp2p/raw/master/doc/images/install.png" alt="image"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/install.png" alt="image"></p>
 <h3 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h3><p>拉取镜像</p>
 <p>用Putty连接NAS终端，输入安装指令</p>
-<img src="Openp2p/image-20250423202358983.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250423202358983.png">
 
-<h2 id="组网"><a href="#组网" class="headerlink" title="组网"></a>组网</h2><img src="Openp2p/image-20250423203020965.png">
-
-
-
-<img src="Openp2p/image-20250423203201404.png">
+<h2 id="组网"><a href="#组网" class="headerlink" title="组网"></a>组网</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250423203020965.png">
 
 
 
-<img src="Openp2p/image-20250423203505907.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250423203201404.png">
 
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><img src="Openp2p/image-20250423203255835.png">
+
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250423203505907.png">
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250423203255835.png">
 
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://console.openp2p.cn/sdwan">OPENP2P.CN 控制台</a></p>
 <p><a target="_blank" rel="noopener" href="https://gitee.com/szq19980627/openp2p">Gitee</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/NAS/4-维护/Openp2p.html',
+  pageTitle: 'Openp2p',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -92,4 +104,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

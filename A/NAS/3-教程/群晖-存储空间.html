@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,26 +40,38 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-27 10:34:17</span>
 </div>
-
 <div id="article"><h1 id="群晖-存储空间"><a href="#群晖-存储空间" class="headerlink" title="群晖-存储空间"></a>群晖-存储空间</h1><h2 id="存储池和存储空间"><a href="#存储池和存储空间" class="headerlink" title="存储池和存储空间"></a>存储池和存储空间</h2><p>存储池</p>
-<img src="群晖-存储空间/存储池.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/存储池.png">
 
-<h1 id="硬盘RAID阵列"><a href="#硬盘RAID阵列" class="headerlink" title="硬盘RAID阵列"></a>硬盘RAID阵列</h1><h2 id="RAID0"><a href="#RAID0" class="headerlink" title="RAID0"></a>RAID0</h2><img src="群晖-存储空间/RAID0.png">
+<h1 id="硬盘RAID阵列"><a href="#硬盘RAID阵列" class="headerlink" title="硬盘RAID阵列"></a>硬盘RAID阵列</h1><h2 id="RAID0"><a href="#RAID0" class="headerlink" title="RAID0"></a>RAID0</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/RAID0.png">
 
-<h2 id="RAID1"><a href="#RAID1" class="headerlink" title="RAID1"></a>RAID1</h2><img src="群晖-存储空间/RAID1.png">
+<h2 id="RAID1"><a href="#RAID1" class="headerlink" title="RAID1"></a>RAID1</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/RAID1.png">
 
-<h2 id="RAID5"><a href="#RAID5" class="headerlink" title="RAID5"></a>RAID5</h2><img src="群晖-存储空间/RAID5.png">
+<h2 id="RAID5"><a href="#RAID5" class="headerlink" title="RAID5"></a>RAID5</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/RAID5.png">
 
-<h2 id="RAID6"><a href="#RAID6" class="headerlink" title="RAID6"></a>RAID6</h2><img src="群晖-存储空间/RAID6.png">
+<h2 id="RAID6"><a href="#RAID6" class="headerlink" title="RAID6"></a>RAID6</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/RAID6.png">
 
-<h2 id="RAID其他"><a href="#RAID其他" class="headerlink" title="RAID其他"></a>RAID其他</h2><img src="群晖-存储空间/RAID10.png">
+<h2 id="RAID其他"><a href="#RAID其他" class="headerlink" title="RAID其他"></a>RAID其他</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/RAID10.png">
 
 
 
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/51170719">RAID磁盘阵列是什么（一看就懂） - 知乎 (zhihu.com)</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vA411W7yU/?spm_id_from=333.337.search-card.all.click&vd_source=61426b94de87e3e2baee96fc2f5b14f2">什么是磁盘阵列？15种RAID优缺点详解 (RAID5 RAID6 RAID10 RAIDZ SHR UNRAID)_哔哩哔哩_bilibili</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/NAS/3-教程/群晖-存储空间.html',
+  pageTitle: '群晖-存储空间',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -85,4 +97,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

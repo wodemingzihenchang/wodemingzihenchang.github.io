@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,19 +40,18 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-26 10:34:17</span>
 </div>
-
 <div id="article"><h1 id="群晖Synology-网页端"><a href="#群晖Synology-网页端" class="headerlink" title="群晖Synology-网页端"></a>群晖Synology-网页端</h1><h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><h2 id="浏览器端操作"><a href="#浏览器端操作" class="headerlink" title="浏览器端操作"></a>浏览器端操作</h2><p>输入IP和端口号，</p>
-<img src="群晖-网页端/image-20240502160301082.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240502160301082.png">
 
 <p>外网访问可能会收到警告：你的连接不是专用连接，这里点击“高级”，然后继续访问即可。</p>
-<img src="群晖-网页端/image-20240502160355727.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240502160355727.png">
 
 <h2 id="登录-1"><a href="#登录-1" class="headerlink" title="登录"></a>登录</h2><p>输入账号密码</p>
-<img src="群晖-网页端/image-20240502160428029.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240502160428029.png">
 
 
 
-<img src="群晖-网页端/image-20240502160656074.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240502160656074.png">
 
 
 
@@ -62,7 +61,20 @@
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ba4y117Yn/?spm_id_from=333.880.my_history.page.click&vd_source=61426b94de87e3e2baee96fc2f5b14f2">pve8.1安装黑群晖 | pve硬盘直通 | 群晖使用nvme做存储空间 | pve安装 | 群晖nas_哔哩哔哩_bilibili</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ND4y1G7Xb/">https://www.bilibili.com/video/BV1ND4y1G7Xb/</a>)</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/NAS/3-教程/群晖-网页端.html',
+  pageTitle: '群晖Synology-网页端',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -88,4 +100,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2022-08-22 11:27:11</span>
 </div>
-
 <div id="article"><h1 id="典型电路案例"><a href="#典型电路案例" class="headerlink" title="典型电路案例"></a>典型电路案例</h1><h1 id="小车往返运动"><a href="#小车往返运动" class="headerlink" title="小车往返运动"></a>小车往返运动</h1><p>用S7-200实现小车往返的自动控制 ，控制过程为按下启动按钮 ，小车从左边往右边（右边往左边运动） 当运动到右边（左边）碰到右边（左边）的行程开关后 小车自动做返回运动，当碰到另一边的行程开关后又做返回运动 。如此的往返运动，直到当按下停车按钮后小车停止运动。</p>
 <p>▲电气接线图</p>
 <p>I&#x2F;O分配表</p>
@@ -105,7 +104,20 @@
 <h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/168749618">https://zhuanlan.zhihu.com/p/168749618</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45156309">电工电气知识：交流接触器接线方式及接线图 - 知乎 (zhihu.com)</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/电气设计/典型电路案例.html',
+  pageTitle: '典型电路案例',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

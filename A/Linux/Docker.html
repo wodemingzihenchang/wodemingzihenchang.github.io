@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2025-03-26 10:34:17</span>
 </div>
-
 <div id="article"><h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>通过利用 Docker 快速交付、测试和部署代码的方法，您可以显著缩短编写代码和在生产环境中运行代码之间的时间延迟。</p>
 <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>windows</p>
 <p>使用页面顶部的下载按钮或从<a target="_blank" rel="noopener" href="https://docs.docker.net.cn/desktop/release-notes/">发行说明</a>下载安装程序。双击<code>Docker Desktop Installer.exe</code>运行安装程序。默认情况下，Docker Desktop 安装在<code>C:\Program Files\Docker\Docker</code>。</p>
@@ -98,8 +97,23 @@
 
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/henuyuxiang/p/17879277.html">docker拉取镜像错误missing signature key - 岁月淡忘了谁 - 博客园</a></p>
 <p><strong>权限</strong></p>
+<h2 id="文件数量限制"><a href="#文件数量限制" class="headerlink" title="文件数量限制"></a>文件数量限制</h2><p>正在监视的文件数量的限制时，我通过在 docker 主机上运行命令来解决：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf</span><br><span class="line">sudo sysctl -p</span><br></pre></td></tr></table></figure>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Linux/Docker.html',
+  pageTitle: 'Docker',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

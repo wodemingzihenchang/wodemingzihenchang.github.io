@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,8 +40,29 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-05-15 21:48:58</span>
 </div>
+<div id="article"><h1 id="SQLserver重建索引"><a href="#SQLserver重建索引" class="headerlink" title="SQLserver重建索引"></a>SQLserver重建索引</h1><p>当PDM数据库使用时间较长，使用过程中数据表增删涂改量大的时候，索引往往会出现失效问题，</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/abelzhong/p/17430477.html">SQLServer索引碎片查询及处理 - misA丶 - 博客园</a></p>
+<h2 id="查询索引"><a href="#查询索引" class="headerlink" title="查询索引"></a>查询索引</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 显示内容，其中avg_fragmentation_in_percent返回索引的平均碎片百分比</span></span><br><span class="line"><span class="keyword">SELECT</span> OBJECT_NAME(ips.object_id) <span class="keyword">AS</span> TableName,</span><br><span class="line">       ips.index_id,</span><br><span class="line">       name <span class="keyword">AS</span> IndexName,</span><br><span class="line">       avg_fragmentation_in_percent,</span><br><span class="line">       DB_NAME(ips.database_id) <span class="keyword">AS</span> DatabaseName</span><br><span class="line"><span class="comment">-- </span></span><br><span class="line"><span class="keyword">FROM</span> sys.dm_db_index_physical_stats(DB_ID(DB_NAME()), <span class="keyword">NULL</span>, <span class="keyword">NULL</span>, <span class="keyword">NULL</span>, <span class="keyword">NULL</span>) <span class="keyword">AS</span> ips</span><br><span class="line">    <span class="keyword">INNER</span> <span class="keyword">JOIN</span> sys.indexes <span class="keyword">AS</span> si</span><br><span class="line">        <span class="keyword">ON</span> si.object_id <span class="operator">=</span> ips.object_id</span><br><span class="line">           <span class="keyword">AND</span> si.index_id <span class="operator">=</span> ips.index_id</span><br><span class="line"><span class="comment">-- 筛选：只显示有碎片（大于0%）的索引 并且 堆表没有索引结构，不用处理其“碎片”，排除掉。</span></span><br><span class="line"><span class="keyword">WHERE</span> ips.avg_fragmentation_in_percent <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">AND</span> si.index_id <span class="operator">&lt;&gt;</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 
-<div id="article"><h1 id="SQLserver重建索引"><a href="#SQLserver重建索引" class="headerlink" title="SQLserver重建索引"></a>SQLserver重建索引</h1><p>当PDM数据库使用时间较长，使用过程中数据表增删涂改量大的时候，索引往往会出现失效问题，若手工重建又极为麻烦，下面利用数据库创建维护计划自动重建&#x2F;组织数据库表索引方法：</p>
+<h2 id="重建索引"><a href="#重建索引" class="headerlink" title="重建索引"></a>重建索引</h2><p><em>avg_fragmentation_in_percent是索引碎片率，低于5%可以不考虑。5%-30%建议reorganize，超过30%建议rebuild</em></p>
+<p>2：reorganize</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> index [index_name] <span class="keyword">on</span> dbo.[表名] reorganize;</span><br></pre></td></tr></table></figure>
+
+<p>3：rebuild</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> index [index_name] <span class="keyword">on</span> dbo.[表名] rebuild;</span><br></pre></td></tr></table></figure>
+
+<p>4：rebuild all 重建表上所有索引</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> index <span class="keyword">all</span> <span class="keyword">on</span> dbo.[表名] rebuild;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>SSMS里手动重建索引</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260430220137489.png" alt="image-20260430220137489"></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> OBJECT_SCHEMA_NAME(B.OBJECT_ID) 架构,OBJECT_NAME(B.OBJECT_ID) 表名,B.NAME 索引名,ROUND(A.AVG_FRAGMENTATION_IN_PERCENT,<span class="number">2</span>) 碎片率,</span><br><span class="line">    <span class="keyword">CASE</span> <span class="keyword">WHEN</span> A.AVG_FRAGMENTATION_IN_PERCENT<span class="operator">&gt;</span><span class="number">30</span> <span class="keyword">THEN</span> N<span class="string">&#x27;重新生成索引&#x27;</span> <span class="keyword">ELSE</span> N<span class="string">&#x27;重新组织索引&#x27;</span> <span class="keyword">END</span> 处理方式,</span><br><span class="line">    <span class="string">&#x27;ALTER INDEX &#x27;</span><span class="operator">+</span>QUOTENAME(B.NAME)<span class="operator">+</span><span class="string">&#x27; ON &#x27;</span><span class="operator">+</span>QUOTENAME(OBJECT_SCHEMA_NAME(B.OBJECT_ID))<span class="operator">+</span><span class="string">&#x27;.&#x27;</span><span class="operator">+</span>QUOTENAME(OBJECT_NAME(B.OBJECT_ID))<span class="operator">+</span><span class="string">&#x27; &#x27;</span></span><br><span class="line">        <span class="operator">+</span><span class="keyword">CASE</span> <span class="keyword">WHEN</span> A.AVG_FRAGMENTATION_IN_PERCENT<span class="operator">&gt;</span><span class="number">30</span> <span class="keyword">THEN</span> <span class="string">&#x27;REBUILD&#x27;</span> <span class="keyword">ELSE</span> <span class="string">&#x27;REORGANIZE&#x27;</span> <span class="keyword">END</span> 生成<span class="keyword">SQL</span>语句</span><br><span class="line"><span class="keyword">FROM</span> sys.dm_db_index_physical_stats(DB_ID(),<span class="keyword">NULL</span>,<span class="keyword">NULL</span>,<span class="keyword">NULL</span>,<span class="keyword">NULL</span>) A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> sys.indexes B <span class="keyword">ON</span> A.OBJECT_ID<span class="operator">=</span>B.OBJECT_ID <span class="keyword">AND</span> A.INDEX_ID<span class="operator">=</span>B.INDEX_ID</span><br><span class="line"><span class="keyword">WHERE</span> A.AVG_FRAGMENTATION_IN_PERCENT<span class="operator">&gt;</span><span class="number">5</span> <span class="keyword">AND</span> B.INDEX_ID<span class="operator">&gt;</span><span class="number">0</span></span><br><span class="line">    <span class="comment">--AND OBJECT_NAME(B.OBJECT_ID) IN (&#x27;INVMB&#x27;)    --指定表</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">CASE</span> <span class="keyword">WHEN</span> A.AVG_FRAGMENTATION_IN_PERCENT<span class="operator">&gt;</span><span class="number">30</span> <span class="keyword">THEN</span> N<span class="string">&#x27;重新生成索引&#x27;</span> <span class="keyword">ELSE</span> N<span class="string">&#x27;重新组织索引&#x27;</span> <span class="keyword">END</span>,OBJECT_NAME(B.OBJECT_ID),B.INDEX_ID</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="索引维护计划"><a href="#索引维护计划" class="headerlink" title="索引维护计划"></a>索引维护计划</h1><p>手工重建又极为麻烦，下面利用数据库创建维护计划自动重建&#x2F;组织数据库表索引方法：</p>
 <p>查看表碎片情况，可使用语句：DBCC SHOWCONFIG。可以查看表的扫描密度大小，逻辑碎片及区碎片数量判断表是否需要重建。</p>
 <p>1、	打开SQL SERVER数据库（SSMS），选择展开【管理】，找到【维护计划】，右键，选择【维护计划向导】</p>
 <p>注意：若【管理】无法展开，或【维护计划向导】创建失败，检查服务中【SQL Server代理】是否处于运行状态，如若未运行，右键【启动】服务。</p>
@@ -58,8 +79,22 @@
 <p>【维护计划向导进度】，创建成功。</p>
 <p>8、	创建维护计划完成后，刷新SQLServer对象资源管理器，如下图，新建的“RebuildIndex”维护计划已显示，选择“RebuildIndex”，右键，【执行】</p>
 <p>执行维护计划成功。</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>tags:SQLsever</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/SQLserver/4-维护/重建索引.html',
+  pageTitle: 'SQLserver重建索引',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -85,4 +120,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

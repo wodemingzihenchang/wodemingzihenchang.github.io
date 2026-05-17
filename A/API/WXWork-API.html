@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2026-02-12 11:53:19</span>
+</div>
+<div id="article"><h1 id="WXWork-API"><a href="#WXWork-API" class="headerlink" title="WXWork-API"></a>WXWork-API</h1><p>创建群机器人进行信息的【接收】与【发送】</p>
+<h2 id="创建webhook"><a href="#创建webhook" class="headerlink" title="创建webhook"></a>创建webhook</h2><p>群右上角…号 -&gt; 信息推送 -&gt; 创建后产生Webhook地址。</p>
+<p>只能是企业群聊才可以，外部群聊不行。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260224113127305.png">
+
+<h2 id="群消息推送"><a href="#群消息推送" class="headerlink" title="群消息推送"></a>群消息推送</h2><p><a target="_blank" rel="noopener" href="https://developer.work.weixin.qq.com/document/path/91770">消息推送配置说明</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">curl &#x27;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=693axxx6-7aoc-4bc4-97a0-0ec2sifa5aaa&#x27; \</span><br><span class="line">   -H &#x27;Content-Type: application/json&#x27; \</span><br><span class="line">   -d &#x27;</span><br><span class="line">   &#123;</span><br><span class="line">    	&quot;msgtype&quot;: &quot;text&quot;,</span><br><span class="line">    	&quot;text&quot;: &#123;</span><br><span class="line">        	&quot;content&quot;: &quot;hello world&quot;</span><br><span class="line">    	&#125;</span><br><span class="line">   &#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、支持的消息类型"><a href="#三、支持的消息类型" class="headerlink" title="三、支持的消息类型"></a>三、支持的消息类型</h3><p>除了文本消息，企业微信 Webhook 还支持以下消息类型：</p>
+<ol>
+<li><p><strong>Markdown 消息</strong></p>
+<ul>
+<li><p>请求体示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">  &quot;markdown&quot;: &#123;</span><br><span class="line">    &quot;content&quot;: &quot;**加粗文字**\n&gt; 引用内容&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>图片消息</strong></p>
+</li>
+</ol>
+<ul>
+<li><p>请求头实例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;image&quot;,</span><br><span class="line">    &quot;image&quot;: &#123;</span><br><span class="line">        &quot;base64&quot;: &quot;DATA&quot;,</span><br><span class="line">		&quot;md5&quot;: &quot;MD5&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>base64是图片内容的base64编码</p>
+<p>md5 是图片内容（base64编码前）的md5值</p>
+</li>
+</ul>
+<blockquote>
+<p>注：图片（base64编码前）最大不能超过2M，支持JPG,PNG格式</p>
+</blockquote>
+<ol>
+<li><p><strong>文件消息</strong></p>
+<ul>
+<li><p>通过下文的上传文件接口获取</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">media_id</span><br></pre></td></tr></table></figure>
+
+<p>，然后发送：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;msgtype&quot;: &quot;file&quot;,</span><br><span class="line">  &quot;file&quot;: &#123;</span><br><span class="line">    &quot;media_id&quot;: &quot;your_media_id&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>图文消息</strong></p>
+<ul>
+<li><p>请求体示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;msgtype&quot;: &quot;news&quot;,</span><br><span class="line">  &quot;news&quot;: &#123;</span><br><span class="line">    &quot;articles&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;title&quot;: &quot;标题&quot;,</span><br><span class="line">        &quot;description&quot;: &quot;描述&quot;,</span><br><span class="line">        &quot;url&quot;: &quot;https://example.com&quot;,</span><br><span class="line">        &quot;picurl&quot;: &quot;https://example.com/image.png&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h2 id="群消息接收"><a href="#群消息接收" class="headerlink" title="群消息接收"></a>群消息接收</h2><p><a target="_blank" rel="noopener" href="https://developer.work.weixin.qq.com/document/path/91360">消息推送配置说明</a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://natuie.github.io/posts/2025/02/03/170201/">企业微信如何获取 Webhook 实现消息推送 - 知行小屋</a></p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/API/WXWork-API.html',
+  pageTitle: 'WXWork-API',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</div></body></html>

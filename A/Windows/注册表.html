@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,26 +40,25 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2022-09-12 11:53:19</span>
 </div>
-
 <div id="article"><p>注册表是 Windows 操作系统的核心数据库，存放着各种参数，直接控制着 Windows 的启动、硬件驱动程序的装载以及一些 Windows 应用程序的运行。本文章将记录收集有关”注册表”操作（进入方式：WIN+R，输入“Regedit”）</p>
-<img src="注册表\打开注册表.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/打开注册表.png">
 
 <span id="more"></span>
 
 <h2 id="注册表简介"><a href="#注册表简介" class="headerlink" title="注册表简介"></a>注册表简介</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CLASSES_ROOT：包含了所有已装载的应用程序、OLE 或 DDE 信息，以及所有文件类型信息。</span><br><span class="line">HKEY_CURRENT_USER：记录了有关登录计算机网络的特定用户的设置和配置信息</span><br><span class="line">HKEY_LOCAL_MACHINE：该主键存储了 Windows 开始运行的全部信息。即插即用设备信息、设备驱动器信息等</span><br><span class="line">HKEY_USERS：描述了所有同当前计算机联网的用户简表。</span><br><span class="line">HKEY_CURRENT_CONFIG：该主键包括字体、打印机和当前系统的有关信息。</span><br></pre></td></tr></table></figure>
 
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="右键菜单命令"><a href="#右键菜单命令" class="headerlink" title="右键菜单命令"></a>右键菜单命令</h3><img src="注册表\右击菜单 (1).png">
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="右键菜单命令"><a href="#右键菜单命令" class="headerlink" title="右键菜单命令"></a>右键菜单命令</h3><img src="https://img.r77817520.nyat.app:18981/Hexo/右击菜单 (1).png">
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">【计算机\HKEY_CLASSES_ROOT\Directory\Background\shell】</span><br></pre></td></tr></table></figure>
 
 <p>项：shell\“自定义名字”</p>
 <p>——默认值：是显示文本内容</p>
 <p>——Icon值 ：是图标写程序路径即可</p>
-<img src="注册表\右击菜单 (2).png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/右击菜单 (2).png">
 
 <p>项： command</p>
 <p>——默认值：程序路径：写程序路径即可”D:\Program Files\Git\cmd\git-gui.exe” “–working-dir” “%v.”</p>
-<img src="注册表\右击菜单 (3).png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/右击菜单 (3).png">
 
 
 
@@ -79,7 +78,20 @@
 <p><a target="_blank" rel="noopener" href="http://www.guidgenerator.com/online-guid-generator.aspx">http://www.guidgenerator.com/online-guid-generator.aspx</a></p>
 <h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="拒绝访问"><a href="#拒绝访问" class="headerlink" title="拒绝访问"></a>拒绝访问</h2><p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/3aed632ec4b9257010809183.html">Win10注册表无法保存对权限所作的更改拒绝访问-百度经验 (baidu.com)</a></p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/Windows/注册表.html',
+  pageTitle: '注册表',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -105,4 +117,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

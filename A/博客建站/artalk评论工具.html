@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-08-12 11:53:21</span>
+</div>
+<div id="article"><h1 id="artalk评论工具"><a href="#artalk评论工具" class="headerlink" title="artalk评论工具"></a>artalk评论工具</h1><p>给大家介绍一款用于Hexo博客添加评论功能的插件artalk，通过此插件，我们可以在网站文章最下方添加评论回复内容。</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260502234549266.png" alt="image-20260502234549266"></p>
+<p>下面是插件的安装以及使用操作。</p>
+<span id="more"></span>
+
+<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p>可以在Linux服务器上通过Docker 安装 artalk 服务器。安装后需要手动创建管理员账户。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入 Artalk 容器创建管理员（artalk 为容器名）</span></span><br><span class="line">docker <span class="built_in">exec</span> -it artalk artalk admin</span><br></pre></td></tr></table></figure>
+
+<p>按提示输入：</p>
+<ul>
+<li>用户名（如 <code>admin</code>）</li>
+<li>邮箱（作为登录账号）</li>
+<li>密码（使用强密码）</li>
+</ul>
+<p>进入后台地址：<a target="_blank" rel="noopener" href="http://127.0.0.0:23366/sidebar/#/sites)%E3%80%82">http://127.0.0.0:23366/sidebar/#/sites)。</a></p>
+<p>在站点里添加新站点，需要记住站点名字和网站URL需要写你的博客网址。这一步服务器就算完成了。</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260502235055526.png" alt="image-20260502235055526"></p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>在你的博客根目录下打开终端，运行以下命令来安装一个为 Hexo 准备的 Artalk 插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-next-artalk</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h2><p>修改博客配置文件：打开你 Hexo 博客根目录下的 _config.yml 文件，在末尾添加或修改以下内容。这里需要填入你之前部署好的 Artalk 服务端信息。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 评论工具 artalk 插件配置参考：https://artalk.js.org</span></span><br><span class="line"><span class="attr">artalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  <span class="comment"># 是否开启插件</span></span><br><span class="line">  <span class="attr">server:</span> <span class="string">http://127.0.0.0:端口/</span>  <span class="comment">#Artalk 服务端地址</span></span><br><span class="line">  <span class="attr">site:</span> <span class="string">myblog</span>  <span class="comment"># 你在 Artalk 后台创建的站点名称</span></span><br><span class="line">  <span class="attr">vCount:</span> <span class="literal">true</span>  <span class="comment"># 是否开启访问量统计</span></span><br><span class="line">  <span class="attr">commentCount:</span> <span class="literal">true</span>  <span class="comment"># 是否开启评论数统计</span></span><br><span class="line">  <span class="attr">darkMode:</span> <span class="string">auto</span>  <span class="comment"># 主题：&#x27;auto&#x27;为自动，&#x27;light&#x27;为浅色，&#x27;dark&#x27;为深色</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加评论元素"><a href="#添加评论元素" class="headerlink" title="添加评论元素"></a>添加评论元素</h2><p>直接在 Hexo 主题的文章模板文件（通常是 layout&#x2F;_partial&#x2F;comment.ejs 或 layout&#x2F;post.ejs）中添加 Artalk 的初始化代码。</p>
+<p>在你的主题文件中，找到合适的位置（通常是在 &lt;div id&#x3D;”post-comment”&gt; 或类似的标签内），添加以下 HTML 结构：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Artalk 评论系统 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;Comments&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="title class_">Artalk</span>.<span class="title function_">init</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">el</span>:        <span class="string">&#x27;#Comments&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">pageKey</span>:   <span class="string">&#x27;&lt;%= page.path %&gt;&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">pageTitle</span>: <span class="string">&#x27;&lt;%= page.title %&gt;&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">server</span>:    <span class="string">&#x27;http://127.0.0.0:端口/&#x27;</span>,  <span class="comment">// 👈 修改为你的 Artalk 后端地址</span></span></span><br><span class="line"><span class="language-javascript">  <span class="attr">site</span>:      <span class="string">&#x27;myblog&#x27;</span>,                       <span class="comment">// 👈 修改为你的站点名称</span></span></span><br><span class="line"><span class="language-javascript">&#125;)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>启动Hexo服务，进入博客网址。如果文章底部有评论框内容即为成功部署了评论插件功能了。</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260502234549266.png" alt="image-20260502234549266"></p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>artalk服务默认是Http协议访问的。如果你的博客是使用的https协议访问，这会影响到安全性提示导致评论区读取失败</p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/博客建站/artalk评论工具.html',
+  pageTitle: 'artalk评论工具',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</div></body></html>

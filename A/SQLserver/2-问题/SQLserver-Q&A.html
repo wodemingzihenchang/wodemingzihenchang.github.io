@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,9 +40,8 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-09-30 21:48:58</span>
 </div>
-
 <div id="article"><h1 id="SQLserver-Q-A"><a href="#SQLserver-Q-A" class="headerlink" title="SQLserver-Q&amp;A"></a>SQLserver-Q&amp;A</h1><h2 id="索引超出范围"><a href="#索引超出范围" class="headerlink" title="索引超出范围"></a>索引超出范围</h2><p>必须为非负值并小于集合大小。参数名: index (mscorlib)</p>
-<img src="SQLserver-Q&A/索引超出范围.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/索引超出范围.png">
 
 
 
@@ -61,11 +60,43 @@
 <p>假如以上的办法还是不能解决就再进行一下的操作：</p>
 <p>打开 “开始菜单”——“Microsoft SQL Server 2008”——“配置工具”——“Microsoft SQL Server 2008”选择“SQL server网络配置”将其中的“Named Pipes状态”“TCPIP状态”全部修改为“已启用”</p>
 <p><a target="_blank" rel="noopener" href="https://www.goengineer.com/blog/solidworks-pdm-how-to-reset-the-sql-sa-user-password">SOLIDWORKS PDM - 如何重置 SQL“sa”用户密码 |Go工程师 (goengineer.com)</a></p>
-<h2 id="保存表失败"><a href="#保存表失败" class="headerlink" title="保存表失败"></a>保存表失败</h2><img src="SQLserver-Q&A/image-20250417123346014.png">
+<h2 id="保存表失败"><a href="#保存表失败" class="headerlink" title="保存表失败"></a>保存表失败</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250417123346014.png">
 
 <h2 id="服务器改名"><a href="#服务器改名" class="headerlink" title="服务器改名"></a>服务器改名</h2><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sql/database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server?view=sql-server-ver16">重命名托管 SQL Server 独立实例的计算机 - SQL Server | Microsoft Learn</a></p>
+<h2 id="数据库日志不可用"><a href="#数据库日志不可用" class="headerlink" title="数据库日志不可用"></a>数据库日志不可用</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/微信图片_20251107094721_63_477.png">
+
+<p>重启SQL服务后，恢复正常。</p>
+<h1 id="无法连接到WMI"><a href="#无法连接到WMI" class="headerlink" title="无法连接到WMI"></a>无法连接到WMI</h1><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241023153715749.png">
+
+<h1 id="还原"><a href="#还原" class="headerlink" title="还原"></a>还原</h1><h2 id="恢复路径与数据库不一致"><a href="#恢复路径与数据库不一致" class="headerlink" title="恢复路径与数据库不一致"></a>恢复路径与数据库不一致</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241012102038263.png">
+
+<p>SQL数据库还原&#x2F;备份集中的数据库备份与现有的数据库不同.png</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/备份集中的数据库备份与现有的数据库不同.png">
+
+<h2 id="一直显示-正在还原"><a href="#一直显示-正在还原" class="headerlink" title="一直显示(正在还原)"></a>一直显示(正在还原)</h2><p>问题现象：SQL Server数据库一直显示“XXX正在还原”。</p>
+<p>解决办法：执行查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Restore Database &lt;库名称&gt; with Recovery</span><br></pre></td></tr></table></figure>
+
+<p>出现无法还原异常，试试先执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Restore Database &lt;库名称&gt; with Recovery</span><br><span class="line">Restore Database &lt;库名称&gt; with NoRecovery</span><br></pre></td></tr></table></figure>
+
+
+<p>再还原一下数据库备份</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/SQLserver/2-问题/SQLserver-Q&amp;A.html',
+  pageTitle: 'SQLserver-Q&amp;A',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -91,4 +122,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

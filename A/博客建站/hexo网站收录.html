@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -40,12 +40,17 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2022-08-12 11:53:21</span>
 </div>
-
 <div id="article"><h1 id="hexo网站收录"><a href="#hexo网站收录" class="headerlink" title="hexo网站收录"></a>hexo网站收录</h1><p>博客网站搜索引擎收录之前，是搜索不到的（虽然直接用网站链接也能访问），查看网站是否被收录。首先我们可以输入 site:域名 来查看域名是否被搜索引擎收录，如下图所示，表示没有收录：</p>
 <span id="more"></span>
 
-
-
+<h1 id="发布主题"><a href="#发布主题" class="headerlink" title="发布主题"></a>发布主题</h1><p>提交主题到官网收录。参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/smileyan9/article/details/124368376">https://blog.csdn.net/smileyan9/article/details/124368376</a></p>
+<p>5.2.1 提交方法<br>hexo.io 官网的源码地址是：<a target="_blank" rel="noopener" href="https://github.com/hexojs/site">https://github.com/hexojs/site</a> 为了提交自己的主题，需要更新这个源码，但是很明显我们没有权限直接修改。所以</p>
+<p>Fork <a target="_blank" rel="noopener" href="https://github.com/hexojs/site">https://github.com/hexojs/site</a> 到自己的仓库。</p>
+<p>修改 Fork 过来的 site ，编辑其中的 source&#x2F;_data&#x2F;themes.yml 文件 ，在后面添加自己的主题信息：</p>
+<p>这个猫咪照片是百度上找的，主要目的也是为了吸引别人注意。</p>
+<p>git add&#x2F;commit&#x2F;push 到自己fork的仓库中，然后提交 pull request。可以理解为合并的请求，提交以后会进入一个自动的审核过程，并且也有提示自己需要关注的问题。 </p>
+<p>等待有权限的 hexo-site 管理人员看到，然后进行合并操作。可能需要一些时间（我总共等待不超过两天）。</p>
+<p>最后就可以在 hexo 主题网站上搜索自己的主题名字，看看是否能查到了。</p>
 <h1 id="百度收录"><a href="#百度收录" class="headerlink" title="百度收录"></a>百度收录</h1><p>以百度搜索引擎收录为例：</p>
 <p>● 百度资源平台添加网站<br>访问百度搜索资源平台官网，注册或者登陆百度账号，依次选择【用户中心】-【站点管理】，添加你的网站，在添加站点时会让你选择协议头（http 或者 https），如果选择 https，它会验证你的站点，大约能在一天之内完成，我的网站已经实现了全站 https，因此选择了 https 协议，但是不知道为什么始终验证失败，实在是无解，只能选择 http 协议了，如果你的站点也实现了全站 https，也可以尝试一下</p>
 <p>之后会让你验证网站所有权，提供三种验证方式：</p>
@@ -57,7 +62,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 1               # 提交最新的多少个链接</span><br><span class="line">  host: www.itrhx.com    # 在百度站长平台中添加的域名</span><br><span class="line">  token: your_token      # 秘钥</span><br><span class="line">  path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></table></figure>
 
 <p>其中的 token 可以在【链接提交】-【自动提交】-【主动推送】下面看到，接口调用地址最后面 token&#x3D;xxxxx 即为你的 token</p>
-<p><img src="/hexo%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/image-20231122161139989.png" alt="image-20231122161139989"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20231122161139989.png" alt="image-20231122161139989"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: https://gitee.com/littleboy97/littleboy97.git</span><br><span class="line">  branch: main</span><br><span class="line">- type: baidu_url_submitter # 这是新加的主动推送 </span><br></pre></td></tr></table></figure>
 
 
@@ -99,7 +104,20 @@
 <p>由对比可知选择网域资源验证方式比较好，只需要一个域名就可以匹配到多种格式的 URL，之后会给你一个 TXT 的记录值，复制它到你域名 DNS 增加一个 TXT 记录，点击验证即可</p>
 <p>提交谷歌收录比较简单，选择站点地图，将我们之前生成的 sitemap 提交就行了，过几分钟刷新一下看到成功字样表示提交成功！</p>
 </div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/博客建站/hexo网站收录.html',
+  pageTitle: 'hexo网站收录',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
@@ -125,4 +143,4 @@
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
-</body></html>
+</div></body></html>

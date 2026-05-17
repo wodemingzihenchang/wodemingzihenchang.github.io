@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2025-06-26 10:34:17</span>
+</div>
+<div id="article"><h1 id="host"><a href="#host" class="headerlink" title="host"></a>host</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>hosts文件是一个用于储存计算机网络中各节点信息的计算机文件；其主要功能是将域名与对应的 IP 地址建立映射关系。</p>
+<p>host文件所在位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\System32\drivers\etc</span><br></pre></td></tr></table></figure>
+
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址。如果没有host数据，则会到DNS解析服务器里找到记录，访问到DNS解析下的网址（对应的IP地址）</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/host执行过程.png">
+
+<p>1、首先需要明白hosts优先级高于dns域名解析服务器，在hosts文件中把<a target="_blank" rel="noopener" href="http://www.baidu.com解析为127.0.0.1,那么浏览器实际访问的是127.0.0.1这个本地地址,并非百度域名对应的ip地址.所以网址是打不开的./">www.baidu.com解析为127.0.0.1,那么浏览器实际访问的是127.0.0.1这个本地地址，并非百度域名对应的IP地址。所以网址是打不开的。</a></p>
+<p>2、比如说有的网站服务器换IP了，但是运营商dns那边还没有相关信息，那么你是无法访问网站的。比方<a href="http://www.123.com把IP地址换成了111.111.111.111。我们该如何修改呢？在hosts文件中填写111.111.111.111">www.123.com把IP地址换成了111.111.111.111。我们该如何修改呢？在hosts文件中填写111.111.111.111</a> <a href="http://www.123.com那么就可以正常访问了。如果它的IP好记，当然你也可以在浏览器中输入111.111.111.111或者111.111.111.111:端口">www.123.com那么就可以正常访问了。如果它的IP好记，当然你也可以在浏览器中输入111.111.111.111或者111.111.111.111:端口</a></p>
+<p>3、有些网站有好多服务器分布在不同的地方，不同的地方IP地址也不一样，但是用的是同一个域名。比如<a target="_blank" rel="noopener" href="http://www.123.com有两个ip地址,一个在北京ip地址是1.2.3.4,/">www.123.com有两个IP地址，一个在北京IP地址是1.2.3.4，</a> 一个在河南，IP地址是245.63.2.8。如果你在河南这边， 我们可以通过hosts修改来让我们访问<a href="http://www.123.com时锁定在河南服务器。你可以在hosts中写入245.63.2.8">www.123.com时锁定在河南服务器。你可以在hosts中写入245.63.2.8</a> <a target="_blank" rel="noopener" href="http://www.123.com/">www.123.com</a></p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>它在网络通信中起到重要作用，尤其是在域名解析和网络管理中。以下是 hosts 文件的主要作用：</p>
+<h3 id="加快域名解析"><a href="#加快域名解析" class="headerlink" title="加快域名解析"></a>加快域名解析</h3><p>当用户访问某个网站时，系统会优先检查 hosts 文件中是否存在该域名的映射。如果找到对应的 IP 地址，系统会直接使用该地址，而无需请求 DNS 服务器。这种方式可以显著提高域名解析速度，尤其是对于经常访问的网站。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">202.108.22.5 www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="屏蔽恶意网站"><a href="#屏蔽恶意网站" class="headerlink" title="屏蔽恶意网站"></a>屏蔽恶意网站</h3><p>与作用1相对的功能，我们可以设置错误的IP以及域名，通过将这些网站的域名映射到错误的 IP 地址，即可有效阻止访问。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 ads.example.com</span><br><span class="line">127.0.0.1 malware.example.com</span><br></pre></td></tr></table></figure>
+
+<p>上述配置会将 <em>ads.example.com</em> 和 <em>malware.example.com</em> 映射到本地地址，从而禁止访问这些网站。</p>
+<h3 id="作用：服务器映射"><a href="#作用：服务器映射" class="headerlink" title="作用：服务器映射"></a>作用：服务器映射</h3><p>构建局域网在服务器映射。局域网中，通常没有 DNS 服务器，访问服务器时需要输入复杂的 IP 地址。通过在 hosts 文件中为这些服务器配置易记的名称，可以简化访问。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">192.168.1.100 server1</span><br><span class="line">192.168.1.101 server2</span><br></pre></td></tr></table></figure>
+
+<p>这样，用户只需输入 <em>server1</em> 或 <em>server2</em> 即可访问对应的服务器，而无需记住具体的 IP 地址</p>
+<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><p>修改 hosts 文件的方法</p>
+<p>由于 hosts 文件是系统文件，修改时需要管理员权限。以下是两种常见的修改方法：</p>
+<p>直接修改：以管理员权限打开 hosts 文件，进行编辑并保存。</p>
+<p>复制修改：将 hosts 文件复制到桌面，编辑后再替换原文件。</p>
+<p>不同操作系统中 hosts 文件的位置：</p>
+<p>Windows: C:\Windows\System32\drivers\etc\hosts</p>
+<p>Mac&#x2F;Linux: &#x2F;etc&#x2F;hosts</p>
+<p>示例</p>
+<p>以下是一个 hosts 文件的示例配置：</p>
+<p>通过上述配置，用户可以实现快速访问、屏蔽垃圾网站以及简化局域网管理。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>hosts 文件是一个简单但功能强大的工具，能够优化网络访问速度、增强安全性以及提高管理效率。在日常使用中，合理配置 hosts 文件可以带来显著的便利和性能提升。</p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/网络知识/host.html',
+  pageTitle: 'host',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</div></body></html>

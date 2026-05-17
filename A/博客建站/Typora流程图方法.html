@@ -40,7 +40,6 @@
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-01-11 11:44:04</span>
 </div>
-
 <div id="article"><h1 id="Typora流程图方法"><a href="#Typora流程图方法" class="headerlink" title="Typora流程图方法"></a>Typora流程图方法</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/notes/hexo/website/13-flowchart/flowchart/">flowchart</a></p>
 <p><a target="_blank" rel="noopener" href="https://mermaid.nodejs.cn/">Mermaid</a></p>
 <span id="more"></span>
@@ -107,7 +106,20 @@ out=>inputoutput: 输出
 st(right)->in(right)->op(right)->cond
 cond(yes,right)->out(right)->e
 cond(no)->sub</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></div>
- 			<!-- 引入正文 -->
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'A/博客建站/Typora流程图方法.html',
+  pageTitle: 'Typora流程图方法',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'littleboy',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>
