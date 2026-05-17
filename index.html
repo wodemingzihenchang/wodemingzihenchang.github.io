@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
 <!-- 代码高亮库 -->
 <meta name="generator" content="Hexo 6.3.0"></head>
-<body>
+<body onload="location.reload()">
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
@@ -411,7 +411,15 @@
     border-radius:5px;
 }
 </style>
-
+	
+<script>
+        // 检查是否已经刷新过
+        if (!sessionStorage.getItem('refreshed')) {
+            sessionStorage.setItem('refreshed', 'true');
+            location.reload();
+        }
+</script>
+	
 <!--宠物开始-->
 
 <div id="pet" class="cywl"><img id="pet-img" src="./max/stand1.png" style="box-shadow:0px 0px 0px #000"></div>
